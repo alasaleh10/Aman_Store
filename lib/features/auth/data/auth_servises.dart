@@ -4,14 +4,22 @@ import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
 import 'model/signup_response.dart';
+import 'model/user_model.dart';
 part 'auth_servises.g.dart';
+
 @RestApi(baseUrl: ApiConstanses.baseUrl)
 abstract class AuthServices {
-
   factory AuthServices(Dio dio, {String baseUrl}) = _AuthServices;
 
   @POST(ApiConstanses.signUp)
-  Future<SignUpResponse> signUp(
-    @Body()
-     SignUpRequestBody signUpRequestBody);
+  Future<SignUpResponse> signUp(@Body() SignUpRequestBody signUpRequestBody);
+
+  @POST(ApiConstanses.virifyCode)
+  Future<UserModel> virifyCode(@Body() Map<String, dynamic> data);
+  @POST(ApiConstanses.login)
+  Future<UserModel> login(@Body() Map<String, dynamic> data);
+  @POST(ApiConstanses.forgetPassword)
+  Future forgetPassword(@Body() Map<String, dynamic> data);
+  @PUT(ApiConstanses.restPassword)
+  Future restPassword(@Body() Map<String, dynamic> data);
 }

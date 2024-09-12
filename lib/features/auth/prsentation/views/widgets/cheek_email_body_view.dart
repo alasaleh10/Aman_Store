@@ -2,17 +2,18 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../../../../core/functions/show_snac_bar.dart';
 import '../../../../../core/routers/app_routers.dart';
 import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../core/validations/regular_exceptions.dart';
 import '../../../../../core/widgets/custom_elevated_button.dart';
+import '../../../../../core/widgets/custom_loading_stack.dart';
 import '../../../../../core/widgets/custom_text_form_failed.dart';
+import '../../../../../core/widgets/erroe_stacke.dart';
+import '../../../../../core/widgets/no_internet_stack.dart';
 import '../../view_model/cheek_email_cuibt/cheek_email_cubit.dart';
-import 'auth_loading.dart';
+import '../../view_model/cheek_email_cuibt/cheek_email_state.dart';
 
 class CheekEmailBodyView extends StatelessWidget {
   const CheekEmailBodyView({super.key});
@@ -42,17 +43,30 @@ class CheekEmailBodyView extends StatelessWidget {
             const SizedBox(height: 25),
             BlocListener<CheekEmailCubit, CheekEmailState>(
               listener: (context, state) {
-                if (state is CheekEmailLoading) {
-                  showDialog(
-                      context: context,
-                      builder: (context) => const AuthLoading());
-                } else if (state is CheekEmailFailure) {
-                  showSnackBar(context, message: state.errorMessage);
-                } else if (state is CheekEmailSucsess) {
+                if (isDialogOpen(context)) {
                   context.pop();
-                  GoRouter.of(context).pushNamed(AppRouters.confirmEmailView,
-                      extra: [1, cuibt.email.text]);
                 }
+                state.mapOrNull(
+                  failure: (value) {
+                    showErrorStack(context, value.message, () {
+                      cuibt.cheekEmail();
+                    });
+                  },
+                  loading: (value) {
+                    showLoadingStack(context);
+                  },
+                  noInternet: (value) {
+                    showNoInternet(context, () {
+                      cuibt.cheekEmail();
+                    });
+                  },
+                  sucsess: (value) {
+                    context.pushNamed(AppRouters.confirmEmailView,
+                        extra: [1, cuibt.email.text.trim()]);
+                  },
+                );
+
+               
               },
               child: CustomElevatedButton(
                   title: 'cheek'.tr(),

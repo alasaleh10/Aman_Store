@@ -34,6 +34,10 @@ class Assets {
   /// assets/images/email.svg
   static const String imagesEmail = "assets/images/email.svg";
 
+  /// Assets for imagesErrorVector
+  /// assets/images/errorVector.svg
+  static const String imagesErrorVector = "assets/images/errorVector.svg";
+
   /// Assets for imagesFastDelevryCar
   /// assets/images/fast_delevry_car.svg
   static const String imagesFastDelevryCar = "assets/images/fast_delevry_car.svg";
@@ -49,6 +53,10 @@ class Assets {
   /// Assets for imagesHome
   /// assets/images/home.svg
   static const String imagesHome = "assets/images/home.svg";
+
+  /// Assets for imagesLoadingAnimation
+  /// assets/images/loadingAnimation.json
+  static const String imagesLoadingAnimation = "assets/images/loadingAnimation.json";
 
   /// Assets for imagesLocation2
   /// assets/images/location2.svg
@@ -70,9 +78,9 @@ class Assets {
   /// assets/images/new.svg
   static const String imagesNew = "assets/images/new.svg";
 
-  /// Assets for imagesNoIntrnet
-  /// assets/images/noIntrnet.json
-  static const String imagesNoIntrnet = "assets/images/noIntrnet.json";
+  /// Assets for imagesNoInternetVector
+  /// assets/images/noInternetVector.svg
+  static const String imagesNoInternetVector = "assets/images/noInternetVector.svg";
 
   /// Assets for imagesNotifcation
   /// assets/images/notifcation.svg

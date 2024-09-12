@@ -15,7 +15,7 @@ Future<void> setUpGetIt() async
 
   //  Auth
   gitIt.registerSingleton(AuthServices(dio));
-  gitIt .registerLazySingleton<AuthRepo> (()=>AuthRepo(gitIt()));
+  gitIt .registerFactory<AuthRepo> (()=>AuthRepo(gitIt()));
    
 
    

@@ -1,19 +1,14 @@
-part of 'rest_password_cubit.dart';
 
-
-sealed class RestPasswordState {}
-
-final class RestPasswordInitial extends RestPasswordState {}
-final class RestPasswordLoading extends RestPasswordState {}
-final class RestPasswordFailure extends RestPasswordState 
-{
-  final String errorMessage;
-
-  RestPasswordFailure({required this.errorMessage});
+import 'package:freezed_annotation/freezed_annotation.dart';
+part 'rest_password_state.freezed.dart';
+@freezed
+ 
+ class RestPasswordState with _$RestPasswordState {
+  const factory RestPasswordState.initial() = RestPasswordInitial;
+  const factory RestPasswordState.loading() = RestPasswordLoading;
+  const factory RestPasswordState.sucsess() = RestPasswordSucsess;
+  const factory RestPasswordState.noInternet() = RestPasswordNoInternet;
+  const factory RestPasswordState.failure(String error) = RestPasswordFailurer;
 }
-final class RestPasswordSucsess extends RestPasswordState {}
-
-
-
 
 

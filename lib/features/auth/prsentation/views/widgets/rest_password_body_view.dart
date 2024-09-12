@@ -2,19 +2,21 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../../../../core/functions/show_snac_bar.dart';
 import '../../../../../core/routers/app_routers.dart';
 import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../core/validations/regular_exceptions.dart';
 import '../../../../../core/widgets/custom_elevated_button.dart';
+import '../../../../../core/widgets/custom_loading_stack.dart';
 import '../../../../../core/widgets/custom_text_form_failed.dart';
+import '../../../../../core/widgets/erroe_stacke.dart';
+import '../../../../../core/widgets/no_internet_stack.dart';
 import '../../view_model/rest_password_cuibt/rest_password_cubit.dart';
-import 'auth_loading.dart';
+import '../../view_model/rest_password_cuibt/rest_password_state.dart';
 
 class RestPasswordBodyView extends StatelessWidget {
-  const RestPasswordBodyView({super.key});
+  final String email;
+  const RestPasswordBodyView({super.key, required this.email});
 
   @override
   Widget build(BuildContext context) {
@@ -55,17 +57,27 @@ class RestPasswordBodyView extends StatelessWidget {
             const SizedBox(height: 24),
             BlocListener<RestPasswordCubit, RestPasswordState>(
               listener: (context, state) {
-                if (state is RestPasswordLoading) {
-                  showDialog(
-                      context: context,
-                      builder: (context) => const AuthLoading());
-                } else if (state is RestPasswordFailure) {
+                if (isDialogOpen(context)) {
                   context.pop();
-                  showSnackBar(context, message: state.errorMessage);
-                } else if (state is RestPasswordSucsess) {
-                  context.pop();
-                  GoRouter.of(context).goNamed(AppRouters.loginView);
                 }
+                state.mapOrNull(
+                  failure: (value) {
+                    showErrorStack(context, value.error, () {
+                      cuibt.restPassword();
+                    });
+                  },
+                  loading: (value) {
+                    showLoadingStack(context);
+                  },
+                  noInternet: (value) {
+                    showNoInternet(context, () {
+                      cuibt.restPassword();
+                    });
+                  },
+                  sucsess: (value) {
+                    context.goNamed(AppRouters.loginView);
+                  },
+                );
               },
               child: CustomElevatedButton(
                   title: 'confirm'.tr(),

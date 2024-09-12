@@ -10,7 +10,7 @@ validations(
   }
   for (var i in RegularExceptions.disallowedSymbols) {
     if (value.startsWith(i) ||
-        value.contains(' ') ||
+       
         value.endsWith(i) ||
         value.endsWith(' ')) {
       return 'خطا في المدخلات';
@@ -52,9 +52,9 @@ validations(
       if (!RegExp(RegularExceptions.musetContintLowerChar).hasMatch(value)) {
         return 'كلمة المرور يجب ان تحتوي على حرف ';
       }
-      if (!RegExp(RegularExceptions.musetContintUperChar).hasMatch(value)) {
-        return 'كلمة المرور يجب ان تحتوي على حرف كبتل';
-      }
+      // if (!RegExp(RegularExceptions.musetContintUperChar).hasMatch(value)) {
+      //   return 'كلمة المرور يجب ان تحتوي على حرف كبتل';
+      // }
       if (!RegExp(RegularExceptions.musetContintNumber).hasMatch(value)) {
         return 'كلمة المرور يجب ان تحتوي على رقم ';
       }

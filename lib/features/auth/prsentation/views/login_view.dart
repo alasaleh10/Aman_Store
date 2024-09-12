@@ -1,3 +1,4 @@
+import 'package:aman_store2/core/di/depencency_injection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -10,7 +11,7 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  BlocProvider(
-      create: (context) => LoginCubit(),
+      create: (context) => LoginCubit(gitIt()),
       child:const Scaffold(
         body: SafeArea(
           child: LoginBodyView(),

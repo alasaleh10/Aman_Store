@@ -1,7 +1,7 @@
 import 'package:aman_store2/core/functions/cheek_internet.dart';
 import 'package:aman_store2/features/auth/data/model/signup_request_body.dart';
 import 'package:aman_store2/features/auth/data/repos/auth_repo.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -24,20 +24,19 @@ class SignUpCubit extends Cubit<SignUpState> {
       if (await isConncection()) {
         signUp();
       } else {
-        emit(SignUpState.failure('interNetConntction'.tr()));
+        emit(const SignUpState.noIntetnet());
       }
     }
   }
 
   void signUp() async {
-   
     var response = await _authRepo.signUp(SignUpRequestBody(
-        firstName: name1.text,
-        lastName: name1.text.trim().isNotEmpty ? name2.text : null,
-        email: email.text,
-        phone: phone.text,
-        password: password1.text,
-        confirmPassword: password2.text));
+        firstName: name1.text.trim(),
+        lastName: name2.text.trim().isNotEmpty ? name2.text.trim() : null,
+        email: email.text.trim(),
+        phone: phone.text.trim(),
+        password: password1.text.trim(),
+        confirmPassword: password2.text.trim()));
     response.when(success: (user) {
       emit(SignUpState.sucsess(user));
     }, failure: (failure) {

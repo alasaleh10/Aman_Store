@@ -7,6 +7,7 @@ class TestCategorieModel {
   
 }
 
+
 List<TestCategorieModel> testCategorieList=
 [
   TestCategorieModel(image: Assets.imagesTestCateroriemeet, title: 'اللحوم'),
@@ -14,3 +15,8 @@ List<TestCategorieModel> testCategorieList=
   TestCategorieModel(image: Assets.imagesTestCaterorieMailk, title: 'الألبان'),
   TestCategorieModel(image: Assets.imagesTestCategorise, title: 'المقرمشات')
 ];
+
+
+
+
+

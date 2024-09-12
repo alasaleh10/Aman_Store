@@ -1,3 +1,5 @@
+import 'package:aman_store2/core/helper/cached_helper.dart';
+import 'package:aman_store2/core/utils/app_constsans.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -16,7 +18,8 @@ class SkipText extends StatelessWidget {
             alignment: AlignmentDirectional.topStart,
             child: TextButton(
               onPressed: () {
-                GoRouter.of(context).pushReplacementNamed(AppRouters.loginView);
+                CacheHelper.saveData(key: AppConstants.onBording, value: true);
+                context.goNamed(AppRouters.loginView);
               },
               child: Text(
                 'skip'.tr(),

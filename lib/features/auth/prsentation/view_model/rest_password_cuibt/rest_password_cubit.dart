@@ -1,27 +1,33 @@
-
-
+import 'package:aman_store2/core/functions/cheek_internet.dart';
+import 'package:aman_store2/features/auth/data/repos/auth_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-part 'rest_password_state.dart';
+import 'rest_password_state.dart';
 
 class RestPasswordCubit extends Cubit<RestPasswordState> {
-  RestPasswordCubit() : super(RestPasswordInitial());
-  final key=GlobalKey<FormState>();
-  final password1=TextEditingController();
-  final password2=TextEditingController();
+  final String email;
+  final AuthRepo _authRepo;
+  RestPasswordCubit(this._authRepo, this.email) : super(const RestPasswordState.initial());
+  final key = GlobalKey<FormState>();
+  final password1 = TextEditingController();
+  final password2 = TextEditingController();
 
-
-  void restPassword()
-  {
-    if(key.currentState!.validate())
-    {
-      emit(RestPasswordLoading());
-      Future.delayed(const Duration(seconds: 2),()
-      {
-        emit(RestPasswordSucsess());
-      });
+  void restPassword() async {
+    if (key.currentState!.validate()) {
+      emit(const RestPasswordState.loading());
+      if (await isConncection()) {
+        var response = await _authRepo.restPassword(
+          email: email,
+            password: password1.text.trim(), confirm: password2.text.trim());
+        response.when(success: (val) {
+          emit(const RestPasswordState.sucsess());
+        }, failure: (failure) {
+          emit(RestPasswordState.failure(failure.message!));
+        });
+      } else {
+        emit(const RestPasswordState.noInternet());
+      }
     }
   }
-
 }

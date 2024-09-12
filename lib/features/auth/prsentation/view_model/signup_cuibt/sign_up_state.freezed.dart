@@ -22,6 +22,7 @@ mixin _$SignUpState {
     required TResult Function() loading,
     required TResult Function(SignUpResponse signUpResponse) sucsess,
     required TResult Function(String message) failure,
+    required TResult Function() noIntetnet,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$SignUpState {
     TResult? Function()? loading,
     TResult? Function(SignUpResponse signUpResponse)? sucsess,
     TResult? Function(String message)? failure,
+    TResult? Function()? noIntetnet,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$SignUpState {
     TResult Function()? loading,
     TResult Function(SignUpResponse signUpResponse)? sucsess,
     TResult Function(String message)? failure,
+    TResult Function()? noIntetnet,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$SignUpState {
     required TResult Function(SignUpLoading value) loading,
     required TResult Function(SignUpSucsess value) sucsess,
     required TResult Function(SignUpFailure value) failure,
+    required TResult Function(SignUpNoInternet value) noIntetnet,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$SignUpState {
     TResult? Function(SignUpLoading value)? loading,
     TResult? Function(SignUpSucsess value)? sucsess,
     TResult? Function(SignUpFailure value)? failure,
+    TResult? Function(SignUpNoInternet value)? noIntetnet,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$SignUpState {
     TResult Function(SignUpLoading value)? loading,
     TResult Function(SignUpSucsess value)? sucsess,
     TResult Function(SignUpFailure value)? failure,
+    TResult Function(SignUpNoInternet value)? noIntetnet,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -128,6 +134,7 @@ class _$SignUpInitialImpl implements SignUpInitial {
     required TResult Function() loading,
     required TResult Function(SignUpResponse signUpResponse) sucsess,
     required TResult Function(String message) failure,
+    required TResult Function() noIntetnet,
   }) {
     return initial();
   }
@@ -139,6 +146,7 @@ class _$SignUpInitialImpl implements SignUpInitial {
     TResult? Function()? loading,
     TResult? Function(SignUpResponse signUpResponse)? sucsess,
     TResult? Function(String message)? failure,
+    TResult? Function()? noIntetnet,
   }) {
     return initial?.call();
   }
@@ -150,6 +158,7 @@ class _$SignUpInitialImpl implements SignUpInitial {
     TResult Function()? loading,
     TResult Function(SignUpResponse signUpResponse)? sucsess,
     TResult Function(String message)? failure,
+    TResult Function()? noIntetnet,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -165,6 +174,7 @@ class _$SignUpInitialImpl implements SignUpInitial {
     required TResult Function(SignUpLoading value) loading,
     required TResult Function(SignUpSucsess value) sucsess,
     required TResult Function(SignUpFailure value) failure,
+    required TResult Function(SignUpNoInternet value) noIntetnet,
   }) {
     return initial(this);
   }
@@ -176,6 +186,7 @@ class _$SignUpInitialImpl implements SignUpInitial {
     TResult? Function(SignUpLoading value)? loading,
     TResult? Function(SignUpSucsess value)? sucsess,
     TResult? Function(SignUpFailure value)? failure,
+    TResult? Function(SignUpNoInternet value)? noIntetnet,
   }) {
     return initial?.call(this);
   }
@@ -187,6 +198,7 @@ class _$SignUpInitialImpl implements SignUpInitial {
     TResult Function(SignUpLoading value)? loading,
     TResult Function(SignUpSucsess value)? sucsess,
     TResult Function(SignUpFailure value)? failure,
+    TResult Function(SignUpNoInternet value)? noIntetnet,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -242,6 +254,7 @@ class _$SignUpLoadingImpl implements SignUpLoading {
     required TResult Function() loading,
     required TResult Function(SignUpResponse signUpResponse) sucsess,
     required TResult Function(String message) failure,
+    required TResult Function() noIntetnet,
   }) {
     return loading();
   }
@@ -253,6 +266,7 @@ class _$SignUpLoadingImpl implements SignUpLoading {
     TResult? Function()? loading,
     TResult? Function(SignUpResponse signUpResponse)? sucsess,
     TResult? Function(String message)? failure,
+    TResult? Function()? noIntetnet,
   }) {
     return loading?.call();
   }
@@ -264,6 +278,7 @@ class _$SignUpLoadingImpl implements SignUpLoading {
     TResult Function()? loading,
     TResult Function(SignUpResponse signUpResponse)? sucsess,
     TResult Function(String message)? failure,
+    TResult Function()? noIntetnet,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -279,6 +294,7 @@ class _$SignUpLoadingImpl implements SignUpLoading {
     required TResult Function(SignUpLoading value) loading,
     required TResult Function(SignUpSucsess value) sucsess,
     required TResult Function(SignUpFailure value) failure,
+    required TResult Function(SignUpNoInternet value) noIntetnet,
   }) {
     return loading(this);
   }
@@ -290,6 +306,7 @@ class _$SignUpLoadingImpl implements SignUpLoading {
     TResult? Function(SignUpLoading value)? loading,
     TResult? Function(SignUpSucsess value)? sucsess,
     TResult? Function(SignUpFailure value)? failure,
+    TResult? Function(SignUpNoInternet value)? noIntetnet,
   }) {
     return loading?.call(this);
   }
@@ -301,6 +318,7 @@ class _$SignUpLoadingImpl implements SignUpLoading {
     TResult Function(SignUpLoading value)? loading,
     TResult Function(SignUpSucsess value)? sucsess,
     TResult Function(SignUpFailure value)? failure,
+    TResult Function(SignUpNoInternet value)? noIntetnet,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -383,6 +401,7 @@ class _$SignUpSucsessImpl implements SignUpSucsess {
     required TResult Function() loading,
     required TResult Function(SignUpResponse signUpResponse) sucsess,
     required TResult Function(String message) failure,
+    required TResult Function() noIntetnet,
   }) {
     return sucsess(signUpResponse);
   }
@@ -394,6 +413,7 @@ class _$SignUpSucsessImpl implements SignUpSucsess {
     TResult? Function()? loading,
     TResult? Function(SignUpResponse signUpResponse)? sucsess,
     TResult? Function(String message)? failure,
+    TResult? Function()? noIntetnet,
   }) {
     return sucsess?.call(signUpResponse);
   }
@@ -405,6 +425,7 @@ class _$SignUpSucsessImpl implements SignUpSucsess {
     TResult Function()? loading,
     TResult Function(SignUpResponse signUpResponse)? sucsess,
     TResult Function(String message)? failure,
+    TResult Function()? noIntetnet,
     required TResult orElse(),
   }) {
     if (sucsess != null) {
@@ -420,6 +441,7 @@ class _$SignUpSucsessImpl implements SignUpSucsess {
     required TResult Function(SignUpLoading value) loading,
     required TResult Function(SignUpSucsess value) sucsess,
     required TResult Function(SignUpFailure value) failure,
+    required TResult Function(SignUpNoInternet value) noIntetnet,
   }) {
     return sucsess(this);
   }
@@ -431,6 +453,7 @@ class _$SignUpSucsessImpl implements SignUpSucsess {
     TResult? Function(SignUpLoading value)? loading,
     TResult? Function(SignUpSucsess value)? sucsess,
     TResult? Function(SignUpFailure value)? failure,
+    TResult? Function(SignUpNoInternet value)? noIntetnet,
   }) {
     return sucsess?.call(this);
   }
@@ -442,6 +465,7 @@ class _$SignUpSucsessImpl implements SignUpSucsess {
     TResult Function(SignUpLoading value)? loading,
     TResult Function(SignUpSucsess value)? sucsess,
     TResult Function(SignUpFailure value)? failure,
+    TResult Function(SignUpNoInternet value)? noIntetnet,
     required TResult orElse(),
   }) {
     if (sucsess != null) {
@@ -529,6 +553,7 @@ class _$SignUpFailureImpl implements SignUpFailure {
     required TResult Function() loading,
     required TResult Function(SignUpResponse signUpResponse) sucsess,
     required TResult Function(String message) failure,
+    required TResult Function() noIntetnet,
   }) {
     return failure(message);
   }
@@ -540,6 +565,7 @@ class _$SignUpFailureImpl implements SignUpFailure {
     TResult? Function()? loading,
     TResult? Function(SignUpResponse signUpResponse)? sucsess,
     TResult? Function(String message)? failure,
+    TResult? Function()? noIntetnet,
   }) {
     return failure?.call(message);
   }
@@ -551,6 +577,7 @@ class _$SignUpFailureImpl implements SignUpFailure {
     TResult Function()? loading,
     TResult Function(SignUpResponse signUpResponse)? sucsess,
     TResult Function(String message)? failure,
+    TResult Function()? noIntetnet,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -566,6 +593,7 @@ class _$SignUpFailureImpl implements SignUpFailure {
     required TResult Function(SignUpLoading value) loading,
     required TResult Function(SignUpSucsess value) sucsess,
     required TResult Function(SignUpFailure value) failure,
+    required TResult Function(SignUpNoInternet value) noIntetnet,
   }) {
     return failure(this);
   }
@@ -577,6 +605,7 @@ class _$SignUpFailureImpl implements SignUpFailure {
     TResult? Function(SignUpLoading value)? loading,
     TResult? Function(SignUpSucsess value)? sucsess,
     TResult? Function(SignUpFailure value)? failure,
+    TResult? Function(SignUpNoInternet value)? noIntetnet,
   }) {
     return failure?.call(this);
   }
@@ -588,6 +617,7 @@ class _$SignUpFailureImpl implements SignUpFailure {
     TResult Function(SignUpLoading value)? loading,
     TResult Function(SignUpSucsess value)? sucsess,
     TResult Function(SignUpFailure value)? failure,
+    TResult Function(SignUpNoInternet value)? noIntetnet,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -604,4 +634,124 @@ abstract class SignUpFailure implements SignUpState {
   @JsonKey(ignore: true)
   _$$SignUpFailureImplCopyWith<_$SignUpFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SignUpNoInternetImplCopyWith<$Res> {
+  factory _$$SignUpNoInternetImplCopyWith(_$SignUpNoInternetImpl value,
+          $Res Function(_$SignUpNoInternetImpl) then) =
+      __$$SignUpNoInternetImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SignUpNoInternetImplCopyWithImpl<$Res>
+    extends _$SignUpStateCopyWithImpl<$Res, _$SignUpNoInternetImpl>
+    implements _$$SignUpNoInternetImplCopyWith<$Res> {
+  __$$SignUpNoInternetImplCopyWithImpl(_$SignUpNoInternetImpl _value,
+      $Res Function(_$SignUpNoInternetImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SignUpNoInternetImpl implements SignUpNoInternet {
+  const _$SignUpNoInternetImpl();
+
+  @override
+  String toString() {
+    return 'SignUpState.noIntetnet()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SignUpNoInternetImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(SignUpResponse signUpResponse) sucsess,
+    required TResult Function(String message) failure,
+    required TResult Function() noIntetnet,
+  }) {
+    return noIntetnet();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(SignUpResponse signUpResponse)? sucsess,
+    TResult? Function(String message)? failure,
+    TResult? Function()? noIntetnet,
+  }) {
+    return noIntetnet?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(SignUpResponse signUpResponse)? sucsess,
+    TResult Function(String message)? failure,
+    TResult Function()? noIntetnet,
+    required TResult orElse(),
+  }) {
+    if (noIntetnet != null) {
+      return noIntetnet();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignUpInitial value) initial,
+    required TResult Function(SignUpLoading value) loading,
+    required TResult Function(SignUpSucsess value) sucsess,
+    required TResult Function(SignUpFailure value) failure,
+    required TResult Function(SignUpNoInternet value) noIntetnet,
+  }) {
+    return noIntetnet(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SignUpInitial value)? initial,
+    TResult? Function(SignUpLoading value)? loading,
+    TResult? Function(SignUpSucsess value)? sucsess,
+    TResult? Function(SignUpFailure value)? failure,
+    TResult? Function(SignUpNoInternet value)? noIntetnet,
+  }) {
+    return noIntetnet?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignUpInitial value)? initial,
+    TResult Function(SignUpLoading value)? loading,
+    TResult Function(SignUpSucsess value)? sucsess,
+    TResult Function(SignUpFailure value)? failure,
+    TResult Function(SignUpNoInternet value)? noIntetnet,
+    required TResult orElse(),
+  }) {
+    if (noIntetnet != null) {
+      return noIntetnet(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignUpNoInternet implements SignUpState {
+  const factory SignUpNoInternet() = _$SignUpNoInternetImpl;
 }

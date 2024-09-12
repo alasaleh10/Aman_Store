@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../utils/app_colors.dart';
@@ -37,8 +38,13 @@ class CustomTextFormField extends StatelessWidget {
         controller: textFormController,
         cursorColor: AppColors.kPrimColor,
         decoration: InputDecoration(
+            hintStyle: AppStyle.textStyleRegular16,
+            hintText: title,
             errorStyle: AppStyle.textStyleRegular14
                 .copyWith(color: AppColors.kPrimColor3),
+            label: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.w),
+                child: Text(title, style: AppStyle.textStyleRegular16)),
             prefixIconColor: Colors.black,
             prefixIcon: isCommed
                 ? null
@@ -49,12 +55,14 @@ class CustomTextFormField extends StatelessWidget {
                       children: [
                         SvgPicture.asset(
                           image!,
+                          // height: 25.h,
+                          // width: 10.w,
                         ),
-                        const SizedBox(width: 13.5),
-                        Text(title, style: AppStyle.textStyleRegular16)
+                        SizedBox(width: 10.w),
                       ],
                     ),
                   ),
+            // Text(title, style: AppStyle.textStyleRegular16)
             focusedErrorBorder: textFormBorder(isCommed: isCommed),
             disabledBorder: textFormBorder(isCommed: isCommed),
             contentPadding: EdgeInsets.symmetric(

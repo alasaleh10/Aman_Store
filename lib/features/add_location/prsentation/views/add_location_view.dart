@@ -5,8 +5,8 @@ import '../view_model/add_location_cuibt/add_location_cubit.dart';
 import 'widgets/add_location_body_view.dart';
 
 class AddLocationView extends StatelessWidget {
-  final int userId;
-  const AddLocationView({super.key, required this.userId});
+  final int index;
+  const AddLocationView({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {

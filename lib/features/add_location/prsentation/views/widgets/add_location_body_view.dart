@@ -6,7 +6,7 @@ import 'package:go_router/go_router.dart';
 import '../../../../../core/routers/app_routers.dart';
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../core/widgets/custom_elevated_button.dart';
-import '../../../../auth/prsentation/views/widgets/auth_loading.dart';
+
 import '../../view_model/add_location_cuibt/add_location_cubit.dart';
 import 'custom_divider_row.dart';
 import 'google_map_stack.dart';
@@ -50,7 +50,7 @@ class AddLocationBodyView extends StatelessWidget {
                 if (state is AddLocationLoading2) {
                   showDialog(
                       context: context,
-                      builder: (context) => const AuthLoading());
+                      builder: (context) => const Text('data'));
                 } else if (state is AddLocationSucsess2) {
                   context.pop();
                   GoRouter.of(context).goNamed(AppRouters.homeScreenView);

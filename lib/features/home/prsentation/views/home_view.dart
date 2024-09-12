@@ -57,6 +57,7 @@ class HomeView extends StatelessWidget {
             const SliverToBoxAdapter(child: SizedBox(height: 16)),
             const MonthStockListRow(),
             const SliverToBoxAdapter(child: SizedBox(height: 24)),
+           
           ],
         ),
       ),

@@ -7,4 +7,5 @@ class SignUpState with _$SignUpState {
   const factory SignUpState.loading() = SignUpLoading;
   const factory SignUpState.sucsess(SignUpResponse signUpResponse) = SignUpSucsess;
   const factory SignUpState.failure(String message) = SignUpFailure;
+  const factory SignUpState.noIntetnet() = SignUpNoInternet;
 }

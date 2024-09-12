@@ -1,3 +1,6 @@
+import 'package:aman_store2/core/helper/cached_helper.dart';
+import 'package:aman_store2/core/helper/secure_storage.dart';
+import 'package:aman_store2/core/utils/app_constsans.dart';
 import 'package:aman_store2/features/saved_address/prsentation/views/saved_address_view.dart';
 import 'package:aman_store2/features/orders/prsentation/views/rating_order_trying_view.dart';
 import 'package:aman_store2/features/my_account/prsentation/views/edit_my_data_view.dart';
@@ -18,23 +21,26 @@ import '../../features/home/prsentation/views/home_new_aman_view.dart';
 import 'app_routers.dart';
 import 'build_routers.dart';
 import 'page_animation.dart';
-import '../helper/cached_helper.dart';
 
 abstract class Routers {
   static final routers = GoRouter(
     routes: [
       GoRoute(
-      path: AppRouters.splashView,
-      pageBuilder: (context, state) =>
-          pageAnimation(page: const SplashScreenView()),
-    ),
+        path: AppRouters.splashView,
+        pageBuilder: (context, state) =>
+            pageAnimation(page: const SplashScreenView()),
+      ),
       // buildRoute(
       //     AppRouters.splashView, (context, state) => const SplashScreenView()),
       GoRoute(
-        redirect: (context, state) {
-          if (CacheHelper.getData(key: 'id') != null) {
-            return '/${AppRouters.homeScreenView}';
+        redirect: (context, state) async {
+          // if (await SecureStorage.readData(key: AppConstants.token) != null) {
+          //   return '/${AppRouters.homeScreenView}';
+          // }
+          if (CacheHelper.getData(key: AppConstants.onBording) == true) {
+            return '/${AppRouters.loginView}';
           }
+
           return null;
         },
         name: AppRouters.onBordingView,
@@ -42,6 +48,7 @@ abstract class Routers {
         pageBuilder: (context, state) =>
             pageAnimation(page: const OnBordingView()),
       ),
+
       buildRoute(AppRouters.loginView, (context, state) => const LoginView()),
       buildRoute(AppRouters.signupView, (context, state) => const SignUpView()),
       buildRoute(AppRouters.homeScreenView,
@@ -51,9 +58,11 @@ abstract class Routers {
       buildRoute(AppRouters.cheekEmailView,
           (context, state) => const CheekEmailView()),
       buildRoute(AppRouters.restPasswordView,
-          (context, state) => const RestPasswordView()),
+          (context, state) =>  RestPasswordView(
+            email: state.extra as String,
+          )),
       buildRoute(AppRouters.addLocationView,
-          (context, state) => AddLocationView(userId: state.extra as int)),
+          (context, state) => AddLocationView(index: state.extra as int)),
       buildRoute(
           AppRouters.homeAmanView, (context, state) => const HomeNewAmanView()),
       buildRoute(AppRouters.homeAllCategorisesView,
