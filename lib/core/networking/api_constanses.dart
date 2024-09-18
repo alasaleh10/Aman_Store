@@ -8,5 +8,21 @@ class ApiConstanses {
   static const String restPassword = 'users/restPassword';
 
 
+  // Location
+
+  static const String addLocation = 'locations/add';
+  static const String myLocations = 'locations/my';
+  static const String spicificLocation = 'locations/spicific';
+  static const String deleteLocation = 'locations/delete';
+
+  // categories
+  static const String allCategories = 'categoriees/all'; 
+
+
+
+
+
+
+
 
 }

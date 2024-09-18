@@ -9,17 +9,19 @@ class CustomElevatedButton extends StatelessWidget {
   final Color backgroundColor;
   final Color borderColor;
   final Color textColor;
-final double? radius;
+  final double? radius;
+  final double? fontSize;
   final bool isVisitor;
-  const CustomElevatedButton({
-    super.key,
-    required this.title,
-    required this.onPressed,
-    this.backgroundColor = AppColors.kPrimColor,
-    this.isVisitor = false,
-    this.borderColor = AppColors.kPrimColor2,
-    this.textColor = AppColors.kWhiteColor, this.radius,
-  });
+  const CustomElevatedButton(
+      {super.key,
+      required this.title,
+      required this.onPressed,
+      this.backgroundColor = AppColors.kPrimColor,
+      this.isVisitor = false,
+      this.borderColor = AppColors.kPrimColor2,
+      this.textColor = AppColors.kWhiteColor,
+      this.radius,
+      this.fontSize});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,7 @@ final double? radius;
             minimumSize: Size(MediaQuery.of(context).size.width * .8, 50),
             backgroundColor: backgroundColor,
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(radius??40),
+                borderRadius: BorderRadius.circular(radius ?? 40),
                 side: isVisitor == true
                     ? BorderSide(color: borderColor)
                     : BorderSide.none),
@@ -47,9 +49,11 @@ final double? radius;
             title,
             style: isVisitor
                 ? AppStyle.textStyleBold18.copyWith(
+                    fontSize: fontSize,
                     color: borderColor,
                   )
-                : AppStyle.textStyleBold18.copyWith(color: textColor),
+                : AppStyle.textStyleBold18
+                    .copyWith(color: textColor, fontSize: fontSize),
           )),
     );
   }

@@ -32,7 +32,6 @@ class LocationService {
     }
     return true;
   }
-
   // void getRialTimeLocations(void Function(LocationData) onData) async {
   //   await cheekLocationServess();
   //   await cheekLocationPermision();

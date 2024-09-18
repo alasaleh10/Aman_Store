@@ -1,3 +1,4 @@
+
 import 'package:aman_store2/features/auth/prsentation/view_model/confirm_email_cuibt/confirm_email_state.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -60,18 +61,18 @@ class ConfirmEmailBodyView extends StatelessWidget {
                     });
                   },
                   sucsess: (value) async {
-                    if(index == 0)
-                    {
-                      await CacheHelper.saveData(
-                          key: 'token', value: value.user.token);
+                    if (index == 0) {
+                      // await SecureStorage.readData(key: 'token');
+
+
+                    
                       // ignore: use_build_context_synchronously
-                      context.pushReplacementNamed(AppRouters.addLocationView);
-                    }
-                  else  if (index == 1) {
+                      context.pushReplacementNamed(AppRouters.addLocationView,
+                          extra: 0);
+                    } else if (index == 1) {
                       context.pushNamed(AppRouters.restPasswordView,
                           extra: email.trim());
-                    } 
-                    else {
+                    } else {
                       await CacheHelper.saveData(
                           key: 'token', value: value.user.token);
                       // ignore: use_build_context_synchronously
@@ -83,7 +84,6 @@ class ConfirmEmailBodyView extends StatelessWidget {
               child: CustomElevatedButton(
                   title: 'confirm'.tr(),
                   onPressed: () {
-                   
                     context.read<ConfirmEmailCubit>().confirmEmail(email);
                   }),
             )),

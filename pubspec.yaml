@@ -56,7 +56,10 @@ dependencies:
   lottie: ^3.1.2
   flutter_otp_text_field: ^1.2.0
   flutter_secure_storage: ^9.2.2
-  
+  permission_handler: ^11.3.1
+  json_annotation: ^4.9.0
+  cached_network_image: ^3.4.0
+  shimmer: ^3.0.0
   
   
 
@@ -69,7 +72,7 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
   
-  json_annotation: ^4.9.0
+  
   json_serializable: ^6.8.0
   flutter_test:
     sdk: flutter

@@ -13,13 +13,13 @@ class CustomTextFormField extends StatelessWidget {
   final int maxLines;
   final bool obesText;
   final TextInputType? textInputType;
-  final TextEditingController textFormController;
+  final TextEditingController? textFormController;
 
   const CustomTextFormField(
       {super.key,
       this.image,
       required this.title,
-      required this.textFormController,
+       this.textFormController,
       this.validation,
       this.obesText = false,
       this.textInputType,

@@ -30,11 +30,12 @@ class LoginCubit extends Cubit<LoginState> {
   void login() async {
     var result = await _authRepo
         .login({'phone': phone.text.trim(), 'password': password.text.trim()});
-    result.when(success: (user)async {
-if(user.user.isApproved==true)
-{
-  await SecureStorage.saveData(key:AppConstants.token , value: user.token??'');
-}
+    result.when(success: (user) async {
+      if (user.user.isApproved == true) {
+        print(user.token);
+        await SecureStorage.saveData(
+            key: AppConstants.token, value: user.token ?? '');
+      }
 
       emit(LoginState.sucsess(user));
     }, failure: (failure) {

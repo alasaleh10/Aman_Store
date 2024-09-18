@@ -52,7 +52,7 @@ class _SplashBodyViewState extends State<SplashBodyView>
 
   void goOnBording() {
      Future.delayed(const Duration(milliseconds: 1700), () {
-      GoRouter.of(context).pushReplacementNamed(AppRouters.onBordingView);
+     context.pushReplacementNamed(AppRouters.onBordingView);
     });
   }
 
