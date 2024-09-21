@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
 import '../../../data/models/test_model.dart';
-import 'home_items_continer.dart';
 
 class NewAmanItems extends StatelessWidget {
   const NewAmanItems({super.key});
@@ -20,9 +19,9 @@ class NewAmanItems extends StatelessWidget {
           itemBuilder: (context, index) {
             return FittedBox(
               fit: BoxFit.cover,
-              child: HomeItemsContiner(
-                testModel: testList[index],
-              ),
+              // child: HomeItemsContiner(
+              //   testModel: testList[index],
+              // ),
             );
           },
           itemCount: testList.length,

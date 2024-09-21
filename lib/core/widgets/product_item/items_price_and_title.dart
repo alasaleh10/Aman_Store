@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
@@ -14,6 +15,7 @@ class ItemsTitleAndPrice extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Column(
       // mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,14 +23,13 @@ class ItemsTitleAndPrice extends StatelessWidget {
         Text(
           title,
           style: AppStyle.textStyleRegular14,
-          // maxLines: 2,
-          // overflow: TextOverflow.ellipsis,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
         ),
-        const SizedBox(height: 5),
+        SizedBox(height: 5.h),
         Text(
           subTitle,
-          style: AppStyle.textStyleBold12
-              .copyWith(fontWeight: FontWeight.w400),
+          style: AppStyle.textStyleBold12.copyWith(fontWeight: FontWeight.w400),
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
@@ -39,8 +40,8 @@ class ItemsTitleAndPrice extends StatelessWidget {
           child: Row(
             children: [
               Text(price),
-              const SizedBox(
-                width: 5,
+              SizedBox(
+                width: 5.w,
               ),
               Text(
                 'ry'.tr(),

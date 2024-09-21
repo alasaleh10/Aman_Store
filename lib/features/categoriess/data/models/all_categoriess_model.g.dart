@@ -14,12 +14,7 @@ AllCategoriessModel _$AllCategoriessModelFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$AllCategoriessModelToJson(
-        AllCategoriessModel instance) =>
-    <String, dynamic>{
-      'status': instance.status,
-      'categories': instance.categorieeModel,
-    };
+
 
 CategorieeModel _$CategorieeModelFromJson(Map<String, dynamic> json) =>
     CategorieeModel(
@@ -29,10 +24,3 @@ CategorieeModel _$CategorieeModelFromJson(Map<String, dynamic> json) =>
       isActive: json['isActive'] as bool,
     );
 
-Map<String, dynamic> _$CategorieeModelToJson(CategorieeModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'image': instance.image,
-      'isActive': instance.isActive,
-    };

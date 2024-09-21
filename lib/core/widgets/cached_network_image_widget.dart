@@ -11,7 +11,7 @@ class CachedImageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
-      fit: BoxFit.fill,
+      fit: BoxFit.cover,
       imageUrl: url,
       placeholder: (context, url) => const ShimarImageLoading(),
       errorWidget: (context, url, error) => Icon(

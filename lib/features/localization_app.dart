@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -13,10 +14,10 @@ class LocalizationApp extends StatelessWidget {
       path: 'assets/translations',
       supportedLocales: const [Locale('ar'), Locale('en')],
       child:
-       const AmanStore()
-      //  DevicePreview(
-      //   builder: (context) => const AmanStore(),
-      // ),
+      //  const AmanStore()
+       DevicePreview(
+        builder: (context) => const AmanStore(),
+      ),
       );
   }
 }

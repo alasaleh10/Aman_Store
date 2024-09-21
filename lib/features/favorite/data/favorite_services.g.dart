@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'categoriee_serveices.dart';
+part of 'favorite_services.dart';
 
 // **************************************************************************
 // RetrofitGenerator
@@ -8,8 +8,8 @@ part of 'categoriee_serveices.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element
 
-class _CategorieeServices implements CategorieeServices {
-  _CategorieeServices(
+class _FavoriteServises implements FavoriteServises {
+  _FavoriteServises(
     this._dio, {
     this.baseUrl,
     this.errorLogger,
@@ -24,40 +24,7 @@ class _CategorieeServices implements CategorieeServices {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<AllCategoriessModel> allCategoriee() async {
-    final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
-    const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<AllCategoriessModel>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          'categoriees/all',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
-    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late AllCategoriessModel _value;
-    try {
-      _value = AllCategoriessModel.fromJson(_result.data!);
-    } on Object catch (e, s) {
-      errorLogger?.logError(e, s, _options);
-      rethrow;
-    }
-    return _value;
-  }
-
-  @override
-  Future<ListProductModel> getCategorieeProducts(int id) async {
+  Future<ListProductModel> getFavorite() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -69,7 +36,7 @@ class _CategorieeServices implements CategorieeServices {
     )
         .compose(
           _dio.options,
-          'products/getProductsByCategoriees/${id}',
+          'favorites',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -82,6 +49,74 @@ class _CategorieeServices implements CategorieeServices {
     late ListProductModel _value;
     try {
       _value = ListProductModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<FavoriteSucsessModel> addFavorite(Map<String, dynamic> data) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(data);
+    final _options = _setStreamType<FavoriteSucsessModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'favorites/addFavorite',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late FavoriteSucsessModel _value;
+    try {
+      _value = FavoriteSucsessModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<FavoriteSucsessModel> deleteFavorite(Map<String, dynamic> data) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(data);
+    final _options = _setStreamType<FavoriteSucsessModel>(Options(
+      method: 'DELETE',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'favorites/deleteFavorite',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late FavoriteSucsessModel _value;
+    try {
+      _value = FavoriteSucsessModel.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

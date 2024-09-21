@@ -1,4 +1,6 @@
 import 'package:aman_store2/core/utils/app_constsans.dart';
+import 'package:aman_store2/features/categoriess/prsentation/views/categoriee_items_view.dart';
+import 'package:aman_store2/features/favorite/views/favorite_view.dart';
 import 'package:aman_store2/features/location/data/models/add_location_model.dart';
 import 'package:aman_store2/features/location/prsentation/views/confirem_location_view.dart';
 import 'package:aman_store2/features/location/prsentation/views/edit_address_view.dart';
@@ -85,8 +87,12 @@ abstract class Routers {
           AppRouters.confirmLocationView,
           (context, state) => ConfirmLocationView(
               addLocationModel: state.extra as AddLocationModel)),
-               buildRoute(AppRouters.editAddressView,
-          (context, state) =>  EditAddressView(data: state.extra as List)),
+      buildRoute(AppRouters.editAddressView,
+          (context, state) => EditAddressView(data: state.extra as List)),
+      buildRoute(AppRouters.categorieeItemsView,
+          (context, state) => CategorieeItemsView(data: state.extra as List)),
+      buildRoute(
+          AppRouters.favoriteView, (context, state) => const FavoriteView())
     ],
   );
 }

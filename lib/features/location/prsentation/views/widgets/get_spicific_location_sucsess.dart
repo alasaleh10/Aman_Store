@@ -1,9 +1,8 @@
 import 'package:aman_store2/core/widgets/custom_elevated_button.dart';
 import 'package:aman_store2/features/location/data/models/location_model.dart';
 import 'package:aman_store2/features/location/prsentation/views/widgets/edit_location_google_map.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';

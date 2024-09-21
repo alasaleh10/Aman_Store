@@ -18,6 +18,10 @@ abstract class AppRouters {
   static const String ratingOrderTryingView='ratingOrderTryingView';
   static const String savedAddressView='savedAddressView';
   static const String editAddressView='editAddressView';
+  static const String categorieeItemsView='categorieeItemsView';
+  static const String favoriteView='favoriteView';
+
+   
 
 
   // static const String View='';

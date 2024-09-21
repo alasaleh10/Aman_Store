@@ -18,6 +18,15 @@ class ApiConstanses {
   // categories
   static const String allCategories = 'categoriees/all'; 
 
+  // products
+  static const String categorieeProducts = 'products/getProductsByCategoriees';
+
+  // Favorite
+  static const String addFavorite = 'favorites/addFavorite';
+  static const String deleteFavorite = 'favorites/deleteFavorite';
+  static const String myFavorite = 'favorites';
+  
+
 
 
 

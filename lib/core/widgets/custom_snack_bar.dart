@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../utils/app_colors.dart';
 import '../utils/app_styles.dart';
@@ -29,7 +30,7 @@ SnackBar customSnackBar(BuildContext context,
             Icon(
               isError ? Icons.error : Icons.done,
               color: isError ? Colors.red : Colors.green,
-              size: 30,
+              size: 30.r,
             )
           ],
         ),

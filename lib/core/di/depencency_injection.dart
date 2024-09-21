@@ -1,6 +1,8 @@
 import 'package:aman_store2/features/auth/data/repos/auth_repo.dart';
 import 'package:aman_store2/features/categoriess/data/categoriee_serveices.dart';
 import 'package:aman_store2/features/categoriess/data/repo/categoriess_repo.dart';
+import 'package:aman_store2/features/favorite/data/favorite_repo.dart';
+import 'package:aman_store2/features/favorite/data/favorite_services.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
@@ -30,6 +32,10 @@ Future<void> setUpGetIt() async
   // categoriess
   gitIt.registerSingleton(CategorieeServices(dio));
   gitIt .registerFactory<CategoriessRepo> (()=>CategoriessRepo(gitIt()));
+
+  // Favorite
+  gitIt.registerSingleton(FavoriteServises(dio));
+  gitIt.registerFactory<FavoriteRepo>(() => FavoriteRepo(gitIt()));
 
    
 

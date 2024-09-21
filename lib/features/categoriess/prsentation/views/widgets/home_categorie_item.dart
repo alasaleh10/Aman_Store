@@ -34,8 +34,11 @@
 //     );
 //   }
 // }
+import 'package:aman_store2/core/routers/app_routers.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
@@ -53,33 +56,39 @@ class CategorieItem extends StatelessWidget {
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Container(
-                clipBehavior: Clip.antiAlias,
-                height: 70.h,
-                width: 70.w,
-                // padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 8.w),
-                decoration: const BoxDecoration(
-                  color: AppColors.kPrimColor,
-                  shape: BoxShape.circle,
-                ),
-                child: ClipRRect(
-                    borderRadius: BorderRadius.circular(15.r),
-                    clipBehavior: Clip.antiAlias,
-                    child: CachedImageWidget(
-                      url: categorieeModel.image,
-                    )
+            GestureDetector(
+              onTap: () {
+                context.pushNamed(AppRouters.categorieeItemsView,
+                    extra: [categorieeModel.id, categorieeModel.name]);
+              },
+              child: Container(
+                  clipBehavior: Clip.antiAlias,
+                  height: 70.h,
+                  width: 70.w,
+                  // padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 8.w),
+                  decoration: const BoxDecoration(
+                    color: AppColors.kPrimColor,
+                    shape: BoxShape.circle,
+                  ),
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15.r),
+                      clipBehavior: Clip.antiAlias,
+                      child: CachedImageWidget(
+                        url: categorieeModel.image,
+                      )
 
-                    // Image(
-                    //   image: NetworkImage(categorieeModel.image),
-                    //   fit: BoxFit.fill,
-                    // )
-                    )
+                      // Image(
+                      //   image: NetworkImage(categorieeModel.image),
+                      //   fit: BoxFit.fill,
+                      // )
+                      )
 
-                //  Image.network(
-                //   categorieeModel.image,
-                //   fit: BoxFit.cover,
-                // ),
-                ),
+                  //  Image.network(
+                  //   categorieeModel.image,
+                  //   fit: BoxFit.cover,
+                  // ),
+                  ),
+            ),
             SizedBox(height: 10.h),
             Text(
               categorieeModel.name,

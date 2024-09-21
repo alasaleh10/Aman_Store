@@ -2,7 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/app_styles.dart';
-import 'item_add_to_cart_button.dart';
+import '../../../../../core/widgets/product_item/add_cart_button.dart';
+
 
 class HomeSearchItemDiscountContiner extends StatelessWidget {
   final bool isOrder;
@@ -42,6 +43,7 @@ class HomeSearchItemDiscountContiner extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsetsDirectional.only(end: 5),
                 child: 
+                
                 ItemAddToCartButton(
                   horizontal: 0,
                   vertical: 0,

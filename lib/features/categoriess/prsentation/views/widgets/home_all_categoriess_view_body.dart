@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../home/data/models/teas_caterorie_model.dart';
 import 'home_categorie_item.dart';
 
 class HomeAllCategorieesViewBody extends StatelessWidget {

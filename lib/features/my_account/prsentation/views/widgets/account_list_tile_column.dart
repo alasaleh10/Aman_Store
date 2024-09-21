@@ -24,7 +24,10 @@ class AccountListTileColumn extends StatelessWidget {
             image: Assets.imagesPaymentMthods,
             onTap: () {}),
         AccountCustomListTile(
-            title: 'faviorte'.tr(), image: Assets.imagesFaviorte, onTap: () {}),
+            title: 'faviorte'.tr(), image: Assets.imagesFaviorte, onTap: () 
+            {
+              context.pushNamed(AppRouters.favoriteView);
+            }),
         AccountCustomListTile(
             title: 'technicalSupport'.tr(),
             image: Assets.imagesSupport,
