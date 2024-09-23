@@ -7,8 +7,12 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../features/auth/data/auth_servises.dart';
+import '../../features/home/data/home_repo.dart';
+import '../../features/home/data/home_servises.dart';
 import '../../features/location/data/location_services.dart';
 import '../../features/location/data/repo/location_repo.dart';
+import '../../features/my_account/data/account_repo.dart';
+import '../../features/my_account/data/account_servises.dart';
 import '../networking/dio_factory.dart';
 
 final gitIt = GetIt.instance;
@@ -36,6 +40,14 @@ Future<void> setUpGetIt() async
   // Favorite
   gitIt.registerSingleton(FavoriteServises(dio));
   gitIt.registerFactory<FavoriteRepo>(() => FavoriteRepo(gitIt()));
+
+  // account
+  gitIt.registerSingleton(AccountServices(dio));
+  gitIt .registerFactory<AccountRepo> (()=>AccountRepo(gitIt()));
+
+  //  home
+  gitIt.registerSingleton(HomeServices(dio));
+  gitIt .registerFactory<HomeRepo>(() => HomeRepo(gitIt()));
 
    
 

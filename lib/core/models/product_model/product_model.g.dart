@@ -16,7 +16,7 @@ ProductModel _$ProductModelFromJson(Map<String, dynamic> json) => ProductModel(
       quilty: (json['quilty'] as num).toInt(),
       discount: (json['discount'] as num).toInt(),
       priceAfterDiscount: (json['priceAfterDiscount'] as num).toInt(),
-      isFavorite: json['isFavorite'] as bool,
+      isFavorite: json['isFavorite'] as bool?,
     );
 
 Map<String, dynamic> _$ProductModelToJson(ProductModel instance) =>

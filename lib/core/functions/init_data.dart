@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../di/depencency_injection.dart';
 import '../helper/cached_helper.dart';
 import '../helper/location_helper.dart';
+import '../helper/sqflite_helper/sqflite_helper.dart';
 import '../widgets/simple_observer_bolc.dart';
 
 abstract class InitData {
@@ -18,6 +19,7 @@ abstract class InitData {
         await LocationService().cheekLocationPermision();
         await EasyLocalization.ensureInitialized();
         Bloc.observer = SimpleObserver();
+        await SqlHelper.inizalizeDb();
       
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../home/prsentation/views/widgets/home_search_item.dart';
 
 class FollowOrdersItems extends StatelessWidget {
   const FollowOrdersItems({super.key});
@@ -14,9 +13,10 @@ class FollowOrdersItems extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         return const Padding(
             padding: EdgeInsets.symmetric(vertical: 5),
-            child: HomeSearchItem(
-              isOrder: true,
-            ));
+            // child: HomeSearchItem(
+            //   isOrder: true,
+            // )
+            );
       },
     );
   }

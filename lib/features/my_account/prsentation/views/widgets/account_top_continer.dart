@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
@@ -22,9 +24,9 @@ class AccountTopContiner extends StatelessWidget {
       child: GestureDetector(
         onTap: onTap,
         child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 10),
+          padding: EdgeInsets.symmetric(vertical: 10.h),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
+              borderRadius: BorderRadius.circular(15.r),
               border: Border.all(color: AppColors.kOtpBorderColor)),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -44,6 +46,7 @@ class AccountTopContiner extends StatelessWidget {
                 title,
                 style: AppStyle.textStyleSemiBold15,
                 textAlign: TextAlign.center,
+                maxLines: 1,
               ),
               Text(
                 subTitle,
@@ -51,6 +54,7 @@ class AccountTopContiner extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     color: const Color(0xff8B959E)),
                 textAlign: TextAlign.center,
+                maxLines: 1,
               ),
             ],
           ),

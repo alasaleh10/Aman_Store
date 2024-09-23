@@ -35,7 +35,7 @@ class ProductItem extends StatelessWidget {
             Expanded(
               child: ItemImageStack(
                 onTap: onTap,
-                isFaviorte: product.isFavorite,
+                isFaviorte: product.isFavorite!,
                 image: product.image,
                 id: product.id,
               ),

@@ -7,6 +7,8 @@ import '../utils/app_styles.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final bool isCommed;
+  final void Function(String)? onChanged;
+  final Widget? seffexIcon;
   final String? Function(String?)? validation;
   final String? image;
   final String title;
@@ -24,13 +26,14 @@ class CustomTextFormField extends StatelessWidget {
       this.obesText = false,
       this.textInputType,
       this.isCommed = false,
-      this.maxLines = 1});
+      this.maxLines = 1, this.seffexIcon, this.onChanged});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4.5),
       child: TextFormField(
+        onChanged: onChanged,
         maxLines: maxLines,
         keyboardType: textInputType,
         obscureText: obesText,
@@ -46,6 +49,7 @@ class CustomTextFormField extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 10.w),
                 child: Text(title, style: AppStyle.textStyleRegular16)),
             prefixIconColor: Colors.black,
+            suffixIcon: seffexIcon,
             prefixIcon: isCommed
                 ? null
                 : Padding(

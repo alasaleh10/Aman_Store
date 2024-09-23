@@ -1,3 +1,4 @@
+import 'package:aman_store2/features/auth/data/model/user_model.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,7 +9,8 @@ import '../../../../home_screen/view_model/home_screen_cuibt/home_screen_cubit.d
 import 'account_top_continer.dart';
 
 class AccountRowContiners extends StatelessWidget {
-  const AccountRowContiners({super.key});
+  final UserModel user;
+  const AccountRowContiners({super.key, required this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class AccountRowContiners extends StatelessWidget {
           AccountTopContiner(
             imageColor: const Color(0xff10B982),
             image: Assets.imagesWallet,
-            title: '0 ${'ry'.tr()}',
+            title: '${user.user.credit} ${'ry2'.tr()}',
             subTitle: 'balance'.tr(),
             onTap: () {},
             backgroundColor: const Color(0xffEAFEF5),
@@ -39,7 +41,7 @@ class AccountRowContiners extends StatelessWidget {
           AccountTopContiner(
             imageColor: const Color(0xff5B6FEC),
             image: Assets.imagesPoint,
-            title: '350',
+            title: user.user.points.toString(),
             subTitle: 'loyaltyPoints'.tr(),
             onTap: () {},
             backgroundColor: const Color(0xffF5F9FC),

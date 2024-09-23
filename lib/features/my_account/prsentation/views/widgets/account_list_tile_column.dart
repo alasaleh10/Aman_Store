@@ -1,3 +1,5 @@
+import 'package:aman_store2/core/helper/secure_storage.dart';
+
 import '../../../../../core/routers/app_routers.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
@@ -24,8 +26,9 @@ class AccountListTileColumn extends StatelessWidget {
             image: Assets.imagesPaymentMthods,
             onTap: () {}),
         AccountCustomListTile(
-            title: 'faviorte'.tr(), image: Assets.imagesFaviorte, onTap: () 
-            {
+            title: 'faviorte'.tr(),
+            image: Assets.imagesFaviorte,
+            onTap: () {
               context.pushNamed(AppRouters.favoriteView);
             }),
         AccountCustomListTile(
@@ -36,6 +39,14 @@ class AccountListTileColumn extends StatelessWidget {
             title: 'frequentyQuestions'.tr(),
             image: Assets.imagesQuestions,
             onTap: () {}),
+        AccountCustomListTile(
+            title: 'logOut'.tr(),
+            image: Assets.imagesLogout,
+            onTap: () async {
+              await SecureStorage.delete(key: 'token');
+              // ignore: use_build_context_synchronously
+              context.goNamed(AppRouters.loginView);
+            }),
         const SizedBox(height: 15)
       ],
     );

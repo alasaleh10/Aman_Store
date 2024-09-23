@@ -6,8 +6,15 @@ import '../../models/product_model/list_product_model.dart';
 
 class CustomProductGridView extends StatelessWidget {
   final VoidCallback onTap;
+  final bool shrinkWrap;
+  final ScrollPhysics? physics;
   final ListProductModel listProductModel;
-  const CustomProductGridView({super.key, required this.listProductModel, required this.onTap});
+  const CustomProductGridView(
+      {super.key,
+      required this.listProductModel,
+      required this.onTap,
+      this.shrinkWrap = false,
+      this.physics});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +24,9 @@ class CustomProductGridView extends StatelessWidget {
         double aspectRatio = constraints.maxWidth > 550 ? 1 / 1.8 : 1 / 1.6;
 
         return GridView.builder(
-          padding: EdgeInsets.symmetric(horizontal: 10.w),
+          physics: physics,
+          shrinkWrap: shrinkWrap,
+          padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: crossAxisCount,
             mainAxisSpacing: 10,

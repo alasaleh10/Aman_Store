@@ -32,7 +32,9 @@ class ItemImageStack extends StatelessWidget {
         children: [
           AspectRatio(
             aspectRatio: 1,
-            child: CachedImageWidget(url: image),
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(8.r),
+                child: CachedImageWidget(url: image)),
           ),
           Positioned(
             top: 13.h,
@@ -51,7 +53,6 @@ class ItemImageStack extends StatelessWidget {
               },
               child: GestureDetector(
                 onTap: () {
-                  
                   if (isFaviorte) {
                     cubit2.removeFavorite();
                   } else {

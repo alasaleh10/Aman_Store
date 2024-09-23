@@ -76,7 +76,9 @@ abstract class Routers {
       buildRoute(AppRouters.homeAllCategorisesView,
           (context, state) => const HomeAllCategorisess()),
       buildRoute(AppRouters.editMyDataView,
-          (context, state) => const EditMyDataView()),
+          (context, state) =>  EditMyDataView(
+            data: state.extra as List,
+          )),
       buildRoute(AppRouters.followOrderView,
           (context, state) => const FollowOrderView()),
       buildRoute(AppRouters.ratingOrderTryingView,

@@ -5,13 +5,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'shimar_image_loading.dart';
 
 class CachedImageWidget extends StatelessWidget {
+  final BoxFit? boxFit;
   final String url;
-  const CachedImageWidget({super.key, required this.url});
+  const CachedImageWidget({super.key, required this.url, this.boxFit});
 
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
-      fit: BoxFit.cover,
+      fit: boxFit??BoxFit.cover,
       imageUrl: url,
       placeholder: (context, url) => const ShimarImageLoading(),
       errorWidget: (context, url, error) => Icon(

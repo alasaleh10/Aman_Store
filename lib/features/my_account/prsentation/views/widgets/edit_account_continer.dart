@@ -1,5 +1,8 @@
+import 'package:aman_store2/features/auth/data/model/user_model.dart';
+import 'package:aman_store2/features/my_account/data/push_user_model.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/routers/app_routers.dart';
@@ -7,7 +10,8 @@ import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
 
 class EditAccountContiner extends StatelessWidget {
-  const EditAccountContiner({super.key});
+  final UserModel user;
+  const EditAccountContiner({super.key, required this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +20,17 @@ class EditAccountContiner extends StatelessWidget {
           horizontal: MediaQuery.sizeOf(context).width * .3),
       child: GestureDetector(
         onTap: () {
-          GoRouter.of(context).pushNamed(AppRouters.editMyDataView);
+          PushUserModel pushUserModel = PushUserModel(
+            name: user.user.firstName,
+            name2: user.user.lastName,
+            phone: user.user.phone,
+          );
+
+          context.pushNamed(AppRouters.editMyDataView,
+              extra: [context, pushUserModel]);
         },
         child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 8),
+          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 8.w),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: AppColors.kPrimColor)),

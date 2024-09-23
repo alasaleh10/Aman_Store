@@ -1,10 +1,8 @@
-
 import 'widgets/p_cart_add_more.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 
 import '../../../home/prsentation/views/widgets/home_search_item.dart';
 import 'widgets/cart_next_button.dart';
@@ -19,8 +17,10 @@ class CartProdectsView extends StatelessWidget {
         SliverList.builder(
           itemBuilder: (context, index) {
             return const Padding(
-                padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                child: HomeSearchItem());
+              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              // child:
+              //  HomeSearchItem()
+            );
           },
           itemCount: 3,
         ),

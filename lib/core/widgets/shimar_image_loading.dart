@@ -14,9 +14,7 @@ class ShimarImageLoading extends StatelessWidget {
           decoration:  BoxDecoration(color: Colors.white,
           borderRadius: BorderRadius.circular(60.r),
           ),
-          // width: double.infinity,
-          // height: double.infinity,
-          // color: Colors.white,
+          
         ),
       );
   }

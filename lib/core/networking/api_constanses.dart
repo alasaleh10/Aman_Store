@@ -6,6 +6,14 @@ class ApiConstanses {
   static const String virifyCode = 'users/virifyCode';
   static const String forgetPassword = 'users/forgetPassword';
   static const String restPassword = 'users/restPassword';
+  static const String me = 'users/user';
+  static const String editMyAccount = 'users/editMyAccount';
+
+  // Home
+
+  static const String home = 'home';
+  static const String searchProduct = 'home/searchProduct';
+
 
 
   // Location
@@ -20,11 +28,13 @@ class ApiConstanses {
 
   // products
   static const String categorieeProducts = 'products/getProductsByCategoriees';
+  static const String newAmanProducts = 'products/newAmanProducts';
 
   // Favorite
   static const String addFavorite = 'favorites/addFavorite';
   static const String deleteFavorite = 'favorites/deleteFavorite';
   static const String myFavorite = 'favorites';
+
   
 
 

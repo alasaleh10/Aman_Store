@@ -1,12 +1,16 @@
+import 'package:aman_store2/core/di/depencency_injection.dart';
+import 'package:aman_store2/core/utils/app_colors.dart';
+import 'package:aman_store2/core/widgets/failure_page_view.dart';
+import 'package:aman_store2/core/widgets/loading_view_page.dart';
+import 'package:aman_store2/core/widgets/no_internet_page_view.dart';
+import 'package:aman_store2/features/home/prsentation/view_model/search_products_cubit/search_produtc_cubit.dart';
+import 'package:aman_store2/features/home/prsentation/view_model/search_products_cubit/search_produtc_state.dart';
+import 'package:aman_store2/features/home/prsentation/views/widgets/saved_search_list.dart';
+import 'package:aman_store2/features/home/prsentation/views/widgets/search_product_text_form.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../../core/utils/app_assets.dart';
-import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_styles.dart';
-import '../../../../core/widgets/custom_text_form_failed.dart';
-import '../../../home_screen/view_model/home_screen_cuibt/home_screen_cubit.dart';
 import 'widgets/home_search_item.dart';
 
 class HomeSearchView extends StatelessWidget {
@@ -14,73 +18,88 @@ class HomeSearchView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopScope(
-      canPop: false,
-      onPopInvoked: (didPop) {
-        BlocProvider.of<HomeScreenCubit>(context)
-            .changeSearchOrHome(isSearch: false);
-      },
+    return BlocProvider(
+      create: (context) => SearchProdutcCubit(gitIt())..getSavedSearched(),
       child: Scaffold(
         body: SafeArea(
             child: CustomScrollView(
           slivers: [
+            const SearchPRoductTextForm(),
             SliverToBoxAdapter(
               child: Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Expanded(
-                        child: CustomTextFormField(
-                      image: Assets.imagesSearchIcon,
-                      textFormController: TextEditingController(),
-                      title: 'whatyouloking'.tr(),
-                    )),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        BlocProvider.of<HomeScreenCubit>(context)
-                            .changeSearchOrHome(isSearch: false);
+                    Text('searchResult'.tr(),
+                        style: AppStyle.textStyleRegular16),
+                    BlocBuilder<SearchProdutcCubit, SearchProdutcState>(
+                      builder: (context, state) {
+                        if (state is SavedSearch) {
+                          return TextButton(
+                              onPressed: () {
+                                context
+                                    .read<SearchProdutcCubit>()
+                                    .removeAllSearch();
+                              },
+                              child: Text(
+                                'مسح الــسجل',
+                                style: AppStyle.textStyleRegular16
+                                    .copyWith(color: AppColors.kPrimColor3),
+                              ));
+                        } else {
+                          return const SizedBox();
+                        }
                       },
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            'cancel'.tr(),
-                            style: AppStyle.textStyleBold18
-                                .copyWith(color: AppColors.kPrimColor3),
-                          ),
-                          const SizedBox(width: 5),
-                          const Icon(
-                            Icons.cancel_outlined,
-                            color: AppColors.kPrimColor3,
-                            size: 25,
-                          )
-                        ],
-                      ),
                     )
                   ],
                 ),
               ),
             ),
-            SliverToBoxAdapter(
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
-                child: Text('searchResult'.tr(),
-                    style: AppStyle.textStyleRegular16),
-              ),
-            ),
-            SliverList.builder(
-              itemBuilder: (context, index) {
-                return const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                  child: HomeSearchItem(),
+            BlocBuilder<SearchProdutcCubit, SearchProdutcState>(
+              builder: (context, state) {
+                return state.maybeWhen(
+                  orElse: () => const SliverToBoxAdapter(child: SizedBox()),
+                  error: (error) => SliverFillRemaining(
+                      hasScrollBody: false,
+                      child: Center(
+                        child: FailurePageView(
+                            message: error,
+                            onTap: () {
+                              context
+                                  .read<SearchProdutcCubit>()
+                                  .searchProduct();
+                            }),
+                      )),
+                  loading: () => const SliverFillRemaining(
+                      hasScrollBody: false,
+                      child: Center(child: LoadingViewPage())),
+                  noInternet: () => SliverFillRemaining(
+                      hasScrollBody: false,
+                      child: Center(
+                        child: NoInternetPage(onTap: () {
+                          context.read<SearchProdutcCubit>().searchProduct();
+                        }),
+                      )),
+                  sucsess: (listProductModel) {
+                    return SliverList.builder(
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 8, vertical: 8),
+                          child: HomeSearchItem(
+                            product: listProductModel.productModel[index],
+                          ),
+                        );
+                      },
+                      itemCount: listProductModel.productModel.length,
+                    );
+                  },
+                  savedSearch: (savedSearch) =>
+                      SavedSearchList(savedSearch: savedSearch),
                 );
               },
-              itemCount: 10,
             ),
             const SliverToBoxAdapter(child: SizedBox(height: 15))
           ],
@@ -89,5 +108,3 @@ class HomeSearchView extends StatelessWidget {
     );
   }
 }
-// refactor Code && complate Search
-// 2024/5/12

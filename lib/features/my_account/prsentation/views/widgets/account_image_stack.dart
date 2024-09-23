@@ -1,4 +1,6 @@
+import 'package:aman_store2/core/widgets/cached_network_image_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 
@@ -14,10 +16,16 @@ class AccountImageStack extends StatelessWidget {
       clipBehavior: Clip.none,
       alignment: AlignmentDirectional.bottomStart,
       children: [
-        CircleAvatar(
-          radius: 35,
-          backgroundImage: AssetImage(image),
-        ),
+        Container(
+            height: 70.h,
+            width: 70.w,
+            clipBehavior: Clip.antiAlias,
+            decoration: const BoxDecoration(shape: BoxShape.circle),
+            child: CachedImageWidget(
+              url: image,
+              boxFit: BoxFit.fill,
+            )),
+       
         Positioned(
           bottom: -10,
           child: Container(

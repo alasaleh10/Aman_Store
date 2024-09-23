@@ -57,13 +57,13 @@ class _FavoriteServises implements FavoriteServises {
   }
 
   @override
-  Future<FavoriteSucsessModel> addFavorite(Map<String, dynamic> data) async {
+  Future<DoneModel> addFavorite(Map<String, dynamic> data) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(data);
-    final _options = _setStreamType<FavoriteSucsessModel>(Options(
+    final _options = _setStreamType<DoneModel>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -80,9 +80,9 @@ class _FavoriteServises implements FavoriteServises {
           baseUrl,
         )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late FavoriteSucsessModel _value;
+    late DoneModel _value;
     try {
-      _value = FavoriteSucsessModel.fromJson(_result.data!);
+      _value = DoneModel.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -91,13 +91,13 @@ class _FavoriteServises implements FavoriteServises {
   }
 
   @override
-  Future<FavoriteSucsessModel> deleteFavorite(Map<String, dynamic> data) async {
+  Future<DoneModel> deleteFavorite(Map<String, dynamic> data) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(data);
-    final _options = _setStreamType<FavoriteSucsessModel>(Options(
+    final _options = _setStreamType<DoneModel>(Options(
       method: 'DELETE',
       headers: _headers,
       extra: _extra,
@@ -114,9 +114,9 @@ class _FavoriteServises implements FavoriteServises {
           baseUrl,
         )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late FavoriteSucsessModel _value;
+    late DoneModel _value;
     try {
-      _value = FavoriteSucsessModel.fromJson(_result.data!);
+      _value = DoneModel.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

@@ -11,7 +11,7 @@ class ProductModel {
   final int quilty;
   final int discount;
   final int priceAfterDiscount;
-  final bool isFavorite;
+  final bool? isFavorite;
 
   ProductModel(
       {required this.id,
