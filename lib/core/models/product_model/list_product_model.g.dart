@@ -14,8 +14,3 @@ ListProductModel _$ListProductModelFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$ListProductModelToJson(ListProductModel instance) =>
-    <String, dynamic>{
-      'status': instance.status,
-      'products': instance.productModel,
-    };

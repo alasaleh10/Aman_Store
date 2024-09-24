@@ -13,8 +13,8 @@ class HomeCategoriseListView extends StatelessWidget {
         child: Row(
           children: List.generate(
              4,
-              (index) => Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 7.5),
+              (index) => const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 7.5),
                     child:Text('f')
                     //  CategorieItem(testCategorieModel: testCategorieList[index]),
                   )),

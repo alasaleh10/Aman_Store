@@ -1,10 +1,16 @@
+import 'package:aman_store2/core/di/depencency_injection.dart';
 import 'package:aman_store2/core/utils/app_constsans.dart';
 import 'package:aman_store2/features/categoriess/prsentation/views/categoriee_items_view.dart';
+import 'package:aman_store2/features/drawer_pages/views/about_aman_view.dart';
+import 'package:aman_store2/features/drawer_pages/views/terms_conditions_view.dart';
 import 'package:aman_store2/features/favorite/views/favorite_view.dart';
 import 'package:aman_store2/features/location/data/models/add_location_model.dart';
 import 'package:aman_store2/features/location/prsentation/views/confirem_location_view.dart';
 import 'package:aman_store2/features/location/prsentation/views/edit_address_view.dart';
 import 'package:aman_store2/features/location/prsentation/views/saved_address_view.dart';
+import 'package:aman_store2/features/my_account/prsentation/view_model/faq_questions_cubit/faq_qusetions_cubit.dart';
+import 'package:aman_store2/features/my_account/prsentation/views/questions_view.dart';
+import 'package:aman_store2/features/my_account/prsentation/views/technical_support_view.dart';
 import 'package:aman_store2/features/orders/prsentation/views/rating_order_trying_view.dart';
 import 'package:aman_store2/features/my_account/prsentation/views/edit_my_data_view.dart';
 import 'package:aman_store2/features/orders/prsentation/views/follow_order_view.dart';
@@ -18,9 +24,11 @@ import 'package:aman_store2/features/categoriess/prsentation/views/home_all_cate
 import 'package:aman_store2/features/home_screen/views/home_screen.dart';
 import 'package:aman_store2/features/on_bording/views/on_bording_view.dart';
 import 'package:aman_store2/features/splash_screen/views/splash_screen_view.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/home/prsentation/views/home_new_aman_view.dart';
+import '../../features/my_account/prsentation/view_model/technical_support_cubit/technical_support_cubit.dart';
 import '../helper/cached_helper.dart';
 import '../helper/secure_storage.dart';
 import 'app_routers.dart';
@@ -75,10 +83,11 @@ abstract class Routers {
           AppRouters.homeAmanView, (context, state) => const HomeNewAmanView()),
       buildRoute(AppRouters.homeAllCategorisesView,
           (context, state) => const HomeAllCategorisess()),
-      buildRoute(AppRouters.editMyDataView,
-          (context, state) =>  EditMyDataView(
-            data: state.extra as List,
-          )),
+      buildRoute(
+          AppRouters.editMyDataView,
+          (context, state) => EditMyDataView(
+                data: state.extra as List,
+              )),
       buildRoute(AppRouters.followOrderView,
           (context, state) => const FollowOrderView()),
       buildRoute(AppRouters.ratingOrderTryingView,
@@ -94,7 +103,22 @@ abstract class Routers {
       buildRoute(AppRouters.categorieeItemsView,
           (context, state) => CategorieeItemsView(data: state.extra as List)),
       buildRoute(
-          AppRouters.favoriteView, (context, state) => const FavoriteView())
+          AppRouters.favoriteView, (context, state) => const FavoriteView()),
+      buildRoute(AppRouters.termsAndConditions,
+          (context, state) => const TermsAndConditions()),
+      buildRoute(
+          AppRouters.aboutAmanView, (context, state) => const AboutAmanView()),
+      buildRoute(
+        AppRouters.technicalSupportView,
+        (context, state) => BlocProvider(
+          create: (context) => TechnicalSupportCubit(gitIt()),
+          child: const TechnicalSupportView(),
+        ),
+      ),
+         buildRoute(
+          AppRouters.questionsView, (context, state) =>  BlocProvider(
+            create: (context) => FaqQusetionsCubit(gitIt())..getFaqQusetions(),
+            child: const QuesentaionView()),),
     ],
   );
 }

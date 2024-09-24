@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:aman_store2/core/utils/app_assets.dart';
 import 'package:aman_store2/core/utils/app_colors.dart';
 import 'package:aman_store2/core/utils/app_styles.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';

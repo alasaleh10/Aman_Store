@@ -14,6 +14,18 @@ class Assets {
   /// assets/images/add_cart.svg
   static const String imagesAddCart = "assets/images/add_cart.svg";
 
+  /// Assets for imagesAmanFooter1
+  /// assets/images/amanFooter1.png
+  static const String imagesAmanFooter1 = "assets/images/amanFooter1.png";
+
+  /// Assets for imagesAmanFooter2
+  /// assets/images/amanFooter2.png
+  static const String imagesAmanFooter2 = "assets/images/amanFooter2.png";
+
+  /// Assets for imagesAmanLogo
+  /// assets/images/amanLogo.png
+  static const String imagesAmanLogo = "assets/images/amanLogo.png";
+
   /// Assets for imagesCart
   /// assets/images/cart.svg
   static const String imagesCart = "assets/images/cart.svg";
@@ -205,10 +217,6 @@ class Assets {
   /// Assets for imagesTestOffers
   /// assets/images/testOffers.png
   static const String imagesTestOffers = "assets/images/testOffers.png";
-
-  /// Assets for imagesTestProfile
-  /// assets/images/testProfile.png
-  static const String imagesTestProfile = "assets/images/testProfile.png";
 
   /// Assets for imagesUsername
   /// assets/images/username.svg

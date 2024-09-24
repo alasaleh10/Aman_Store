@@ -1,13 +1,16 @@
-import '../../../home_screen/view_model/home_screen_cuibt/home_screen_cubit.dart';
+import 'package:aman_store2/core/routers/app_routers.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../home_screen/view_model/home_screen_cuibt/home_screen_cubit.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/utils/app_assets.dart';
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_styles.dart';
-import 'widgets/drwer_image.dart';
-import 'widgets/home_drwer_list_tile.dart';
+import '../../../core/utils/app_assets.dart';
+import '../../../core/utils/app_colors.dart';
+import '../../../core/utils/app_styles.dart';
+import '../widgets/drwer_image.dart';
+import '../widgets/home_drwer_list_tile.dart';
 
 class HomeDrwer extends StatelessWidget {
   const HomeDrwer({super.key});
@@ -81,9 +84,17 @@ class HomeDrwer extends StatelessWidget {
                     closeDrwer(context, 4);
                   }),
               DrwerListTile(
-                  image: Assets.imagesAbout, title: 'about'.tr(), onTap: () {}),
+                  image: Assets.imagesAbout,
+                  title: 'about'.tr(),
+                  onTap: () {
+                    context.pushNamed(AppRouters.aboutAmanView);
+                  }),
               DrwerListTile(
-                  image: Assets.imagesTerms, title: 'terms'.tr(), onTap: () {}),
+                  image: Assets.imagesTerms,
+                  title: 'terms'.tr(),
+                  onTap: () {
+                    context.pushNamed(AppRouters.termsAndConditions);
+                  }),
               DrwerListTile(
                   image: Assets.imagesShare, title: 'share'.tr(), onTap: () {}),
             ],
@@ -96,6 +107,6 @@ class HomeDrwer extends StatelessWidget {
 
   void closeDrwer(BuildContext context, int index) {
     Scaffold.of(context).closeDrawer();
-    BlocProvider.of<HomeScreenCubit>(context).changePage(index: index);
+    context.read<HomeScreenCubit>().changePage(index: index);
   }
 }

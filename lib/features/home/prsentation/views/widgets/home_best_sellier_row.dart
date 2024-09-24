@@ -15,8 +15,8 @@ class HomeBestSellerRow extends StatelessWidget {
           child: Row(
               children: List.generate(
                   testList.length,
-                  (index) => Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                  (index) => const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8),
                     // child: HomeItemsContiner(
                     //   testModel: testList[index],
                     // ),

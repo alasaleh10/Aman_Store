@@ -14,8 +14,8 @@ class MonthStockListRow extends StatelessWidget {
           child: Row(
             children: List.generate(
               testList.length,
-              (index) => Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+              (index) => const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 // child: HomeItemsContiner(testModel: testList[index]),
               ),
             ),

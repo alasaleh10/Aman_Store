@@ -19,7 +19,7 @@ class AccountListTileColumn extends StatelessWidget {
             title: 'mySavedAddress'.tr(),
             image: Assets.imagesLocation2,
             onTap: () {
-              GoRouter.of(context).pushNamed(AppRouters.savedAddressView);
+              context.pushNamed(AppRouters.savedAddressView);
             }),
         AccountCustomListTile(
             title: 'paymentMethods'.tr(),
@@ -34,11 +34,15 @@ class AccountListTileColumn extends StatelessWidget {
         AccountCustomListTile(
             title: 'technicalSupport'.tr(),
             image: Assets.imagesSupport,
-            onTap: () {}),
+            onTap: () {
+              context.pushNamed(AppRouters.technicalSupportView);
+            }),
         AccountCustomListTile(
             title: 'frequentyQuestions'.tr(),
             image: Assets.imagesQuestions,
-            onTap: () {}),
+            onTap: () {
+              context.pushNamed(AppRouters.questionsView);
+            }),
         AccountCustomListTile(
             title: 'logOut'.tr(),
             image: Assets.imagesLogout,

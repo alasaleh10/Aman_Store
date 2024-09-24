@@ -124,12 +124,12 @@ class _LocationServices implements LocationServices {
   }
 
   @override
-  Future<LocationMessageModel> deleteLocation(int id) async {
+  Future<DoneModel> deleteLocation(int id) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<LocationMessageModel>(Options(
+    final _options = _setStreamType<DoneModel>(Options(
       method: 'DELETE',
       headers: _headers,
       extra: _extra,
@@ -146,9 +146,9 @@ class _LocationServices implements LocationServices {
           baseUrl,
         )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late LocationMessageModel _value;
+    late DoneModel _value;
     try {
-      _value = LocationMessageModel.fromJson(_result.data!);
+      _value = DoneModel.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

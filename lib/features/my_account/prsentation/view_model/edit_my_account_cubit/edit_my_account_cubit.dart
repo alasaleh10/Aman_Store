@@ -1,6 +1,6 @@
 import 'package:aman_store2/core/functions/cheek_internet.dart';
 import 'package:aman_store2/features/my_account/data/account_repo.dart';
-import 'package:aman_store2/features/my_account/data/push_user_model.dart';
+import 'package:aman_store2/features/my_account/data/models/push_user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -40,7 +40,7 @@ class EditMyAccountCubit extends Cubit<EditMyAccountState> {
           emit(EditMyAccountState.failure(failure.message ?? 'فشلةالعملية'));
         });
       } else {
-        emit(const EditMyAccountState.noInternet());
+        emit(const EditMyAccountState.noInternet()); 
       }
     }
   }

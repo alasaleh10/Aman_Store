@@ -17,14 +17,15 @@ class AccountCustomListTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 15),
       child: ListTile(
+       
         onTap: onTap,
         dense: true,
         // contentPadding: EdgeInsets.zero,
         leading: SvgPicture.asset(image),
         title: Text(
           title,
-          style: AppStyle.textStyleBold18
-              .copyWith(color: const Color(0xff45495E)),
+          style:
+              AppStyle.textStyleBold18.copyWith(color: const Color(0xff45495E)),
         ),
         trailing: const Icon(Icons.arrow_forward_ios),
       ),

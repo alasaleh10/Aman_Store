@@ -7,13 +7,13 @@ Future<void> checkLocationPermission() async {
       // إذا كانت الصلاحيات مرفوضة أو مرفوضة بشكل دائم، نطلب من المستخدم فتح الإعدادات
       bool opened = await openAppSettings();
       if (!opened) {
-        print('تعذر فتح الإعدادات');
+        // print('تعذر فتح الإعدادات');
       }
     } else if (permissionStatus.isGranted) {
       // الصلاحيات ممنوحة
-      print('تم منح صلاحيات الموقع.');
+      // print('تم منح صلاحيات الموقع.');
     } else if (permissionStatus.isRestricted || permissionStatus.isLimited) {
       // حالات أخرى محتملة
-      print('الصلاحيات مقيدة.');
+      // print('الصلاحيات مقيدة.');
     }
   }

@@ -20,11 +20,10 @@ class MyAccountHome extends StatelessWidget {
             icon: const Icon(Icons.arrow_back)),
       ),
       body: ListView(
-        // ignore: prefer_const_literals_to_create_immutables
-        children:  [
-          const Divider(color: AppColors.kOtpBorderColor),
-         const UserDataColumn(),
-          const AccountListTileColumn()
+        children: const [
+          Divider(color: AppColors.kOtpBorderColor),
+          UserDataColumn(),
+          AccountListTileColumn()
         ],
       ),
     );

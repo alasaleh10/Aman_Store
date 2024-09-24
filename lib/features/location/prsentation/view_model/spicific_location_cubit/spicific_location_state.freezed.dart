@@ -24,8 +24,7 @@ mixin _$SpicificLocationState {
     required TResult Function(String errorMessage) error,
     required TResult Function() noInternet,
     required TResult Function() loading2,
-    required TResult Function(LocationMessageModel locationMessageModel)
-        loaded2,
+    required TResult Function(DoneModel locationMessageModel) loaded2,
     required TResult Function(String errorMessage) error2,
     required TResult Function() noInternet2,
   }) =>
@@ -38,7 +37,7 @@ mixin _$SpicificLocationState {
     TResult? Function(String errorMessage)? error,
     TResult? Function()? noInternet,
     TResult? Function()? loading2,
-    TResult? Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult? Function(DoneModel locationMessageModel)? loaded2,
     TResult? Function(String errorMessage)? error2,
     TResult? Function()? noInternet2,
   }) =>
@@ -51,7 +50,7 @@ mixin _$SpicificLocationState {
     TResult Function(String errorMessage)? error,
     TResult Function()? noInternet,
     TResult Function()? loading2,
-    TResult Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult Function(DoneModel locationMessageModel)? loaded2,
     TResult Function(String errorMessage)? error2,
     TResult Function()? noInternet2,
     required TResult orElse(),
@@ -162,8 +161,7 @@ class _$InitialImpl implements Initial {
     required TResult Function(String errorMessage) error,
     required TResult Function() noInternet,
     required TResult Function() loading2,
-    required TResult Function(LocationMessageModel locationMessageModel)
-        loaded2,
+    required TResult Function(DoneModel locationMessageModel) loaded2,
     required TResult Function(String errorMessage) error2,
     required TResult Function() noInternet2,
   }) {
@@ -179,7 +177,7 @@ class _$InitialImpl implements Initial {
     TResult? Function(String errorMessage)? error,
     TResult? Function()? noInternet,
     TResult? Function()? loading2,
-    TResult? Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult? Function(DoneModel locationMessageModel)? loaded2,
     TResult? Function(String errorMessage)? error2,
     TResult? Function()? noInternet2,
   }) {
@@ -195,7 +193,7 @@ class _$InitialImpl implements Initial {
     TResult Function(String errorMessage)? error,
     TResult Function()? noInternet,
     TResult Function()? loading2,
-    TResult Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult Function(DoneModel locationMessageModel)? loaded2,
     TResult Function(String errorMessage)? error2,
     TResult Function()? noInternet2,
     required TResult orElse(),
@@ -307,8 +305,7 @@ class _$LoadingImpl implements Loading {
     required TResult Function(String errorMessage) error,
     required TResult Function() noInternet,
     required TResult Function() loading2,
-    required TResult Function(LocationMessageModel locationMessageModel)
-        loaded2,
+    required TResult Function(DoneModel locationMessageModel) loaded2,
     required TResult Function(String errorMessage) error2,
     required TResult Function() noInternet2,
   }) {
@@ -324,7 +321,7 @@ class _$LoadingImpl implements Loading {
     TResult? Function(String errorMessage)? error,
     TResult? Function()? noInternet,
     TResult? Function()? loading2,
-    TResult? Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult? Function(DoneModel locationMessageModel)? loaded2,
     TResult? Function(String errorMessage)? error2,
     TResult? Function()? noInternet2,
   }) {
@@ -340,7 +337,7 @@ class _$LoadingImpl implements Loading {
     TResult Function(String errorMessage)? error,
     TResult Function()? noInternet,
     TResult Function()? loading2,
-    TResult Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult Function(DoneModel locationMessageModel)? loaded2,
     TResult Function(String errorMessage)? error2,
     TResult Function()? noInternet2,
     required TResult orElse(),
@@ -479,8 +476,7 @@ class _$LoadedImpl implements Loaded {
     required TResult Function(String errorMessage) error,
     required TResult Function() noInternet,
     required TResult Function() loading2,
-    required TResult Function(LocationMessageModel locationMessageModel)
-        loaded2,
+    required TResult Function(DoneModel locationMessageModel) loaded2,
     required TResult Function(String errorMessage) error2,
     required TResult Function() noInternet2,
   }) {
@@ -496,7 +492,7 @@ class _$LoadedImpl implements Loaded {
     TResult? Function(String errorMessage)? error,
     TResult? Function()? noInternet,
     TResult? Function()? loading2,
-    TResult? Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult? Function(DoneModel locationMessageModel)? loaded2,
     TResult? Function(String errorMessage)? error2,
     TResult? Function()? noInternet2,
   }) {
@@ -512,7 +508,7 @@ class _$LoadedImpl implements Loaded {
     TResult Function(String errorMessage)? error,
     TResult Function()? noInternet,
     TResult Function()? loading2,
-    TResult Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult Function(DoneModel locationMessageModel)? loaded2,
     TResult Function(String errorMessage)? error2,
     TResult Function()? noInternet2,
     required TResult orElse(),
@@ -657,8 +653,7 @@ class _$ErrorImpl implements Error {
     required TResult Function(String errorMessage) error,
     required TResult Function() noInternet,
     required TResult Function() loading2,
-    required TResult Function(LocationMessageModel locationMessageModel)
-        loaded2,
+    required TResult Function(DoneModel locationMessageModel) loaded2,
     required TResult Function(String errorMessage) error2,
     required TResult Function() noInternet2,
   }) {
@@ -674,7 +669,7 @@ class _$ErrorImpl implements Error {
     TResult? Function(String errorMessage)? error,
     TResult? Function()? noInternet,
     TResult? Function()? loading2,
-    TResult? Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult? Function(DoneModel locationMessageModel)? loaded2,
     TResult? Function(String errorMessage)? error2,
     TResult? Function()? noInternet2,
   }) {
@@ -690,7 +685,7 @@ class _$ErrorImpl implements Error {
     TResult Function(String errorMessage)? error,
     TResult Function()? noInternet,
     TResult Function()? loading2,
-    TResult Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult Function(DoneModel locationMessageModel)? loaded2,
     TResult Function(String errorMessage)? error2,
     TResult Function()? noInternet2,
     required TResult orElse(),
@@ -807,8 +802,7 @@ class _$NoInternetImpl implements NoInternet {
     required TResult Function(String errorMessage) error,
     required TResult Function() noInternet,
     required TResult Function() loading2,
-    required TResult Function(LocationMessageModel locationMessageModel)
-        loaded2,
+    required TResult Function(DoneModel locationMessageModel) loaded2,
     required TResult Function(String errorMessage) error2,
     required TResult Function() noInternet2,
   }) {
@@ -824,7 +818,7 @@ class _$NoInternetImpl implements NoInternet {
     TResult? Function(String errorMessage)? error,
     TResult? Function()? noInternet,
     TResult? Function()? loading2,
-    TResult? Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult? Function(DoneModel locationMessageModel)? loaded2,
     TResult? Function(String errorMessage)? error2,
     TResult? Function()? noInternet2,
   }) {
@@ -840,7 +834,7 @@ class _$NoInternetImpl implements NoInternet {
     TResult Function(String errorMessage)? error,
     TResult Function()? noInternet,
     TResult Function()? loading2,
-    TResult Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult Function(DoneModel locationMessageModel)? loaded2,
     TResult Function(String errorMessage)? error2,
     TResult Function()? noInternet2,
     required TResult orElse(),
@@ -952,8 +946,7 @@ class _$Loading2Impl implements Loading2 {
     required TResult Function(String errorMessage) error,
     required TResult Function() noInternet,
     required TResult Function() loading2,
-    required TResult Function(LocationMessageModel locationMessageModel)
-        loaded2,
+    required TResult Function(DoneModel locationMessageModel) loaded2,
     required TResult Function(String errorMessage) error2,
     required TResult Function() noInternet2,
   }) {
@@ -969,7 +962,7 @@ class _$Loading2Impl implements Loading2 {
     TResult? Function(String errorMessage)? error,
     TResult? Function()? noInternet,
     TResult? Function()? loading2,
-    TResult? Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult? Function(DoneModel locationMessageModel)? loaded2,
     TResult? Function(String errorMessage)? error2,
     TResult? Function()? noInternet2,
   }) {
@@ -985,7 +978,7 @@ class _$Loading2Impl implements Loading2 {
     TResult Function(String errorMessage)? error,
     TResult Function()? noInternet,
     TResult Function()? loading2,
-    TResult Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult Function(DoneModel locationMessageModel)? loaded2,
     TResult Function(String errorMessage)? error2,
     TResult Function()? noInternet2,
     required TResult orElse(),
@@ -1059,7 +1052,7 @@ abstract class _$$Loaded2ImplCopyWith<$Res> {
           _$Loaded2Impl value, $Res Function(_$Loaded2Impl) then) =
       __$$Loaded2ImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({LocationMessageModel locationMessageModel});
+  $Res call({DoneModel locationMessageModel});
 }
 
 /// @nodoc
@@ -1079,7 +1072,7 @@ class __$$Loaded2ImplCopyWithImpl<$Res>
       locationMessageModel: null == locationMessageModel
           ? _value.locationMessageModel
           : locationMessageModel // ignore: cast_nullable_to_non_nullable
-              as LocationMessageModel,
+              as DoneModel,
     ));
   }
 }
@@ -1090,7 +1083,7 @@ class _$Loaded2Impl implements Loaded2 {
   const _$Loaded2Impl({required this.locationMessageModel});
 
   @override
-  final LocationMessageModel locationMessageModel;
+  final DoneModel locationMessageModel;
 
   @override
   String toString() {
@@ -1124,8 +1117,7 @@ class _$Loaded2Impl implements Loaded2 {
     required TResult Function(String errorMessage) error,
     required TResult Function() noInternet,
     required TResult Function() loading2,
-    required TResult Function(LocationMessageModel locationMessageModel)
-        loaded2,
+    required TResult Function(DoneModel locationMessageModel) loaded2,
     required TResult Function(String errorMessage) error2,
     required TResult Function() noInternet2,
   }) {
@@ -1141,7 +1133,7 @@ class _$Loaded2Impl implements Loaded2 {
     TResult? Function(String errorMessage)? error,
     TResult? Function()? noInternet,
     TResult? Function()? loading2,
-    TResult? Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult? Function(DoneModel locationMessageModel)? loaded2,
     TResult? Function(String errorMessage)? error2,
     TResult? Function()? noInternet2,
   }) {
@@ -1157,7 +1149,7 @@ class _$Loaded2Impl implements Loaded2 {
     TResult Function(String errorMessage)? error,
     TResult Function()? noInternet,
     TResult Function()? loading2,
-    TResult Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult Function(DoneModel locationMessageModel)? loaded2,
     TResult Function(String errorMessage)? error2,
     TResult Function()? noInternet2,
     required TResult orElse(),
@@ -1222,11 +1214,10 @@ class _$Loaded2Impl implements Loaded2 {
 }
 
 abstract class Loaded2 implements SpicificLocationState {
-  const factory Loaded2(
-          {required final LocationMessageModel locationMessageModel}) =
+  const factory Loaded2({required final DoneModel locationMessageModel}) =
       _$Loaded2Impl;
 
-  LocationMessageModel get locationMessageModel;
+  DoneModel get locationMessageModel;
   @JsonKey(ignore: true)
   _$$Loaded2ImplCopyWith<_$Loaded2Impl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1303,8 +1294,7 @@ class _$Error2Impl implements Error2 {
     required TResult Function(String errorMessage) error,
     required TResult Function() noInternet,
     required TResult Function() loading2,
-    required TResult Function(LocationMessageModel locationMessageModel)
-        loaded2,
+    required TResult Function(DoneModel locationMessageModel) loaded2,
     required TResult Function(String errorMessage) error2,
     required TResult Function() noInternet2,
   }) {
@@ -1320,7 +1310,7 @@ class _$Error2Impl implements Error2 {
     TResult? Function(String errorMessage)? error,
     TResult? Function()? noInternet,
     TResult? Function()? loading2,
-    TResult? Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult? Function(DoneModel locationMessageModel)? loaded2,
     TResult? Function(String errorMessage)? error2,
     TResult? Function()? noInternet2,
   }) {
@@ -1336,7 +1326,7 @@ class _$Error2Impl implements Error2 {
     TResult Function(String errorMessage)? error,
     TResult Function()? noInternet,
     TResult Function()? loading2,
-    TResult Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult Function(DoneModel locationMessageModel)? loaded2,
     TResult Function(String errorMessage)? error2,
     TResult Function()? noInternet2,
     required TResult orElse(),
@@ -1453,8 +1443,7 @@ class _$NoInternet2Impl implements NoInternet2 {
     required TResult Function(String errorMessage) error,
     required TResult Function() noInternet,
     required TResult Function() loading2,
-    required TResult Function(LocationMessageModel locationMessageModel)
-        loaded2,
+    required TResult Function(DoneModel locationMessageModel) loaded2,
     required TResult Function(String errorMessage) error2,
     required TResult Function() noInternet2,
   }) {
@@ -1470,7 +1459,7 @@ class _$NoInternet2Impl implements NoInternet2 {
     TResult? Function(String errorMessage)? error,
     TResult? Function()? noInternet,
     TResult? Function()? loading2,
-    TResult? Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult? Function(DoneModel locationMessageModel)? loaded2,
     TResult? Function(String errorMessage)? error2,
     TResult? Function()? noInternet2,
   }) {
@@ -1486,7 +1475,7 @@ class _$NoInternet2Impl implements NoInternet2 {
     TResult Function(String errorMessage)? error,
     TResult Function()? noInternet,
     TResult Function()? loading2,
-    TResult Function(LocationMessageModel locationMessageModel)? loaded2,
+    TResult Function(DoneModel locationMessageModel)? loaded2,
     TResult Function(String errorMessage)? error2,
     TResult Function()? noInternet2,
     required TResult orElse(),

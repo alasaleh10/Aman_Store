@@ -35,6 +35,12 @@ class ApiConstanses {
   static const String deleteFavorite = 'favorites/deleteFavorite';
   static const String myFavorite = 'favorites';
 
+  // problems
+  static const String addProblem = 'problems/addProblem';
+  static const String getFaqQusetions = 'problems/getFaqQusetions';
+
+
+
   
 
 

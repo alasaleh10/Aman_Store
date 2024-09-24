@@ -26,4 +26,3 @@ User _$UserFromJson(Map<String, dynamic> json) => User(
       json['isApproved'] as bool,
     );
 
-

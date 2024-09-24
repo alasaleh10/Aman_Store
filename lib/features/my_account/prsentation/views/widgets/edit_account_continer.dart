@@ -1,5 +1,5 @@
 import 'package:aman_store2/features/auth/data/model/user_model.dart';
-import 'package:aman_store2/features/my_account/data/push_user_model.dart';
+import 'package:aman_store2/features/my_account/data/models/push_user_model.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

@@ -4,8 +4,10 @@ import 'package:flutter_svg/svg.dart';
 
 import '../utils/app_colors.dart';
 import '../utils/app_styles.dart';
+import 'custom_textform_border.dart';
 
 class CustomTextFormField extends StatelessWidget {
+  final Color? borderColor;
   final bool isCommed;
   final void Function(String)? onChanged;
   final Widget? seffexIcon;
@@ -21,12 +23,15 @@ class CustomTextFormField extends StatelessWidget {
       {super.key,
       this.image,
       required this.title,
-       this.textFormController,
+      this.textFormController,
       this.validation,
       this.obesText = false,
       this.textInputType,
       this.isCommed = false,
-      this.maxLines = 1, this.seffexIcon, this.onChanged});
+      this.maxLines = 1,
+      this.seffexIcon,
+      this.onChanged,
+      this.borderColor});
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +46,15 @@ class CustomTextFormField extends StatelessWidget {
         controller: textFormController,
         cursorColor: AppColors.kPrimColor,
         decoration: InputDecoration(
+            floatingLabelBehavior: maxLines > 1
+                ? FloatingLabelBehavior.always
+                : FloatingLabelBehavior.auto,
             hintStyle: AppStyle.textStyleRegular16,
             hintText: title,
             errorStyle: AppStyle.textStyleRegular14
                 .copyWith(color: AppColors.kPrimColor3),
-            label: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10.w),
+            label: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 9),
                 child: Text(title, style: AppStyle.textStyleRegular16)),
             prefixIconColor: Colors.black,
             suffixIcon: seffexIcon,
@@ -67,22 +75,19 @@ class CustomTextFormField extends StatelessWidget {
                     ),
                   ),
             // Text(title, style: AppStyle.textStyleRegular16)
-            focusedErrorBorder: textFormBorder(isCommed: isCommed),
-            disabledBorder: textFormBorder(isCommed: isCommed),
+            focusedErrorBorder:
+                textFormBorder(isCommed: isCommed, borderColor: borderColor),
+            disabledBorder:
+                textFormBorder(isCommed: isCommed, borderColor: borderColor),
             contentPadding: EdgeInsets.symmetric(
                 vertical: 10, horizontal: isCommed ? 15 : 0),
-            focusedBorder: textFormBorder(isCommed: isCommed),
-            errorBorder: textFormBorder(isCommed: isCommed),
-            enabledBorder: textFormBorder(isCommed: isCommed)),
+            focusedBorder:
+                textFormBorder(isCommed: isCommed, borderColor: borderColor),
+            errorBorder:
+                textFormBorder(isCommed: isCommed, borderColor: borderColor),
+            enabledBorder:
+                textFormBorder(isCommed: isCommed, borderColor: borderColor)),
       ),
     );
-  }
-
-  OutlineInputBorder textFormBorder({bool isCommed = false}) {
-    return OutlineInputBorder(
-        borderRadius: BorderRadius.circular(isCommed ? 10 : 20),
-        borderSide: isCommed
-            ? const BorderSide(color: AppColors.kOtpBorderColor)
-            : const BorderSide());
   }
 }

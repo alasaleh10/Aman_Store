@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/functions/is_arabic.dart';
-import '../../../../../core/utils/app_assets.dart';
+import '../../../core/functions/is_arabic.dart';
+import '../../../core/utils/app_assets.dart';
 
 class DrwerImage extends StatelessWidget {
   const DrwerImage({super.key});
