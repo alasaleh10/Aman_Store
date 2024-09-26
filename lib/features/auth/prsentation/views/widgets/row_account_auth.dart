@@ -19,12 +19,10 @@ class RowAccountAuth extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          title1,
-          style: AppStyle.textStyleRegular16
-          
-          // textStyl16.copyWith(color: Colors.black),
-        ),
+        Text(title1, style: AppStyle.textStyleRegular16
+
+            // textStyl16.copyWith(color: Colors.black),
+            ),
         TextButton(
             onPressed: onPressed,
             child: Text(title2,

@@ -24,13 +24,13 @@ class LocationRepo {
 
   Future<ApiResult<ListLocationsModel>> getMyLocations() async {
     try {
-     
       var response = await _locationService.getMyLocations();
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
+
   Future<ApiResult<LocationsModel>> spicificLocation(int id) async {
     try {
       var response = await _locationService.spicificLocation(id);

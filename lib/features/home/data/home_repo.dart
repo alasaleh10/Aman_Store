@@ -58,5 +58,4 @@ class HomeRepo {
       return ApiResult.failure(ApiErrorHandler.handle(err));
     }
   }
-
 }

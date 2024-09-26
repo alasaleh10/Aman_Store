@@ -11,16 +11,16 @@ class HomeBestSellerRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
         child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-              children: List.generate(
-                  testList.length,
-                  (index) => const Padding(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+          children: List.generate(
+              testList.length,
+              (index) => const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 8),
                     // child: HomeItemsContiner(
                     //   testModel: testList[index],
                     // ),
                   ))),
-        ));
+    ));
   }
 }

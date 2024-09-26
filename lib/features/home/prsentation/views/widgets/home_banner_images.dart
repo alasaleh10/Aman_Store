@@ -12,7 +12,7 @@ class HomeBannerImages extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: SizedBox(
-        height:screenHeight(context) / 4,
+        height: screenHeight(context) / 4,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Swiper(

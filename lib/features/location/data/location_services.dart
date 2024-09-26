@@ -17,10 +17,11 @@ abstract class LocationServices {
   factory LocationServices(Dio dio, {String baseUrl}) = _LocationServices;
 
   @POST(ApiConstanses.addLocation)
-  Future<LocationModel> addLocation(@Body() AddLocationToJson addLocationToJson);
+  Future<LocationModel> addLocation(
+      @Body() AddLocationToJson addLocationToJson);
 
   @GET(ApiConstanses.myLocations)
-  Future<ListLocationsModel> getMyLocations(); 
+  Future<ListLocationsModel> getMyLocations();
 
   @GET('${ApiConstanses.spicificLocation}/{id}')
   Future<LocationsModel> spicificLocation(@Path('id') int id);

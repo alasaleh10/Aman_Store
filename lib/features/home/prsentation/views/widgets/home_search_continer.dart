@@ -33,9 +33,7 @@ class HomeSearchContiner extends StatelessWidget {
                 Text('whatyouloking'.tr(),
                     style: AppStyle.textStyleBold12.copyWith(
                         fontWeight: FontWeight.w400,
-                        color: const Color(0xffC4C4C4))
-                    
-                    ),
+                        color: const Color(0xffC4C4C4))),
                 const Icon(
                   Icons.search,
                   size: 30,

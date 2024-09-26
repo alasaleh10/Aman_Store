@@ -1,9 +1,9 @@
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../data/models/list_locations_model.dart';
 
 part 'my_address_state.freezed.dart';
+
 @freezed
 class MyAddressState with _$MyAddressState {
   const factory MyAddressState.initial() = Initial;

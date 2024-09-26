@@ -1,4 +1,3 @@
-
 import 'package:aman_store2/core/networking/api_error_handler.dart';
 
 import 'package:aman_store2/features/auth/data/auth_servises.dart';
@@ -31,6 +30,7 @@ class AuthRepo {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
+
   Future<ApiResult<UserModel>> login(Map<String, dynamic> data) async {
     try {
       var response = await _authServices.login(data);
@@ -39,26 +39,23 @@ class AuthRepo {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
- 
- Future<ApiResult> forgetPassword(String email) async {
+
+  Future<ApiResult> forgetPassword(String email) async {
     try {
-      var response = await _authServices.forgetPassword({
-        'email':email
-      });
+      var response = await _authServices.forgetPassword({'email': email});
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
 
-  Future<ApiResult> restPassword({required String password,required String confirm,required String email}) async {
+  Future<ApiResult> restPassword(
+      {required String password,
+      required String confirm,
+      required String email}) async {
     try {
-      var response = await _authServices.restPassword({
-        'password':password,
-        'confirmPassword':confirm,
-        'email':email
-
-      });
+      var response = await _authServices.restPassword(
+          {'password': password, 'confirmPassword': confirm, 'email': email});
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));

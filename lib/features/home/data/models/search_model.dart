@@ -1,5 +1,4 @@
-class SearchModel
-{
+class SearchModel {
   int? id;
   String? search;
   SearchModel({
@@ -7,7 +6,7 @@ class SearchModel
     this.search,
   });
   factory SearchModel.fromJson(Map<String, dynamic> json) => SearchModel(
-    id: json['id'],
-    search: json['search'],
-  );
+        id: json['id'],
+        search: json['search'],
+      );
 }

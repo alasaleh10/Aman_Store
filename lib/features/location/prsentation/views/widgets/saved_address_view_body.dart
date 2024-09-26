@@ -30,7 +30,7 @@ class SavedAddressViewBody extends StatelessWidget {
           loading: () => const LoadingViewPage(),
           noInternet: () => NoInternetPage(
             onTap: () {
-             context.read<MyAddressCubit>().getMyLocations();
+              context.read<MyAddressCubit>().getMyLocations();
             },
           ),
           orElse: () => const SizedBox(),

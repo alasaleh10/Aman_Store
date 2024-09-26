@@ -18,12 +18,9 @@ class DrwerListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: onTap,
-      title: Text(
-        title,
-        style: AppStyle.textStyleRegular16.copyWith(color: AppColors.kPrimColor5)
-       
-        
-      ),
+      title: Text(title,
+          style: AppStyle.textStyleRegular16
+              .copyWith(color: AppColors.kPrimColor5)),
       leading: SvgPicture.asset(
         image,
         height: 25,

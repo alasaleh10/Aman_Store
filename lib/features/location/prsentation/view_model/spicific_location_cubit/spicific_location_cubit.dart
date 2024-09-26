@@ -46,7 +46,7 @@ class SpicificLocationCubit extends Cubit<SpicificLocationState> {
   }
 
   void deleteLocation() async {
-    opreation=2;
+    opreation = 2;
     emit(const SpicificLocationState.loading2());
     if (await isConncection()) {
       var response = await _locationRepo.deleteLocation(id);

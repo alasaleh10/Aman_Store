@@ -25,7 +25,7 @@ class EditAddressView extends StatelessWidget {
                 color: AppColors.kBlackColor, fontWeight: FontWeight.w400),
           ),
         ),
-        body:  EditLocationViewBody(
+        body: EditLocationViewBody(
           context2: data[1],
         ),
       ),

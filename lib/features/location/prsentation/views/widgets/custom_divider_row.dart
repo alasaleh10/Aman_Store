@@ -1,4 +1,3 @@
-
 import 'package:aman_store2/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -6,7 +5,7 @@ import '../../view_model/add_location_cuibt/add_location_cubit.dart';
 
 class CustomDividerRow extends StatelessWidget {
   final AddLocationCubit cubit;
-   CustomDividerRow({super.key, required this.cubit});
+  CustomDividerRow({super.key, required this.cubit});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,8 @@ class CustomDividerRow extends StatelessWidget {
       ],
     );
   }
- final List<Color> colors = [
+
+  final List<Color> colors = [
     AppColors.kPrimColor,
     const Color(0xffFFA04A),
     const Color(0xffFFB777),

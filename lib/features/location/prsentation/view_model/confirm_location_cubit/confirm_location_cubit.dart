@@ -16,7 +16,7 @@ class ConfirmLocationCubit extends Cubit<ConfirmLocationState> {
       : super(const ConfirmLocationState.initial());
   String? lat, long;
   final key = GlobalKey<FormState>();
-  final type=TextEditingController(text: 'المنزل');
+  final type = TextEditingController(text: 'المنزل');
   final location = TextEditingController();
   final street = TextEditingController();
   final house = TextEditingController();
@@ -32,11 +32,10 @@ class ConfirmLocationCubit extends Cubit<ConfirmLocationState> {
     if (key.currentState!.validate()) {
       emit(const ConfirmLocationState.loading());
       if (await isConncection()) {
-     
         String token = await SecureStorage.readData(key: 'token') ?? '';
         DioFactory.setTokenIntoHeaderAfterLogin(token);
         var response = await _locationRepo.addLocation(AddLocationToJson(
-          type: type.text.trim(),
+            type: type.text.trim(),
             name: location.text.trim(),
             lat: lat!,
             lng: long!,

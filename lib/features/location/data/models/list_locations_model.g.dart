@@ -14,4 +14,8 @@ ListLocationsModel _$ListLocationsModelFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-
+Map<String, dynamic> _$ListLocationsModelToJson(ListLocationsModel instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'location': instance.locations,
+    };

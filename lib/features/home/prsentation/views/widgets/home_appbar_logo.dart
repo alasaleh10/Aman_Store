@@ -13,31 +13,31 @@ class HomeAppBarLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-              children: [
-                Image.asset(
-                  Assets.imagesLogo,
-                  height: screenHeight(context) * .09,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const Icon(
-                      Icons.location_on,
-                      color: AppColors.kPrimColor,
-                    ),
-                    Text(
-                      'delivAddress'.tr(),
-                      style: AppStyle.textStyleBold12,
-                    ),
-                    Text(
-                      CacheHelper.getData(key: 'location') ?? '',
-                      style: AppStyle.textStyleBold12
-                          .copyWith(fontWeight: FontWeight.w400),
-                    )
-                  ],
-                ),
-              ],
-            );
+      children: [
+        Image.asset(
+          Assets.imagesLogo,
+          height: screenHeight(context) * .09,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(
+              Icons.location_on,
+              color: AppColors.kPrimColor,
+            ),
+            Text(
+              'delivAddress'.tr(),
+              style: AppStyle.textStyleBold12,
+            ),
+            Text(
+              CacheHelper.getData(key: 'location') ?? '',
+              style: AppStyle.textStyleBold12
+                  .copyWith(fontWeight: FontWeight.w400),
+            )
+          ],
+        ),
+      ],
+    );
   }
 }

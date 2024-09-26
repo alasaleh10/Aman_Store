@@ -1,3 +1,3 @@
-const String cairoFont='Cairo';
+const String cairoFont = 'Cairo';
 
-const String elMessiri='ElMessiri';
+const String elMessiri = 'ElMessiri';

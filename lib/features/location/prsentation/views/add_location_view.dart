@@ -12,7 +12,7 @@ class AddLocationView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => AddLocationCubit()..getCurrentLocation(),
-      child:  Scaffold(
+      child: Scaffold(
         body: SafeArea(
           child: AddLocationBodyView(
             index: index,

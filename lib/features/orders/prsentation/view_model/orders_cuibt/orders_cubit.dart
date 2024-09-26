@@ -10,7 +10,6 @@ class OrdersCubit extends Cubit<OrdersState> {
   void changepage({required int index}) {
     this.index = index;
     pageController.animateToPage(index,
-        duration: const Duration(milliseconds: 400),
-        curve: Curves.bounceIn);
+        duration: const Duration(milliseconds: 400), curve: Curves.bounceIn);
   }
 }

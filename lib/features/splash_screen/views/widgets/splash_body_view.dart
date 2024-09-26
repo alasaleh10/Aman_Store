@@ -42,8 +42,8 @@ class _SplashBodyViewState extends State<SplashBodyView>
   }
 
   void initAnimation() {
-    controller =
-        AnimationController(vsync: this, duration: const Duration(milliseconds: 1000));
+    controller = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 1000));
     animation = Tween<double>(begin: 0.0, end: 1.0).animate(controller);
     controller.forward();
 
@@ -51,8 +51,8 @@ class _SplashBodyViewState extends State<SplashBodyView>
   }
 
   void goOnBording() {
-     Future.delayed(const Duration(milliseconds: 1700), () {
-     context.pushReplacementNamed(AppRouters.onBordingView);
+    Future.delayed(const Duration(milliseconds: 1700), () {
+      context.pushReplacementNamed(AppRouters.onBordingView);
     });
   }
 

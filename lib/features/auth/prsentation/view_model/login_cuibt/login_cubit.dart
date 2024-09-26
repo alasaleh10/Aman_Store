@@ -1,6 +1,7 @@
 import 'package:aman_store2/core/functions/cheek_internet.dart';
 import 'package:aman_store2/core/helper/secure_storage.dart';
 import 'package:aman_store2/core/networking/dio_factory.dart';
+import 'package:aman_store2/core/validations/remove_symbols.dart';
 import 'package:aman_store2/features/auth/data/repos/auth_repo.dart';
 import 'package:flutter/material.dart';
 
@@ -29,8 +30,10 @@ class LoginCubit extends Cubit<LoginState> {
   }
 
   void login() async {
-    var result = await _authRepo
-        .login({'phone': phone.text.trim(), 'password': password.text.trim()});
+    var result = await _authRepo.login({
+      'phone': removeSymbols(phone.text),
+      'password': removeSymbols(password.text)
+    });
     result.when(success: (user) async {
       if (user.user.isApproved == true) {
         await SecureStorage.saveData(

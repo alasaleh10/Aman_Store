@@ -11,9 +11,7 @@ class AddLocationCubit extends Cubit<AddLocationState> {
   String? myCurrentLocation;
   Set<Marker> markers = {};
   getCurrentLocation() async {
-
-   
-     emit(const AddLocationState.loading());
+    emit(const AddLocationState.loading());
     if (!await servess.cheekLocationPermision()) {
       emit(const AddLocationState.noPermision());
       return;

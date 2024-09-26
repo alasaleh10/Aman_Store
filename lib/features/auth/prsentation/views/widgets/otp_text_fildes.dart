@@ -25,7 +25,6 @@ class CustomTextFailedOtp extends StatelessWidget {
         fieldHeight: 60.h,
         showFieldAsBox: true,
         borderRadius: BorderRadius.circular(8.r),
-      
 
         onSubmit: (String verificationCode) {
           cubit.otpCode = verificationCode;

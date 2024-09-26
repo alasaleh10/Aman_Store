@@ -13,29 +13,27 @@ import '../../features/location/data/location_services.dart';
 import '../../features/location/data/repo/location_repo.dart';
 import '../../features/my_account/data/account_repo.dart';
 import '../../features/my_account/data/account_servises.dart';
+import '../../features/product_detils/data/detils_repo.dart';
+import '../../features/product_detils/data/p_detils_serviss.dart';
 import '../networking/dio_factory.dart';
 
 final gitIt = GetIt.instance;
 
-Future<void> setUpGetIt() async 
-{
+Future<void> setUpGetIt() async {
   // dio
-   Dio dio =await DioFactory.getDio();
-  
+  Dio dio = await DioFactory.getDio();
 
   //  Auth
   gitIt.registerSingleton(AuthServices(dio));
-  gitIt .registerFactory<AuthRepo> (()=>AuthRepo(gitIt()));
+  gitIt.registerFactory<AuthRepo>(() => AuthRepo(gitIt()));
 
   // location
   gitIt.registerSingleton(LocationServices(dio));
-  gitIt .registerFactory<LocationRepo> (()=>LocationRepo(gitIt()));
-
-
+  gitIt.registerFactory<LocationRepo>(() => LocationRepo(gitIt()));
 
   // categoriess
   gitIt.registerSingleton(CategorieeServices(dio));
-  gitIt .registerFactory<CategoriessRepo> (()=>CategoriessRepo(gitIt()));
+  gitIt.registerFactory<CategoriessRepo>(() => CategoriessRepo(gitIt()));
 
   // Favorite
   gitIt.registerSingleton(FavoriteServises(dio));
@@ -43,13 +41,13 @@ Future<void> setUpGetIt() async
 
   // account
   gitIt.registerSingleton(AccountServices(dio));
-  gitIt .registerFactory<AccountRepo> (()=>AccountRepo(gitIt()));
+  gitIt.registerFactory<AccountRepo>(() => AccountRepo(gitIt()));
 
   //  home
   gitIt.registerSingleton(HomeServices(dio));
-  gitIt .registerFactory<HomeRepo>(() => HomeRepo(gitIt()));
+  gitIt.registerFactory<HomeRepo>(() => HomeRepo(gitIt()));
 
-   
-
-   
+  // detils
+  gitIt.registerSingleton(ProductDetilsServiss(dio));
+  gitIt.registerFactory<ProductDetilsRepo>(() => ProductDetilsRepo(gitIt()));
 }

@@ -16,7 +16,8 @@ class ConfirmLocationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ConfirmLocationCubit(gitIt(), addLocationModel)..onInit(),
+      create: (context) =>
+          ConfirmLocationCubit(gitIt(), addLocationModel)..onInit(),
       child: Scaffold(
         appBar: AppBar(
           title: Text(

@@ -49,8 +49,7 @@ class DCartDeliveryContiner extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text('deliveryWithin'.tr(),
-                    style: AppStyle.textStyleBold12),
+                Text('deliveryWithin'.tr(), style: AppStyle.textStyleBold12),
                 Text('+ 20 ${'ry'.tr()}',
                     style: AppStyle.textStyleBold12.copyWith(
                         color: AppColors.kPrimColor,

@@ -29,7 +29,9 @@ class CategorieeItemsViewBody extends StatelessWidget {
             sucsess: ((products) {
               return CustomProductGridView(
                 onTap: () {
-               context.read<CategorieeProductsCubit>().getProducts(isFromOpretion: true);
+                  context
+                      .read<CategorieeProductsCubit>()
+                      .getProducts(isFromOpretion: true);
                 },
                 listProductModel: products,
               );

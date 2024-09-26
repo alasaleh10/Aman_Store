@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../core/widgets/product_item/add_cart_button.dart';
 
-
 class HomeSearchItemDiscountContiner extends StatelessWidget {
   final bool isOrder;
   final int cartCount, id, oldPrice, discount;
@@ -13,7 +12,8 @@ class HomeSearchItemDiscountContiner extends StatelessWidget {
       required this.cartCount,
       required this.id,
       required this.oldPrice,
-      required this.discount, required this.isOrder});
+      required this.discount,
+      required this.isOrder});
 
   @override
   Widget build(BuildContext context) {
@@ -38,21 +38,20 @@ class HomeSearchItemDiscountContiner extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 15),
-        if(isOrder==false)  const Expanded(
-              flex: 4,
-              child: Padding(
-                padding: EdgeInsetsDirectional.only(end: 5),
-                child: 
-                
-                ItemAddToCartButton(
-                  horizontal: 0,
-                  vertical: 0,
+          if (isOrder == false)
+            const Expanded(
+                flex: 4,
+                child: Padding(
+                  padding: EdgeInsetsDirectional.only(end: 5),
+                  child: ItemAddToCartButton(
+                    horizontal: 0,
+                    vertical: 0,
 
-                  // vertical: 1,
-                  id: 5,
-                ),
-                //  HomeSearchItemCartCounter(count: cartCount, id: id),
-              ))
+                    // vertical: 1,
+                    id: 5,
+                  ),
+                  //  HomeSearchItemCartCounter(count: cartCount, id: id),
+                ))
         ],
       ),
     );

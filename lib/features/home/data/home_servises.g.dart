@@ -14,7 +14,7 @@ class _HomeServices implements HomeServices {
     this.baseUrl,
     this.errorLogger,
   }) {
-    baseUrl ??= 'http://10.0.2.2:8000/api/';
+    baseUrl ??= 'http://192.168.10.164:8000/api/';
   }
 
   final Dio _dio;

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class HomeCategoriseListView extends StatelessWidget {
   const HomeCategoriseListView({super.key});
 
@@ -12,11 +11,11 @@ class HomeCategoriseListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: List.generate(
-             4,
+              4,
               (index) => const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 7.5),
-                    child:Text('f')
-                    //  CategorieItem(testCategorieModel: testCategorieList[index]),
+                  padding: EdgeInsets.symmetric(horizontal: 7.5),
+                  child: Text('f')
+                  //  CategorieItem(testCategorieModel: testCategorieList[index]),
                   )),
         ),
       ),

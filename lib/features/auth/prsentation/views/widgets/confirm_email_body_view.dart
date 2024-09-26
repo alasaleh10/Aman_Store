@@ -1,4 +1,3 @@
-
 import 'package:aman_store2/features/auth/prsentation/view_model/confirm_email_cuibt/confirm_email_state.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -64,8 +63,6 @@ class ConfirmEmailBodyView extends StatelessWidget {
                     if (index == 0) {
                       // await SecureStorage.readData(key: 'token');
 
-
-                    
                       // ignore: use_build_context_synchronously
                       context.pushReplacementNamed(AppRouters.addLocationView,
                           extra: 0);

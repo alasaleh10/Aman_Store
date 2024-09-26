@@ -25,7 +25,6 @@ class _FaqQuestionsSucsessWidgetState extends State<FaqQuestionsSucsessWidget> {
         if (notification.metrics.pixels ==
                 notification.metrics.maxScrollExtent &&
             notification is ScrollUpdateNotification) {
-          
           context
               .read<FaqQusetionsCubit>()
               .getFaqQusetions(isFrompagination: true);

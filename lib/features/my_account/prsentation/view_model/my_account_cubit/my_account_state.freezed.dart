@@ -22,7 +22,9 @@ mixin _$MyAccountState {
     required TResult Function() loading,
     required TResult Function(UserModel userModel) sucsess,
     required TResult Function(String error) failure,
+    required TResult Function(String error) failure2,
     required TResult Function() noInternet,
+    required TResult Function(DoneModel doneModel) editImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,7 +33,9 @@ mixin _$MyAccountState {
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? sucsess,
     TResult? Function(String error)? failure,
+    TResult? Function(String error)? failure2,
     TResult? Function()? noInternet,
+    TResult? Function(DoneModel doneModel)? editImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,7 +44,9 @@ mixin _$MyAccountState {
     TResult Function()? loading,
     TResult Function(UserModel userModel)? sucsess,
     TResult Function(String error)? failure,
+    TResult Function(String error)? failure2,
     TResult Function()? noInternet,
+    TResult Function(DoneModel doneModel)? editImage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -50,7 +56,9 @@ mixin _$MyAccountState {
     required TResult Function(Loading value) loading,
     required TResult Function(Sucsess value) sucsess,
     required TResult Function(Failure value) failure,
+    required TResult Function(Failure2 value) failure2,
     required TResult Function(NoInternet value) noInternet,
+    required TResult Function(EditImage value) editImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,7 +67,9 @@ mixin _$MyAccountState {
     TResult? Function(Loading value)? loading,
     TResult? Function(Sucsess value)? sucsess,
     TResult? Function(Failure value)? failure,
+    TResult? Function(Failure2 value)? failure2,
     TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(EditImage value)? editImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -68,7 +78,9 @@ mixin _$MyAccountState {
     TResult Function(Loading value)? loading,
     TResult Function(Sucsess value)? sucsess,
     TResult Function(Failure value)? failure,
+    TResult Function(Failure2 value)? failure2,
     TResult Function(NoInternet value)? noInternet,
+    TResult Function(EditImage value)? editImage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,7 +146,9 @@ class _$InitialImpl implements Initial {
     required TResult Function() loading,
     required TResult Function(UserModel userModel) sucsess,
     required TResult Function(String error) failure,
+    required TResult Function(String error) failure2,
     required TResult Function() noInternet,
+    required TResult Function(DoneModel doneModel) editImage,
   }) {
     return initial();
   }
@@ -146,7 +160,9 @@ class _$InitialImpl implements Initial {
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? sucsess,
     TResult? Function(String error)? failure,
+    TResult? Function(String error)? failure2,
     TResult? Function()? noInternet,
+    TResult? Function(DoneModel doneModel)? editImage,
   }) {
     return initial?.call();
   }
@@ -158,7 +174,9 @@ class _$InitialImpl implements Initial {
     TResult Function()? loading,
     TResult Function(UserModel userModel)? sucsess,
     TResult Function(String error)? failure,
+    TResult Function(String error)? failure2,
     TResult Function()? noInternet,
+    TResult Function(DoneModel doneModel)? editImage,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -174,7 +192,9 @@ class _$InitialImpl implements Initial {
     required TResult Function(Loading value) loading,
     required TResult Function(Sucsess value) sucsess,
     required TResult Function(Failure value) failure,
+    required TResult Function(Failure2 value) failure2,
     required TResult Function(NoInternet value) noInternet,
+    required TResult Function(EditImage value) editImage,
   }) {
     return initial(this);
   }
@@ -186,7 +206,9 @@ class _$InitialImpl implements Initial {
     TResult? Function(Loading value)? loading,
     TResult? Function(Sucsess value)? sucsess,
     TResult? Function(Failure value)? failure,
+    TResult? Function(Failure2 value)? failure2,
     TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(EditImage value)? editImage,
   }) {
     return initial?.call(this);
   }
@@ -198,7 +220,9 @@ class _$InitialImpl implements Initial {
     TResult Function(Loading value)? loading,
     TResult Function(Sucsess value)? sucsess,
     TResult Function(Failure value)? failure,
+    TResult Function(Failure2 value)? failure2,
     TResult Function(NoInternet value)? noInternet,
+    TResult Function(EditImage value)? editImage,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -254,7 +278,9 @@ class _$LoadingImpl implements Loading {
     required TResult Function() loading,
     required TResult Function(UserModel userModel) sucsess,
     required TResult Function(String error) failure,
+    required TResult Function(String error) failure2,
     required TResult Function() noInternet,
+    required TResult Function(DoneModel doneModel) editImage,
   }) {
     return loading();
   }
@@ -266,7 +292,9 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? sucsess,
     TResult? Function(String error)? failure,
+    TResult? Function(String error)? failure2,
     TResult? Function()? noInternet,
+    TResult? Function(DoneModel doneModel)? editImage,
   }) {
     return loading?.call();
   }
@@ -278,7 +306,9 @@ class _$LoadingImpl implements Loading {
     TResult Function()? loading,
     TResult Function(UserModel userModel)? sucsess,
     TResult Function(String error)? failure,
+    TResult Function(String error)? failure2,
     TResult Function()? noInternet,
+    TResult Function(DoneModel doneModel)? editImage,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -294,7 +324,9 @@ class _$LoadingImpl implements Loading {
     required TResult Function(Loading value) loading,
     required TResult Function(Sucsess value) sucsess,
     required TResult Function(Failure value) failure,
+    required TResult Function(Failure2 value) failure2,
     required TResult Function(NoInternet value) noInternet,
+    required TResult Function(EditImage value) editImage,
   }) {
     return loading(this);
   }
@@ -306,7 +338,9 @@ class _$LoadingImpl implements Loading {
     TResult? Function(Loading value)? loading,
     TResult? Function(Sucsess value)? sucsess,
     TResult? Function(Failure value)? failure,
+    TResult? Function(Failure2 value)? failure2,
     TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(EditImage value)? editImage,
   }) {
     return loading?.call(this);
   }
@@ -318,7 +352,9 @@ class _$LoadingImpl implements Loading {
     TResult Function(Loading value)? loading,
     TResult Function(Sucsess value)? sucsess,
     TResult Function(Failure value)? failure,
+    TResult Function(Failure2 value)? failure2,
     TResult Function(NoInternet value)? noInternet,
+    TResult Function(EditImage value)? editImage,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -401,7 +437,9 @@ class _$SucsessImpl implements Sucsess {
     required TResult Function() loading,
     required TResult Function(UserModel userModel) sucsess,
     required TResult Function(String error) failure,
+    required TResult Function(String error) failure2,
     required TResult Function() noInternet,
+    required TResult Function(DoneModel doneModel) editImage,
   }) {
     return sucsess(userModel);
   }
@@ -413,7 +451,9 @@ class _$SucsessImpl implements Sucsess {
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? sucsess,
     TResult? Function(String error)? failure,
+    TResult? Function(String error)? failure2,
     TResult? Function()? noInternet,
+    TResult? Function(DoneModel doneModel)? editImage,
   }) {
     return sucsess?.call(userModel);
   }
@@ -425,7 +465,9 @@ class _$SucsessImpl implements Sucsess {
     TResult Function()? loading,
     TResult Function(UserModel userModel)? sucsess,
     TResult Function(String error)? failure,
+    TResult Function(String error)? failure2,
     TResult Function()? noInternet,
+    TResult Function(DoneModel doneModel)? editImage,
     required TResult orElse(),
   }) {
     if (sucsess != null) {
@@ -441,7 +483,9 @@ class _$SucsessImpl implements Sucsess {
     required TResult Function(Loading value) loading,
     required TResult Function(Sucsess value) sucsess,
     required TResult Function(Failure value) failure,
+    required TResult Function(Failure2 value) failure2,
     required TResult Function(NoInternet value) noInternet,
+    required TResult Function(EditImage value) editImage,
   }) {
     return sucsess(this);
   }
@@ -453,7 +497,9 @@ class _$SucsessImpl implements Sucsess {
     TResult? Function(Loading value)? loading,
     TResult? Function(Sucsess value)? sucsess,
     TResult? Function(Failure value)? failure,
+    TResult? Function(Failure2 value)? failure2,
     TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(EditImage value)? editImage,
   }) {
     return sucsess?.call(this);
   }
@@ -465,7 +511,9 @@ class _$SucsessImpl implements Sucsess {
     TResult Function(Loading value)? loading,
     TResult Function(Sucsess value)? sucsess,
     TResult Function(Failure value)? failure,
+    TResult Function(Failure2 value)? failure2,
     TResult Function(NoInternet value)? noInternet,
+    TResult Function(EditImage value)? editImage,
     required TResult orElse(),
   }) {
     if (sucsess != null) {
@@ -552,7 +600,9 @@ class _$FailureImpl implements Failure {
     required TResult Function() loading,
     required TResult Function(UserModel userModel) sucsess,
     required TResult Function(String error) failure,
+    required TResult Function(String error) failure2,
     required TResult Function() noInternet,
+    required TResult Function(DoneModel doneModel) editImage,
   }) {
     return failure(error);
   }
@@ -564,7 +614,9 @@ class _$FailureImpl implements Failure {
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? sucsess,
     TResult? Function(String error)? failure,
+    TResult? Function(String error)? failure2,
     TResult? Function()? noInternet,
+    TResult? Function(DoneModel doneModel)? editImage,
   }) {
     return failure?.call(error);
   }
@@ -576,7 +628,9 @@ class _$FailureImpl implements Failure {
     TResult Function()? loading,
     TResult Function(UserModel userModel)? sucsess,
     TResult Function(String error)? failure,
+    TResult Function(String error)? failure2,
     TResult Function()? noInternet,
+    TResult Function(DoneModel doneModel)? editImage,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -592,7 +646,9 @@ class _$FailureImpl implements Failure {
     required TResult Function(Loading value) loading,
     required TResult Function(Sucsess value) sucsess,
     required TResult Function(Failure value) failure,
+    required TResult Function(Failure2 value) failure2,
     required TResult Function(NoInternet value) noInternet,
+    required TResult Function(EditImage value) editImage,
   }) {
     return failure(this);
   }
@@ -604,7 +660,9 @@ class _$FailureImpl implements Failure {
     TResult? Function(Loading value)? loading,
     TResult? Function(Sucsess value)? sucsess,
     TResult? Function(Failure value)? failure,
+    TResult? Function(Failure2 value)? failure2,
     TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(EditImage value)? editImage,
   }) {
     return failure?.call(this);
   }
@@ -616,7 +674,9 @@ class _$FailureImpl implements Failure {
     TResult Function(Loading value)? loading,
     TResult Function(Sucsess value)? sucsess,
     TResult Function(Failure value)? failure,
+    TResult Function(Failure2 value)? failure2,
     TResult Function(NoInternet value)? noInternet,
+    TResult Function(EditImage value)? editImage,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -632,6 +692,169 @@ abstract class Failure implements MyAccountState {
   String get error;
   @JsonKey(ignore: true)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$Failure2ImplCopyWith<$Res> {
+  factory _$$Failure2ImplCopyWith(
+          _$Failure2Impl value, $Res Function(_$Failure2Impl) then) =
+      __$$Failure2ImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$Failure2ImplCopyWithImpl<$Res>
+    extends _$MyAccountStateCopyWithImpl<$Res, _$Failure2Impl>
+    implements _$$Failure2ImplCopyWith<$Res> {
+  __$$Failure2ImplCopyWithImpl(
+      _$Failure2Impl _value, $Res Function(_$Failure2Impl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$Failure2Impl(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$Failure2Impl implements Failure2 {
+  const _$Failure2Impl(this.error);
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'MyAccountState.failure2(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Failure2Impl &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$Failure2ImplCopyWith<_$Failure2Impl> get copyWith =>
+      __$$Failure2ImplCopyWithImpl<_$Failure2Impl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(UserModel userModel) sucsess,
+    required TResult Function(String error) failure,
+    required TResult Function(String error) failure2,
+    required TResult Function() noInternet,
+    required TResult Function(DoneModel doneModel) editImage,
+  }) {
+    return failure2(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(UserModel userModel)? sucsess,
+    TResult? Function(String error)? failure,
+    TResult? Function(String error)? failure2,
+    TResult? Function()? noInternet,
+    TResult? Function(DoneModel doneModel)? editImage,
+  }) {
+    return failure2?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(UserModel userModel)? sucsess,
+    TResult Function(String error)? failure,
+    TResult Function(String error)? failure2,
+    TResult Function()? noInternet,
+    TResult Function(DoneModel doneModel)? editImage,
+    required TResult orElse(),
+  }) {
+    if (failure2 != null) {
+      return failure2(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Sucsess value) sucsess,
+    required TResult Function(Failure value) failure,
+    required TResult Function(Failure2 value) failure2,
+    required TResult Function(NoInternet value) noInternet,
+    required TResult Function(EditImage value) editImage,
+  }) {
+    return failure2(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Sucsess value)? sucsess,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(Failure2 value)? failure2,
+    TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(EditImage value)? editImage,
+  }) {
+    return failure2?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Sucsess value)? sucsess,
+    TResult Function(Failure value)? failure,
+    TResult Function(Failure2 value)? failure2,
+    TResult Function(NoInternet value)? noInternet,
+    TResult Function(EditImage value)? editImage,
+    required TResult orElse(),
+  }) {
+    if (failure2 != null) {
+      return failure2(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Failure2 implements MyAccountState {
+  const factory Failure2(final String error) = _$Failure2Impl;
+
+  String get error;
+  @JsonKey(ignore: true)
+  _$$Failure2ImplCopyWith<_$Failure2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -677,7 +900,9 @@ class _$NoInternetImpl implements NoInternet {
     required TResult Function() loading,
     required TResult Function(UserModel userModel) sucsess,
     required TResult Function(String error) failure,
+    required TResult Function(String error) failure2,
     required TResult Function() noInternet,
+    required TResult Function(DoneModel doneModel) editImage,
   }) {
     return noInternet();
   }
@@ -689,7 +914,9 @@ class _$NoInternetImpl implements NoInternet {
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? sucsess,
     TResult? Function(String error)? failure,
+    TResult? Function(String error)? failure2,
     TResult? Function()? noInternet,
+    TResult? Function(DoneModel doneModel)? editImage,
   }) {
     return noInternet?.call();
   }
@@ -701,7 +928,9 @@ class _$NoInternetImpl implements NoInternet {
     TResult Function()? loading,
     TResult Function(UserModel userModel)? sucsess,
     TResult Function(String error)? failure,
+    TResult Function(String error)? failure2,
     TResult Function()? noInternet,
+    TResult Function(DoneModel doneModel)? editImage,
     required TResult orElse(),
   }) {
     if (noInternet != null) {
@@ -717,7 +946,9 @@ class _$NoInternetImpl implements NoInternet {
     required TResult Function(Loading value) loading,
     required TResult Function(Sucsess value) sucsess,
     required TResult Function(Failure value) failure,
+    required TResult Function(Failure2 value) failure2,
     required TResult Function(NoInternet value) noInternet,
+    required TResult Function(EditImage value) editImage,
   }) {
     return noInternet(this);
   }
@@ -729,7 +960,9 @@ class _$NoInternetImpl implements NoInternet {
     TResult? Function(Loading value)? loading,
     TResult? Function(Sucsess value)? sucsess,
     TResult? Function(Failure value)? failure,
+    TResult? Function(Failure2 value)? failure2,
     TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(EditImage value)? editImage,
   }) {
     return noInternet?.call(this);
   }
@@ -741,7 +974,9 @@ class _$NoInternetImpl implements NoInternet {
     TResult Function(Loading value)? loading,
     TResult Function(Sucsess value)? sucsess,
     TResult Function(Failure value)? failure,
+    TResult Function(Failure2 value)? failure2,
     TResult Function(NoInternet value)? noInternet,
+    TResult Function(EditImage value)? editImage,
     required TResult orElse(),
   }) {
     if (noInternet != null) {
@@ -753,4 +988,168 @@ class _$NoInternetImpl implements NoInternet {
 
 abstract class NoInternet implements MyAccountState {
   const factory NoInternet() = _$NoInternetImpl;
+}
+
+/// @nodoc
+abstract class _$$EditImageImplCopyWith<$Res> {
+  factory _$$EditImageImplCopyWith(
+          _$EditImageImpl value, $Res Function(_$EditImageImpl) then) =
+      __$$EditImageImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({DoneModel doneModel});
+}
+
+/// @nodoc
+class __$$EditImageImplCopyWithImpl<$Res>
+    extends _$MyAccountStateCopyWithImpl<$Res, _$EditImageImpl>
+    implements _$$EditImageImplCopyWith<$Res> {
+  __$$EditImageImplCopyWithImpl(
+      _$EditImageImpl _value, $Res Function(_$EditImageImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? doneModel = null,
+  }) {
+    return _then(_$EditImageImpl(
+      null == doneModel
+          ? _value.doneModel
+          : doneModel // ignore: cast_nullable_to_non_nullable
+              as DoneModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EditImageImpl implements EditImage {
+  const _$EditImageImpl(this.doneModel);
+
+  @override
+  final DoneModel doneModel;
+
+  @override
+  String toString() {
+    return 'MyAccountState.editImage(doneModel: $doneModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditImageImpl &&
+            (identical(other.doneModel, doneModel) ||
+                other.doneModel == doneModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, doneModel);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditImageImplCopyWith<_$EditImageImpl> get copyWith =>
+      __$$EditImageImplCopyWithImpl<_$EditImageImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(UserModel userModel) sucsess,
+    required TResult Function(String error) failure,
+    required TResult Function(String error) failure2,
+    required TResult Function() noInternet,
+    required TResult Function(DoneModel doneModel) editImage,
+  }) {
+    return editImage(doneModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(UserModel userModel)? sucsess,
+    TResult? Function(String error)? failure,
+    TResult? Function(String error)? failure2,
+    TResult? Function()? noInternet,
+    TResult? Function(DoneModel doneModel)? editImage,
+  }) {
+    return editImage?.call(doneModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(UserModel userModel)? sucsess,
+    TResult Function(String error)? failure,
+    TResult Function(String error)? failure2,
+    TResult Function()? noInternet,
+    TResult Function(DoneModel doneModel)? editImage,
+    required TResult orElse(),
+  }) {
+    if (editImage != null) {
+      return editImage(doneModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Sucsess value) sucsess,
+    required TResult Function(Failure value) failure,
+    required TResult Function(Failure2 value) failure2,
+    required TResult Function(NoInternet value) noInternet,
+    required TResult Function(EditImage value) editImage,
+  }) {
+    return editImage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Sucsess value)? sucsess,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(Failure2 value)? failure2,
+    TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(EditImage value)? editImage,
+  }) {
+    return editImage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Sucsess value)? sucsess,
+    TResult Function(Failure value)? failure,
+    TResult Function(Failure2 value)? failure2,
+    TResult Function(NoInternet value)? noInternet,
+    TResult Function(EditImage value)? editImage,
+    required TResult orElse(),
+  }) {
+    if (editImage != null) {
+      return editImage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditImage implements MyAccountState {
+  const factory EditImage(final DoneModel doneModel) = _$EditImageImpl;
+
+  DoneModel get doneModel;
+  @JsonKey(ignore: true)
+  _$$EditImageImplCopyWith<_$EditImageImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

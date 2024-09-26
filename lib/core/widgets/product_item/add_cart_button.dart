@@ -1,3 +1,4 @@
+import 'package:aman_store2/core/functions/show_snac_bar.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,7 +17,9 @@ class ItemAddToCartButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        showSnackBar(context, message: 'قريبا');
+      },
       child: Container(
         padding: EdgeInsets.symmetric(
             horizontal: horizontal ?? 30.w, vertical: vertical ?? 10.h),

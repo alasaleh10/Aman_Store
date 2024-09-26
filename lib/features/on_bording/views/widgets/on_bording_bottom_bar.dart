@@ -31,7 +31,7 @@ class OnBordingBottomBar extends StatelessWidget {
             onPressed: () {
               if (cuibt.index == onbordingItems.length - 1) {
                 CacheHelper.saveData(key: AppConstants.onBording, value: true);
-           context.pushReplacementNamed(AppRouters.loginView);
+                context.pushReplacementNamed(AppRouters.loginView);
               } else {
                 cuibt.changePage();
               }

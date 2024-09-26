@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 
 String productCounter({required int count}) {
   if (count == 0) {
-    return'noProducts'.tr();
+    return 'noProducts'.tr();
   } else if (count == 1) {
     return 'oneProduct'.tr();
   } else if (count == 2) {
@@ -12,6 +12,4 @@ String productCounter({required int count}) {
   } else {
     return '$count ${'product'.tr()}';
   }
-
-  
 }

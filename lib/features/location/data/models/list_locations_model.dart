@@ -34,7 +34,8 @@ class ListLocationsModel {
     required this.locations,
   });
 
-  factory ListLocationsModel.fromJson(Map<String, dynamic> json) => _$ListLocationsModelFromJson(json);
+  factory ListLocationsModel.fromJson(Map<String, dynamic> json) =>
+      _$ListLocationsModelFromJson(json);
   // factory ListLocationsModel.fromJson(Map<String, dynamic> json) {
   //   return ListLocationsModel(
   //     status: json['status'] as bool,

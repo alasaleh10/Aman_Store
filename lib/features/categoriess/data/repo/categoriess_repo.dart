@@ -5,38 +5,26 @@ import 'package:aman_store2/features/categoriess/data/models/all_categoriess_mod
 import '../../../../core/models/product_model/list_product_model.dart';
 import '../../../../core/networking/api_error_handler.dart';
 
-class CategoriessRepo
-{
+class CategoriessRepo {
   final CategorieeServices _categorieeServices;
 
   CategoriessRepo(this._categorieeServices);
 
-  
-  Future<ApiResult<AllCategoriessModel>> getAllCategoriees()async
-
-
-  {
+  Future<ApiResult<AllCategoriessModel>> getAllCategoriees() async {
     try {
-      var response=await _categorieeServices.allCategoriee();
+      var response = await _categorieeServices.allCategoriee();
       return ApiResult.success(response);
-      
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));
-      
     }
   }
 
-
-  Future<ApiResult<ListProductModel>> getCategorieeProducts(int id)async
-  {
-
+  Future<ApiResult<ListProductModel>> getCategorieeProducts(int id) async {
     try {
-      var response=await _categorieeServices.getCategorieeProducts(id);
+      var response = await _categorieeServices.getCategorieeProducts(id);
       return ApiResult.success(response);
-      
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));
-      
     }
   }
 }

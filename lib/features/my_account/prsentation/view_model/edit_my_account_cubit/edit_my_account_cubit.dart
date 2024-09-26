@@ -40,7 +40,7 @@ class EditMyAccountCubit extends Cubit<EditMyAccountState> {
           emit(EditMyAccountState.failure(failure.message ?? 'فشلةالعملية'));
         });
       } else {
-        emit(const EditMyAccountState.noInternet()); 
+        emit(const EditMyAccountState.noInternet());
       }
     }
   }

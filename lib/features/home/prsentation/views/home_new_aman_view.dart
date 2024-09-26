@@ -13,14 +13,14 @@ class HomeNewAmanView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  BlocProvider(
+    return BlocProvider(
       create: (context) => NewAmanCubit(gitIt())..getAmanProducts(),
       child: Scaffold(
         appBar: customAppbar('newAmanStore'.tr()),
         body: ListView(
-          children:const [
+          children: const [
             // HomeNewAmanAppBar(),
-          
+
             SizedBox(height: 10),
             NewAmanViewContiner(),
             SizedBox(height: 15),

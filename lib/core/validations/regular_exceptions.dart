@@ -1,3 +1,5 @@
+import 'remove_symbols.dart';
+
 part 'validations_function.dart';
 
 abstract class RegularExceptions {

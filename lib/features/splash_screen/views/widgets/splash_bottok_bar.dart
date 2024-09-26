@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../../core/utils/app_assets.dart';
 import 'splash_image_button.dart';
 
-
-
 class SplashBottomImages extends StatelessWidget {
   const SplashBottomImages({super.key});
 

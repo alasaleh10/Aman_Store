@@ -6,6 +6,7 @@ import '../../../core/networking/api_constanses.dart';
 import '../../auth/data/model/user_model.dart';
 import 'models/faq_questions_model.dart';
 part 'account_servises.g.dart';
+
 @RestApi(baseUrl: ApiConstanses.baseUrl)
 abstract class AccountServices {
   factory AccountServices(Dio dio, {String baseUrl}) = _AccountServices;
@@ -18,4 +19,6 @@ abstract class AccountServices {
   Future<DoneModel> addProblem(@Body() Map<String, dynamic> data);
   @GET(ApiConstanses.getFaqQusetions)
   Future<Questions> getFaqQusetions(@Query('page') int page);
+  @PUT(ApiConstanses.editImage)
+  Future<DoneModel> editImage(@Body() FormData formData);
 }

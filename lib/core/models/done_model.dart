@@ -1,8 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'done_model.g.dart';
+
 @JsonSerializable()
-class DoneModel
-{
+class DoneModel {
   final bool status;
   final String message;
 

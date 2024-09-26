@@ -19,4 +19,16 @@ ProductModel _$ProductModelFromJson(Map<String, dynamic> json) => ProductModel(
       isFavorite: json['isFavorite'] as bool?,
     );
 
-
+Map<String, dynamic> _$ProductModelToJson(ProductModel instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'subName': instance.subName,
+      'description': instance.description,
+      'price': instance.price,
+      'image': instance.image,
+      'quilty': instance.quilty,
+      'discount': instance.discount,
+      'priceAfterDiscount': instance.priceAfterDiscount,
+      'isFavorite': instance.isFavorite,
+    };

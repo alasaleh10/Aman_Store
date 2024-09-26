@@ -1,4 +1,6 @@
+import 'package:aman_store2/features/my_account/prsentation/view_model/my_account_cubit/my_account_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../auth/data/model/user_model.dart';
 import 'account_image_stack.dart';
@@ -13,7 +15,11 @@ class AccountDetilsRow extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: Row(
         children: [
-          AccountImageStack(image: user.user.image, onTap: () {}),
+          AccountImageStack(
+              image: user.user.image,
+              onTap: () {
+                context.read<MyAccountCubit>().chooseImage();
+              }),
           const SizedBox(width: 20),
           Expanded(
               child: Column(

@@ -48,7 +48,7 @@ class SqlHelper {
   static Future<void> closeDatabase() async {
     if (_db != null) {
       await _db!.close();
-      
+
       _db = null;
     }
   }

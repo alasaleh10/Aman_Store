@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'product_model.g.dart';
+
 @JsonSerializable()
 class ProductModel {
   final int id;
@@ -25,5 +26,6 @@ class ProductModel {
       required this.priceAfterDiscount,
       required this.isFavorite});
 
-  factory ProductModel.fromJson(Map<String, dynamic> json) =>_$ProductModelFromJson(json);
+  factory ProductModel.fromJson(Map<String, dynamic> json) =>
+      _$ProductModelFromJson(json);
 }

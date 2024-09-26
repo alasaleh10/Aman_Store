@@ -6,8 +6,6 @@ pageAnimation({required Widget page}) {
     child: page,
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       return FadeTransition(opacity: animation, child: child);
-      
-    
     },
   );
 }

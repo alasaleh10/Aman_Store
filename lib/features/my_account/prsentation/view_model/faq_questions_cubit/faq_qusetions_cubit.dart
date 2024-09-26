@@ -43,11 +43,8 @@ class FaqQusetionsCubit extends Cubit<FaqQusetionsState> {
           emit(const FaqQusetionsState.noInternet());
         }
       }
-    }
-    else
-    {
+    } else {
       emit(const FaqQusetionsState.failure2('لاتوجد بيانات أخرى'));
     }
-   
   }
 }

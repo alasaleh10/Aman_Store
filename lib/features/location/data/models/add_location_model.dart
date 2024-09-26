@@ -4,10 +4,9 @@ class AddLocationModel {
   final String lag;
   final int index;
 
-  AddLocationModel({
-    required this.name,
-    required this.lat,
-    required this.lag,
-    required this.index
-  });
+  AddLocationModel(
+      {required this.name,
+      required this.lat,
+      required this.lag,
+      required this.index});
 }

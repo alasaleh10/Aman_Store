@@ -19,7 +19,7 @@ class EditMyDataView extends StatelessWidget {
       create: (context) => EditMyAccountCubit(gitIt(), data[1])..onInit(),
       child: Scaffold(
         appBar: customAppbar('editmyData'.tr()),
-        body:  EditMyDataViewBody(
+        body: EditMyDataViewBody(
           context2: data[0],
         ),
       ),

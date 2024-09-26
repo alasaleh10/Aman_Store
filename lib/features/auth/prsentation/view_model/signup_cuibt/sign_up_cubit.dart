@@ -5,6 +5,7 @@ import 'package:aman_store2/features/auth/data/repos/auth_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../../core/validations/remove_symbols.dart';
 import 'sign_up_state.dart';
 
 class SignUpCubit extends Cubit<SignUpState> {
@@ -30,13 +31,17 @@ class SignUpCubit extends Cubit<SignUpState> {
   }
 
   void signUp() async {
-    var response = await _authRepo.signUp(SignUpRequestBody(
-        firstName: name1.text.trim(),
-        lastName: name2.text.trim().isNotEmpty ? name2.text.trim() : null,
-        email: email.text.trim(),
-        phone: phone.text.trim(),
-        password: password1.text.trim(),
-        confirmPassword: password2.text.trim()));
+    var response = await _authRepo.signUp(
+      SignUpRequestBody(
+        firstName: removeSymbols(name1.text),
+        lastName:
+            name2.text.trim().isNotEmpty ? removeSymbols(name2.text) : null,
+        email: removeSymbols(email.text),
+        phone: removeSymbols(phone.text),
+        password: removeSymbols(password1.text),
+        confirmPassword: removeSymbols(password2.text),
+      ),
+    );
     response.when(success: (user) {
       emit(SignUpState.sucsess(user));
     }, failure: (failure) {

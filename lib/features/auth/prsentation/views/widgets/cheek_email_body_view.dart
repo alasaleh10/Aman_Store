@@ -65,8 +65,6 @@ class CheekEmailBodyView extends StatelessWidget {
                         extra: [1, cuibt.email.text.trim()]);
                   },
                 );
-
-               
               },
               child: CustomElevatedButton(
                   title: 'cheek'.tr(),

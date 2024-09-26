@@ -23,7 +23,6 @@ class FollowOrderBodyView extends StatelessWidget {
         delay: const Duration(milliseconds: 150),
         child: CustomScrollView(
           slivers: [
-           
             const FollowOrderNumber(orderNo: 500),
             SliverToBoxAdapter(child: SizedBox(height: 10.h)),
             FollowOrderTopTable(

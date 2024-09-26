@@ -1,8 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'signup_request_body.g.dart';
+
 @JsonSerializable()
 class SignUpRequestBody {
-
   final String firstName;
   final String? lastName;
   final String email;
@@ -18,7 +18,6 @@ class SignUpRequestBody {
     required this.password,
     required this.confirmPassword,
   });
-  
+
   Map<String, dynamic> toJson() => _$SignUpRequestBodyToJson(this);
-  
 }

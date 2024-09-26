@@ -9,15 +9,14 @@ class LocalizationApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  EasyLocalization(
-      startLocale: const Locale('ar'),
-      path: 'assets/translations',
-      supportedLocales: const [Locale('ar'), Locale('en')],
-      child:
-      //  const AmanStore()
-       DevicePreview(
-        builder: (context) => const AmanStore(),
-      ),
-      );
+    return EasyLocalization(
+        startLocale: const Locale('ar'),
+        path: 'assets/translations',
+        supportedLocales: const [Locale('ar'), Locale('en')],
+        child: const AmanStore()
+        //  DevicePreview(
+        //   builder: (context) => const AmanStore(),
+        // ),
+        );
   }
 }

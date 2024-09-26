@@ -51,13 +51,12 @@ class HomeView extends StatelessWidget {
             SliverToBoxAdapter(
               child: Padding(
                   padding: const EdgeInsetsDirectional.only(start: 10),
-                  child: Text('monthStock'.tr(),
-                      style: AppStyle.textStyleBold17)),
+                  child:
+                      Text('monthStock'.tr(), style: AppStyle.textStyleBold17)),
             ),
             const SliverToBoxAdapter(child: SizedBox(height: 16)),
             const MonthStockListRow(),
             const SliverToBoxAdapter(child: SizedBox(height: 24)),
-           
           ],
         ),
       ),

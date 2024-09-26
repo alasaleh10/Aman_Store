@@ -2,6 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'product_model.dart';
 part 'list_product_model.g.dart';
+
 @JsonSerializable()
 class ListProductModel {
   final bool status;
@@ -14,5 +15,4 @@ class ListProductModel {
   });
   factory ListProductModel.fromJson(Map<String, dynamic> json) =>
       _$ListProductModelFromJson(json);
-
 }

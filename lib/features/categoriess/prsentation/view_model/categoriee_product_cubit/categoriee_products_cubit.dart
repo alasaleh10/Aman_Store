@@ -10,16 +10,11 @@ class CategorieeProductsCubit extends Cubit<CategorieeProductsState> {
   CategorieeProductsCubit(this._categoriessRepo, this.catId)
       : super(const CategorieeProductsState.initial());
 
-  void getProducts({bool isFromOpretion=false}) async {
-
-    if(isFromOpretion)
-    {
-emit(const CategorieeProductsState.fromOpreations());
-    }
-    else
-    {
-    emit(const CategorieeProductsState.loading());
-
+  void getProducts({bool isFromOpretion = false}) async {
+    if (isFromOpretion) {
+      emit(const CategorieeProductsState.fromOpreations());
+    } else {
+      emit(const CategorieeProductsState.loading());
     }
 
     if (await isConncection()) {

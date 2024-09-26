@@ -1,6 +1,6 @@
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'technical_support_state.freezed.dart';
+
 @freezed
 class TechnicalSupportState with _$TechnicalSupportState {
   const factory TechnicalSupportState.initial() = Initial;

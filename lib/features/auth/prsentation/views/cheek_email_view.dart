@@ -22,4 +22,3 @@ class CheekEmailView extends StatelessWidget {
     );
   }
 }
-

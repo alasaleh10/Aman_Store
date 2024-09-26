@@ -13,11 +13,11 @@ class FaqQuestionsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<FaqQusetionsCubit, FaqQusetionsState>(
-      buildWhen: (previous, current) => current is Loading ||
-      current is Failure||
-      current is NoInternet||
-      current is Sucsess
-      ,
+      buildWhen: (previous, current) =>
+          current is Loading ||
+          current is Failure ||
+          current is NoInternet ||
+          current is Sucsess,
       builder: (context, state) {
         return state.maybeWhen(
           orElse: () => const SizedBox(),

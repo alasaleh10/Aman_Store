@@ -1,6 +1,6 @@
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'edit_my_account_state.freezed.dart';
+
 @freezed
 class EditMyAccountState with _$EditMyAccountState {
   const factory EditMyAccountState.initial() = Initial;

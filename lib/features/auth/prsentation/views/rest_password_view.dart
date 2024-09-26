@@ -12,13 +12,13 @@ class RestPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => RestPasswordCubit(gitIt(),email),
+      create: (context) => RestPasswordCubit(gitIt(), email),
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
-        body:  RestPasswordBodyView(
+        body: RestPasswordBodyView(
           email: email,
         ),
       ),

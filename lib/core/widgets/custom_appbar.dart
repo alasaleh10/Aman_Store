@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../utils/app_styles.dart';
 
-AppBar customAppbar(String title,{Color? backgroundColor}) {
+AppBar customAppbar(String title, {Color? backgroundColor}) {
   return AppBar(
     backgroundColor: backgroundColor,
     bottom: const PreferredSize(

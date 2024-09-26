@@ -29,7 +29,7 @@ class ConfirmLocationViewBody extends StatelessWidget {
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.center,
             children: [
-               CustomTextFormField(
+              CustomTextFormField(
                 title: 'نوع *',
                 validation: (val) {
                   return validations(value: val!, type: '');

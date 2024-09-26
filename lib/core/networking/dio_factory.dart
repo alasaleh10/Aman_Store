@@ -33,7 +33,6 @@ class DioFactory {
 
   static Future<void> addDioHeaders() async {
     dio?.options.headers = {
-      'Content-Type': 'application/json',
       'Accept': 'application/json',
       'Authorization': 'Bearer ${await SecureStorage.readData(key: 'token')}'
     };

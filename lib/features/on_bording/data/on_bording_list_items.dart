@@ -8,14 +8,12 @@ List<OnBordingModel> onbordingItems = [
       image: Assets.imagesOnbording1,
       title: 'onbording1T1'.tr(),
       subTitle: 'onbording1T2'.tr()),
-       OnBordingModel(
+  OnBordingModel(
       image: Assets.imagesOnbording2,
       title: 'onbording2T1'.tr(),
       subTitle: 'onbording2T2'.tr()),
-       OnBordingModel(
+  OnBordingModel(
       image: Assets.imagesOnbording3,
       title: 'onbording3T1'.tr(),
       subTitle: 'onbording3T2'.tr()),
-
- 
 ];

@@ -1,3 +1,4 @@
+import 'package:aman_store2/core/functions/show_snac_bar.dart';
 import 'package:aman_store2/core/widgets/failure_page_view.dart';
 import 'package:aman_store2/core/widgets/no_internet_page_view.dart';
 import 'package:aman_store2/features/my_account/prsentation/view_model/my_account_cubit/my_account_cubit.dart';
@@ -15,7 +16,18 @@ class UserDataColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<MyAccountCubit, MyAccountState>(
+    return BlocConsumer<MyAccountCubit, MyAccountState>(
+      listener: (context, state) {
+        state.mapOrNull(
+            failure2: (value) => showSnackBar(context, message: value.error),
+            editImage: (value) {
+              showSnackBar(context,
+                  message: value.doneModel.message, isError: false);
+              context.read<MyAccountCubit>().getMyAccount(isFromEdit: true);
+            });
+      },
+      buildWhen: (previous, current) =>
+          (current is! Failure2 && current is! EditImage),
       builder: (context, state) {
         return state.maybeWhen(
           orElse: () => const SizedBox(),
@@ -25,9 +37,9 @@ class UserDataColumn extends StatelessWidget {
                 AccountDetilsRow(
                   user: userModel,
                 ),
-                 EditAccountContiner(
+                EditAccountContiner(
                   user: userModel,
-                 ),
+                ),
                 const SizedBox(height: 24),
                 AccountRowContiners(
                   user: userModel,

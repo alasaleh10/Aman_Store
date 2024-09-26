@@ -23,6 +23,7 @@ import 'package:aman_store2/features/auth/prsentation/views/signup_view.dart';
 import 'package:aman_store2/features/categoriess/prsentation/views/home_all_categorisess.dart';
 import 'package:aman_store2/features/home_screen/views/home_screen.dart';
 import 'package:aman_store2/features/on_bording/views/on_bording_view.dart';
+import 'package:aman_store2/features/product_detils/views/product_detils_view.dart';
 import 'package:aman_store2/features/splash_screen/views/splash_screen_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -115,10 +116,17 @@ abstract class Routers {
           child: const TechnicalSupportView(),
         ),
       ),
-         buildRoute(
-          AppRouters.questionsView, (context, state) =>  BlocProvider(
+      buildRoute(
+        AppRouters.questionsView,
+        (context, state) => BlocProvider(
             create: (context) => FaqQusetionsCubit(gitIt())..getFaqQusetions(),
-            child: const QuesentaionView()),),
+            child: const QuesentaionView()),
+      ),
+      buildRoute(
+          AppRouters.productDetilsView,
+          (context, state) => ProductDetilsView(
+                productId: state.extra as int,
+              )),
     ],
   );
 }

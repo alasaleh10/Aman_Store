@@ -13,7 +13,7 @@ class FavoriteViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<FavoriteCubit, FavoriteState>(
-      buildWhen: (previous, current) => current is !FromOpreations,
+      buildWhen: (previous, current) => current is! FromOpreations,
       builder: (context, state) {
         return state.maybeMap(
           orElse: () => const SizedBox(),
@@ -26,12 +26,12 @@ class FavoriteViewBody extends StatelessWidget {
           noInternet: (value) => NoInternetPage(onTap: () {
             context.read<FavoriteCubit>().getFavorite();
           }),
-          sucsess: (products) =>
-              CustomProductGridView(listProductModel: products.product,
-              onTap: () {
-                context.read<FavoriteCubit>().getFavorite(isFromOPreations: true);
-              },
-              ),
+          sucsess: (products) => CustomProductGridView(
+            listProductModel: products.product,
+            onTap: () {
+              context.read<FavoriteCubit>().getFavorite(isFromOPreations: true);
+            },
+          ),
         );
       },
     );

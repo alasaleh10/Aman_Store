@@ -1,5 +1,5 @@
 class ApiConstanses {
-  static const String baseUrl = 'http://10.0.2.2:8000/api/';
+  static const String baseUrl = 'http://192.168.10.164:8000/api/';
 // auth
   static const String signUp = 'users/signUp';
   static const String login = 'users/login';
@@ -8,13 +8,12 @@ class ApiConstanses {
   static const String restPassword = 'users/restPassword';
   static const String me = 'users/user';
   static const String editMyAccount = 'users/editMyAccount';
+  static const String editImage = 'users/editImage';
 
   // Home
 
   static const String home = 'home';
   static const String searchProduct = 'home/searchProduct';
-
-
 
   // Location
 
@@ -24,11 +23,12 @@ class ApiConstanses {
   static const String deleteLocation = 'locations/delete';
 
   // categories
-  static const String allCategories = 'categoriees/all'; 
+  static const String allCategories = 'categoriees/all';
 
   // products
   static const String categorieeProducts = 'products/getProductsByCategoriees';
   static const String newAmanProducts = 'products/newAmanProducts';
+  static const String getSpicificProduct = 'products/getSpicificProduct';
 
   // Favorite
   static const String addFavorite = 'favorites/addFavorite';
@@ -38,16 +38,4 @@ class ApiConstanses {
   // problems
   static const String addProblem = 'problems/addProblem';
   static const String getFaqQusetions = 'problems/getFaqQusetions';
-
-
-
-  
-
-
-
-
-
-
-
-
 }

@@ -13,12 +13,12 @@ class AmanStore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-   designSize: const Size(414, 896),
+      designSize: const Size(414, 896),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
         return BlocProvider(
-           create: (context) => HomeScreenCubit(),
+          create: (context) => HomeScreenCubit(),
           child: MaterialApp.router(
             theme: ThemeData(fontFamily: cairoFont),
             locale: context.locale,

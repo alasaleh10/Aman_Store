@@ -12,19 +12,19 @@ class FollowOrderCount extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: ListTile(
-            title: Text(
-              'numberOfProducts'.tr(),
-              style: AppStyle.textStyleBold25.copyWith(
-                  fontWeight: FontWeight.w300, color: const Color(0xff8B959E)),
-              textAlign: TextAlign.center,
-            ),
-            subtitle: Text(
-              productCounter(count: count),
-              style: AppStyle.textStyleSemiBold20
-                  .copyWith(color: const Color(0xff45495E)),
-              textAlign: TextAlign.center,
-            ),
-          ),
+        title: Text(
+          'numberOfProducts'.tr(),
+          style: AppStyle.textStyleBold25.copyWith(
+              fontWeight: FontWeight.w300, color: const Color(0xff8B959E)),
+          textAlign: TextAlign.center,
+        ),
+        subtitle: Text(
+          productCounter(count: count),
+          style: AppStyle.textStyleSemiBold20
+              .copyWith(color: const Color(0xff45495E)),
+          textAlign: TextAlign.center,
+        ),
+      ),
     );
   }
 }

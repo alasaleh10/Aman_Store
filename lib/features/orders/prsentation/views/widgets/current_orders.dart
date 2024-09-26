@@ -13,7 +13,7 @@ class CurrentOrders extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         return const Padding(
             padding: EdgeInsets.symmetric(vertical: 8),
-            child:  OrderItems(status: 1));
+            child: OrderItems(status: 1));
       },
     );
   }

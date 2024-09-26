@@ -5,31 +5,22 @@ validations(
     required String type,
     String? password2,
     String? password1}) {
-  if (value.isEmpty) {
+  if (value.trim().isEmpty) {
     return 'هذا الحقل مطلوب';
   }
-  for (var i in RegularExceptions.disallowedSymbols) {
-    if (value.startsWith(i) ||
-       
-        value.endsWith(i) ||
-        value.endsWith(' ')) {
-      return 'خطا في المدخلات';
-    }
-  }
+  value = removeSymbols(value);
 
   switch (type) {
     case 'email':
-      if (value.length < 8) return 'البريد الإلكتروني يجب يكون اكبر من 8';
+      if (value.trim().length < 8) {
+        return 'البريد الإلكتروني يجب يكون اكبر من 8';
+      }
       if (value.contains(' ')) {
         return 'البريد الإلكتروني يجب ان لا يحتوي على مسافات';
       }
       if (!value.contains('@')) return 'خطا في البريد الإلكتروني';
 
-      for (var i in RegularExceptions.disallowedSymbols) {
-        if (value.startsWith(i) || value.endsWith(i)) {
-          return 'خطا في البريد الإلكتروني';
-        }
-      }
+      if (!value.contains('.')) return 'خطا في البريد الإلكتروني';
       for (int i = 0; i < RegularExceptions.disallowedSymbols.length - 4; i++) {
         if (value.contains(RegularExceptions.disallowedSymbols[i])) {
           return 'خطا في البريد الإلكتروني';
@@ -43,10 +34,14 @@ validations(
     case 'password':
       if (value.length <= 8) return 'كلمة المرور يجب تكون اكبر من 7';
       if (value.length > 16) return 'كلمة المرور يجب ان تكون اصغر من 17';
-      if (value.contains(' ')) return 'كلمة المرور يجب ان لاتحتوي على مسافات';
+      if (value.contains(' ')) {
+        return 'كلمة المرور يجب ان لاتحتوي على مسافات';
+      }
 
       for (var i in RegularExceptions.disallowedSymbols) {
-        if (value.contains(i)) return 'كلمة المرور يجب ان لا تحتوي على رمز ';
+        if (value.contains(i)) {
+          return 'كلمة المرور يجب ان لا تحتوي على رمز ';
+        }
       }
 
       if (!RegExp(RegularExceptions.musetContintLowerChar).hasMatch(value)) {

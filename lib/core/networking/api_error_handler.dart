@@ -55,7 +55,6 @@ class ApiErrorHandler {
           return ApiErrorModel(message: 'خطأ غير معروف');
       }
     } else {
-     
       // return ApiErrorModel(message: "Unknown error occurred");
       return ApiErrorModel(message: error.toString());
     }

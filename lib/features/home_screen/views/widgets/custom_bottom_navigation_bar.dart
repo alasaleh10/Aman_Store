@@ -33,11 +33,9 @@ class CustomBottomNavigationBar extends StatelessWidget {
             elevation: 0,
             selectedLabelStyle: AppStyle.textStyleRegular16,
             unselectedLabelStyle: AppStyle.textStyleRegular14,
-           
             onTap: (index) {
               if (cuibt.index == index) return;
               cuibt.changePage(index: index);
-             
             },
             items: [
               BottomNavigationBarItem(
