@@ -14,11 +14,7 @@ ProductDtilsModel _$ProductDtilsModelFromJson(Map<String, dynamic> json) =>
       product: Product.fromJson(json['product'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$ProductDtilsModelToJson(ProductDtilsModel instance) =>
-    <String, dynamic>{
-      'product': instance.product,
-      'similarProducts': instance.similerProducts,
-    };
+
 
 Product _$ProductFromJson(Map<String, dynamic> json) => Product(
       id: (json['id'] as num).toInt(),
@@ -53,7 +49,3 @@ ProductImages _$ProductImagesFromJson(Map<String, dynamic> json) =>
       imag: json['imag'] as String,
     );
 
-Map<String, dynamic> _$ProductImagesToJson(ProductImages instance) =>
-    <String, dynamic>{
-      'imag': instance.imag,
-    };

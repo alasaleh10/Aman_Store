@@ -7,6 +7,8 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../features/auth/data/auth_servises.dart';
+import '../../features/cart/data/cart_repo.dart';
+import '../../features/cart/data/cart_serviese.dart';
 import '../../features/home/data/home_repo.dart';
 import '../../features/home/data/home_servises.dart';
 import '../../features/location/data/location_services.dart';
@@ -50,4 +52,8 @@ Future<void> setUpGetIt() async {
   // detils
   gitIt.registerSingleton(ProductDetilsServiss(dio));
   gitIt.registerFactory<ProductDetilsRepo>(() => ProductDetilsRepo(gitIt()));
+
+  // Cart
+  gitIt.registerSingleton(CartServises(dio));
+  gitIt.registerFactory<CartRepo>(() => CartRepo(gitIt()));
 }

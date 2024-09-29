@@ -5,7 +5,8 @@ import '../../../../../core/utils/app_assets.dart';
 import 'cart_stepper_continer.dart';
 
 class CartStepperRowContiners extends StatelessWidget {
-  const CartStepperRowContiners({super.key});
+  final int index;
+  const CartStepperRowContiners({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class CartStepperRowContiners extends StatelessWidget {
           CartSteperContiner(
             image: Assets.imagesCart,
             title: 'products'.tr(),
-            isActive: true,
+            isActive: index == 0,
           ),
           const SizedBox(width: 10),
           const Expanded(child: Divider()),
@@ -24,7 +25,7 @@ class CartStepperRowContiners extends StatelessWidget {
           CartSteperContiner(
             image: Assets.imagesLocation2,
             title: 'delivery'.tr(),
-            isActive: false,
+            isActive: index == 1,
           ),
           const SizedBox(width: 10),
           const Expanded(child: Divider()),
@@ -32,7 +33,7 @@ class CartStepperRowContiners extends StatelessWidget {
           CartSteperContiner(
             image: Assets.imagesPayment,
             title: 'payment'.tr(),
-            isActive: false,
+            isActive: index == 2,
           ),
         ],
       ),

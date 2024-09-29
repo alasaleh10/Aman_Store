@@ -1,11 +1,11 @@
 import 'package:aman_store2/core/widgets/failure_page_view.dart';
-import 'package:aman_store2/core/widgets/loading_view_page.dart';
 import 'package:aman_store2/core/widgets/no_internet_page_view.dart';
 import 'package:aman_store2/features/product_detils/view_model/product_detils_cubit/product_detils_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../view_model/product_detils_cubit/product_detils_cubit.dart';
+import 'product_detils_loading.dart';
 import 'product_detils_sucsess_widget.dart';
 
 class ProductDetilsViewBody extends StatelessWidget {
@@ -17,7 +17,7 @@ class ProductDetilsViewBody extends StatelessWidget {
       builder: (context, state) {
         return state.maybeWhen(
           orElse: () => const SizedBox(),
-          loading: () => const LoadingViewPage(),
+          loading: () => const ProductDetilsLoading(),
           noInternet: () => NoInternetPage(onTap: () {
             context.read<ProductDetilsCubit>().getSpicificProduct();
           }),

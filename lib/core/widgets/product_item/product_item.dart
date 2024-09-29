@@ -20,7 +20,12 @@ class ProductItem extends StatelessWidget {
   final VoidCallback onTap;
   final VoidCallback? onTap2;
   final ProductModel product;
-  const ProductItem({super.key, required this.product, required this.onTap, this.isDetils, this.onTap2});
+  const ProductItem(
+      {super.key,
+      required this.product,
+      required this.onTap,
+      this.isDetils,
+      this.onTap2});
 
   @override
   Widget build(BuildContext context) {
@@ -35,16 +40,12 @@ class ProductItem extends StatelessWidget {
         ),
         child: GestureDetector(
           onTap: () {
-if(isDetils==true)
-{
-onTap2!.call();
-}
-else
-{
-            context.pushNamed(AppRouters.productDetilsView, extra: product.id);
-
-}
-
+            if (isDetils == true) {
+              onTap2!.call();
+            } else {
+              context.pushNamed(AppRouters.productDetilsView,
+                  extra: product.id);
+            }
           },
           child: Column(
             mainAxisSize: MainAxisSize.min,

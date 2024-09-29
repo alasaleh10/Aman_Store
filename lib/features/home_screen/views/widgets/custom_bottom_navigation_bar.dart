@@ -1,7 +1,9 @@
+import 'package:aman_store2/core/routers/app_routers.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -35,7 +37,11 @@ class CustomBottomNavigationBar extends StatelessWidget {
             unselectedLabelStyle: AppStyle.textStyleRegular14,
             onTap: (index) {
               if (cuibt.index == index) return;
-              cuibt.changePage(index: index);
+              if (index == 2) {
+                context.pushNamed(AppRouters.cartProductView);
+              } else {
+                cuibt.changePage(index: index);
+              }
             },
             items: [
               BottomNavigationBarItem(

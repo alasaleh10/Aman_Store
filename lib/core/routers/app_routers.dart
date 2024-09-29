@@ -24,9 +24,8 @@ abstract class AppRouters {
   static const String technicalSupportView = 'technicalSupportView';
   static const String questionsView = 'questionsView';
   static const String productDetilsView = 'productDetilsView';
-
-  // static const String View='';
-  // static const String View='';
+  static const String cartProductView='cartProductView';
+  static const String cartDeliveryView='cartDeliveryView';
   // static const String View='';
   // static const String View='';
   // static const String View='';

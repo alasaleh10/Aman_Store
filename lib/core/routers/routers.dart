@@ -1,5 +1,8 @@
 import 'package:aman_store2/core/di/depencency_injection.dart';
 import 'package:aman_store2/core/utils/app_constsans.dart';
+import 'package:aman_store2/features/cart/prsentation/view_model/cart_product_cubit/cart_products_cubit.dart';
+import 'package:aman_store2/features/cart/prsentation/views/cart_delivery_view.dart';
+import 'package:aman_store2/features/cart/prsentation/views/cart_prodects.dart';
 import 'package:aman_store2/features/categoriess/prsentation/views/categoriee_items_view.dart';
 import 'package:aman_store2/features/drawer_pages/views/about_aman_view.dart';
 import 'package:aman_store2/features/drawer_pages/views/terms_conditions_view.dart';
@@ -44,9 +47,6 @@ abstract class Routers {
         pageBuilder: (context, state) =>
             pageAnimation(page: const SplashScreenView()),
       ),
-
-      // buildRoute(
-      //     AppRouters.splashView, (context, state) => const SplashScreenView()),
       GoRoute(
         redirect: (context, state) async {
           if (await SecureStorage.readData(key: AppConstants.token) != null) {
@@ -63,23 +63,34 @@ abstract class Routers {
         pageBuilder: (context, state) =>
             pageAnimation(page: const OnBordingView()),
       ),
-
-      buildRoute(AppRouters.loginView, (context, state) => const LoginView()),
-      buildRoute(AppRouters.signupView, (context, state) => const SignUpView()),
+      buildRoute(
+        AppRouters.loginView,
+        (context, state) => const LoginView(),
+      ),
+      buildRoute(
+        AppRouters.signupView,
+        (context, state) => const SignUpView(),
+      ),
       buildRoute(AppRouters.homeScreenView,
           (context, state) => const HomeScreenView()),
-      buildRoute(AppRouters.confirmEmailView,
-          (context, state) => ConfirmEmailView(data: state.extra as List)),
-      buildRoute(AppRouters.cheekEmailView,
-          (context, state) => const CheekEmailView()),
       buildRoute(
-          AppRouters.restPasswordView,
-          (context, state) => RestPasswordView(
-                email: state.extra as String,
-              )),
-      buildRoute(AppRouters.addLocationView,
-          (context, state) => AddLocationView(index: state.extra as int)),
-
+        AppRouters.confirmEmailView,
+        (context, state) => ConfirmEmailView(data: state.extra as List),
+      ),
+      buildRoute(
+        AppRouters.cheekEmailView,
+        (context, state) => const CheekEmailView(),
+      ),
+      buildRoute(
+        AppRouters.restPasswordView,
+        (context, state) => RestPasswordView(
+          email: state.extra as String,
+        ),
+      ),
+      buildRoute(
+        AppRouters.addLocationView,
+        (context, state) => AddLocationView(index: state.extra as int),
+      ),
       buildRoute(
           AppRouters.homeAmanView, (context, state) => const HomeNewAmanView()),
       buildRoute(AppRouters.homeAllCategorisesView,
@@ -89,44 +100,80 @@ abstract class Routers {
           (context, state) => EditMyDataView(
                 data: state.extra as List,
               )),
-      buildRoute(AppRouters.followOrderView,
-          (context, state) => const FollowOrderView()),
-      buildRoute(AppRouters.ratingOrderTryingView,
-          (context, state) => const RatingOrderTryingView()),
-      buildRoute(AppRouters.savedAddressView,
-          (context, state) => const SavedAddressView()),
       buildRoute(
-          AppRouters.confirmLocationView,
-          (context, state) => ConfirmLocationView(
-              addLocationModel: state.extra as AddLocationModel)),
-      buildRoute(AppRouters.editAddressView,
-          (context, state) => EditAddressView(data: state.extra as List)),
-      buildRoute(AppRouters.categorieeItemsView,
-          (context, state) => CategorieeItemsView(data: state.extra as List)),
+        AppRouters.followOrderView,
+        (context, state) => const FollowOrderView(),
+      ),
       buildRoute(
-          AppRouters.favoriteView, (context, state) => const FavoriteView()),
-      buildRoute(AppRouters.termsAndConditions,
-          (context, state) => const TermsAndConditions()),
+        AppRouters.ratingOrderTryingView,
+        (context, state) => const RatingOrderTryingView(),
+      ),
       buildRoute(
-          AppRouters.aboutAmanView, (context, state) => const AboutAmanView()),
+        AppRouters.savedAddressView,
+        (context, state) => const SavedAddressView(),
+      ),
+      buildRoute(
+        AppRouters.confirmLocationView,
+        (context, state) => ConfirmLocationView(
+            addLocationModel: state.extra as AddLocationModel),
+      ),
+      buildRoute(
+        AppRouters.editAddressView,
+        (context, state) => EditAddressView(data: state.extra as List),
+      ),
+      buildRoute(
+        AppRouters.categorieeItemsView,
+        (context, state) => CategorieeItemsView(data: state.extra as List),
+      ),
+      buildRoute(
+        AppRouters.favoriteView,
+        (context, state) => const FavoriteView(),
+      ),
+      buildRoute(
+        AppRouters.termsAndConditions,
+        (context, state) => const TermsAndConditions(),
+      ),
+      buildRoute(
+        AppRouters.aboutAmanView,
+        (context, state) => const AboutAmanView(),
+      ),
       buildRoute(
         AppRouters.technicalSupportView,
         (context, state) => BlocProvider(
-          create: (context) => TechnicalSupportCubit(gitIt()),
+          create: (context) => TechnicalSupportCubit(
+            gitIt(),
+          ),
           child: const TechnicalSupportView(),
         ),
       ),
       buildRoute(
         AppRouters.questionsView,
         (context, state) => BlocProvider(
-            create: (context) => FaqQusetionsCubit(gitIt())..getFaqQusetions(),
+            create: (context) => FaqQusetionsCubit(
+                  gitIt(),
+                )..getFaqQusetions(),
             child: const QuesentaionView()),
       ),
       buildRoute(
-          AppRouters.productDetilsView,
-          (context, state) => ProductDetilsView(
-                productId: state.extra as int,
-              )),
+        AppRouters.productDetilsView,
+        (context, state) => ProductDetilsView(
+          productId: state.extra as int,
+        ),
+      ),
+      buildRoute(
+        AppRouters.cartProductView,
+        (context, state) => BlocProvider(
+          create: (context) => CartProductsCubit(gitIt())..getCart(),
+          child: const CartProdectsView(),
+        ),
+        
+      ),
+       buildRoute(
+        AppRouters.cartDeliveryView,
+        (context, state) => CartDeliveryView(
+          total: state.extra as int,
+        ),
+      ),
     ],
   );
 }

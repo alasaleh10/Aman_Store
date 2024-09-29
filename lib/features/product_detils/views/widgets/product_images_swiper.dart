@@ -42,7 +42,7 @@ class _PRoductImagesSwiperState extends State<PRoductImagesSwiper> {
               ),
               child: CachedImageWidget(
                 url: pImages[index].imag,
-                boxFit: BoxFit.fill,
+                boxFit: BoxFit.scaleDown,
               ),
             ),
           );

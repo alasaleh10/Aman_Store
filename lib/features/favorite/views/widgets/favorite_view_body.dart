@@ -1,11 +1,12 @@
 import 'package:aman_store2/core/widgets/failure_page_view.dart';
-import 'package:aman_store2/core/widgets/loading_view_page.dart';
 import 'package:aman_store2/core/widgets/no_internet_page_view.dart';
 import 'package:aman_store2/core/widgets/product_item/custom_products_grid_view.dart';
 import 'package:aman_store2/features/favorite/view_model/favorite_cubit/favorite_cubit.dart';
 import 'package:aman_store2/features/favorite/view_model/favorite_cubit/favorite_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../core/widgets/product_item/product_loading/grid_product_loading.dart';
 
 class FavoriteViewBody extends StatelessWidget {
   const FavoriteViewBody({super.key});
@@ -17,7 +18,7 @@ class FavoriteViewBody extends StatelessWidget {
       builder: (context, state) {
         return state.maybeMap(
           orElse: () => const SizedBox(),
-          loading: (_) => const LoadingViewPage(),
+          loading: (_) => const GridProductLoading(),
           error: (value) => FailurePageView(
               message: value.error,
               onTap: () {

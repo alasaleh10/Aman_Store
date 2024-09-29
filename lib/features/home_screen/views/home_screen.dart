@@ -17,6 +17,7 @@ class HomeScreenView extends StatelessWidget {
           BlocProvider(create: (context) => OrdersCubit()),
           BlocProvider(
               create: (context) => MyAccountCubit(gitIt())..getMyAccount()),
+          
         ],
         child: BlocBuilder<HomeScreenCubit, HomeScreenState>(
           builder: (context, state) {

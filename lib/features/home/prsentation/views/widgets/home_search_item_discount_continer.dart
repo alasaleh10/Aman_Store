@@ -22,12 +22,15 @@ class HomeSearchItemDiscountContiner extends StatelessWidget {
         children: [
           Expanded(
             flex: 2,
-            child: Text(
-              '$oldPrice ${'ry2'.tr()}',
-              style: AppStyle.textStyleRegular16.copyWith(
-                  color: const Color(0xffCACACA),
-                  decoration: TextDecoration.lineThrough,
-                  decorationColor: const Color(0xffCACACA)),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                '$oldPrice ${'ry2'.tr()}',
+                style: AppStyle.textStyleRegular16.copyWith(
+                    color: const Color(0xffCACACA),
+                    decoration: TextDecoration.lineThrough,
+                    decorationColor: const Color(0xffCACACA)),
+              ),
             ),
           ),
           const SizedBox(width: 15),

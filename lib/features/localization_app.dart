@@ -13,10 +13,11 @@ class LocalizationApp extends StatelessWidget {
         startLocale: const Locale('ar'),
         path: 'assets/translations',
         supportedLocales: const [Locale('ar'), Locale('en')],
-        child: const AmanStore()
-        //  DevicePreview(
-        //   builder: (context) => const AmanStore(),
-        // ),
+        child:
+        //  const AmanStore()
+         DevicePreview(
+          builder: (context) => const AmanStore(),
+        ),
         );
   }
 }

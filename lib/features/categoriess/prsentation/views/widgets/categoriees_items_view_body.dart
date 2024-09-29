@@ -1,10 +1,10 @@
 import 'package:aman_store2/core/widgets/failure_page_view.dart';
-import 'package:aman_store2/core/widgets/loading_view_page.dart';
 import 'package:aman_store2/core/widgets/no_internet_page_view.dart';
 import 'package:aman_store2/features/categoriess/prsentation/view_model/categoriee_product_cubit/categoriee_products_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/widgets/product_item/custom_products_grid_view.dart';
+import '../../../../../core/widgets/product_item/product_loading/grid_product_loading.dart';
 import '../../view_model/categoriee_product_cubit/categoriee_products_cubit.dart';
 
 class CategorieeItemsViewBody extends StatelessWidget {
@@ -22,7 +22,7 @@ class CategorieeItemsViewBody extends StatelessWidget {
                 onTap: () {
                   context.read<CategorieeProductsCubit>().getProducts();
                 }),
-            loading: () => const LoadingViewPage(),
+            loading: () => const GridProductLoading(),
             noInternet: () => NoInternetPage(onTap: () {
                   context.read<CategorieeProductsCubit>().getProducts();
                 }),

@@ -5,8 +5,8 @@ import 'package:aman_store2/core/functions/app_sizedbox.dart';
 import 'package:aman_store2/core/utils/app_styles.dart';
 import 'package:aman_store2/features/product_detils/views/widgets/product_price.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/models/product_model/product_model.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../data/model/product_detils_model.dart';
@@ -48,10 +48,13 @@ class ProductDetilsSucsessWidget extends StatelessWidget {
         vSizedBox(15),
         ProductDiscriptionReadMore(discription: data.description),
         vSizedBox(10),
-        Text(
-          'similarProducts'.tr(),
-          style:
-              AppStyle.textStyleBold18.copyWith(color: AppColors.kBlackColor),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10.w),
+          child: Text(
+            'similarProducts'.tr(),
+            style:
+                AppStyle.textStyleBold18.copyWith(color: AppColors.kBlackColor),
+          ),
         ),
         vSizedBox(10),
         SingleChildScrollView(

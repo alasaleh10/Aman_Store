@@ -38,4 +38,12 @@ class ApiConstanses {
   // problems
   static const String addProblem = 'problems/addProblem';
   static const String getFaqQusetions = 'problems/getFaqQusetions';
+
+  // Cart
+  // static const String addToCart = 'carts/addToCart';
+  static const String myCart = 'carts/myCart'; 
+  static const String addOneToCart = 'carts/addOneToCart';
+  static const String deleteOneFromCart = 'carts/deleteOneFromCart'; 
+
+
 }

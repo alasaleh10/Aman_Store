@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../cart/prsentation/views/cart_view.dart';
 import '../../../home/prsentation/views/home_search_view.dart';
 import '../../../home/prsentation/views/home_view.dart';
 import '../../../my_account/prsentation/views/my_account_home.dart';
@@ -27,7 +25,7 @@ class HomeScreenCubit extends Cubit<HomeScreenState> {
       return const [
         HomeSearchView(),
         OffersView(),
-        CartView(),
+       SizedBox(),
         OrdersView(),
         MyAccountHome()
       ];
@@ -35,7 +33,8 @@ class HomeScreenCubit extends Cubit<HomeScreenState> {
       return const [
         HomeView(),
         OffersView(),
-        CartView(),
+              SizedBox(),
+
         OrdersView(),
         MyAccountHome()
       ];

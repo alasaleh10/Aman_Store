@@ -77,16 +77,9 @@ class CategorieItem extends StatelessWidget {
                         url: categorieeModel.image,
                       )
 
-                      // Image(
-                      //   image: NetworkImage(categorieeModel.image),
-                      //   fit: BoxFit.fill,
-                      // )
+                  
                       )
 
-                  //  Image.network(
-                  //   categorieeModel.image,
-                  //   fit: BoxFit.cover,
-                  // ),
                   ),
             ),
             SizedBox(height: 10.h),

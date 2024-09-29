@@ -1,7 +1,6 @@
 import 'package:aman_store2/core/di/depencency_injection.dart';
 import 'package:aman_store2/core/utils/app_colors.dart';
 import 'package:aman_store2/core/widgets/failure_page_view.dart';
-import 'package:aman_store2/core/widgets/loading_view_page.dart';
 import 'package:aman_store2/core/widgets/no_internet_page_view.dart';
 import 'package:aman_store2/features/home/prsentation/view_model/search_products_cubit/search_produtc_cubit.dart';
 import 'package:aman_store2/features/home/prsentation/view_model/search_products_cubit/search_produtc_state.dart';
@@ -12,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/utils/app_styles.dart';
 import 'widgets/home_search_item.dart';
+import 'widgets/home_search_loading.dart';
 
 class HomeSearchView extends StatelessWidget {
   const HomeSearchView({super.key});
@@ -72,9 +72,7 @@ class HomeSearchView extends StatelessWidget {
                                   .searchProduct();
                             }),
                       )),
-                  loading: () => const SliverFillRemaining(
-                      hasScrollBody: false,
-                      child: Center(child: LoadingViewPage())),
+                  loading: () => const HomeSearchLoading(),
                   noInternet: () => SliverFillRemaining(
                       hasScrollBody: false,
                       child: Center(

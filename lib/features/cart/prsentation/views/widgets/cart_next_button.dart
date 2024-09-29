@@ -2,12 +2,13 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../core/functions/decimal_number.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../core/widgets/custom_elevated_button.dart';
 
 class CartNextButton extends StatelessWidget {
-  final String price;
+  final int price;
   final VoidCallback onPressed;
   const CartNextButton({
     super.key,
@@ -29,7 +30,8 @@ class CartNextButton extends StatelessWidget {
                 'total'.tr(),
                 style: AppStyle.textStyleRegular16,
               ),
-              Text('$price ${'ry2'.tr()}',
+            
+              Text('${decimalNumer(price: price)} ${'ry2'.tr()}',
                   style: AppStyle.textStyleBold18.copyWith(
                       color: AppColors.kPrimColor, fontWeight: FontWeight.w600))
             ],
