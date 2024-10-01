@@ -31,6 +31,7 @@ import 'package:aman_store2/features/splash_screen/views/splash_screen_view.dart
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/cart/prsentation/view_model/cart_delivery_cubit/cart_delivery_cubit.dart';
 import '../../features/home/prsentation/views/home_new_aman_view.dart';
 import '../../features/my_account/prsentation/view_model/technical_support_cubit/technical_support_cubit.dart';
 import '../helper/cached_helper.dart';
@@ -110,7 +111,9 @@ abstract class Routers {
       ),
       buildRoute(
         AppRouters.savedAddressView,
-        (context, state) => const SavedAddressView(),
+        (context, state) =>  SavedAddressView(
+          index: state.extra as int?,
+        ),
       ),
       buildRoute(
         AppRouters.confirmLocationView,
@@ -170,8 +173,11 @@ abstract class Routers {
       ),
        buildRoute(
         AppRouters.cartDeliveryView,
-        (context, state) => CartDeliveryView(
-          total: state.extra as int,
+        (context, state) => BlocProvider(
+          create: (context) => CartDeliveryCubit(gitIt(),state.extra as int),
+          child: CartDeliveryView(
+            total: state.extra as int,
+          ),
         ),
       ),
     ],

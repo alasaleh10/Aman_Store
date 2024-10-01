@@ -12,7 +12,7 @@ class LocationRepo {
 
   LocationRepo(this._locationService);
 
-  Future<ApiResult<LocationModel>> addLocation(
+  Future<ApiResult<DoneModel>> addLocation(
       AddLocationToJson addLocationToJson) async {
     try {
       var response = await _locationService.addLocation(addLocationToJson);
@@ -48,4 +48,14 @@ class LocationRepo {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
+
+  Future<ApiResult<DoneModel>> setMainLocation(int id) async {
+    try {
+      var response = await _locationService.setMainLocation(id);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
 }
+

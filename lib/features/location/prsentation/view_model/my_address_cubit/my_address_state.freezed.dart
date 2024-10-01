@@ -23,6 +23,9 @@ mixin _$MyAddressState {
     required TResult Function(ListLocationsModel locations) success,
     required TResult Function(String message) failure,
     required TResult Function() noInternet,
+    required TResult Function() loading2,
+    required TResult Function(String message) success2,
+    required TResult Function(String message) failure2,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,6 +35,9 @@ mixin _$MyAddressState {
     TResult? Function(ListLocationsModel locations)? success,
     TResult? Function(String message)? failure,
     TResult? Function()? noInternet,
+    TResult? Function()? loading2,
+    TResult? Function(String message)? success2,
+    TResult? Function(String message)? failure2,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,6 +47,9 @@ mixin _$MyAddressState {
     TResult Function(ListLocationsModel locations)? success,
     TResult Function(String message)? failure,
     TResult Function()? noInternet,
+    TResult Function()? loading2,
+    TResult Function(String message)? success2,
+    TResult Function(String message)? failure2,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,6 +60,9 @@ mixin _$MyAddressState {
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
     required TResult Function(NoInternet value) noInternet,
+    required TResult Function(Loading2 value) loading2,
+    required TResult Function(Success2 value) success2,
+    required TResult Function(Failure2 value) failure2,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +72,9 @@ mixin _$MyAddressState {
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
     TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(Loading2 value)? loading2,
+    TResult? Function(Success2 value)? success2,
+    TResult? Function(Failure2 value)? failure2,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,6 +84,9 @@ mixin _$MyAddressState {
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
     TResult Function(NoInternet value)? noInternet,
+    TResult Function(Loading2 value)? loading2,
+    TResult Function(Success2 value)? success2,
+    TResult Function(Failure2 value)? failure2,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -135,6 +153,9 @@ class _$InitialImpl implements Initial {
     required TResult Function(ListLocationsModel locations) success,
     required TResult Function(String message) failure,
     required TResult Function() noInternet,
+    required TResult Function() loading2,
+    required TResult Function(String message) success2,
+    required TResult Function(String message) failure2,
   }) {
     return initial();
   }
@@ -147,6 +168,9 @@ class _$InitialImpl implements Initial {
     TResult? Function(ListLocationsModel locations)? success,
     TResult? Function(String message)? failure,
     TResult? Function()? noInternet,
+    TResult? Function()? loading2,
+    TResult? Function(String message)? success2,
+    TResult? Function(String message)? failure2,
   }) {
     return initial?.call();
   }
@@ -159,6 +183,9 @@ class _$InitialImpl implements Initial {
     TResult Function(ListLocationsModel locations)? success,
     TResult Function(String message)? failure,
     TResult Function()? noInternet,
+    TResult Function()? loading2,
+    TResult Function(String message)? success2,
+    TResult Function(String message)? failure2,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -175,6 +202,9 @@ class _$InitialImpl implements Initial {
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
     required TResult Function(NoInternet value) noInternet,
+    required TResult Function(Loading2 value) loading2,
+    required TResult Function(Success2 value) success2,
+    required TResult Function(Failure2 value) failure2,
   }) {
     return initial(this);
   }
@@ -187,6 +217,9 @@ class _$InitialImpl implements Initial {
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
     TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(Loading2 value)? loading2,
+    TResult? Function(Success2 value)? success2,
+    TResult? Function(Failure2 value)? failure2,
   }) {
     return initial?.call(this);
   }
@@ -199,6 +232,9 @@ class _$InitialImpl implements Initial {
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
     TResult Function(NoInternet value)? noInternet,
+    TResult Function(Loading2 value)? loading2,
+    TResult Function(Success2 value)? success2,
+    TResult Function(Failure2 value)? failure2,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -255,6 +291,9 @@ class _$LoadingImpl implements Loading {
     required TResult Function(ListLocationsModel locations) success,
     required TResult Function(String message) failure,
     required TResult Function() noInternet,
+    required TResult Function() loading2,
+    required TResult Function(String message) success2,
+    required TResult Function(String message) failure2,
   }) {
     return loading();
   }
@@ -267,6 +306,9 @@ class _$LoadingImpl implements Loading {
     TResult? Function(ListLocationsModel locations)? success,
     TResult? Function(String message)? failure,
     TResult? Function()? noInternet,
+    TResult? Function()? loading2,
+    TResult? Function(String message)? success2,
+    TResult? Function(String message)? failure2,
   }) {
     return loading?.call();
   }
@@ -279,6 +321,9 @@ class _$LoadingImpl implements Loading {
     TResult Function(ListLocationsModel locations)? success,
     TResult Function(String message)? failure,
     TResult Function()? noInternet,
+    TResult Function()? loading2,
+    TResult Function(String message)? success2,
+    TResult Function(String message)? failure2,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -295,6 +340,9 @@ class _$LoadingImpl implements Loading {
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
     required TResult Function(NoInternet value) noInternet,
+    required TResult Function(Loading2 value) loading2,
+    required TResult Function(Success2 value) success2,
+    required TResult Function(Failure2 value) failure2,
   }) {
     return loading(this);
   }
@@ -307,6 +355,9 @@ class _$LoadingImpl implements Loading {
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
     TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(Loading2 value)? loading2,
+    TResult? Function(Success2 value)? success2,
+    TResult? Function(Failure2 value)? failure2,
   }) {
     return loading?.call(this);
   }
@@ -319,6 +370,9 @@ class _$LoadingImpl implements Loading {
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
     TResult Function(NoInternet value)? noInternet,
+    TResult Function(Loading2 value)? loading2,
+    TResult Function(Success2 value)? success2,
+    TResult Function(Failure2 value)? failure2,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -402,6 +456,9 @@ class _$SuccessImpl implements Success {
     required TResult Function(ListLocationsModel locations) success,
     required TResult Function(String message) failure,
     required TResult Function() noInternet,
+    required TResult Function() loading2,
+    required TResult Function(String message) success2,
+    required TResult Function(String message) failure2,
   }) {
     return success(locations);
   }
@@ -414,6 +471,9 @@ class _$SuccessImpl implements Success {
     TResult? Function(ListLocationsModel locations)? success,
     TResult? Function(String message)? failure,
     TResult? Function()? noInternet,
+    TResult? Function()? loading2,
+    TResult? Function(String message)? success2,
+    TResult? Function(String message)? failure2,
   }) {
     return success?.call(locations);
   }
@@ -426,6 +486,9 @@ class _$SuccessImpl implements Success {
     TResult Function(ListLocationsModel locations)? success,
     TResult Function(String message)? failure,
     TResult Function()? noInternet,
+    TResult Function()? loading2,
+    TResult Function(String message)? success2,
+    TResult Function(String message)? failure2,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -442,6 +505,9 @@ class _$SuccessImpl implements Success {
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
     required TResult Function(NoInternet value) noInternet,
+    required TResult Function(Loading2 value) loading2,
+    required TResult Function(Success2 value) success2,
+    required TResult Function(Failure2 value) failure2,
   }) {
     return success(this);
   }
@@ -454,6 +520,9 @@ class _$SuccessImpl implements Success {
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
     TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(Loading2 value)? loading2,
+    TResult? Function(Success2 value)? success2,
+    TResult? Function(Failure2 value)? failure2,
   }) {
     return success?.call(this);
   }
@@ -466,6 +535,9 @@ class _$SuccessImpl implements Success {
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
     TResult Function(NoInternet value)? noInternet,
+    TResult Function(Loading2 value)? loading2,
+    TResult Function(Success2 value)? success2,
+    TResult Function(Failure2 value)? failure2,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -553,6 +625,9 @@ class _$FailureImpl implements Failure {
     required TResult Function(ListLocationsModel locations) success,
     required TResult Function(String message) failure,
     required TResult Function() noInternet,
+    required TResult Function() loading2,
+    required TResult Function(String message) success2,
+    required TResult Function(String message) failure2,
   }) {
     return failure(message);
   }
@@ -565,6 +640,9 @@ class _$FailureImpl implements Failure {
     TResult? Function(ListLocationsModel locations)? success,
     TResult? Function(String message)? failure,
     TResult? Function()? noInternet,
+    TResult? Function()? loading2,
+    TResult? Function(String message)? success2,
+    TResult? Function(String message)? failure2,
   }) {
     return failure?.call(message);
   }
@@ -577,6 +655,9 @@ class _$FailureImpl implements Failure {
     TResult Function(ListLocationsModel locations)? success,
     TResult Function(String message)? failure,
     TResult Function()? noInternet,
+    TResult Function()? loading2,
+    TResult Function(String message)? success2,
+    TResult Function(String message)? failure2,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -593,6 +674,9 @@ class _$FailureImpl implements Failure {
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
     required TResult Function(NoInternet value) noInternet,
+    required TResult Function(Loading2 value) loading2,
+    required TResult Function(Success2 value) success2,
+    required TResult Function(Failure2 value) failure2,
   }) {
     return failure(this);
   }
@@ -605,6 +689,9 @@ class _$FailureImpl implements Failure {
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
     TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(Loading2 value)? loading2,
+    TResult? Function(Success2 value)? success2,
+    TResult? Function(Failure2 value)? failure2,
   }) {
     return failure?.call(this);
   }
@@ -617,6 +704,9 @@ class _$FailureImpl implements Failure {
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
     TResult Function(NoInternet value)? noInternet,
+    TResult Function(Loading2 value)? loading2,
+    TResult Function(Success2 value)? success2,
+    TResult Function(Failure2 value)? failure2,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -678,6 +768,9 @@ class _$NoInternetImpl implements NoInternet {
     required TResult Function(ListLocationsModel locations) success,
     required TResult Function(String message) failure,
     required TResult Function() noInternet,
+    required TResult Function() loading2,
+    required TResult Function(String message) success2,
+    required TResult Function(String message) failure2,
   }) {
     return noInternet();
   }
@@ -690,6 +783,9 @@ class _$NoInternetImpl implements NoInternet {
     TResult? Function(ListLocationsModel locations)? success,
     TResult? Function(String message)? failure,
     TResult? Function()? noInternet,
+    TResult? Function()? loading2,
+    TResult? Function(String message)? success2,
+    TResult? Function(String message)? failure2,
   }) {
     return noInternet?.call();
   }
@@ -702,6 +798,9 @@ class _$NoInternetImpl implements NoInternet {
     TResult Function(ListLocationsModel locations)? success,
     TResult Function(String message)? failure,
     TResult Function()? noInternet,
+    TResult Function()? loading2,
+    TResult Function(String message)? success2,
+    TResult Function(String message)? failure2,
     required TResult orElse(),
   }) {
     if (noInternet != null) {
@@ -718,6 +817,9 @@ class _$NoInternetImpl implements NoInternet {
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
     required TResult Function(NoInternet value) noInternet,
+    required TResult Function(Loading2 value) loading2,
+    required TResult Function(Success2 value) success2,
+    required TResult Function(Failure2 value) failure2,
   }) {
     return noInternet(this);
   }
@@ -730,6 +832,9 @@ class _$NoInternetImpl implements NoInternet {
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
     TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(Loading2 value)? loading2,
+    TResult? Function(Success2 value)? success2,
+    TResult? Function(Failure2 value)? failure2,
   }) {
     return noInternet?.call(this);
   }
@@ -742,6 +847,9 @@ class _$NoInternetImpl implements NoInternet {
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
     TResult Function(NoInternet value)? noInternet,
+    TResult Function(Loading2 value)? loading2,
+    TResult Function(Success2 value)? success2,
+    TResult Function(Failure2 value)? failure2,
     required TResult orElse(),
   }) {
     if (noInternet != null) {
@@ -753,4 +861,480 @@ class _$NoInternetImpl implements NoInternet {
 
 abstract class NoInternet implements MyAddressState {
   const factory NoInternet() = _$NoInternetImpl;
+}
+
+/// @nodoc
+abstract class _$$Loading2ImplCopyWith<$Res> {
+  factory _$$Loading2ImplCopyWith(
+          _$Loading2Impl value, $Res Function(_$Loading2Impl) then) =
+      __$$Loading2ImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$Loading2ImplCopyWithImpl<$Res>
+    extends _$MyAddressStateCopyWithImpl<$Res, _$Loading2Impl>
+    implements _$$Loading2ImplCopyWith<$Res> {
+  __$$Loading2ImplCopyWithImpl(
+      _$Loading2Impl _value, $Res Function(_$Loading2Impl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$Loading2Impl implements Loading2 {
+  const _$Loading2Impl();
+
+  @override
+  String toString() {
+    return 'MyAddressState.loading2()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$Loading2Impl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(ListLocationsModel locations) success,
+    required TResult Function(String message) failure,
+    required TResult Function() noInternet,
+    required TResult Function() loading2,
+    required TResult Function(String message) success2,
+    required TResult Function(String message) failure2,
+  }) {
+    return loading2();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(ListLocationsModel locations)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? noInternet,
+    TResult? Function()? loading2,
+    TResult? Function(String message)? success2,
+    TResult? Function(String message)? failure2,
+  }) {
+    return loading2?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(ListLocationsModel locations)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? noInternet,
+    TResult Function()? loading2,
+    TResult Function(String message)? success2,
+    TResult Function(String message)? failure2,
+    required TResult orElse(),
+  }) {
+    if (loading2 != null) {
+      return loading2();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(NoInternet value) noInternet,
+    required TResult Function(Loading2 value) loading2,
+    required TResult Function(Success2 value) success2,
+    required TResult Function(Failure2 value) failure2,
+  }) {
+    return loading2(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(Loading2 value)? loading2,
+    TResult? Function(Success2 value)? success2,
+    TResult? Function(Failure2 value)? failure2,
+  }) {
+    return loading2?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(NoInternet value)? noInternet,
+    TResult Function(Loading2 value)? loading2,
+    TResult Function(Success2 value)? success2,
+    TResult Function(Failure2 value)? failure2,
+    required TResult orElse(),
+  }) {
+    if (loading2 != null) {
+      return loading2(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Loading2 implements MyAddressState {
+  const factory Loading2() = _$Loading2Impl;
+}
+
+/// @nodoc
+abstract class _$$Success2ImplCopyWith<$Res> {
+  factory _$$Success2ImplCopyWith(
+          _$Success2Impl value, $Res Function(_$Success2Impl) then) =
+      __$$Success2ImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$Success2ImplCopyWithImpl<$Res>
+    extends _$MyAddressStateCopyWithImpl<$Res, _$Success2Impl>
+    implements _$$Success2ImplCopyWith<$Res> {
+  __$$Success2ImplCopyWithImpl(
+      _$Success2Impl _value, $Res Function(_$Success2Impl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$Success2Impl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$Success2Impl implements Success2 {
+  const _$Success2Impl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'MyAddressState.success2(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Success2Impl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$Success2ImplCopyWith<_$Success2Impl> get copyWith =>
+      __$$Success2ImplCopyWithImpl<_$Success2Impl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(ListLocationsModel locations) success,
+    required TResult Function(String message) failure,
+    required TResult Function() noInternet,
+    required TResult Function() loading2,
+    required TResult Function(String message) success2,
+    required TResult Function(String message) failure2,
+  }) {
+    return success2(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(ListLocationsModel locations)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? noInternet,
+    TResult? Function()? loading2,
+    TResult? Function(String message)? success2,
+    TResult? Function(String message)? failure2,
+  }) {
+    return success2?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(ListLocationsModel locations)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? noInternet,
+    TResult Function()? loading2,
+    TResult Function(String message)? success2,
+    TResult Function(String message)? failure2,
+    required TResult orElse(),
+  }) {
+    if (success2 != null) {
+      return success2(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(NoInternet value) noInternet,
+    required TResult Function(Loading2 value) loading2,
+    required TResult Function(Success2 value) success2,
+    required TResult Function(Failure2 value) failure2,
+  }) {
+    return success2(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(Loading2 value)? loading2,
+    TResult? Function(Success2 value)? success2,
+    TResult? Function(Failure2 value)? failure2,
+  }) {
+    return success2?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(NoInternet value)? noInternet,
+    TResult Function(Loading2 value)? loading2,
+    TResult Function(Success2 value)? success2,
+    TResult Function(Failure2 value)? failure2,
+    required TResult orElse(),
+  }) {
+    if (success2 != null) {
+      return success2(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Success2 implements MyAddressState {
+  const factory Success2(final String message) = _$Success2Impl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$Success2ImplCopyWith<_$Success2Impl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$Failure2ImplCopyWith<$Res> {
+  factory _$$Failure2ImplCopyWith(
+          _$Failure2Impl value, $Res Function(_$Failure2Impl) then) =
+      __$$Failure2ImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$Failure2ImplCopyWithImpl<$Res>
+    extends _$MyAddressStateCopyWithImpl<$Res, _$Failure2Impl>
+    implements _$$Failure2ImplCopyWith<$Res> {
+  __$$Failure2ImplCopyWithImpl(
+      _$Failure2Impl _value, $Res Function(_$Failure2Impl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$Failure2Impl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$Failure2Impl implements Failure2 {
+  const _$Failure2Impl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'MyAddressState.failure2(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Failure2Impl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$Failure2ImplCopyWith<_$Failure2Impl> get copyWith =>
+      __$$Failure2ImplCopyWithImpl<_$Failure2Impl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(ListLocationsModel locations) success,
+    required TResult Function(String message) failure,
+    required TResult Function() noInternet,
+    required TResult Function() loading2,
+    required TResult Function(String message) success2,
+    required TResult Function(String message) failure2,
+  }) {
+    return failure2(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(ListLocationsModel locations)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? noInternet,
+    TResult? Function()? loading2,
+    TResult? Function(String message)? success2,
+    TResult? Function(String message)? failure2,
+  }) {
+    return failure2?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(ListLocationsModel locations)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? noInternet,
+    TResult Function()? loading2,
+    TResult Function(String message)? success2,
+    TResult Function(String message)? failure2,
+    required TResult orElse(),
+  }) {
+    if (failure2 != null) {
+      return failure2(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(NoInternet value) noInternet,
+    required TResult Function(Loading2 value) loading2,
+    required TResult Function(Success2 value) success2,
+    required TResult Function(Failure2 value) failure2,
+  }) {
+    return failure2(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(NoInternet value)? noInternet,
+    TResult? Function(Loading2 value)? loading2,
+    TResult? Function(Success2 value)? success2,
+    TResult? Function(Failure2 value)? failure2,
+  }) {
+    return failure2?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(NoInternet value)? noInternet,
+    TResult Function(Loading2 value)? loading2,
+    TResult Function(Success2 value)? success2,
+    TResult Function(Failure2 value)? failure2,
+    required TResult orElse(),
+  }) {
+    if (failure2 != null) {
+      return failure2(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Failure2 implements MyAddressState {
+  const factory Failure2(final String message) = _$Failure2Impl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$Failure2ImplCopyWith<_$Failure2Impl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

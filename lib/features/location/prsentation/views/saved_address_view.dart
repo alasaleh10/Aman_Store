@@ -10,7 +10,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/utils/app_styles.dart';
 
 class SavedAddressView extends StatelessWidget {
-  const SavedAddressView({super.key});
+  final int? index;
+  const SavedAddressView({super.key, this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,9 @@ class SavedAddressView extends StatelessWidget {
           bottom: PreferredSize(
               preferredSize: Size.fromHeight(20.h), child: const Divider()),
         ),
-        body: const SavedAddressViewBody(),
+        body:  SavedAddressViewBody(
+          index: index,
+        ),
       ),
     );
   }

@@ -1,5 +1,10 @@
+import 'package:aman_store2/core/functions/decimal_number.dart';
+import 'package:aman_store2/features/cart/prsentation/view_model/cart_delivery_cubit/cart_delivery_cubit.dart';
+import 'package:aman_store2/features/cart/prsentation/view_model/cart_delivery_cubit/cart_delivery_state.dart';
+import 'package:aman_store2/features/cart/prsentation/views/widgets/custom_swich_adaptive.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -32,17 +37,22 @@ class DCartDeliveryContiner extends StatelessWidget {
                         style: AppStyle.textStyleRegular16
                             .copyWith(color: AppColors.kWhiteColor)),
                     const Spacer(),
-                    Switch.adaptive(
-                        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                        trackOutlineWidth: const MaterialStatePropertyAll(20),
-                        activeColor: AppColors.kPrimColor,
-                        inactiveThumbColor: AppColors.kWhiteColor,
-                        inactiveTrackColor: AppColors.kWhiteColor,
-                        activeTrackColor: AppColors.kWhiteColor,
-                        value: true,
-                        onChanged: (val) {
-                          // controller.changeDeliveryTime(val);
-                        })
+                    BlocBuilder<CartDeliveryCubit, CartDeliveryState>(
+                      buildWhen: (previous, current) =>
+                          current is Initial || current is Sucsess,
+                      builder: (context, state) {
+                        return CustomSwitchAdaptive(
+                          circlColor: AppColors.kPrimColor,
+                          activeColor: AppColors.kWhiteColor,
+                          onChanged: (val) {
+                            context
+                                .read<CartDeliveryCubit>()
+                                .setFastingDelivery(val);
+                          },
+                          val: context.read<CartDeliveryCubit>().isFastDelivery,
+                        );
+                      },
+                    )
                   ],
                 )),
             SizedBox(height: 20.h),
@@ -50,7 +60,7 @@ class DCartDeliveryContiner extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text('deliveryWithin'.tr(), style: AppStyle.textStyleBold12),
-                Text('+ 20 ${'ry'.tr()}',
+                Text('+ ${decimalNumer(price: 2000)} ${'ry'.tr()}',
                     style: AppStyle.textStyleBold12.copyWith(
                         color: AppColors.kPrimColor,
                         fontWeight: FontWeight.w600))

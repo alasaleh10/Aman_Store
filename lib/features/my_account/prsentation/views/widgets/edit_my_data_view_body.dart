@@ -94,7 +94,7 @@ class EditMyDataViewBody extends StatelessWidget {
                   );
                 },
                 child: CustomElevatedButton(
-                  title: 'update'.tr(),
+                  title: 'update'.tr(), 
                   onPressed: () {
                     cubit.editMyAccount();
                   },

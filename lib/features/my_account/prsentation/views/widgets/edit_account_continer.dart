@@ -4,7 +4,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../../../../core/routers/app_routers.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
@@ -26,8 +25,11 @@ class EditAccountContiner extends StatelessWidget {
             phone: user.user.phone,
           );
 
-          context.pushNamed(AppRouters.editMyDataView,
-              extra: [context, pushUserModel]);
+          context.pushNamed(AppRouters.editMyDataView, extra: [
+            context,
+            pushUserModel
+          ]);
+        
         },
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 8, horizontal: 8.w),

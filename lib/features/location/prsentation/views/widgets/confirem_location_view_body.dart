@@ -93,6 +93,11 @@ class ConfirmLocationViewBody extends StatelessWidget {
                     success: (locationModel) => {
                       if (addLocationModel.index == 0)
                         {context.goNamed(AppRouters.homeScreenView)}
+                      else if (addLocationModel.index == 3)
+                        {
+                          context.pop(),
+                          context.pop(true),
+                        }
                     },
                   );
                 },

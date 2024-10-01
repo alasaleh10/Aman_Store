@@ -43,7 +43,7 @@ class ConfirmLocationCubit extends Cubit<ConfirmLocationState> {
             home: house.text.trim(),
             roomNo: room.text.trim()));
         response.when(success: (location) {
-          emit(ConfirmLocationState.success(location));
+          emit(ConfirmLocationState.success(location.message));
         }, failure: (failure) {
           emit(ConfirmLocationState.failure(failure.message ?? 'فشلةالعملية'));
         });

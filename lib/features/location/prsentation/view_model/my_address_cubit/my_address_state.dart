@@ -11,4 +11,10 @@ class MyAddressState with _$MyAddressState {
   const factory MyAddressState.success(ListLocationsModel locations) = Success;
   const factory MyAddressState.failure(String message) = Failure;
   const factory MyAddressState.noInternet() = NoInternet;
+  // 2
+  const factory MyAddressState.loading2() = Loading2;
+  const factory MyAddressState.success2(String message) = Success2;
+  const factory MyAddressState.failure2(String message) = Failure2;
+
+
 }

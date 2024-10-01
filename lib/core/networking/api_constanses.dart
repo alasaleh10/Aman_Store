@@ -21,6 +21,8 @@ class ApiConstanses {
   static const String myLocations = 'locations/my';
   static const String spicificLocation = 'locations/spicific';
   static const String deleteLocation = 'locations/delete';
+  static const String changeMainLocation = 'locations/changeMainLocation';
+
 
   // categories
   static const String allCategories = 'categoriees/all';
@@ -44,6 +46,8 @@ class ApiConstanses {
   static const String myCart = 'carts/myCart'; 
   static const String addOneToCart = 'carts/addOneToCart';
   static const String deleteOneFromCart = 'carts/deleteOneFromCart'; 
+  static const String cartDelivery = 'carts/cartDelivery'; 
+
 
 
 }

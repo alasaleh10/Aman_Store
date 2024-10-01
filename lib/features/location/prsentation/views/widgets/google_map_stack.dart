@@ -11,7 +11,8 @@ import '../../view_model/add_location_cuibt/add_location_state.dart';
 import 'get_my_location_continer.dart';
 
 class GoogleMapStack extends StatelessWidget {
-  const GoogleMapStack({super.key});
+  final int index;
+  const GoogleMapStack({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -32,24 +33,28 @@ class GoogleMapStack extends StatelessWidget {
                     const CameraPosition(target: LatLng(0, 0)));
           },
         ),
-        Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-            child: GestureDetector(
-              onTap: () {
-                context.goNamed(AppRouters.homeScreenView);
-              },
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-                decoration: BoxDecoration(
-                    color: AppColors.kPrimColor,
-                    borderRadius: BorderRadius.circular(8)),
-                child: Text(
-                  'skip'.tr(),
-                  style: AppStyle.textStyleRegular16
-                      .copyWith(color: AppColors.kPrimColor5),
-                ),
-              ),
-            )),
+        index != 0
+            ? const SizedBox()
+            : Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                child: GestureDetector(
+                  onTap: () {
+                    context.goNamed(AppRouters.homeScreenView);
+                  },
+                  child: Container(
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+                    decoration: BoxDecoration(
+                        color: AppColors.kPrimColor,
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Text(
+                      'skip'.tr(),
+                      style: AppStyle.textStyleRegular16
+                          .copyWith(color: AppColors.kPrimColor5),
+                    ),
+                  ),
+                )),
         const Positioned(
             bottom: 10,
             child: Padding(

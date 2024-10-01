@@ -19,10 +19,32 @@ class MyAddressCubit extends Cubit<MyAddressState> {
       response.when(success: (locations) {
         emit(MyAddressState.success(locations));
       }, failure: (failure) {
-        emit(MyAddressState.failure(failure.message ?? 'فشلةالعملية'));
+        if (isFromRefresh) {
+          emit(MyAddressState.failure2(failure.message ?? 'فشلةالعملية'));
+        } else {
+          emit(MyAddressState.failure(failure.message ?? 'فشلةالعملية'));
+        }
       });
     } else {
-      emit(const MyAddressState.noInternet());
+      if (isFromRefresh) {
+        emit(const MyAddressState.failure2('لا يوجد اتصال بالانترنت'));
+      } else {
+        emit(const MyAddressState.noInternet());
+      }
+    }
+  }
+
+  void setMainLocation(int id) async {
+    emit(const MyAddressState.loading2());
+    if (await isConncection()) {
+      var response = await _locationRepo.setMainLocation(id);
+      response.when(success: (doneModel) {
+        emit(MyAddressState.success2(doneModel.message));
+      }, failure: (failure) {
+        emit(MyAddressState.failure2(failure.message ?? 'فشلة العملية'));
+      });
+    } else {
+      emit(const MyAddressState.failure2('لا يوجد اتصال بالانترنت'));
     }
   }
 }

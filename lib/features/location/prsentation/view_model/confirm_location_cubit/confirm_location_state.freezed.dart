@@ -20,7 +20,7 @@ mixin _$ConfirmLocationState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(LocationModel locationModel) success,
+    required TResult Function(String message) success,
     required TResult Function(String errorMessage) failure,
     required TResult Function() noInternet,
   }) =>
@@ -29,7 +29,7 @@ mixin _$ConfirmLocationState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(LocationModel locationModel)? success,
+    TResult? Function(String message)? success,
     TResult? Function(String errorMessage)? failure,
     TResult? Function()? noInternet,
   }) =>
@@ -38,7 +38,7 @@ mixin _$ConfirmLocationState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(LocationModel locationModel)? success,
+    TResult Function(String message)? success,
     TResult Function(String errorMessage)? failure,
     TResult Function()? noInternet,
     required TResult orElse(),
@@ -137,7 +137,7 @@ class _$ConfirmLocationStateInitialImpl implements ConfirmLocationStateInitial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(LocationModel locationModel) success,
+    required TResult Function(String message) success,
     required TResult Function(String errorMessage) failure,
     required TResult Function() noInternet,
   }) {
@@ -149,7 +149,7 @@ class _$ConfirmLocationStateInitialImpl implements ConfirmLocationStateInitial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(LocationModel locationModel)? success,
+    TResult? Function(String message)? success,
     TResult? Function(String errorMessage)? failure,
     TResult? Function()? noInternet,
   }) {
@@ -161,7 +161,7 @@ class _$ConfirmLocationStateInitialImpl implements ConfirmLocationStateInitial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(LocationModel locationModel)? success,
+    TResult Function(String message)? success,
     TResult Function(String errorMessage)? failure,
     TResult Function()? noInternet,
     required TResult orElse(),
@@ -262,7 +262,7 @@ class _$ConfirmLocationStateLoadingImpl implements ConfirmLocationStateLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(LocationModel locationModel) success,
+    required TResult Function(String message) success,
     required TResult Function(String errorMessage) failure,
     required TResult Function() noInternet,
   }) {
@@ -274,7 +274,7 @@ class _$ConfirmLocationStateLoadingImpl implements ConfirmLocationStateLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(LocationModel locationModel)? success,
+    TResult? Function(String message)? success,
     TResult? Function(String errorMessage)? failure,
     TResult? Function()? noInternet,
   }) {
@@ -286,7 +286,7 @@ class _$ConfirmLocationStateLoadingImpl implements ConfirmLocationStateLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(LocationModel locationModel)? success,
+    TResult Function(String message)? success,
     TResult Function(String errorMessage)? failure,
     TResult Function()? noInternet,
     required TResult orElse(),
@@ -350,7 +350,7 @@ abstract class _$$ConfirmLocationStateSuccessImplCopyWith<$Res> {
           $Res Function(_$ConfirmLocationStateSuccessImpl) then) =
       __$$ConfirmLocationStateSuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({LocationModel locationModel});
+  $Res call({String message});
 }
 
 /// @nodoc
@@ -366,13 +366,13 @@ class __$$ConfirmLocationStateSuccessImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? locationModel = null,
+    Object? message = null,
   }) {
     return _then(_$ConfirmLocationStateSuccessImpl(
-      null == locationModel
-          ? _value.locationModel
-          : locationModel // ignore: cast_nullable_to_non_nullable
-              as LocationModel,
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -380,14 +380,14 @@ class __$$ConfirmLocationStateSuccessImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ConfirmLocationStateSuccessImpl implements ConfirmLocationStateSuccess {
-  const _$ConfirmLocationStateSuccessImpl(this.locationModel);
+  const _$ConfirmLocationStateSuccessImpl(this.message);
 
   @override
-  final LocationModel locationModel;
+  final String message;
 
   @override
   String toString() {
-    return 'ConfirmLocationState.success(locationModel: $locationModel)';
+    return 'ConfirmLocationState.success(message: $message)';
   }
 
   @override
@@ -395,12 +395,11 @@ class _$ConfirmLocationStateSuccessImpl implements ConfirmLocationStateSuccess {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConfirmLocationStateSuccessImpl &&
-            (identical(other.locationModel, locationModel) ||
-                other.locationModel == locationModel));
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, locationModel);
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
@@ -414,11 +413,11 @@ class _$ConfirmLocationStateSuccessImpl implements ConfirmLocationStateSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(LocationModel locationModel) success,
+    required TResult Function(String message) success,
     required TResult Function(String errorMessage) failure,
     required TResult Function() noInternet,
   }) {
-    return success(locationModel);
+    return success(message);
   }
 
   @override
@@ -426,11 +425,11 @@ class _$ConfirmLocationStateSuccessImpl implements ConfirmLocationStateSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(LocationModel locationModel)? success,
+    TResult? Function(String message)? success,
     TResult? Function(String errorMessage)? failure,
     TResult? Function()? noInternet,
   }) {
-    return success?.call(locationModel);
+    return success?.call(message);
   }
 
   @override
@@ -438,13 +437,13 @@ class _$ConfirmLocationStateSuccessImpl implements ConfirmLocationStateSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(LocationModel locationModel)? success,
+    TResult Function(String message)? success,
     TResult Function(String errorMessage)? failure,
     TResult Function()? noInternet,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(locationModel);
+      return success(message);
     }
     return orElse();
   }
@@ -491,10 +490,10 @@ class _$ConfirmLocationStateSuccessImpl implements ConfirmLocationStateSuccess {
 }
 
 abstract class ConfirmLocationStateSuccess implements ConfirmLocationState {
-  const factory ConfirmLocationStateSuccess(final LocationModel locationModel) =
+  const factory ConfirmLocationStateSuccess(final String message) =
       _$ConfirmLocationStateSuccessImpl;
 
-  LocationModel get locationModel;
+  String get message;
   @JsonKey(ignore: true)
   _$$ConfirmLocationStateSuccessImplCopyWith<_$ConfirmLocationStateSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -571,7 +570,7 @@ class _$ConfirmLocationStateFailureImpl implements ConfirmLocationStateFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(LocationModel locationModel) success,
+    required TResult Function(String message) success,
     required TResult Function(String errorMessage) failure,
     required TResult Function() noInternet,
   }) {
@@ -583,7 +582,7 @@ class _$ConfirmLocationStateFailureImpl implements ConfirmLocationStateFailure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(LocationModel locationModel)? success,
+    TResult? Function(String message)? success,
     TResult? Function(String errorMessage)? failure,
     TResult? Function()? noInternet,
   }) {
@@ -595,7 +594,7 @@ class _$ConfirmLocationStateFailureImpl implements ConfirmLocationStateFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(LocationModel locationModel)? success,
+    TResult Function(String message)? success,
     TResult Function(String errorMessage)? failure,
     TResult Function()? noInternet,
     required TResult orElse(),
@@ -702,7 +701,7 @@ class _$ConfirmLocationStateNoInternetImpl
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(LocationModel locationModel) success,
+    required TResult Function(String message) success,
     required TResult Function(String errorMessage) failure,
     required TResult Function() noInternet,
   }) {
@@ -714,7 +713,7 @@ class _$ConfirmLocationStateNoInternetImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(LocationModel locationModel)? success,
+    TResult? Function(String message)? success,
     TResult? Function(String errorMessage)? failure,
     TResult? Function()? noInternet,
   }) {
@@ -726,7 +725,7 @@ class _$ConfirmLocationStateNoInternetImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(LocationModel locationModel)? success,
+    TResult Function(String message)? success,
     TResult Function(String errorMessage)? failure,
     TResult Function()? noInternet,
     required TResult orElse(),

@@ -7,7 +7,7 @@ class DioFactory {
   DioFactory._();
   static Dio? dio;
   static Future<Dio> getDio() async {
-    Duration duration = const Duration(seconds: 30);
+    Duration duration = const Duration(seconds: 15);
     if (dio == null) {
       dio = Dio();
       dio!
@@ -34,7 +34,8 @@ class DioFactory {
   static Future<void> addDioHeaders() async {
     dio?.options.headers = {
       'Accept': 'application/json',
-      'Authorization': 'Bearer ${await SecureStorage.readData(key: 'token')}'
+      'Authorization':
+          'Bearer ${await SecureStorage.readData(key: 'token') ?? ''}'
     };
   }
 
@@ -44,3 +45,4 @@ class DioFactory {
     };
   }
 }
+ 

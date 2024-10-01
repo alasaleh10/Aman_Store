@@ -47,8 +47,10 @@ class AddLocationBodyView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Expanded(
-            child: GoogleMapStack(),
+          Expanded(
+            child: GoogleMapStack(
+              index: index,
+            ),
           ),
           CustomDividerRow(cubit: cuibt),
           const SizedBox(height: 7),

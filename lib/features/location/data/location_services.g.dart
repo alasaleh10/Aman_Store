@@ -24,13 +24,13 @@ class _LocationServices implements LocationServices {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<LocationModel> addLocation(AddLocationToJson addLocationToJson) async {
+  Future<DoneModel> addLocation(AddLocationToJson addLocationToJson) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(addLocationToJson.toJson());
-    final _options = _setStreamType<LocationModel>(Options(
+    final _options = _setStreamType<DoneModel>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -47,9 +47,9 @@ class _LocationServices implements LocationServices {
           baseUrl,
         )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late LocationModel _value;
+    late DoneModel _value;
     try {
-      _value = LocationModel.fromJson(_result.data!);
+      _value = DoneModel.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -137,6 +137,39 @@ class _LocationServices implements LocationServices {
         .compose(
           _dio.options,
           'locations/delete/${id}',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late DoneModel _value;
+    try {
+      _value = DoneModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<DoneModel> setMainLocation(int id) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<DoneModel>(Options(
+      method: 'PUT',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'locations/changeMainLocation/${id}',
           queryParameters: queryParameters,
           data: _data,
         )

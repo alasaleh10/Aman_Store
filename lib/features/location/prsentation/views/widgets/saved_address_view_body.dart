@@ -5,21 +5,45 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:go_router/go_router.dart';
+import '../../../../../core/functions/show_snac_bar.dart';
 import '../../../../../core/widgets/failure_page_view.dart';
-import '../../../../../core/widgets/loading_view_page.dart';
 import '../../../../../core/widgets/no_internet_page_view.dart';
+import 'locations_loading.dart';
 
 class SavedAddressViewBody extends StatelessWidget {
-  const SavedAddressViewBody({super.key});
+  final int? index;
+  const SavedAddressViewBody({super.key, this.index});
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<MyAddressCubit, MyAddressState>(
+    return BlocConsumer<MyAddressCubit, MyAddressState>(
+      listener: (context, state) {
+        state.mapOrNull(
+          failure2: (value) => showSnackBar(context, message: value.message),
+          loading2: (value) => showSnackBar(context,
+              message: 'جاري تحديث البيانات', isError: false),
+          success2: (value) {
+            if (index == 1) {
+              context.pop(true);
+            } else if (index == 2) {
+              context.pop(true);
+            } else {
+              showSnackBar(context, message: value.message, isError: false);
+              context
+                  .read<MyAddressCubit>()
+                  .getMyLocations(isFromRefresh: true);
+            }
+          },
+        );
+      },
+      buildWhen: (previous, current) =>
+          current is! Loading2 && current is! Success2 && current is! Failure2,
       builder: (context, state) {
         return state.maybeWhen(
           success: (locations) {
-            return MyLocationsSucsessWidget(locations: locations);
+            return MyLocationsSucsessWidget(
+                index2: index, locations: locations);
           },
           failure: (message) => FailurePageView(
             message: message,
@@ -27,7 +51,7 @@ class SavedAddressViewBody extends StatelessWidget {
               context.read<MyAddressCubit>().getMyLocations();
             },
           ),
-          loading: () => const LoadingViewPage(),
+          loading: () => const LocationsLoading(),
           noInternet: () => NoInternetPage(
             onTap: () {
               context.read<MyAddressCubit>().getMyLocations();

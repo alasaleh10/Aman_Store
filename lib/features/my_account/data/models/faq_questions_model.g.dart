@@ -12,9 +12,7 @@ Questions _$QuestionsFromJson(Map<String, dynamic> json) => Questions(
           .toList(),
     );
 
-Map<String, dynamic> _$QuestionsToJson(Questions instance) => <String, dynamic>{
-      'questions': instance.question,
-    };
+
 
 FaqQuestionModel _$FaqQuestionModelFromJson(Map<String, dynamic> json) =>
     FaqQuestionModel(
@@ -23,9 +21,3 @@ FaqQuestionModel _$FaqQuestionModelFromJson(Map<String, dynamic> json) =>
       answer: json['answer'] as String,
     );
 
-Map<String, dynamic> _$FaqQuestionModelToJson(FaqQuestionModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'question': instance.question,
-      'answer': instance.answer,
-    };

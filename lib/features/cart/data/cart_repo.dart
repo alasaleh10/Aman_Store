@@ -3,6 +3,7 @@ import 'package:aman_store2/features/cart/data/cart_serviese.dart';
 
 import '../../../core/networking/api_error_handler.dart';
 import '../../../core/networking/api_result.dart';
+import 'models/cart_delivery_model.dart';
 import 'models/cart_items_model/cart_item_model.dart';
 
 class CartRepo {
@@ -42,5 +43,13 @@ class CartRepo {
     }
   }
 
+  Future<ApiResult<CartDeliveryModel>> cartDelivery() async {
+    try {
+      var response = await _cartServises.cartDelivery();
+      return ApiResult.success(response);
+    } catch (err) {
+      return ApiResult.failure(ApiErrorHandler.handle(err));
+    }
+  }
   
 }

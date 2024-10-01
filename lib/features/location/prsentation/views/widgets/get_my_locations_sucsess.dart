@@ -6,8 +6,9 @@ import 'add_new_location_continer.dart';
 import 'address_continer.dart';
 
 class MyLocationsSucsessWidget extends StatelessWidget {
+  final int? index2;
   final ListLocationsModel locations;
-  const MyLocationsSucsessWidget({super.key, required this.locations});
+  const MyLocationsSucsessWidget({super.key, required this.locations, this.index2});
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +19,7 @@ class MyLocationsSucsessWidget extends StatelessWidget {
             itemCount: locations.locations.length,
             itemBuilder: (BuildContext context, int index) {
               return AddressContiner(
+                index: index2,
                 location: locations.locations[index],
               );
             },

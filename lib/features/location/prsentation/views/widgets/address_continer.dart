@@ -1,5 +1,7 @@
 import 'package:aman_store2/core/routers/app_routers.dart';
+import 'package:aman_store2/features/location/prsentation/view_model/my_address_cubit/my_address_cubit.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
@@ -10,11 +12,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../data/models/location_model.dart';
 
 class AddressContiner extends StatelessWidget {
+  final int? index;
   final LocationModel location;
-  const AddressContiner({super.key, required this.location});
+  const AddressContiner({super.key, required this.location, this.index});
 
   @override
   Widget build(BuildContext context) {
+  
+
     return ZoomIn(
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
@@ -35,7 +40,11 @@ class AddressContiner extends StatelessWidget {
                       activeColor: AppColors.kPrimColor,
                       value: true,
                       groupValue: location.isMain,
-                      onChanged: (value) {},
+                      onChanged: (value) {
+                        context
+                            .read<MyAddressCubit>()
+                            .setMainLocation(location.id);
+                      },
                       title: Text(
                         'setAsDefualtAddress'.tr(),
                         style: AppStyle.textStyleRegular14,
@@ -78,7 +87,7 @@ class AddressContiner extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Text(
                   '${location.name} - ${location.street}',
-                  // 'حضرموت – سيئون – شارع الجزائر – عمارة الكاف – شقة رقم 6',
+                  
                   style: AppStyle.textStyleBold12.copyWith(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w400,
