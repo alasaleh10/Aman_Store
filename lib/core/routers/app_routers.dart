@@ -26,7 +26,7 @@ abstract class AppRouters {
   static const String productDetilsView = 'productDetilsView';
   static const String cartProductView='cartProductView';
   static const String cartDeliveryView='cartDeliveryView';
-  // static const String View='';
+  static const String cartPaymentView='cartPaymentView';
   // static const String View='';
   // static const String View='';
   // static const String View='';

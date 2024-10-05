@@ -25,6 +25,9 @@ mixin _$CartProductsState {
     required TResult Function() noInternet,
     required TResult Function(String message) sucsess2,
     required TResult Function(String message) failure,
+    required TResult Function() loading3,
+    required TResult Function(String message) sucsess3,
+    required TResult Function(String message) failure3,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +39,9 @@ mixin _$CartProductsState {
     TResult? Function()? noInternet,
     TResult? Function(String message)? sucsess2,
     TResult? Function(String message)? failure,
+    TResult? Function()? loading3,
+    TResult? Function(String message)? sucsess3,
+    TResult? Function(String message)? failure3,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +53,9 @@ mixin _$CartProductsState {
     TResult Function()? noInternet,
     TResult Function(String message)? sucsess2,
     TResult Function(String message)? failure,
+    TResult Function()? loading3,
+    TResult Function(String message)? sucsess3,
+    TResult Function(String message)? failure3,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -59,6 +68,9 @@ mixin _$CartProductsState {
     required TResult Function(Nointernet value) noInternet,
     required TResult Function(Sucsess2 value) sucsess2,
     required TResult Function(Failure value) failure,
+    required TResult Function(Loading3 value) loading3,
+    required TResult Function(Sucsess3 value) sucsess3,
+    required TResult Function(Failure3 value) failure3,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +82,9 @@ mixin _$CartProductsState {
     TResult? Function(Nointernet value)? noInternet,
     TResult? Function(Sucsess2 value)? sucsess2,
     TResult? Function(Failure value)? failure,
+    TResult? Function(Loading3 value)? loading3,
+    TResult? Function(Sucsess3 value)? sucsess3,
+    TResult? Function(Failure3 value)? failure3,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,6 +96,9 @@ mixin _$CartProductsState {
     TResult Function(Nointernet value)? noInternet,
     TResult Function(Sucsess2 value)? sucsess2,
     TResult Function(Failure value)? failure,
+    TResult Function(Loading3 value)? loading3,
+    TResult Function(Sucsess3 value)? sucsess3,
+    TResult Function(Failure3 value)? failure3,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -149,6 +167,9 @@ class _$InitialImpl implements Initial {
     required TResult Function() noInternet,
     required TResult Function(String message) sucsess2,
     required TResult Function(String message) failure,
+    required TResult Function() loading3,
+    required TResult Function(String message) sucsess3,
+    required TResult Function(String message) failure3,
   }) {
     return initial();
   }
@@ -163,6 +184,9 @@ class _$InitialImpl implements Initial {
     TResult? Function()? noInternet,
     TResult? Function(String message)? sucsess2,
     TResult? Function(String message)? failure,
+    TResult? Function()? loading3,
+    TResult? Function(String message)? sucsess3,
+    TResult? Function(String message)? failure3,
   }) {
     return initial?.call();
   }
@@ -177,6 +201,9 @@ class _$InitialImpl implements Initial {
     TResult Function()? noInternet,
     TResult Function(String message)? sucsess2,
     TResult Function(String message)? failure,
+    TResult Function()? loading3,
+    TResult Function(String message)? sucsess3,
+    TResult Function(String message)? failure3,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -195,6 +222,9 @@ class _$InitialImpl implements Initial {
     required TResult Function(Nointernet value) noInternet,
     required TResult Function(Sucsess2 value) sucsess2,
     required TResult Function(Failure value) failure,
+    required TResult Function(Loading3 value) loading3,
+    required TResult Function(Sucsess3 value) sucsess3,
+    required TResult Function(Failure3 value) failure3,
   }) {
     return initial(this);
   }
@@ -209,6 +239,9 @@ class _$InitialImpl implements Initial {
     TResult? Function(Nointernet value)? noInternet,
     TResult? Function(Sucsess2 value)? sucsess2,
     TResult? Function(Failure value)? failure,
+    TResult? Function(Loading3 value)? loading3,
+    TResult? Function(Sucsess3 value)? sucsess3,
+    TResult? Function(Failure3 value)? failure3,
   }) {
     return initial?.call(this);
   }
@@ -223,6 +256,9 @@ class _$InitialImpl implements Initial {
     TResult Function(Nointernet value)? noInternet,
     TResult Function(Sucsess2 value)? sucsess2,
     TResult Function(Failure value)? failure,
+    TResult Function(Loading3 value)? loading3,
+    TResult Function(Sucsess3 value)? sucsess3,
+    TResult Function(Failure3 value)? failure3,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -281,6 +317,9 @@ class _$LoadingImpl implements Loading {
     required TResult Function() noInternet,
     required TResult Function(String message) sucsess2,
     required TResult Function(String message) failure,
+    required TResult Function() loading3,
+    required TResult Function(String message) sucsess3,
+    required TResult Function(String message) failure3,
   }) {
     return loading();
   }
@@ -295,6 +334,9 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? noInternet,
     TResult? Function(String message)? sucsess2,
     TResult? Function(String message)? failure,
+    TResult? Function()? loading3,
+    TResult? Function(String message)? sucsess3,
+    TResult? Function(String message)? failure3,
   }) {
     return loading?.call();
   }
@@ -309,6 +351,9 @@ class _$LoadingImpl implements Loading {
     TResult Function()? noInternet,
     TResult Function(String message)? sucsess2,
     TResult Function(String message)? failure,
+    TResult Function()? loading3,
+    TResult Function(String message)? sucsess3,
+    TResult Function(String message)? failure3,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -327,6 +372,9 @@ class _$LoadingImpl implements Loading {
     required TResult Function(Nointernet value) noInternet,
     required TResult Function(Sucsess2 value) sucsess2,
     required TResult Function(Failure value) failure,
+    required TResult Function(Loading3 value) loading3,
+    required TResult Function(Sucsess3 value) sucsess3,
+    required TResult Function(Failure3 value) failure3,
   }) {
     return loading(this);
   }
@@ -341,6 +389,9 @@ class _$LoadingImpl implements Loading {
     TResult? Function(Nointernet value)? noInternet,
     TResult? Function(Sucsess2 value)? sucsess2,
     TResult? Function(Failure value)? failure,
+    TResult? Function(Loading3 value)? loading3,
+    TResult? Function(Sucsess3 value)? sucsess3,
+    TResult? Function(Failure3 value)? failure3,
   }) {
     return loading?.call(this);
   }
@@ -355,6 +406,9 @@ class _$LoadingImpl implements Loading {
     TResult Function(Nointernet value)? noInternet,
     TResult Function(Sucsess2 value)? sucsess2,
     TResult Function(Failure value)? failure,
+    TResult Function(Loading3 value)? loading3,
+    TResult Function(Sucsess3 value)? sucsess3,
+    TResult Function(Failure3 value)? failure3,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -440,6 +494,9 @@ class _$SucsessImpl implements Sucsess {
     required TResult Function() noInternet,
     required TResult Function(String message) sucsess2,
     required TResult Function(String message) failure,
+    required TResult Function() loading3,
+    required TResult Function(String message) sucsess3,
+    required TResult Function(String message) failure3,
   }) {
     return sucsess(cartItemModel);
   }
@@ -454,6 +511,9 @@ class _$SucsessImpl implements Sucsess {
     TResult? Function()? noInternet,
     TResult? Function(String message)? sucsess2,
     TResult? Function(String message)? failure,
+    TResult? Function()? loading3,
+    TResult? Function(String message)? sucsess3,
+    TResult? Function(String message)? failure3,
   }) {
     return sucsess?.call(cartItemModel);
   }
@@ -468,6 +528,9 @@ class _$SucsessImpl implements Sucsess {
     TResult Function()? noInternet,
     TResult Function(String message)? sucsess2,
     TResult Function(String message)? failure,
+    TResult Function()? loading3,
+    TResult Function(String message)? sucsess3,
+    TResult Function(String message)? failure3,
     required TResult orElse(),
   }) {
     if (sucsess != null) {
@@ -486,6 +549,9 @@ class _$SucsessImpl implements Sucsess {
     required TResult Function(Nointernet value) noInternet,
     required TResult Function(Sucsess2 value) sucsess2,
     required TResult Function(Failure value) failure,
+    required TResult Function(Loading3 value) loading3,
+    required TResult Function(Sucsess3 value) sucsess3,
+    required TResult Function(Failure3 value) failure3,
   }) {
     return sucsess(this);
   }
@@ -500,6 +566,9 @@ class _$SucsessImpl implements Sucsess {
     TResult? Function(Nointernet value)? noInternet,
     TResult? Function(Sucsess2 value)? sucsess2,
     TResult? Function(Failure value)? failure,
+    TResult? Function(Loading3 value)? loading3,
+    TResult? Function(Sucsess3 value)? sucsess3,
+    TResult? Function(Failure3 value)? failure3,
   }) {
     return sucsess?.call(this);
   }
@@ -514,6 +583,9 @@ class _$SucsessImpl implements Sucsess {
     TResult Function(Nointernet value)? noInternet,
     TResult Function(Sucsess2 value)? sucsess2,
     TResult Function(Failure value)? failure,
+    TResult Function(Loading3 value)? loading3,
+    TResult Function(Sucsess3 value)? sucsess3,
+    TResult Function(Failure3 value)? failure3,
     required TResult orElse(),
   }) {
     if (sucsess != null) {
@@ -603,6 +675,9 @@ class _$ErrorImpl implements Error {
     required TResult Function() noInternet,
     required TResult Function(String message) sucsess2,
     required TResult Function(String message) failure,
+    required TResult Function() loading3,
+    required TResult Function(String message) sucsess3,
+    required TResult Function(String message) failure3,
   }) {
     return error(message);
   }
@@ -617,6 +692,9 @@ class _$ErrorImpl implements Error {
     TResult? Function()? noInternet,
     TResult? Function(String message)? sucsess2,
     TResult? Function(String message)? failure,
+    TResult? Function()? loading3,
+    TResult? Function(String message)? sucsess3,
+    TResult? Function(String message)? failure3,
   }) {
     return error?.call(message);
   }
@@ -631,6 +709,9 @@ class _$ErrorImpl implements Error {
     TResult Function()? noInternet,
     TResult Function(String message)? sucsess2,
     TResult Function(String message)? failure,
+    TResult Function()? loading3,
+    TResult Function(String message)? sucsess3,
+    TResult Function(String message)? failure3,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -649,6 +730,9 @@ class _$ErrorImpl implements Error {
     required TResult Function(Nointernet value) noInternet,
     required TResult Function(Sucsess2 value) sucsess2,
     required TResult Function(Failure value) failure,
+    required TResult Function(Loading3 value) loading3,
+    required TResult Function(Sucsess3 value) sucsess3,
+    required TResult Function(Failure3 value) failure3,
   }) {
     return error(this);
   }
@@ -663,6 +747,9 @@ class _$ErrorImpl implements Error {
     TResult? Function(Nointernet value)? noInternet,
     TResult? Function(Sucsess2 value)? sucsess2,
     TResult? Function(Failure value)? failure,
+    TResult? Function(Loading3 value)? loading3,
+    TResult? Function(Sucsess3 value)? sucsess3,
+    TResult? Function(Failure3 value)? failure3,
   }) {
     return error?.call(this);
   }
@@ -677,6 +764,9 @@ class _$ErrorImpl implements Error {
     TResult Function(Nointernet value)? noInternet,
     TResult Function(Sucsess2 value)? sucsess2,
     TResult Function(Failure value)? failure,
+    TResult Function(Loading3 value)? loading3,
+    TResult Function(Sucsess3 value)? sucsess3,
+    TResult Function(Failure3 value)? failure3,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -740,6 +830,9 @@ class _$NointernetImpl implements Nointernet {
     required TResult Function() noInternet,
     required TResult Function(String message) sucsess2,
     required TResult Function(String message) failure,
+    required TResult Function() loading3,
+    required TResult Function(String message) sucsess3,
+    required TResult Function(String message) failure3,
   }) {
     return noInternet();
   }
@@ -754,6 +847,9 @@ class _$NointernetImpl implements Nointernet {
     TResult? Function()? noInternet,
     TResult? Function(String message)? sucsess2,
     TResult? Function(String message)? failure,
+    TResult? Function()? loading3,
+    TResult? Function(String message)? sucsess3,
+    TResult? Function(String message)? failure3,
   }) {
     return noInternet?.call();
   }
@@ -768,6 +864,9 @@ class _$NointernetImpl implements Nointernet {
     TResult Function()? noInternet,
     TResult Function(String message)? sucsess2,
     TResult Function(String message)? failure,
+    TResult Function()? loading3,
+    TResult Function(String message)? sucsess3,
+    TResult Function(String message)? failure3,
     required TResult orElse(),
   }) {
     if (noInternet != null) {
@@ -786,6 +885,9 @@ class _$NointernetImpl implements Nointernet {
     required TResult Function(Nointernet value) noInternet,
     required TResult Function(Sucsess2 value) sucsess2,
     required TResult Function(Failure value) failure,
+    required TResult Function(Loading3 value) loading3,
+    required TResult Function(Sucsess3 value) sucsess3,
+    required TResult Function(Failure3 value) failure3,
   }) {
     return noInternet(this);
   }
@@ -800,6 +902,9 @@ class _$NointernetImpl implements Nointernet {
     TResult? Function(Nointernet value)? noInternet,
     TResult? Function(Sucsess2 value)? sucsess2,
     TResult? Function(Failure value)? failure,
+    TResult? Function(Loading3 value)? loading3,
+    TResult? Function(Sucsess3 value)? sucsess3,
+    TResult? Function(Failure3 value)? failure3,
   }) {
     return noInternet?.call(this);
   }
@@ -814,6 +919,9 @@ class _$NointernetImpl implements Nointernet {
     TResult Function(Nointernet value)? noInternet,
     TResult Function(Sucsess2 value)? sucsess2,
     TResult Function(Failure value)? failure,
+    TResult Function(Loading3 value)? loading3,
+    TResult Function(Sucsess3 value)? sucsess3,
+    TResult Function(Failure3 value)? failure3,
     required TResult orElse(),
   }) {
     if (noInternet != null) {
@@ -898,6 +1006,9 @@ class _$Sucsess2Impl implements Sucsess2 {
     required TResult Function() noInternet,
     required TResult Function(String message) sucsess2,
     required TResult Function(String message) failure,
+    required TResult Function() loading3,
+    required TResult Function(String message) sucsess3,
+    required TResult Function(String message) failure3,
   }) {
     return sucsess2(message);
   }
@@ -912,6 +1023,9 @@ class _$Sucsess2Impl implements Sucsess2 {
     TResult? Function()? noInternet,
     TResult? Function(String message)? sucsess2,
     TResult? Function(String message)? failure,
+    TResult? Function()? loading3,
+    TResult? Function(String message)? sucsess3,
+    TResult? Function(String message)? failure3,
   }) {
     return sucsess2?.call(message);
   }
@@ -926,6 +1040,9 @@ class _$Sucsess2Impl implements Sucsess2 {
     TResult Function()? noInternet,
     TResult Function(String message)? sucsess2,
     TResult Function(String message)? failure,
+    TResult Function()? loading3,
+    TResult Function(String message)? sucsess3,
+    TResult Function(String message)? failure3,
     required TResult orElse(),
   }) {
     if (sucsess2 != null) {
@@ -944,6 +1061,9 @@ class _$Sucsess2Impl implements Sucsess2 {
     required TResult Function(Nointernet value) noInternet,
     required TResult Function(Sucsess2 value) sucsess2,
     required TResult Function(Failure value) failure,
+    required TResult Function(Loading3 value) loading3,
+    required TResult Function(Sucsess3 value) sucsess3,
+    required TResult Function(Failure3 value) failure3,
   }) {
     return sucsess2(this);
   }
@@ -958,6 +1078,9 @@ class _$Sucsess2Impl implements Sucsess2 {
     TResult? Function(Nointernet value)? noInternet,
     TResult? Function(Sucsess2 value)? sucsess2,
     TResult? Function(Failure value)? failure,
+    TResult? Function(Loading3 value)? loading3,
+    TResult? Function(Sucsess3 value)? sucsess3,
+    TResult? Function(Failure3 value)? failure3,
   }) {
     return sucsess2?.call(this);
   }
@@ -972,6 +1095,9 @@ class _$Sucsess2Impl implements Sucsess2 {
     TResult Function(Nointernet value)? noInternet,
     TResult Function(Sucsess2 value)? sucsess2,
     TResult Function(Failure value)? failure,
+    TResult Function(Loading3 value)? loading3,
+    TResult Function(Sucsess3 value)? sucsess3,
+    TResult Function(Failure3 value)? failure3,
     required TResult orElse(),
   }) {
     if (sucsess2 != null) {
@@ -1061,6 +1187,9 @@ class _$FailureImpl implements Failure {
     required TResult Function() noInternet,
     required TResult Function(String message) sucsess2,
     required TResult Function(String message) failure,
+    required TResult Function() loading3,
+    required TResult Function(String message) sucsess3,
+    required TResult Function(String message) failure3,
   }) {
     return failure(message);
   }
@@ -1075,6 +1204,9 @@ class _$FailureImpl implements Failure {
     TResult? Function()? noInternet,
     TResult? Function(String message)? sucsess2,
     TResult? Function(String message)? failure,
+    TResult? Function()? loading3,
+    TResult? Function(String message)? sucsess3,
+    TResult? Function(String message)? failure3,
   }) {
     return failure?.call(message);
   }
@@ -1089,6 +1221,9 @@ class _$FailureImpl implements Failure {
     TResult Function()? noInternet,
     TResult Function(String message)? sucsess2,
     TResult Function(String message)? failure,
+    TResult Function()? loading3,
+    TResult Function(String message)? sucsess3,
+    TResult Function(String message)? failure3,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -1107,6 +1242,9 @@ class _$FailureImpl implements Failure {
     required TResult Function(Nointernet value) noInternet,
     required TResult Function(Sucsess2 value) sucsess2,
     required TResult Function(Failure value) failure,
+    required TResult Function(Loading3 value) loading3,
+    required TResult Function(Sucsess3 value) sucsess3,
+    required TResult Function(Failure3 value) failure3,
   }) {
     return failure(this);
   }
@@ -1121,6 +1259,9 @@ class _$FailureImpl implements Failure {
     TResult? Function(Nointernet value)? noInternet,
     TResult? Function(Sucsess2 value)? sucsess2,
     TResult? Function(Failure value)? failure,
+    TResult? Function(Loading3 value)? loading3,
+    TResult? Function(Sucsess3 value)? sucsess3,
+    TResult? Function(Failure3 value)? failure3,
   }) {
     return failure?.call(this);
   }
@@ -1135,6 +1276,9 @@ class _$FailureImpl implements Failure {
     TResult Function(Nointernet value)? noInternet,
     TResult Function(Sucsess2 value)? sucsess2,
     TResult Function(Failure value)? failure,
+    TResult Function(Loading3 value)? loading3,
+    TResult Function(Sucsess3 value)? sucsess3,
+    TResult Function(Failure3 value)? failure3,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -1150,5 +1294,517 @@ abstract class Failure implements CartProductsState {
   String get message;
   @JsonKey(ignore: true)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$Loading3ImplCopyWith<$Res> {
+  factory _$$Loading3ImplCopyWith(
+          _$Loading3Impl value, $Res Function(_$Loading3Impl) then) =
+      __$$Loading3ImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$Loading3ImplCopyWithImpl<$Res>
+    extends _$CartProductsStateCopyWithImpl<$Res, _$Loading3Impl>
+    implements _$$Loading3ImplCopyWith<$Res> {
+  __$$Loading3ImplCopyWithImpl(
+      _$Loading3Impl _value, $Res Function(_$Loading3Impl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$Loading3Impl implements Loading3 {
+  const _$Loading3Impl();
+
+  @override
+  String toString() {
+    return 'CartProductsState.loading3()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$Loading3Impl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(CartItemModel cartItemModel) sucsess,
+    required TResult Function(String message) error,
+    required TResult Function() noInternet,
+    required TResult Function(String message) sucsess2,
+    required TResult Function(String message) failure,
+    required TResult Function() loading3,
+    required TResult Function(String message) sucsess3,
+    required TResult Function(String message) failure3,
+  }) {
+    return loading3();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(CartItemModel cartItemModel)? sucsess,
+    TResult? Function(String message)? error,
+    TResult? Function()? noInternet,
+    TResult? Function(String message)? sucsess2,
+    TResult? Function(String message)? failure,
+    TResult? Function()? loading3,
+    TResult? Function(String message)? sucsess3,
+    TResult? Function(String message)? failure3,
+  }) {
+    return loading3?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(CartItemModel cartItemModel)? sucsess,
+    TResult Function(String message)? error,
+    TResult Function()? noInternet,
+    TResult Function(String message)? sucsess2,
+    TResult Function(String message)? failure,
+    TResult Function()? loading3,
+    TResult Function(String message)? sucsess3,
+    TResult Function(String message)? failure3,
+    required TResult orElse(),
+  }) {
+    if (loading3 != null) {
+      return loading3();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Sucsess value) sucsess,
+    required TResult Function(Error value) error,
+    required TResult Function(Nointernet value) noInternet,
+    required TResult Function(Sucsess2 value) sucsess2,
+    required TResult Function(Failure value) failure,
+    required TResult Function(Loading3 value) loading3,
+    required TResult Function(Sucsess3 value) sucsess3,
+    required TResult Function(Failure3 value) failure3,
+  }) {
+    return loading3(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Sucsess value)? sucsess,
+    TResult? Function(Error value)? error,
+    TResult? Function(Nointernet value)? noInternet,
+    TResult? Function(Sucsess2 value)? sucsess2,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(Loading3 value)? loading3,
+    TResult? Function(Sucsess3 value)? sucsess3,
+    TResult? Function(Failure3 value)? failure3,
+  }) {
+    return loading3?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Sucsess value)? sucsess,
+    TResult Function(Error value)? error,
+    TResult Function(Nointernet value)? noInternet,
+    TResult Function(Sucsess2 value)? sucsess2,
+    TResult Function(Failure value)? failure,
+    TResult Function(Loading3 value)? loading3,
+    TResult Function(Sucsess3 value)? sucsess3,
+    TResult Function(Failure3 value)? failure3,
+    required TResult orElse(),
+  }) {
+    if (loading3 != null) {
+      return loading3(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Loading3 implements CartProductsState {
+  const factory Loading3() = _$Loading3Impl;
+}
+
+/// @nodoc
+abstract class _$$Sucsess3ImplCopyWith<$Res> {
+  factory _$$Sucsess3ImplCopyWith(
+          _$Sucsess3Impl value, $Res Function(_$Sucsess3Impl) then) =
+      __$$Sucsess3ImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$Sucsess3ImplCopyWithImpl<$Res>
+    extends _$CartProductsStateCopyWithImpl<$Res, _$Sucsess3Impl>
+    implements _$$Sucsess3ImplCopyWith<$Res> {
+  __$$Sucsess3ImplCopyWithImpl(
+      _$Sucsess3Impl _value, $Res Function(_$Sucsess3Impl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$Sucsess3Impl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$Sucsess3Impl implements Sucsess3 {
+  const _$Sucsess3Impl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'CartProductsState.sucsess3(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Sucsess3Impl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$Sucsess3ImplCopyWith<_$Sucsess3Impl> get copyWith =>
+      __$$Sucsess3ImplCopyWithImpl<_$Sucsess3Impl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(CartItemModel cartItemModel) sucsess,
+    required TResult Function(String message) error,
+    required TResult Function() noInternet,
+    required TResult Function(String message) sucsess2,
+    required TResult Function(String message) failure,
+    required TResult Function() loading3,
+    required TResult Function(String message) sucsess3,
+    required TResult Function(String message) failure3,
+  }) {
+    return sucsess3(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(CartItemModel cartItemModel)? sucsess,
+    TResult? Function(String message)? error,
+    TResult? Function()? noInternet,
+    TResult? Function(String message)? sucsess2,
+    TResult? Function(String message)? failure,
+    TResult? Function()? loading3,
+    TResult? Function(String message)? sucsess3,
+    TResult? Function(String message)? failure3,
+  }) {
+    return sucsess3?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(CartItemModel cartItemModel)? sucsess,
+    TResult Function(String message)? error,
+    TResult Function()? noInternet,
+    TResult Function(String message)? sucsess2,
+    TResult Function(String message)? failure,
+    TResult Function()? loading3,
+    TResult Function(String message)? sucsess3,
+    TResult Function(String message)? failure3,
+    required TResult orElse(),
+  }) {
+    if (sucsess3 != null) {
+      return sucsess3(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Sucsess value) sucsess,
+    required TResult Function(Error value) error,
+    required TResult Function(Nointernet value) noInternet,
+    required TResult Function(Sucsess2 value) sucsess2,
+    required TResult Function(Failure value) failure,
+    required TResult Function(Loading3 value) loading3,
+    required TResult Function(Sucsess3 value) sucsess3,
+    required TResult Function(Failure3 value) failure3,
+  }) {
+    return sucsess3(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Sucsess value)? sucsess,
+    TResult? Function(Error value)? error,
+    TResult? Function(Nointernet value)? noInternet,
+    TResult? Function(Sucsess2 value)? sucsess2,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(Loading3 value)? loading3,
+    TResult? Function(Sucsess3 value)? sucsess3,
+    TResult? Function(Failure3 value)? failure3,
+  }) {
+    return sucsess3?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Sucsess value)? sucsess,
+    TResult Function(Error value)? error,
+    TResult Function(Nointernet value)? noInternet,
+    TResult Function(Sucsess2 value)? sucsess2,
+    TResult Function(Failure value)? failure,
+    TResult Function(Loading3 value)? loading3,
+    TResult Function(Sucsess3 value)? sucsess3,
+    TResult Function(Failure3 value)? failure3,
+    required TResult orElse(),
+  }) {
+    if (sucsess3 != null) {
+      return sucsess3(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Sucsess3 implements CartProductsState {
+  const factory Sucsess3(final String message) = _$Sucsess3Impl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$Sucsess3ImplCopyWith<_$Sucsess3Impl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$Failure3ImplCopyWith<$Res> {
+  factory _$$Failure3ImplCopyWith(
+          _$Failure3Impl value, $Res Function(_$Failure3Impl) then) =
+      __$$Failure3ImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$Failure3ImplCopyWithImpl<$Res>
+    extends _$CartProductsStateCopyWithImpl<$Res, _$Failure3Impl>
+    implements _$$Failure3ImplCopyWith<$Res> {
+  __$$Failure3ImplCopyWithImpl(
+      _$Failure3Impl _value, $Res Function(_$Failure3Impl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$Failure3Impl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$Failure3Impl implements Failure3 {
+  const _$Failure3Impl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'CartProductsState.failure3(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Failure3Impl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$Failure3ImplCopyWith<_$Failure3Impl> get copyWith =>
+      __$$Failure3ImplCopyWithImpl<_$Failure3Impl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(CartItemModel cartItemModel) sucsess,
+    required TResult Function(String message) error,
+    required TResult Function() noInternet,
+    required TResult Function(String message) sucsess2,
+    required TResult Function(String message) failure,
+    required TResult Function() loading3,
+    required TResult Function(String message) sucsess3,
+    required TResult Function(String message) failure3,
+  }) {
+    return failure3(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(CartItemModel cartItemModel)? sucsess,
+    TResult? Function(String message)? error,
+    TResult? Function()? noInternet,
+    TResult? Function(String message)? sucsess2,
+    TResult? Function(String message)? failure,
+    TResult? Function()? loading3,
+    TResult? Function(String message)? sucsess3,
+    TResult? Function(String message)? failure3,
+  }) {
+    return failure3?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(CartItemModel cartItemModel)? sucsess,
+    TResult Function(String message)? error,
+    TResult Function()? noInternet,
+    TResult Function(String message)? sucsess2,
+    TResult Function(String message)? failure,
+    TResult Function()? loading3,
+    TResult Function(String message)? sucsess3,
+    TResult Function(String message)? failure3,
+    required TResult orElse(),
+  }) {
+    if (failure3 != null) {
+      return failure3(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Sucsess value) sucsess,
+    required TResult Function(Error value) error,
+    required TResult Function(Nointernet value) noInternet,
+    required TResult Function(Sucsess2 value) sucsess2,
+    required TResult Function(Failure value) failure,
+    required TResult Function(Loading3 value) loading3,
+    required TResult Function(Sucsess3 value) sucsess3,
+    required TResult Function(Failure3 value) failure3,
+  }) {
+    return failure3(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Sucsess value)? sucsess,
+    TResult? Function(Error value)? error,
+    TResult? Function(Nointernet value)? noInternet,
+    TResult? Function(Sucsess2 value)? sucsess2,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(Loading3 value)? loading3,
+    TResult? Function(Sucsess3 value)? sucsess3,
+    TResult? Function(Failure3 value)? failure3,
+  }) {
+    return failure3?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Sucsess value)? sucsess,
+    TResult Function(Error value)? error,
+    TResult Function(Nointernet value)? noInternet,
+    TResult Function(Sucsess2 value)? sucsess2,
+    TResult Function(Failure value)? failure,
+    TResult Function(Loading3 value)? loading3,
+    TResult Function(Sucsess3 value)? sucsess3,
+    TResult Function(Failure3 value)? failure3,
+    required TResult orElse(),
+  }) {
+    if (failure3 != null) {
+      return failure3(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Failure3 implements CartProductsState {
+  const factory Failure3(final String message) = _$Failure3Impl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$Failure3ImplCopyWith<_$Failure3Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -8,11 +8,13 @@ import '../../../../../core/utils/app_styles.dart';
 import '../../../../../core/widgets/custom_elevated_button.dart';
 
 class CartNextButton extends StatelessWidget {
-  final int price;
+  final int? price;
+  final double? discount;
   final VoidCallback onPressed;
   const CartNextButton({
     super.key,
-    required this.price,
+     this.price,
+     this.discount,
     required this.onPressed,
   });
 
@@ -31,7 +33,7 @@ class CartNextButton extends StatelessWidget {
                 style: AppStyle.textStyleRegular16,
               ),
             
-              Text('${decimalNumer(price: price)} ${'ry2'.tr()}',
+              Text('${decimalNumer(price: price??discount)} ${'ry2'.tr()}',
                   style: AppStyle.textStyleBold18.copyWith(
                       color: AppColors.kPrimColor, fontWeight: FontWeight.w600))
             ],

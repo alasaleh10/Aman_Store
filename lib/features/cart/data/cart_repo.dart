@@ -1,8 +1,11 @@
 import 'package:aman_store2/core/models/done_model.dart';
 import 'package:aman_store2/features/cart/data/cart_serviese.dart';
+import 'package:aman_store2/features/cart/data/models/coupon_model.dart';
 
 import '../../../core/networking/api_error_handler.dart';
 import '../../../core/networking/api_result.dart';
+import 'models/add_order_done_model.dart';
+import 'models/add_order_request_model.dart';
 import 'models/cart_delivery_model.dart';
 import 'models/cart_items_model/cart_item_model.dart';
 
@@ -21,9 +24,7 @@ class CartRepo {
 
   Future<ApiResult<DoneModel>> addToCart(int product) async {
     try {
-      Map<String, dynamic> data={
-        'product':product
-      };
+      Map<String, dynamic> data = {'product': product};
       var response = await _cartServises.addToCart(data);
       return ApiResult.success(response);
     } catch (err) {
@@ -33,9 +34,7 @@ class CartRepo {
 
   Future<ApiResult<DoneModel>> removeToCart(int product) async {
     try {
-      Map<String, dynamic> data={
-        'product':product
-      };
+      Map<String, dynamic> data = {'product': product};
       var response = await _cartServises.removeOneFromCart(data);
       return ApiResult.success(response);
     } catch (err) {
@@ -51,5 +50,42 @@ class CartRepo {
       return ApiResult.failure(ApiErrorHandler.handle(err));
     }
   }
-  
+
+  Future<ApiResult<CouponModel>> cheekCoupon(String code) async {
+    try {
+      CouponModel couponModel = await _cartServises.cheekCoupon(code);
+      return ApiResult.success(couponModel);
+    } catch (err) {
+      return ApiResult.failure(ApiErrorHandler.handle(err));
+    }
+  }
+
+  Future<ApiResult<DoneModel>> cheekMyWallet(int total) async {
+    try {
+      DoneModel doneModel = await _cartServises.cheekMyWallet({'total': total});
+      return ApiResult.success(doneModel);
+    } catch (err) {
+      return ApiResult.failure(ApiErrorHandler.handle(err));
+    }
+  }
+
+  Future<ApiResult<DoneModel>> cheekCartItemsQuantity() async {
+    try {
+      DoneModel doneModel = await _cartServises.cheekCartItemsQuantity();
+      return ApiResult.success(doneModel);
+    } catch (err) {
+      return ApiResult.failure(ApiErrorHandler.handle(err));
+    }
+  }
+
+  Future<ApiResult<AddOrderDoneModel>> addOrder(
+      AddOrderRequestModel addOrderRequestModel) async {
+    try {
+      AddOrderDoneModel addOrderDoneModel =
+          await _cartServises.addOrder(addOrderRequestModel);
+      return ApiResult.success(addOrderDoneModel);
+    } catch (err) {
+      return ApiResult.failure(ApiErrorHandler.handle(err));
+    }
+  }
 }

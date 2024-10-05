@@ -1,5 +1,6 @@
 import 'package:aman_store2/core/functions/get_app_size.dart';
 import 'package:aman_store2/core/routers/app_routers.dart';
+import 'package:aman_store2/core/widgets/erroe_stacke.dart';
 import 'package:aman_store2/features/cart/prsentation/view_model/cart_product_cubit/cart_products_cubit.dart';
 import 'package:aman_store2/features/cart/prsentation/view_model/cart_product_cubit/cart_products_state.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shimmer/shimmer.dart';
 import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/widgets/custom_loading_stack.dart';
+import '../../../../../core/widgets/no_internet_stack.dart';
 import 'cart_next_button.dart';
 
 class CartProductBottomBar extends StatelessWidget {
@@ -15,9 +18,30 @@ class CartProductBottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<CartProductsCubit, CartProductsState>(
+    return BlocConsumer<CartProductsCubit, CartProductsState>(
+      listener: (context, state) {
+        if (isDialogOpen(context)) {
+          context.pop();
+        }
+        state.mapOrNull(
+          failure3: (message) => showErrorStack(context, message.message, () {
+            context.read<CartProductsCubit>().cheekCartItemsQuantity();
+          }),
+          loading3: (value) => showLoadingStack(context),
+          sucsess3: (value) => {
+            context.pushNamed(AppRouters.cartDeliveryView, extra: [
+              context.read<CartProductsCubit>().totalPrice,
+              context.read<CartProductsCubit>().items
+            ])
+          },
+        );
+      },
       buildWhen: (previous, current) =>
-          current is! Sucsess2 && current is! Failure,
+          current is! Sucsess2 &&
+          current is! Failure &&
+          current is! Loading3 &&
+          current is! Failure3 &&
+          current is! Sucsess3,
       builder: (context, state) {
         return state.maybeWhen(
             orElse: () => const SizedBox(),
@@ -27,8 +51,9 @@ class CartProductBottomBar extends StatelessWidget {
             sucsess: (cartItemModel) => IntrinsicHeight(
                   child: CartNextButton(
                     onPressed: () {
-                      context.pushNamed(AppRouters.cartDeliveryView,
-                          extra: cartItemModel.totalPrice!);
+                      context
+                          .read<CartProductsCubit>()
+                          .cheekCartItemsQuantity();
                     },
                     price: cartItemModel.totalPrice!,
                   ),

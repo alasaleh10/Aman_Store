@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'signup_response.dart';
+part of 'coupon_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-SignUpResponse _$SignUpResponseFromJson(Map<String, dynamic> json) =>
-    SignUpResponse(
+CouponModel _$CouponModelFromJson(Map<String, dynamic> json) => CouponModel(
       id: (json['id'] as num).toInt(),
-      email: json['email'] as String,
+      code: json['code'] as String,
+      discount: (json['discount'] as num).toInt(),
     );
 

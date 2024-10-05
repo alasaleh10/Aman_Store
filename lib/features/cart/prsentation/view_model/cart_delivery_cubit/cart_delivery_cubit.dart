@@ -7,14 +7,15 @@ import 'cart_delivery_state.dart';
 
 class CartDeliveryCubit extends Cubit<CartDeliveryState> {
   final CartRepo _cartRepo;
-  final int total;
 
-  CartDeliveryCubit(this._cartRepo, this.total)
-      : super(const CartDeliveryState.initial());
+  CartDeliveryCubit(this._cartRepo) : super(const CartDeliveryState.initial());
+  int total = 0;
+  List<Map<String,dynamic>> items=[];
   bool isDelivery = false;
   bool isFastDelivery = false;
   CartDeliveryModel? cartDeliveryModel;
   int deliveryTotal = 0;
+  int? location;
   void cartDelivery() async {
     emit(const CartDeliveryState.loading());
     if (await isConncection()) {
@@ -22,6 +23,8 @@ class CartDeliveryCubit extends Cubit<CartDeliveryState> {
 
       response.when(success: (data) {
         cartDeliveryModel = data;
+        location=data.locationModel.id;
+        
         deliveryTotal = data.delivery?.toInt() ?? 0;
         emit(CartDeliveryState.sucsess(cartDeliveryModel!));
       }, failure: (failure) {
@@ -39,13 +42,15 @@ class CartDeliveryCubit extends Cubit<CartDeliveryState> {
   void setIsDelivery(bool val) {
     isDelivery = val;
     if (val == false) {
+      location=null;
+      deliveryTotal = 0;
       emit(const CartDeliveryState.initial());
     }
   }
 
   void setFastingDelivery(bool val) {
     if (cartDeliveryModel != null) {
-    emit(const CartDeliveryState.initial());
+      emit(const CartDeliveryState.initial());
       isFastDelivery = val;
       if (val) {
         deliveryTotal += 2000;

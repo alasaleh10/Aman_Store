@@ -12,6 +12,13 @@ class CartProductsState with _$CartProductsState {
   const factory CartProductsState.noInternet() = Nointernet;
   const factory CartProductsState.sucsess2(String message) = Sucsess2;
   const factory CartProductsState.failure(String message) = Failure;
+  // 3
+  const factory CartProductsState.loading3() = Loading3;
+  const factory CartProductsState.sucsess3(String message) = Sucsess3;
+    const factory CartProductsState.failure3(String message) = Failure3;
+
+
+
 
 
 }

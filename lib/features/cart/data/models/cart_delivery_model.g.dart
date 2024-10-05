@@ -13,8 +13,4 @@ CartDeliveryModel _$CartDeliveryModelFromJson(Map<String, dynamic> json) =>
       delivery: json['delivery'] as num?,
     );
 
-Map<String, dynamic> _$CartDeliveryModelToJson(CartDeliveryModel instance) =>
-    <String, dynamic>{
-      'delivery': instance.delivery,
-      'location': instance.locationModel,
-    };
+

@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class Assets {
   Assets._();
-
+  
   /// Assets for imagesAbout
   /// assets/images/about.svg
   static const String imagesAbout = "assets/images/about.svg";
@@ -30,6 +30,10 @@ class Assets {
   /// assets/images/cart.svg
   static const String imagesCart = "assets/images/cart.svg";
 
+  /// Assets for imagesCash
+  /// assets/images/cash.svg
+  static const String imagesCash = "assets/images/cash.svg";
+
   /// Assets for imagesDeliverCar
   /// assets/images/deliver_car.svg
   static const String imagesDeliverCar = "assets/images/deliver_car.svg";
@@ -56,8 +60,7 @@ class Assets {
 
   /// Assets for imagesFastDelevryCar
   /// assets/images/fast_delevry_car.svg
-  static const String imagesFastDelevryCar =
-      "assets/images/fast_delevry_car.svg";
+  static const String imagesFastDelevryCar = "assets/images/fast_delevry_car.svg";
 
   /// Assets for imagesFaviorte
   /// assets/images/faviorte.svg
@@ -73,8 +76,7 @@ class Assets {
 
   /// Assets for imagesLoadingAnimation
   /// assets/images/loadingAnimation.json
-  static const String imagesLoadingAnimation =
-      "assets/images/loadingAnimation.json";
+  static const String imagesLoadingAnimation = "assets/images/loadingAnimation.json";
 
   /// Assets for imagesLocation2
   /// assets/images/location2.svg
@@ -102,8 +104,7 @@ class Assets {
 
   /// Assets for imagesNoInternetVector
   /// assets/images/noInternetVector.svg
-  static const String imagesNoInternetVector =
-      "assets/images/noInternetVector.svg";
+  static const String imagesNoInternetVector = "assets/images/noInternetVector.svg";
 
   /// Assets for imagesNointernetSvg2
   /// assets/images/nointernetSvg2.svg
@@ -120,6 +121,10 @@ class Assets {
   /// Assets for imagesOffrsSharp
   /// assets/images/offrs_sharp.svg
   static const String imagesOffrsSharp = "assets/images/offrs_sharp.svg";
+
+  /// Assets for imagesOmqy
+  /// assets/images/omqy.svg
+  static const String imagesOmqy = "assets/images/omqy.svg";
 
   /// Assets for imagesOnbording1
   /// assets/images/onbording1.png
@@ -140,6 +145,10 @@ class Assets {
   /// Assets for imagesOrders
   /// assets/images/orders.svg
   static const String imagesOrders = "assets/images/orders.svg";
+
+  /// Assets for imagesOrdertime
+  /// assets/images/ordertime.svg
+  static const String imagesOrdertime = "assets/images/ordertime.svg";
 
   /// Assets for imagesPayment
   /// assets/images/payment.svg
@@ -199,18 +208,15 @@ class Assets {
 
   /// Assets for imagesTestCaterorieBird
   /// assets/images/testCaterorieBird.png
-  static const String imagesTestCaterorieBird =
-      "assets/images/testCaterorieBird.png";
+  static const String imagesTestCaterorieBird = "assets/images/testCaterorieBird.png";
 
   /// Assets for imagesTestCaterorieMailk
   /// assets/images/testCaterorieMailk.png
-  static const String imagesTestCaterorieMailk =
-      "assets/images/testCaterorieMailk.png";
+  static const String imagesTestCaterorieMailk = "assets/images/testCaterorieMailk.png";
 
   /// Assets for imagesTestCateroriemeet
   /// assets/images/testCateroriemeet.png
-  static const String imagesTestCateroriemeet =
-      "assets/images/testCateroriemeet.png";
+  static const String imagesTestCateroriemeet = "assets/images/testCateroriemeet.png";
 
   /// Assets for imagesTestItem1
   /// assets/images/testItem1.png
@@ -236,3 +242,4 @@ class Assets {
   /// assets/images/wallet.svg
   static const String imagesWallet = "assets/images/wallet.svg";
 }
+

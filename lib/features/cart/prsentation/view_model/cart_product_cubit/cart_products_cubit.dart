@@ -7,7 +7,8 @@ import 'cart_products_state.dart';
 class CartProductsCubit extends Cubit<CartProductsState> {
   final CartRepo _cartRepo;
   CartProductsCubit(this._cartRepo) : super(const CartProductsState.initial());
-
+  int totalPrice = 0;
+  List<Map<String, dynamic>> items = [];
   void getCart({bool isFromcart = false}) async {
     if (!isFromcart) {
       emit(const CartProductsState.loading());
@@ -16,6 +17,15 @@ class CartProductsCubit extends Cubit<CartProductsState> {
     if (await isConncection()) {
       var response = await _cartRepo.myCart();
       response.when(success: (cartModel) {
+        items.clear();
+        items = cartModel.items.map((val) {
+          return {
+            'id': val.id!,
+            'quantity': val.quantity!,
+            'price': val.price!,
+          };
+        }).toList();
+        totalPrice = cartModel.totalPrice!;
         emit(CartProductsState.sucsess(cartModel));
       }, failure: (err) {
         if (isFromcart) {
@@ -33,16 +43,32 @@ class CartProductsCubit extends Cubit<CartProductsState> {
     }
   }
 
-  void cartOpretions(int product,bool isAdding) async {
+  void cartOpretions(int product, bool isAdding) async {
     if (await isConncection()) {
-      var response = isAdding?  await _cartRepo.addToCart(product):await _cartRepo.removeToCart(product);
+      var response = isAdding
+          ? await _cartRepo.addToCart(product)
+          : await _cartRepo.removeToCart(product);
       response.when(success: (doneModel) {
-        emit( CartProductsState.sucsess2(doneModel.message));
+        emit(CartProductsState.sucsess2(doneModel.message));
       }, failure: (err) {
         emit(CartProductsState.failure(err.message ?? 'فشلة العملية'));
       });
     } else {
       emit(const CartProductsState.failure('لا يوجد اتصال بالانترنت '));
+    }
+  }
+
+  void cheekCartItemsQuantity() async {
+    emit(const CartProductsState.loading3());
+    if (await isConncection()) {
+      var response = await _cartRepo.cheekCartItemsQuantity();
+      response.when(success: (done) {
+        emit(CartProductsState.sucsess3(done.message));
+      }, failure: (err) {
+        emit(CartProductsState.failure3(err.message ?? 'فشلة العملية'));
+      });
+    } else {
+      emit(const CartProductsState.failure3('لا يوجد اتصال بالانترنت '));
     }
   }
 }

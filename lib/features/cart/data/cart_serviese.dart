@@ -2,8 +2,11 @@ import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import '../../../core/models/done_model.dart';
 import '../../../core/networking/api_constanses.dart';
+import 'models/add_order_done_model.dart';
+import 'models/add_order_request_model.dart';
 import 'models/cart_delivery_model.dart';
 import 'models/cart_items_model/cart_item_model.dart';
+import 'models/coupon_model.dart';
 part 'cart_serviese.g.dart';
 
 @RestApi(baseUrl: ApiConstanses.baseUrl)
@@ -23,4 +26,13 @@ Future<DoneModel> removeOneFromCart(@Body() Map<String, dynamic> data);
 
 @GET(ApiConstanses.cartDelivery)
 Future<CartDeliveryModel> cartDelivery();
+@GET(ApiConstanses.cheekCoupon)
+Future<CouponModel> cheekCoupon(@Query('code') String code);
+
+@POST(ApiConstanses.cheekMyWallet)
+Future<DoneModel> cheekMyWallet(@Body() Map<String, dynamic> data);
+@GET(ApiConstanses.cheekCartItemsQuantity)
+Future<DoneModel>cheekCartItemsQuantity();
+@POST(ApiConstanses.addOrder)
+Future<AddOrderDoneModel> addOrder(@Body() AddOrderRequestModel addOrderRequestModel);
 }

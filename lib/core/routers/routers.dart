@@ -1,5 +1,7 @@
 import 'package:aman_store2/core/di/depencency_injection.dart';
 import 'package:aman_store2/core/utils/app_constsans.dart';
+import 'package:aman_store2/features/cart/data/models/cart_model.dart';
+import 'package:aman_store2/features/cart/data/models/go_payment_model.dart';
 import 'package:aman_store2/features/cart/prsentation/view_model/cart_product_cubit/cart_products_cubit.dart';
 import 'package:aman_store2/features/cart/prsentation/views/cart_delivery_view.dart';
 import 'package:aman_store2/features/cart/prsentation/views/cart_prodects.dart';
@@ -32,6 +34,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/cart/prsentation/view_model/cart_delivery_cubit/cart_delivery_cubit.dart';
+import '../../features/cart/prsentation/view_model/cart_payment_cubit/cart_payment_cubit.dart';
+import '../../features/cart/prsentation/views/cart_payment_view.dart';
 import '../../features/home/prsentation/views/home_new_aman_view.dart';
 import '../../features/my_account/prsentation/view_model/technical_support_cubit/technical_support_cubit.dart';
 import '../helper/cached_helper.dart';
@@ -111,7 +115,7 @@ abstract class Routers {
       ),
       buildRoute(
         AppRouters.savedAddressView,
-        (context, state) =>  SavedAddressView(
+        (context, state) => SavedAddressView(
           index: state.extra as int?,
         ),
       ),
@@ -169,14 +173,22 @@ abstract class Routers {
           create: (context) => CartProductsCubit(gitIt())..getCart(),
           child: const CartProdectsView(),
         ),
-        
       ),
-       buildRoute(
+      buildRoute(
         AppRouters.cartDeliveryView,
         (context, state) => BlocProvider(
-          create: (context) => CartDeliveryCubit(gitIt(),state.extra as int),
+          create: (context) => CartDeliveryCubit(gitIt()),
           child: CartDeliveryView(
-            total: state.extra as int,
+            data: state.extra as List,
+          ),
+        ),
+      ),
+      buildRoute(
+        AppRouters.cartPaymentView,
+        (context, state) => BlocProvider(
+          create: (context) => CartPaymentCubit(gitIt()),
+          child:  CartPaymentView(
+            goPaymentModel: state.extra as GoPaymentModel,
           ),
         ),
       ),

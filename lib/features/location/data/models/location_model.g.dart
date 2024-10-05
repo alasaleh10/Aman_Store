@@ -13,11 +13,7 @@ LocationsModel _$LocationsModelFromJson(Map<String, dynamic> json) =>
           LocationModel.fromJson(json['location'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$LocationsModelToJson(LocationsModel instance) =>
-    <String, dynamic>{
-      'status': instance.status,
-      'location': instance.location,
-    };
+
 
 LocationModel _$LocationModelFromJson(Map<String, dynamic> json) =>
     LocationModel(
@@ -32,15 +28,4 @@ LocationModel _$LocationModelFromJson(Map<String, dynamic> json) =>
       roomNo: json['roomNo'] as String?,
     );
 
-Map<String, dynamic> _$LocationModelToJson(LocationModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'type': instance.type,
-      'lat': instance.lat,
-      'lng': instance.lng,
-      'street': instance.street,
-      'home': instance.home,
-      'roomNo': instance.roomNo,
-      'isMain': instance.isMain,
-    };
+

@@ -27,13 +27,17 @@ class CartProdectsViewBody extends StatelessWidget {
             state.whenOrNull(
               failure: (message) => showSnackBar(context, message: message),
               sucsess2: (message) {
-                showSnackBar(context, message: message,isError: false);
+                showSnackBar(context, message: message, isError: false);
                 context.read<CartProductsCubit>().getCart(isFromcart: true);
               },
             );
           },
           buildWhen: (previous, current) =>
-              current is! Sucsess2 && current is! Failure,
+              current is! Sucsess2 &&
+              current is! Failure &&
+              current is! Loading3 &&
+              current is! Failure3 &&
+              current is! Sucsess3,
           builder: (context, state) {
             return state.maybeWhen(
                 orElse: () => const SliverToBoxAdapter(child: SizedBox()),

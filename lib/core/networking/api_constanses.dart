@@ -46,7 +46,16 @@ class ApiConstanses {
   static const String myCart = 'carts/myCart'; 
   static const String addOneToCart = 'carts/addOneToCart';
   static const String deleteOneFromCart = 'carts/deleteOneFromCart'; 
-  static const String cartDelivery = 'carts/cartDelivery'; 
+  static const String cartDelivery = 'carts/cartDelivery';
+  static const String cheekMyWallet = 'carts/cheekMyWallet';
+  static const String cheekCartItemsQuantity = 'carts/cheekCartItemsQuantity';
+
+
+  // Coupons
+  static const String cheekCoupon = 'coupons/cheekCoupon'; 
+  
+  // Orders
+  static const String addOrder = 'orders/createOrder';
 
 
 
