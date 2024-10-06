@@ -56,6 +56,10 @@ class ApiConstanses {
   
   // Orders
   static const String addOrder = 'orders/createOrder';
+  static const String myPreviousOrders = 'orders/myPreviousOrders';
+  static const String myCurrentOrders = 'orders/myCurrentOrders';
+
+
 
 
 

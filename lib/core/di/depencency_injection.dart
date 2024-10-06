@@ -15,6 +15,8 @@ import '../../features/location/data/location_services.dart';
 import '../../features/location/data/repo/location_repo.dart';
 import '../../features/my_account/data/account_repo.dart';
 import '../../features/my_account/data/account_servises.dart';
+import '../../features/orders/data/orders_repo.dart';
+import '../../features/orders/data/orders_serviess.dart';
 import '../../features/product_detils/data/detils_repo.dart';
 import '../../features/product_detils/data/p_detils_serviss.dart';
 import '../networking/dio_factory.dart';
@@ -56,4 +58,8 @@ Future<void> setUpGetIt() async {
   // Cart
   gitIt.registerSingleton(CartServises(dio));
   gitIt.registerFactory<CartRepo>(() => CartRepo(gitIt()));
+
+  // Orders
+  gitIt.registerSingleton(OrdersServices(dio));
+  gitIt.registerFactory<OrdersRepo>(() => OrdersRepo(gitIt()));
 }

@@ -52,7 +52,10 @@ class _OrdersBodyViewState extends State<OrdersBodyView>
           child: PageView(
             controller: cubit.pageController,
             physics: const NeverScrollableScrollPhysics(),
-            children: const [CurrentOrders(), OldOrders()],
+            children: const [
+              CurrentOrders(),
+              OldOrders(),
+            ],
           ),
         ),
       ],

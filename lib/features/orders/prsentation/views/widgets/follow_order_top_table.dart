@@ -1,7 +1,7 @@
+import 'package:aman_store2/features/orders/prsentation/views/widgets/order_status.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/functions/order_status.dart';
 import '../../../../../core/utils/app_colors.dart';
 import 'table_detils_texts.dart';
 

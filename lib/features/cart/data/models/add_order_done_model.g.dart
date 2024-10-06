@@ -12,8 +12,4 @@ AddOrderDoneModel _$AddOrderDoneModelFromJson(Map<String, dynamic> json) =>
       createdAt: json['createdAt'] as String,
     );
 
-Map<String, dynamic> _$AddOrderDoneModelToJson(AddOrderDoneModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'createdAt': instance.createdAt,
-    };
+
