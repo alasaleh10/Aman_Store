@@ -7,7 +7,10 @@ class UserModel {
   final User user;
   final String? token;
 
-  UserModel(this.user, this.token);
+  @JsonKey(name: "order")
+  final int? order;
+
+  UserModel(this.user, this.token,this.order);
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>
       _$UserModelFromJson(json);

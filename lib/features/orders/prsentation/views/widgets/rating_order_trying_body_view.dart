@@ -1,6 +1,16 @@
+import 'package:aman_store2/core/functions/get_app_size.dart';
+import 'package:aman_store2/core/functions/show_snac_bar.dart';
+import 'package:aman_store2/core/widgets/no_internet_stack.dart';
+import 'package:aman_store2/features/orders/prsentation/view_model/add_rating_cubit/add_rating_cubit.dart';
+import 'package:aman_store2/features/orders/prsentation/view_model/add_rating_cubit/add_rating_state.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../core/widgets/custom_elevated_button.dart';
+import '../../../../../core/widgets/custom_loading_stack.dart';
 import '../../../../../core/widgets/custom_text_form_failed.dart';
+import '../../../../../core/widgets/erroe_stacke.dart';
 import 'done_rating_continer.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -46,20 +56,42 @@ class RatingOrderTryingBodyView extends StatelessWidget {
               maxLines: 4,
               isCommed: true,
               title: '',
-              textFormController: TextEditingController()),
+              textFormController: context.read<AddRatingCubit>().commiet),
           SizedBox(height: 70.h),
           Padding(
             padding: EdgeInsets.symmetric(
-                vertical: 8.h,
-                horizontal: MediaQuery.sizeOf(context).width * .05),
-            child: CustomElevatedButton(
-              title: 'send'.tr(),
-              onPressed: () {
-                showModalBottomSheet(
-                    isScrollControlled: true,
-                    context: context,
-                    builder: (_) => const DoneRatingContiner());
+                vertical: 8.h, horizontal: getAppWidth(context) * .05),
+            child: BlocListener<AddRatingCubit, AddRatingState>(
+              listener: (context, state) {
+                if (isDialogOpen(context)) {
+                  context.pop();
+                }
+                state.whenOrNull(
+                  failure: (message) => showErrorStack(context, message, () {
+                    context.read<AddRatingCubit>().addRating();
+                  }),
+                  loading: () => showLoadingStack(context),
+                  noInternet: () => showNoInternet(context, () {
+                    context.read<AddRatingCubit>().addRating();
+                  }),
+                  sucsess: (doneModel) {
+                     showModalBottomSheet(
+                      isDismissible: false,
+                      isScrollControlled: true,
+                      context: context,
+                      builder: (_) => const DoneRatingContiner());
+                    showSnackBar(context,
+                        message: doneModel.message, isError: false);
+                  },
+                );
               },
+              child: CustomElevatedButton(
+                title: 'send'.tr(),
+                onPressed: () {
+                  context.read<AddRatingCubit>().addRating();
+                 
+                },
+              ),
             ),
           )
         ],

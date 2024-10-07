@@ -8,7 +8,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/utils/app_assets.dart';
 import '../../../core/utils/app_colors.dart';
-import '../../../core/utils/app_styles.dart';
 import '../widgets/drwer_image.dart';
 import '../widgets/home_drwer_list_tile.dart';
 
@@ -56,27 +55,13 @@ class HomeDrwer extends StatelessWidget {
                   onTap: () {
                     closeDrwer(context, 1);
                   }),
-              Stack(
-                children: [
-                  DrwerListTile(
-                      image: Assets.imagesCart,
-                      title: 'cart'.tr(),
-                      onTap: () {
-                        closeDrwer(context, 2);
-                      }),
-                  Positioned(
-                      right: 3,
-                      child: CircleAvatar(
-                        backgroundColor: AppColors.kPrimColor2,
-                        radius: 12,
-                        child: Text(
-                          '2',
-                          style: AppStyle.textStyleRegular14
-                              .copyWith(color: AppColors.kWhiteColor),
-                        ),
-                      ))
-                ],
-              ),
+              DrwerListTile(
+                  image: Assets.imagesCart,
+                  title: 'cart'.tr(),
+                  onTap: () {
+                    Scaffold.of(context).closeDrawer();
+                    context.pushNamed(AppRouters.cartProductView);
+                  }),
               DrwerListTile(
                   image: Assets.imagesAccount,
                   title: 'myAccount'.tr(),

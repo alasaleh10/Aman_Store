@@ -27,7 +27,7 @@ class OrderItems extends StatelessWidget {
         children: [
           FollowOrderContiner(
             onTap: () {
-              context.pushNamed(AppRouters.followOrderView);
+              context.pushNamed(AppRouters.followOrderView,extra: order.id!);
             },
             orderNumber: '${order.id}',
           ),

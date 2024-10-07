@@ -1,4 +1,4 @@
-import '../../view_model/rating_trying_cuibt/rating_trying_cubit.dart';
+import 'package:aman_store2/features/orders/prsentation/view_model/add_rating_cubit/add_rating_cubit.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,14 +6,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'feadback_rating_continer.dart';
 
-class FeadBackColumn extends StatelessWidget {
+class FeadBackColumn extends StatefulWidget {
   const FeadBackColumn({super.key});
 
   @override
+  State<FeadBackColumn> createState() => _FeadBackColumnState();
+}
+
+class _FeadBackColumnState extends State<FeadBackColumn> {
+  @override
   Widget build(BuildContext context) {
-    return BlocBuilder<RatingTryingCubit, RatingTryingState>(
-      builder: (context, state) {
-        final cuibt = BlocProvider.of<RatingTryingCubit>(context);
+    final cuibt = BlocProvider.of<AddRatingCubit>(context);
 
         return Column(
           children: [
@@ -21,9 +24,9 @@ class FeadBackColumn extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FeadBackRatingContiner(
-                  isActive: cuibt.index2 == 0,
+                  isActive: cuibt.feabBack == 0,
                   onTap: () {
-                    cuibt.chnageRatingFeadback(index2: 0);
+                    changeFeadBack(0);
                   },
                   title: 'distinctiveProducts'.tr(),
                 ),
@@ -31,9 +34,9 @@ class FeadBackColumn extends StatelessWidget {
                 FeadBackRatingContiner(
                   horizontal: 20.w,
                   // vertical:,
-                  isActive: cuibt.index2 == 1,
+                  isActive: cuibt.feabBack == 1,
                   onTap: () {
-                    cuibt.chnageRatingFeadback(index2: 1);
+                    changeFeadBack(1);
                   },
                   title: 'fastDelivery'.tr(),
                 ),
@@ -46,9 +49,9 @@ class FeadBackColumn extends StatelessWidget {
                 FeadBackRatingContiner(
                   horizontal: 20.w,
                   // vertical:,
-                  isActive: cuibt.index2 == 2,
+                  isActive: cuibt.feabBack == 2,
                   onTap: () {
-                    cuibt.chnageRatingFeadback(index2: 2);
+                    changeFeadBack(2);
                   },
                   title: 'cheapPrices'.tr(),
                 ),
@@ -57,7 +60,10 @@ class FeadBackColumn extends StatelessWidget {
             ),
           ],
         );
-      },
-    );
+  }
+
+  void changeFeadBack(int index) {
+    context.read<AddRatingCubit>().feabBack = index;
+    setState(() {});
   }
 }

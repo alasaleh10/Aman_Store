@@ -21,7 +21,7 @@ class AccountRowContiners extends StatelessWidget {
           AccountTopContiner(
             imageColor: AppColors.kPrimColor,
             image: Assets.imagesOrdernumber,
-            title: '350',
+            title: '${user.order??0}',
             subTitle: 'orders'.tr(),
             onTap: () {
               BlocProvider.of<HomeScreenCubit>(context).changePage(index: 3);

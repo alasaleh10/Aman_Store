@@ -9,6 +9,7 @@ part of 'user_model.dart';
 UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       User.fromJson(json['user'] as Map<String, dynamic>),
       json['token'] as String?,
+      (json['order'] as num?)?.toInt(),
     );
 
 
@@ -25,4 +26,5 @@ User _$UserFromJson(Map<String, dynamic> json) => User(
       json['image'] as String,
       json['isApproved'] as bool,
     );
+
 

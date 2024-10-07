@@ -7,7 +7,8 @@ import '../../../../../core/utils/app_styles.dart';
 import '../../../../../core/widgets/custom_elevated_button.dart';
 
 class FlolowRating extends StatelessWidget {
-  const FlolowRating({super.key});
+  final int orderID;
+  const FlolowRating({super.key, required this.orderID});
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +36,8 @@ class FlolowRating extends StatelessWidget {
                 radius: 20,
                 title: 'evaluationExprence'.tr(),
                 onPressed: () {
-                  GoRouter.of(context)
-                      .pushNamed(AppRouters.ratingOrderTryingView);
+                  context
+                      .pushNamed(AppRouters.ratingOrderTryingView,extra: orderID);
                 }),
           ),
         ],

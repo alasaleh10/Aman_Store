@@ -20,12 +20,8 @@ class DoneRatingContiner extends StatelessWidget {
     return PopScope(
       canPop: false,
       child: Container(
-        width: MediaQuery.sizeOf(context).width,
         color: AppColors.kPrimColor,
-        height: MediaQuery.sizeOf(context).height,
         child: ListView(
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(height: MediaQuery.sizeOf(context).height * .25),
             Padding(
@@ -65,7 +61,7 @@ class DoneRatingContiner extends StatelessWidget {
                 backgroundColor: AppColors.kWhiteColor,
                 title: 'backHome'.tr(),
                 onPressed: () {
-                  GoRouter.of(context).goNamed(AppRouters.homeScreenView);
+                  context.goNamed(AppRouters.homeScreenView);
                   BlocProvider.of<HomeScreenCubit>(context)
                       .changePage(index: 0);
                 },

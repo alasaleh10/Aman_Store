@@ -15,6 +15,7 @@ class CartPaymentBottomBar extends StatelessWidget {
         builder: (context, state) {
           return CartNextButton(
             onPressed: () {
+           
               cubit.addOrder();
             },
             price: cubit.discount == 0

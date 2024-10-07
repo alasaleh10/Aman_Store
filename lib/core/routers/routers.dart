@@ -1,6 +1,5 @@
 import 'package:aman_store2/core/di/depencency_injection.dart';
 import 'package:aman_store2/core/utils/app_constsans.dart';
-import 'package:aman_store2/features/cart/data/models/cart_model.dart';
 import 'package:aman_store2/features/cart/data/models/go_payment_model.dart';
 import 'package:aman_store2/features/cart/prsentation/view_model/cart_product_cubit/cart_products_cubit.dart';
 import 'package:aman_store2/features/cart/prsentation/views/cart_delivery_view.dart';
@@ -107,11 +106,15 @@ abstract class Routers {
               )),
       buildRoute(
         AppRouters.followOrderView,
-        (context, state) => const FollowOrderView(),
+        (context, state) =>  FollowOrderView(
+          orderID: state.extra as int,
+        ),
       ),
       buildRoute(
         AppRouters.ratingOrderTryingView,
-        (context, state) => const RatingOrderTryingView(),
+        (context, state) =>  RatingOrderTryingView(
+          orderID: state.extra as int,
+        ),
       ),
       buildRoute(
         AppRouters.savedAddressView,

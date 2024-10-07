@@ -68,6 +68,7 @@ class CartDeliveryBootomBar extends StatelessWidget {
                     isFastingDelivery: cubit.isFastDelivery,
                     location: cubit.location,
                     items: cubit.items);
+             
                 context.pushNamed(AppRouters.cartPaymentView,
                     extra: goPaymentModel);
               },

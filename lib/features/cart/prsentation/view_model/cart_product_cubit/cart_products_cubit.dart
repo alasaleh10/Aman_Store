@@ -19,10 +19,12 @@ class CartProductsCubit extends Cubit<CartProductsState> {
       response.when(success: (cartModel) {
         items.clear();
         items = cartModel.items.map((val) {
+          
+
           return {
             'id': val.id!,
             'quantity': val.quantity!,
-            'price': val.price!,
+            'price': val.priceAfterDiscount,
           };
         }).toList();
         totalPrice = cartModel.totalPrice!;
