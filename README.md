@@ -18,7 +18,7 @@
 
 - **Flutter**: لتطوير واجهة المستخدم.
 - **Dio**: للتواصل مع الخادم وإجراء الطلبات عبر HTTP.
-- **Provider / Bloc / Cubit**: لإدارة الحالة (State Management).
+- **Bloc / Cubit**: لإدارة الحالة (State Management).
 - **Sqflite**: لتخزين البيانات محليًا في قاعدة بيانات SQLite (للسلة والمفضلة).
 - **CachedNetworkImage**: لعرض الصور مع التخزين المؤقت (Caching).
 - **Flutter ScreenUtil**: لجعل التطبيق مستجيبًا (Responsive) على جميع أحجام الشاشات.
