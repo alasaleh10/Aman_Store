@@ -1,16 +1,32 @@
-# aman_store2
+# متجر إلكتروني - Flutter
 
-A new Flutter project.
+## مقدمة
 
-## Getting Started
+تطبيق متجر إلكتروني تم تطويره باستخدام Flutter كواجهة أمامية (Frontend). الهدف من المشروع هو توفير تجربة تسوق سهلة للمستخدمين مع واجهة مستخدم جذابة وسلسة. يحتوي التطبيق على ميزات مثل عرض المنتجات، إضافة المنتجات إلى السلة، تسجيل الدخول والتسجيل، وإدارة الطلبات.
 
-This project is a starting point for a Flutter application.
+## الميزات الرئيسية
 
-A few resources to get you started if this is your first Flutter project:
+- **عرض المنتجات**: عرض قائمة بالمنتجات مع تفاصيل مثل الاسم، السعر، والخصم.
+- **إدارة السلة**: إضافة وتعديل وحذف المنتجات من سلة التسوق.
+- **إدارة المفضلة**: إضافة المنتجات إلى قائمة المفضلة لسهولة الوصول إليها لاحقًا.
+- **الطلبات**: تقديم ومتابعة الطلبات.
+- **التصنيفات**: عرض المنتجات حسب الفئات لتسهيل التصفح.
+- **التسجيل وتسجيل الدخول**: دعم تسجيل المستخدمين باستخدام البريد الإلكتروني وكلمات المرور.
+- **دعم الخصومات**: حساب الخصم على المنتجات وعرض السعر النهائي.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## التقنيات المستخدمة
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Flutter**: لتطوير واجهة المستخدم.
+- **Dio**: للتواصل مع الخادم وإجراء الطلبات عبر HTTP.
+- **Provider / Bloc / Cubit**: لإدارة الحالة (State Management).
+- **Sqflite**: لتخزين البيانات محليًا في قاعدة بيانات SQLite (للسلة والمفضلة).
+- **CachedNetworkImage**: لعرض الصور مع التخزين المؤقت (Caching).
+- **Flutter ScreenUtil**: لجعل التطبيق مستجيبًا (Responsive) على جميع أحجام الشاشات.
+
+## المتطلبات
+
+لتشغيل هذا المشروع، يجب أن تكون لديك المتطلبات التالية:
+
+- [Flutter SDK](https://flutter.dev/) (إصدار 3.0 أو أعلى)
+- اتصال بخادم backend جاهز لإدارة بيانات المنتجات والمستخدمين (مثل API تم تطويره باستخدام Node.js أو أي backend آخر).
+
