@@ -23,7 +23,6 @@ class ApiConstanses {
   static const String deleteLocation = 'locations/delete';
   static const String changeMainLocation = 'locations/changeMainLocation';
 
-
   // categories
   static const String allCategories = 'categoriees/all';
 
@@ -43,27 +42,24 @@ class ApiConstanses {
 
   // Cart
   // static const String addToCart = 'carts/addToCart';
-  static const String myCart = 'carts/myCart'; 
+  static const String myCart = 'carts/myCart';
   static const String addOneToCart = 'carts/addOneToCart';
-  static const String deleteOneFromCart = 'carts/deleteOneFromCart'; 
+  static const String deleteOneFromCart = 'carts/deleteOneFromCart';
+  static const String cheekCartProduct = 'carts/cheekCartProduct';
+  static const String deleteProductFromCart = 'carts/deleteProductFromCart';
+  static const String editCart = 'carts/editCart';
+
   static const String cartDelivery = 'carts/cartDelivery';
   static const String cheekMyWallet = 'carts/cheekMyWallet';
   static const String cheekCartItemsQuantity = 'carts/cheekCartItemsQuantity';
 
-
   // Coupons
-  static const String cheekCoupon = 'coupons/cheekCoupon'; 
-  
+  static const String cheekCoupon = 'coupons/cheekCoupon';
+
   // Orders
   static const String addOrder = 'orders/createOrder';
   static const String myPreviousOrders = 'orders/myPreviousOrders';
   static const String myCurrentOrders = 'orders/myCurrentOrders';
   static const String orderDetails = 'orders/orderDetails';
-  static const String addRating='ratings/addRating';
-
-
-
-
-
-
+  static const String addRating = 'ratings/addRating';
 }

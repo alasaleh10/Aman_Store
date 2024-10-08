@@ -5,6 +5,7 @@ import '../utils/app_styles.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   final String title;
+  
   final VoidCallback onPressed;
   final Color backgroundColor;
   final Color borderColor;
@@ -54,6 +55,8 @@ class CustomElevatedButton extends StatelessWidget {
                   )
                 : AppStyle.textStyleBold18
                     .copyWith(color: textColor, fontSize: fontSize),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
           )),
     );
   }

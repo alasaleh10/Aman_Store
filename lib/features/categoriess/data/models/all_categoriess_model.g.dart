@@ -24,3 +24,4 @@ CategorieeModel _$CategorieeModelFromJson(Map<String, dynamic> json) =>
       isActive: json['isActive'] as bool,
     );
 
+

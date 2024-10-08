@@ -30,4 +30,3 @@ CartITem _$CartITemFromJson(Map<String, dynamic> json) => CartITem(
       (json['productTotal'] as num?)?.toInt(),
     );
 
-

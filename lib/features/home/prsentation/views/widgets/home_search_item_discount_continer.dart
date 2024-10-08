@@ -41,20 +41,20 @@ class HomeSearchItemDiscountContiner extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 15),
-          if (isOrder == false)
-            const Expanded(
-                flex: 4,
-                child: Padding(
-                  padding: EdgeInsetsDirectional.only(end: 5),
-                  child: ItemAddToCartButton(
-                    horizontal: 0,
-                    vertical: 0,
+          // if (isOrder == false)
+          //   const Expanded(
+          //       flex: 4,
+          //       child: Padding(
+          //         padding: EdgeInsetsDirectional.only(end: 5),
+          //         child: ItemAddToCartButton(
+          //           horizontal: 0,
+          //           vertical: 0,
 
-                    // vertical: 1,
-                    id: 5,
-                  ),
-                  //  HomeSearchItemCartCounter(count: cartCount, id: id),
-                ))
+          //           // vertical: 1,
+          //           id: 5,
+          //         ),
+          //         //  HomeSearchItemCartCounter(count: cartCount, id: id),
+          //       ))
         ],
       ),
     );

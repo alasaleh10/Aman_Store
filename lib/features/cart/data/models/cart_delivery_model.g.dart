@@ -13,4 +13,3 @@ CartDeliveryModel _$CartDeliveryModelFromJson(Map<String, dynamic> json) =>
       delivery: json['delivery'] as num?,
     );
 
-

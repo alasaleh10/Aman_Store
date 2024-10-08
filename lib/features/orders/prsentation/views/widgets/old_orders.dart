@@ -26,15 +26,22 @@ class OldOrders extends StatelessWidget {
               onTap: () {
                 context.read<PreviousOrdersCubit>().getPreviousOrders();
               }),
-          success: (data) => ListView.builder(
-            itemCount: data.ordersModel.order.length,
-            itemBuilder: (BuildContext context, int index) {
-              return  Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8),
-                  child: OrderItems(
-                    order: data.ordersModel.order[index],
-                  ));
+          success: (data) => RefreshIndicator(
+            onRefresh: () async {
+              context
+                  .read<PreviousOrdersCubit>()
+                  .getPreviousOrders(isFromRefresh: true);
             },
+            child: ListView.builder(
+              itemCount: data.ordersModel.order.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: OrderItems(
+                      order: data.ordersModel.order[index],
+                    ));
+              },
+            ),
           ),
         );
       },

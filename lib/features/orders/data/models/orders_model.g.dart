@@ -25,4 +25,3 @@ Order _$OrderFromJson(Map<String, dynamic> json) => Order(
       json['createdAt'] as String?,
     );
 
-

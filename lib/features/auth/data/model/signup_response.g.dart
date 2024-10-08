@@ -12,3 +12,4 @@ SignUpResponse _$SignUpResponseFromJson(Map<String, dynamic> json) =>
       email: json['email'] as String,
     );
 
+

@@ -10,10 +10,14 @@ class ProductDetilsCubit extends Cubit<ProductDetilsState> {
   ProductDetilsCubit(this._productDetilsRepo, this.productId)
       : super(const ProductDetilsState.initial());
 
-  void getSpicificProduct({int? newproductId}) async {
-    emit(const ProductDetilsState.loading());
+  void getSpicificProduct(
+      {int? newproductId, bool isFromRefresh = false}) async {
+    if (!isFromRefresh) {
+      emit(const ProductDetilsState.loading());
+    }
     if (await isConncection()) {
-      var response = await _productDetilsRepo.getSpicificProduct(newproductId??productId);
+      var response = await _productDetilsRepo
+          .getSpicificProduct(newproductId ?? productId);
       response.when(success: (data) {
         emit(ProductDetilsState.loaded(model: data));
       }, failure: (failure) {

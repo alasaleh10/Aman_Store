@@ -13,7 +13,6 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
     );
 
 
-
 User _$UserFromJson(Map<String, dynamic> json) => User(
       (json['id'] as num).toInt(),
       json['firstName'] as String,
@@ -26,5 +25,4 @@ User _$UserFromJson(Map<String, dynamic> json) => User(
       json['image'] as String,
       json['isApproved'] as bool,
     );
-
 

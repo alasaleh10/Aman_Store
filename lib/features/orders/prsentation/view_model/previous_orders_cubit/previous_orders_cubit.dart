@@ -9,9 +9,14 @@ class PreviousOrdersCubit extends Cubit<PreviousOrdersState> {
   final OrdersRepo _ordersRepo;
   PreviousOrdersCubit(this._ordersRepo) : super(const PreviousOrdersState.initial());
 
-  void getPreviousOrders()async
+  void getPreviousOrders({bool isFromRefresh=false})async
   {
+
+    if(!isFromRefresh)
+    {
     emit(const PreviousOrdersState.loading());
+
+    }
     if(await isConncection())
     {
       var response=await _ordersRepo.getPreviousOrders();

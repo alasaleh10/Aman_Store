@@ -6,6 +6,7 @@ import 'models/add_order_done_model.dart';
 import 'models/add_order_request_model.dart';
 import 'models/cart_delivery_model.dart';
 import 'models/cart_items_model/cart_item_model.dart';
+import 'models/cheek_cart_product_model.dart';
 import 'models/coupon_model.dart';
 part 'cart_serviese.g.dart';
 
@@ -35,4 +36,10 @@ Future<DoneModel> cheekMyWallet(@Body() Map<String, dynamic> data);
 Future<DoneModel>cheekCartItemsQuantity();
 @POST(ApiConstanses.addOrder)
 Future<AddOrderDoneModel> addOrder(@Body() AddOrderRequestModel addOrderRequestModel);
+@GET('${ApiConstanses.cheekCartProduct}/{id}')
+Future<CheekCartProductModel>cheekCartPRoduct(@Path('id') int id);
+@DELETE('${ApiConstanses.deleteProductFromCart}/{id}')
+Future<DoneModel> deleteCartProduct(@Path('id') int id);
+@POST(ApiConstanses.editCart)
+Future<DoneModel> editCart(@Body() Map<String, dynamic> data);
 }

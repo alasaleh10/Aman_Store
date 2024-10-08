@@ -11,14 +11,18 @@ class CachedImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CachedNetworkImage(
-      fit: boxFit ?? BoxFit.cover,
-      imageUrl: url,
-      placeholder: (context, url) => const ShimarImageLoading(),
-      errorWidget: (context, url, error) => Icon(
-        Icons.error_outline,
-        size: 35.r,
-        color: Colors.white,
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(8.r),
+      clipBehavior: Clip.antiAlias,
+      child: CachedNetworkImage(
+        fit: boxFit ?? BoxFit.cover,
+        imageUrl: url,
+        placeholder: (context, url) => const ShimarImageLoading(),
+        errorWidget: (context, url, error) => Icon(
+          Icons.error_outline,
+          size: 35.r,
+          color: Colors.white,
+        ),
       ),
     );
   }

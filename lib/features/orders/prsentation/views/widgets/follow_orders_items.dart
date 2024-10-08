@@ -55,40 +55,42 @@ class OrderItemWidget extends StatelessWidget {
             ),
             hSizedBox(20),
             Expanded(
-                flex: 3,
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        orderItems.subName!,
-                        style: AppStyle.textStyleRegular14
-                            .copyWith(color: const Color(0xff8B959E)),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      Text(
-                        orderItems.name!,
-                        style: AppStyle.textStyleRegular16.copyWith(
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.kBlackColor),
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      CustomOrderDetilsRichedText(
-                        title: 'الكمية',
-                        subTitle: '${orderItems.quantity}',
-                      ),
-                      CustomOrderDetilsRichedText(
-                        title: 'سعر الوحدة',
-                        subTitle:
-                            '${decimalNumer(price: orderItems.price)} ${'ry2'.tr()}',
-                      ),
-                      CustomOrderDetilsRichedText(
-                        title: 'الإجمالي',
-                        subTitle:
-                            '${decimalNumer(price: orderItems.price * orderItems.quantity)} ${'ry2'.tr()}',
-                      )
-                    ]))
+              flex: 3,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    orderItems.subName!,
+                    style: AppStyle.textStyleRegular14
+                        .copyWith(color: const Color(0xff8B959E)),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  Text(
+                    orderItems.name!,
+                    style: AppStyle.textStyleRegular16.copyWith(
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.kBlackColor),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  CustomOrderDetilsRichedText(
+                    title: 'الكمية',
+                    subTitle: '${orderItems.quantity}',
+                  ),
+                  CustomOrderDetilsRichedText(
+                    title: 'سعر الوحدة',
+                    subTitle:
+                        '${decimalNumer(price: orderItems.price)} ${'ry2'.tr()}',
+                  ),
+                  CustomOrderDetilsRichedText(
+                    title: 'الإجمالي',
+                    subTitle:
+                        '${decimalNumer(price: orderItems.price * orderItems.quantity)} ${'ry2'.tr()}',
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),

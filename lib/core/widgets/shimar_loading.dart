@@ -12,7 +12,7 @@ class ShimarLoading extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: height ?? 100.h,
-      width: double.infinity,
+      width: width ?? double.infinity,
       child: Shimmer.fromColors(
         baseColor: AppColors.kOtpBorderColor.withOpacity(.2),
         highlightColor: Colors.grey[100]!,

@@ -1,6 +1,7 @@
 import 'package:aman_store2/core/di/depencency_injection.dart';
 import 'package:aman_store2/core/routers/app_routers.dart';
 import 'package:aman_store2/core/utils/app_colors.dart';
+import 'package:aman_store2/features/cart/data/models/display_item_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -62,13 +63,24 @@ class ProductItem extends StatelessWidget {
               ItemsTitleAndPrice(
                 title: product.name,
                 subTitle: product.subName,
-                price: decimalNumer(price: product.price),
+                price: decimalNumer(price: product.priceAfterDiscount),
               ),
               SizedBox(height: 8.h),
               SizedBox(
                 width: double.infinity,
                 child: FittedBox(
-                  child: ItemAddToCartButton(id: product.id),
+                  child: ItemAddToCartButton(
+                    onSucsess: onTap,
+                    displayItemCart: DisplayItemCart(
+                        product.id,
+                        product.name,
+                        product.subName,
+                        product.image,
+                        product.price,
+                        product.quilty,
+                        product.discount,
+                        product.priceAfterDiscount),
+                  ),
                 ),
               ),
             ],

@@ -1,6 +1,6 @@
-import 'package:aman_store2/core/functions/show_snac_bar.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -8,17 +8,42 @@ import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
 
+import '../../../features/cart/data/models/display_item_cart.dart';
+import '../../../features/cart/prsentation/view_model/cheek_cart_product_cubit/cheek_cart_p_roduct_cubit.dart';
+import '../../di/depencency_injection.dart';
+import 'add_product_cart_widgets/add_product_cart_to_cart_widget.dart';
+
 class ItemAddToCartButton extends StatelessWidget {
+  final VoidCallback onSucsess;
+  final DisplayItemCart displayItemCart;
   final double? horizontal, vertical;
-  final int id;
-  const ItemAddToCartButton(
-      {super.key, required this.id, this.horizontal, this.vertical});
+
+  const ItemAddToCartButton({
+    super.key,
+    this.horizontal,
+    this.vertical,
+    required this.displayItemCart,
+    required this.onSucsess,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        showSnackBar(context, message: 'قريبا');
+        showModalBottomSheet(
+          enableDrag: false,
+          isDismissible: false,
+          context: context,
+          builder: (_) => BlocProvider(
+            create: (context) =>
+                CheekCartPRoductCubit(gitIt(), displayItemCart.id!)
+                  ..cheekCart(),
+            child: AddProductCartWidget(
+              onSucsess: onSucsess,
+              displayItemCart: displayItemCart,
+            ),
+          ),
+        );
       },
       child: Container(
         padding: EdgeInsets.symmetric(

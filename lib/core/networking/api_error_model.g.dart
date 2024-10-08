@@ -13,4 +13,3 @@ ApiErrorModel _$ApiErrorModelFromJson(Map<String, dynamic> json) =>
       statusCode: (json['statusCode'] as num?)?.toInt(),
     );
 
-

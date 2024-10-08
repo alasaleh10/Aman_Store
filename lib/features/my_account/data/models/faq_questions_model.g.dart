@@ -21,3 +21,4 @@ FaqQuestionModel _$FaqQuestionModelFromJson(Map<String, dynamic> json) =>
       answer: json['answer'] as String,
     );
 
+

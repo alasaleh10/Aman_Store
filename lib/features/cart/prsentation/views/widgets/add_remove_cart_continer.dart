@@ -7,18 +7,20 @@ import '../../../../../core/utils/app_styles.dart';
 
 class AddRemoveCArtContiner extends StatelessWidget {
   final int count;
+  final EdgeInsetsGeometry? padding;
   final VoidCallback onAdd;
   final VoidCallback onRemove;
   const AddRemoveCArtContiner(
       {super.key,
       required this.count,
       required this.onAdd,
-      required this.onRemove});
+      required this.onRemove,
+      this.padding});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8.w),
+      padding: padding ?? EdgeInsets.symmetric(horizontal: 8.w),
       margin: EdgeInsets.symmetric(horizontal: 5.w, vertical: 6.h),
       decoration: BoxDecoration(
           border: Border.all(color: AppColors.kOtpBorderColor),

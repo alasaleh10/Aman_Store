@@ -1,13 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'done_model.dart';
+part of 'cheek_cart_product_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-DoneModel _$DoneModelFromJson(Map<String, dynamic> json) => DoneModel(
+CheekCartProductModel _$CheekCartProductModelFromJson(
+        Map<String, dynamic> json) =>
+    CheekCartProductModel(
       status: json['status'] as bool,
-      message: json['message'] as String,
+      quantity: (json['quantity'] as num).toInt(),
     );
 

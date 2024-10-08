@@ -22,6 +22,11 @@ class ProductDetilsViewBody extends StatelessWidget {
             context.read<ProductDetilsCubit>().getSpicificProduct();
           }),
           loaded: (model) => ProductDetilsSucsessWidget(
+            onSucsess: () {
+              context
+                  .read<ProductDetilsCubit>()
+                  .getSpicificProduct(isFromRefresh: true);
+            },
             products: model.similerProducts,
             data: model.product,
           ),

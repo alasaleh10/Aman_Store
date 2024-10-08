@@ -14,3 +14,4 @@ ListLocationsModel _$ListLocationsModelFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
+

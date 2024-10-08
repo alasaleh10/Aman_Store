@@ -8,6 +8,7 @@ import 'models/add_order_done_model.dart';
 import 'models/add_order_request_model.dart';
 import 'models/cart_delivery_model.dart';
 import 'models/cart_items_model/cart_item_model.dart';
+import 'models/cheek_cart_product_model.dart';
 
 class CartRepo {
   final CartServises _cartServises;
@@ -84,6 +85,35 @@ class CartRepo {
       AddOrderDoneModel addOrderDoneModel =
           await _cartServises.addOrder(addOrderRequestModel);
       return ApiResult.success(addOrderDoneModel);
+    } catch (err) {
+      return ApiResult.failure(ApiErrorHandler.handle(err));
+    }
+  }
+
+  Future<ApiResult<CheekCartProductModel>> cheekCartProduct(int id) async {
+    try {
+      CheekCartProductModel cheekCartProductModel =
+          await _cartServises.cheekCartPRoduct(id);
+      return ApiResult.success(cheekCartProductModel);
+    } catch (err) {
+      return ApiResult.failure(ApiErrorHandler.handle(err));
+    }
+  }
+
+  Future<ApiResult<DoneModel>> editCart(int count, int productId) async {
+    try {
+      Map<String, dynamic> data = {'quantity': count, 'product': productId};
+      var response = await _cartServises.editCart(data);
+      return ApiResult.success(response);
+    } catch (err) {
+      return ApiResult.failure(ApiErrorHandler.handle(err));
+    }
+  }
+
+  Future<ApiResult<DoneModel>> deleteProductFromCart(int productId) async {
+    try {
+      var response = await _cartServises.deleteCartProduct(productId);
+      return ApiResult.success(response);
     } catch (err) {
       return ApiResult.failure(ApiErrorHandler.handle(err));
     }
