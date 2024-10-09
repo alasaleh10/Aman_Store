@@ -1,17 +1,16 @@
-import 'package:easy_localization/easy_localization.dart';
+import 'package:aman_store2/core/functions/app_sizedbox.dart';
+import 'package:aman_store2/core/functions/show_snac_bar.dart';
+import 'package:aman_store2/core/widgets/failure_page_view.dart';
+import 'package:aman_store2/core/widgets/no_internet_page_view.dart';
+import 'package:aman_store2/features/home/prsentation/view_model/home_cubit/home_cubit.dart';
+import 'package:aman_store2/features/home/prsentation/view_model/home_cubit/home_state.dart';
+import 'package:aman_store2/features/home/prsentation/views/widgets/home_loading.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_styles.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../drawer_pages/views/home_drwer.dart';
 import 'widgets/custom_home_appbar.dart';
-import 'widgets/home_banner_images.dart';
-import 'widgets/home_best_sellier_row.dart';
-import '../../../categoriess/prsentation/views/widgets/home_categorise_text_row.dart';
-import '../../../categoriess/prsentation/views/widgets/home_categorisess_list.dart';
-import 'widgets/home_month_stock_row.dart';
-import 'widgets/home_new_aman_continer.dart';
 import 'widgets/home_search_continer.dart';
+import 'widgets/home_sucsess.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -22,42 +21,53 @@ class HomeView extends StatelessWidget {
       drawerEnableOpenDragGesture: false,
       drawer: const HomeDrwer(),
       body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            const CustomHomeAppBar(),
-            const HomeSearchContiner(),
-            const SliverToBoxAdapter(child: SizedBox(height: 16)),
-            const HomeBannerImages(),
-            const HomeCategoriseTextRow(),
-            const SliverToBoxAdapter(child: SizedBox(height: 16)),
-            const HomeCategoriseListView(),
-            const HomeNewAmanContiner(),
-            SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsetsDirectional.only(start: 10),
-                child: Text(
-                  'bestSelingProducts'.tr(),
-                  style: AppStyle.textStyleBold17,
-                ),
+        child: RefreshIndicator(
+          onRefresh: () async {
+            if (context.read<HomeCubit>().isSucsess == true) {
+              context.read<HomeCubit>().getHome(isFromRefreshing: true);
+            }
+          },
+          child: CustomScrollView(
+            slivers: [
+              const CustomHomeAppBar(),
+              const HomeSearchContiner(),
+              SliverToBoxAdapter(child: vSizedBox(16)),
+
+              BlocConsumer<HomeCubit, HomeState>(
+                buildWhen: (previous, current) => current is! Failure2,
+                listener: (context, state) {
+                  state.mapOrNull(
+                    failure2: (value) {
+                      showSnackBar(context, message: value.message);
+                    },
+                  );
+                },
+                builder: (context, state) {
+                  return state.maybeMap(
+                    orElse: () => const SliverToBoxAdapter(),
+                    failure: (value) => SliverToBoxAdapter(
+                      child: FailurePageView(
+                        message: value.message,
+                        onTap: () {
+                          context.read<HomeCubit>().getHome();
+                        },
+                      ),
+                    ),
+                    loading: (value) => const HomeLoading(),
+                    noInternet: (value) =>
+                        SliverToBoxAdapter(child: NoInternetPage(onTap: () {
+                      context.read<HomeCubit>().getHome();
+                    })),
+                    sucsess: (data) => HomeSucsess(data: data.homeModel),
+                  );
+                },
               ),
-            ),
-            const SliverToBoxAdapter(child: SizedBox(height: 16)),
-            const HomeBestSellerRow(),
-            const SliverToBoxAdapter(child: SizedBox(height: 20)),
-            const SliverToBoxAdapter(
-              child: Divider(color: AppColors.kOtpBorderColor, thickness: 8),
-            ),
-            const SliverToBoxAdapter(child: SizedBox(height: 16)),
-            SliverToBoxAdapter(
-              child: Padding(
-                  padding: const EdgeInsetsDirectional.only(start: 10),
-                  child:
-                      Text('monthStock'.tr(), style: AppStyle.textStyleBold17)),
-            ),
-            const SliverToBoxAdapter(child: SizedBox(height: 16)),
-            const MonthStockListRow(),
-            const SliverToBoxAdapter(child: SizedBox(height: 24)),
-          ],
+
+              // HomeSucsess(),
+              // HomeLoading(),
+              SliverToBoxAdapter(child: vSizedBox(26)),
+            ],
+          ),
         ),
       ),
     );

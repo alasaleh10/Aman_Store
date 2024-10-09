@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
+import '../../../data/models/all_categoriess_model.dart';
+import 'home_categorie_item.dart';
+
 class HomeCategoriseListView extends StatelessWidget {
-  const HomeCategoriseListView({super.key});
+  final List<CategorieeModel> categories;
+  const HomeCategoriseListView({super.key, required this.categories});
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-        child: IntrinsicHeight(
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          children: List.generate(
-              4,
-              (index) => const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 7.5),
-                  child: Text('f')
-                  //  CategorieItem(testCategorieModel: testCategorieList[index]),
-                  )),
-        ),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: List.generate(
+            categories.length,
+            (index) => Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 7.5),
+                  child: CategorieItem(categorieeModel: categories[index]),
+                )),
       ),
-    ));
+    );
   }
 }

@@ -21,7 +21,5 @@ CategorieeModel _$CategorieeModelFromJson(Map<String, dynamic> json) =>
       id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       image: json['image'] as String,
-      isActive: json['isActive'] as bool,
     );
-
 

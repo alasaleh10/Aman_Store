@@ -13,31 +13,29 @@ class HomeNewAmanContiner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-        child: GestureDetector(
-          onTap: () {
-            GoRouter.of(context).pushNamed(AppRouters.homeAmanView);
-          },
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
-            decoration: BoxDecoration(
-                color: const Color(0xffFEF1E5),
-                border: Border.all(color: AppColors.kPrimColor),
-                borderRadius: BorderRadius.circular(35)),
-            child: ListTile(
-              leading: SvgPicture.asset(Assets.imagesNew),
-              title: Text(
-                'newAmanStore'.tr(),
-                style: AppStyle.textStyleRegular16
-                    .copyWith(color: AppColors.kPrimColor),
-              ),
-              trailing: const Icon(
-                Icons.arrow_forward,
-                size: 30,
-                color: AppColors.kPrimColor,
-              ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+      child: GestureDetector(
+        onTap: () {
+          GoRouter.of(context).pushNamed(AppRouters.homeAmanView);
+        },
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          decoration: BoxDecoration(
+              color: const Color(0xffFEF1E5),
+              border: Border.all(color: AppColors.kPrimColor),
+              borderRadius: BorderRadius.circular(35)),
+          child: ListTile(
+            leading: SvgPicture.asset(Assets.imagesNew),
+            title: Text(
+              'newAmanStore'.tr(),
+              style: AppStyle.textStyleRegular16
+                  .copyWith(color: AppColors.kPrimColor),
+            ),
+            trailing: const Icon(
+              Icons.arrow_forward,
+              size: 30,
+              color: AppColors.kPrimColor,
             ),
           ),
         ),

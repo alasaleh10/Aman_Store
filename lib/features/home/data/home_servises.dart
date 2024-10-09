@@ -3,6 +3,7 @@ import 'package:retrofit/retrofit.dart';
 
 import '../../../core/models/product_model/list_product_model.dart';
 import '../../../core/networking/api_constanses.dart';
+import 'models/home_model.dart';
 part 'home_servises.g.dart';
 
 @RestApi(baseUrl: ApiConstanses.baseUrl)
@@ -13,4 +14,6 @@ abstract class HomeServices {
   Future<ListProductModel> newAmanProducts();
   @GET(ApiConstanses.searchProduct)
   Future<ListProductModel> searchProduct(@Query('search') String search);
+  @GET(ApiConstanses.home)
+  Future<HomeModel> getHome();
 }

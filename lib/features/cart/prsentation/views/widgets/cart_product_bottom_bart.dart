@@ -9,6 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shimmer/shimmer.dart';
 import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/widgets/csutom_small_continer_loadind.dart';
 import '../../../../../core/widgets/custom_loading_stack.dart';
 import '../../../../../core/widgets/no_internet_stack.dart';
 import 'cart_next_button.dart';
@@ -102,18 +103,5 @@ class CartProductButtonLoading extends StatelessWidget {
     );
   }
 
-  Shimmer titleContinerShimmare() {
-    return Shimmer.fromColors(
-      baseColor: AppColors.kOtpBorderColor.withOpacity(.2),
-      highlightColor: Colors.grey[100]!,
-      child: Container(
-        height: 20.h,
-        width: 100.w,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(4.r),
-        ),
-      ),
-    );
-  }
+  
 }

@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:aman_store2/core/helper/sqflite_helper/sqflite_helper.dart';
 import 'package:aman_store2/core/networking/api_error_handler.dart';
 import 'package:aman_store2/features/home/data/home_servises.dart';
+import 'package:aman_store2/features/home/data/models/home_model.dart';
 
 import '../../../core/models/product_model/list_product_model.dart';
 import '../../../core/networking/api_result.dart';
@@ -56,6 +57,18 @@ class HomeRepo {
       log(err.toString());
 
       return ApiResult.failure(ApiErrorHandler.handle(err));
+    }
+  }
+
+  Future<ApiResult<HomeModel>> getHome()async
+  {
+    try {
+      var response=await _homeServices.getHome();
+      return ApiResult.success(response);
+      
+    } catch (err) {
+      return ApiResult.failure(ApiErrorHandler.handle(err));
+      
     }
   }
 }

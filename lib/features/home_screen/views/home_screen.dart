@@ -1,4 +1,5 @@
 import 'package:aman_store2/core/di/depencency_injection.dart';
+import 'package:aman_store2/features/home/prsentation/view_model/home_cubit/home_cubit.dart';
 import 'package:aman_store2/features/my_account/prsentation/view_model/my_account_cubit/my_account_cubit.dart';
 import 'package:aman_store2/features/orders/prsentation/view_model/current_orders_cubit/current_orders_cubit.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,9 @@ class HomeScreenView extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
         providers: [
+          BlocProvider(
+            create: (context) => HomeCubit(gitIt())..getHome(),
+          ),
           BlocProvider(
             create: (context) => OrdersCubit(),
           ),

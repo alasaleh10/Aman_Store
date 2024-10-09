@@ -198,38 +198,6 @@ class Assets {
   /// assets/images/terms.svg
   static const String imagesTerms = "assets/images/terms.svg";
 
-  /// Assets for imagesTestBanar
-  /// assets/images/testBanar.png
-  static const String imagesTestBanar = "assets/images/testBanar.png";
-
-  /// Assets for imagesTestCategorise
-  /// assets/images/testCategorise.png
-  static const String imagesTestCategorise = "assets/images/testCategorise.png";
-
-  /// Assets for imagesTestCaterorieBird
-  /// assets/images/testCaterorieBird.png
-  static const String imagesTestCaterorieBird = "assets/images/testCaterorieBird.png";
-
-  /// Assets for imagesTestCaterorieMailk
-  /// assets/images/testCaterorieMailk.png
-  static const String imagesTestCaterorieMailk = "assets/images/testCaterorieMailk.png";
-
-  /// Assets for imagesTestCateroriemeet
-  /// assets/images/testCateroriemeet.png
-  static const String imagesTestCateroriemeet = "assets/images/testCateroriemeet.png";
-
-  /// Assets for imagesTestItem1
-  /// assets/images/testItem1.png
-  static const String imagesTestItem1 = "assets/images/testItem1.png";
-
-  /// Assets for imagesTestItem2
-  /// assets/images/testItem2.png
-  static const String imagesTestItem2 = "assets/images/testItem2.png";
-
-  /// Assets for imagesTestItem3
-  /// assets/images/testItem3.png
-  static const String imagesTestItem3 = "assets/images/testItem3.png";
-
   /// Assets for imagesTestOffers
   /// assets/images/testOffers.png
   static const String imagesTestOffers = "assets/images/testOffers.png";

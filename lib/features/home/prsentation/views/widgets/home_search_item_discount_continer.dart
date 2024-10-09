@@ -1,8 +1,8 @@
+import 'package:aman_store2/core/functions/app_sizedbox.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/app_styles.dart';
-import '../../../../../core/widgets/product_item/add_cart_button.dart';
 
 class HomeSearchItemDiscountContiner extends StatelessWidget {
   final bool isOrder;
@@ -40,7 +40,7 @@ class HomeSearchItemDiscountContiner extends StatelessWidget {
               style: AppStyle.textStyleBold12,
             ),
           ),
-          const SizedBox(width: 15),
+          hSizedBox(15)
           // if (isOrder == false)
           //   const Expanded(
           //       flex: 4,
