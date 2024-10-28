@@ -24,6 +24,7 @@ class SearchPRoductTextForm extends StatelessWidget {
           children: [
             Expanded(
                 child: CustomTextFormField(
+                  autoFoucs: true,
               onChanged: (val) {
                 if (val.trim().isEmpty) {
                   cubit.clearSearch();

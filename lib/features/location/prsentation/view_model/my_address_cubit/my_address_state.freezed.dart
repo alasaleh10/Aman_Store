@@ -108,6 +108,9 @@ class _$MyAddressStateCopyWithImpl<$Res, $Val extends MyAddressState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -124,6 +127,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -262,6 +268,9 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -403,6 +412,8 @@ class __$$SuccessImplCopyWithImpl<$Res>
       _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -442,7 +453,9 @@ class _$SuccessImpl implements Success {
   @override
   int get hashCode => Object.hash(runtimeType, locations);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
@@ -551,7 +564,10 @@ abstract class Success implements MyAddressState {
   const factory Success(final ListLocationsModel locations) = _$SuccessImpl;
 
   ListLocationsModel get locations;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -573,6 +589,8 @@ class __$$FailureImplCopyWithImpl<$Res>
       _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -611,7 +629,9 @@ class _$FailureImpl implements Failure {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
@@ -720,7 +740,10 @@ abstract class Failure implements MyAddressState {
   const factory Failure(final String message) = _$FailureImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -739,6 +762,9 @@ class __$$NoInternetImplCopyWithImpl<$Res>
   __$$NoInternetImplCopyWithImpl(
       _$NoInternetImpl _value, $Res Function(_$NoInternetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -877,6 +903,9 @@ class __$$Loading2ImplCopyWithImpl<$Res>
   __$$Loading2ImplCopyWithImpl(
       _$Loading2Impl _value, $Res Function(_$Loading2Impl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1018,6 +1047,8 @@ class __$$Success2ImplCopyWithImpl<$Res>
       _$Success2Impl _value, $Res Function(_$Success2Impl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1056,7 +1087,9 @@ class _$Success2Impl implements Success2 {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$Success2ImplCopyWith<_$Success2Impl> get copyWith =>
@@ -1165,7 +1198,10 @@ abstract class Success2 implements MyAddressState {
   const factory Success2(final String message) = _$Success2Impl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$Success2ImplCopyWith<_$Success2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1187,6 +1223,8 @@ class __$$Failure2ImplCopyWithImpl<$Res>
       _$Failure2Impl _value, $Res Function(_$Failure2Impl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1225,7 +1263,9 @@ class _$Failure2Impl implements Failure2 {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$Failure2ImplCopyWith<_$Failure2Impl> get copyWith =>
@@ -1334,7 +1374,10 @@ abstract class Failure2 implements MyAddressState {
   const factory Failure2(final String message) = _$Failure2Impl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyAddressState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$Failure2ImplCopyWith<_$Failure2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }

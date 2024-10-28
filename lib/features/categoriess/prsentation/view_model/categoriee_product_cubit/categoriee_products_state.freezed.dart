@@ -97,6 +97,9 @@ class _$CategorieeProductsStateCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of CategorieeProductsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -113,6 +116,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CategorieeProductsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -242,6 +248,8 @@ class __$$SucsessImplCopyWithImpl<$Res>
       _$SucsessImpl _value, $Res Function(_$SucsessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CategorieeProductsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -281,7 +289,9 @@ class _$SucsessImpl implements Sucsess {
   @override
   int get hashCode => Object.hash(runtimeType, products);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CategorieeProductsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SucsessImplCopyWith<_$SucsessImpl> get copyWith =>
@@ -379,7 +389,10 @@ abstract class Sucsess implements CategorieeProductsState {
       _$SucsessImpl;
 
   ListProductModel get products;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CategorieeProductsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SucsessImplCopyWith<_$SucsessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -401,6 +414,8 @@ class __$$ErrorImplCopyWithImpl<$Res>
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CategorieeProductsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -439,7 +454,9 @@ class _$ErrorImpl implements Error {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CategorieeProductsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -536,7 +553,10 @@ abstract class Error implements CategorieeProductsState {
   const factory Error({required final String error}) = _$ErrorImpl;
 
   String get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CategorieeProductsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -555,6 +575,9 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CategorieeProductsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -681,6 +704,9 @@ class __$$NoInternetImplCopyWithImpl<$Res>
   __$$NoInternetImplCopyWithImpl(
       _$NoInternetImpl _value, $Res Function(_$NoInternetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CategorieeProductsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -807,6 +833,9 @@ class __$$FromOpreationsImplCopyWithImpl<$Res>
   __$$FromOpreationsImplCopyWithImpl(
       _$FromOpreationsImpl _value, $Res Function(_$FromOpreationsImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CategorieeProductsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

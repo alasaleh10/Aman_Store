@@ -1,3 +1,4 @@
+import 'package:aman_store2/core/models/done_model.dart';
 import 'package:aman_store2/core/networking/api_constanses.dart';
 import 'package:aman_store2/features/auth/data/model/signup_request_body.dart';
 import 'package:dio/dio.dart';
@@ -22,4 +23,6 @@ abstract class AuthServices {
   Future forgetPassword(@Body() Map<String, dynamic> data);
   @PUT(ApiConstanses.restPassword)
   Future restPassword(@Body() Map<String, dynamic> data);
+  @POST(ApiConstanses.sendCode)
+  Future<DoneModel> resendCode(@Body() Map<String,dynamic> data);
 }

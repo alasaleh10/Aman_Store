@@ -102,6 +102,9 @@ class _$MyAccountStateCopyWithImpl<$Res, $Val extends MyAccountState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -118,6 +121,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -250,6 +256,9 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -385,6 +394,8 @@ class __$$SucsessImplCopyWithImpl<$Res>
       _$SucsessImpl _value, $Res Function(_$SucsessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -424,7 +435,9 @@ class _$SucsessImpl implements Sucsess {
   @override
   int get hashCode => Object.hash(runtimeType, userModel);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SucsessImplCopyWith<_$SucsessImpl> get copyWith =>
@@ -527,7 +540,10 @@ abstract class Sucsess implements MyAccountState {
   const factory Sucsess(final UserModel userModel) = _$SucsessImpl;
 
   UserModel get userModel;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SucsessImplCopyWith<_$SucsessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -549,6 +565,8 @@ class __$$FailureImplCopyWithImpl<$Res>
       _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -587,7 +605,9 @@ class _$FailureImpl implements Failure {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
@@ -690,7 +710,10 @@ abstract class Failure implements MyAccountState {
   const factory Failure(final String error) = _$FailureImpl;
 
   String get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -712,6 +735,8 @@ class __$$Failure2ImplCopyWithImpl<$Res>
       _$Failure2Impl _value, $Res Function(_$Failure2Impl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -750,7 +775,9 @@ class _$Failure2Impl implements Failure2 {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$Failure2ImplCopyWith<_$Failure2Impl> get copyWith =>
@@ -853,7 +880,10 @@ abstract class Failure2 implements MyAccountState {
   const factory Failure2(final String error) = _$Failure2Impl;
 
   String get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$Failure2ImplCopyWith<_$Failure2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -872,6 +902,9 @@ class __$$NoInternetImplCopyWithImpl<$Res>
   __$$NoInternetImplCopyWithImpl(
       _$NoInternetImpl _value, $Res Function(_$NoInternetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1007,6 +1040,8 @@ class __$$EditImageImplCopyWithImpl<$Res>
       _$EditImageImpl _value, $Res Function(_$EditImageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1046,7 +1081,9 @@ class _$EditImageImpl implements EditImage {
   @override
   int get hashCode => Object.hash(runtimeType, doneModel);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EditImageImplCopyWith<_$EditImageImpl> get copyWith =>
@@ -1149,7 +1186,10 @@ abstract class EditImage implements MyAccountState {
   const factory EditImage(final DoneModel doneModel) = _$EditImageImpl;
 
   DoneModel get doneModel;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyAccountState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EditImageImplCopyWith<_$EditImageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

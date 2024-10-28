@@ -90,6 +90,9 @@ class _$CheekEmailStateCopyWithImpl<$Res, $Val extends CheekEmailState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of CheekEmailState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -106,6 +109,9 @@ class __$$CheekEmailInitialImplCopyWithImpl<$Res>
   __$$CheekEmailInitialImplCopyWithImpl(_$CheekEmailInitialImpl _value,
       $Res Function(_$CheekEmailInitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CheekEmailState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -226,6 +232,9 @@ class __$$CheekEmailLoadingImplCopyWithImpl<$Res>
   __$$CheekEmailLoadingImplCopyWithImpl(_$CheekEmailLoadingImpl _value,
       $Res Function(_$CheekEmailLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CheekEmailState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -346,6 +355,9 @@ class __$$CheekEmailSucsessImplCopyWithImpl<$Res>
   __$$CheekEmailSucsessImplCopyWithImpl(_$CheekEmailSucsessImpl _value,
       $Res Function(_$CheekEmailSucsessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CheekEmailState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -466,6 +478,9 @@ class __$$CheekEmailNoInternetImplCopyWithImpl<$Res>
   __$$CheekEmailNoInternetImplCopyWithImpl(_$CheekEmailNoInternetImpl _value,
       $Res Function(_$CheekEmailNoInternetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CheekEmailState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -590,6 +605,8 @@ class __$$CheekEmailErrorImplCopyWithImpl<$Res>
       _$CheekEmailErrorImpl _value, $Res Function(_$CheekEmailErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CheekEmailState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -628,7 +645,9 @@ class _$CheekEmailErrorImpl implements CheekEmailError {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CheekEmailState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CheekEmailErrorImplCopyWith<_$CheekEmailErrorImpl> get copyWith =>
@@ -720,7 +739,10 @@ abstract class CheekEmailError implements CheekEmailState {
   const factory CheekEmailError(final String message) = _$CheekEmailErrorImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CheekEmailState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CheekEmailErrorImplCopyWith<_$CheekEmailErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

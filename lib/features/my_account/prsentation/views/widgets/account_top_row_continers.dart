@@ -1,3 +1,4 @@
+import 'package:aman_store2/core/functions/decimal_number.dart';
 import 'package:aman_store2/features/auth/data/model/user_model.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class AccountRowContiners extends StatelessWidget {
           AccountTopContiner(
             imageColor: AppColors.kPrimColor,
             image: Assets.imagesOrdernumber,
-            title: '${user.order??0}',
+            title: '${user.order ?? 0}',
             subTitle: 'orders'.tr(),
             onTap: () {
               BlocProvider.of<HomeScreenCubit>(context).changePage(index: 3);
@@ -32,7 +33,7 @@ class AccountRowContiners extends StatelessWidget {
           AccountTopContiner(
             imageColor: const Color(0xff10B982),
             image: Assets.imagesWallet,
-            title: '${user.user.credit} ${'ry2'.tr()}',
+            title: '${decimalNumer(price: user.user.credit)} ${'ry2'.tr()}',
             subTitle: 'balance'.tr(),
             onTap: () {},
             backgroundColor: const Color(0xffEAFEF5),

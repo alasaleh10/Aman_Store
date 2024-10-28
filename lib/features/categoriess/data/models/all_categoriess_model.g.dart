@@ -23,3 +23,4 @@ CategorieeModel _$CategorieeModelFromJson(Map<String, dynamic> json) =>
       image: json['image'] as String,
     );
 
+

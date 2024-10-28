@@ -15,7 +15,6 @@ ProductDtilsModel _$ProductDtilsModelFromJson(Map<String, dynamic> json) =>
     );
 
 
-
 Product _$ProductFromJson(Map<String, dynamic> json) => Product(
       id: (json['id'] as num).toInt(),
       name: json['name'] as String,

@@ -20,4 +20,7 @@ abstract class OrdersServices {
   Future<OrderDetilsModel> getOrderDetails(@Path('id') int id);
   @POST(ApiConstanses.addRating)
   Future<DoneModel> addRating(@Body() AddRatingModel addRatingModel);
+
+  @GET('${ApiConstanses.order}/{id}')
+  Future<dynamic>  searchOrder(@Path('id') int id);
 }

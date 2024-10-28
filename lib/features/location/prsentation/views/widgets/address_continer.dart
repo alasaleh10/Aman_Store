@@ -1,5 +1,6 @@
 import 'package:aman_store2/core/routers/app_routers.dart';
 import 'package:aman_store2/features/location/prsentation/view_model/my_address_cubit/my_address_cubit.dart';
+import 'package:aman_store2/features/location/prsentation/views/widgets/return_location.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -18,8 +19,6 @@ class AddressContiner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-  
-
     return ZoomIn(
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
@@ -86,8 +85,7 @@ class AddressContiner extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Text(
-                  '${location.name} - ${location.street}',
-                  
+                  fullLocation(location),
                   style: AppStyle.textStyleBold12.copyWith(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w400,

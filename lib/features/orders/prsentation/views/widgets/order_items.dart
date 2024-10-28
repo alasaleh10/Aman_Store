@@ -27,7 +27,7 @@ class OrderItems extends StatelessWidget {
         children: [
           FollowOrderContiner(
             onTap: () {
-              context.pushNamed(AppRouters.followOrderView,extra: order.id!);
+              context.pushNamed(AppRouters.followOrderView, extra: order.id!);
             },
             orderNumber: '${order.id}',
           ),
@@ -37,7 +37,7 @@ class OrderItems extends StatelessWidget {
               TableRow(children: [
                 TableDetilsTexts(
                   title: 'orderTime'.tr(),
-                  subTitle: formatedDate(order.createdAt!),
+                  subTitle: formatedDate2(order.createdAt!),
                 ),
                 TableDetilsTexts(
                   title: 'deliveryTime'.tr(),

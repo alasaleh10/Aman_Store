@@ -3,7 +3,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../../core/helper/cached_helper.dart';
 import '../../../../../core/routers/app_routers.dart';
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../core/widgets/custom_elevated_button.dart';
@@ -36,7 +35,9 @@ class ConfirmEmailBodyView extends StatelessWidget {
         const SizedBox(height: 15),
         const CustomTextFailedOtp(),
         const SizedBox(height: 15),
-        const SendCodeRow(),
+        SendCodeRow(
+          email: email,
+        ),
         const SizedBox(height: 20),
         Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -48,7 +49,11 @@ class ConfirmEmailBodyView extends StatelessWidget {
                 state.mapOrNull(
                   failure: (value) {
                     showErrorStack(context, value.errorMessage, () {
-                      context.read<ConfirmEmailCubit>().confirmEmail(email);
+                      if (context.read<ConfirmEmailCubit>().type == 0) {
+                        context.read<ConfirmEmailCubit>().confirmEmail(email);
+                      } else {
+                        context.read<ConfirmEmailCubit>().resendCode(email);
+                      }
                     });
                   },
                   loading: (value) {
@@ -56,7 +61,11 @@ class ConfirmEmailBodyView extends StatelessWidget {
                   },
                   noInternet: (value) {
                     showNoInternet(context, () {
-                      context.read<ConfirmEmailCubit>().confirmEmail(email);
+                      if (context.read<ConfirmEmailCubit>().type == 0) {
+                        context.read<ConfirmEmailCubit>().confirmEmail(email);
+                      } else {
+                        context.read<ConfirmEmailCubit>().resendCode(email);
+                      }
                     });
                   },
                   sucsess: (value) async {
@@ -70,9 +79,6 @@ class ConfirmEmailBodyView extends StatelessWidget {
                       context.pushNamed(AppRouters.restPasswordView,
                           extra: email.trim());
                     } else {
-                      await CacheHelper.saveData(
-                          key: 'token', value: value.user.token);
-                      // ignore: use_build_context_synchronously
                       context.goNamed(AppRouters.homeScreenView);
                     }
                   },

@@ -23,6 +23,7 @@ mixin _$ConfirmStatus {
     required TResult Function(String errorMessage) failure,
     required TResult Function(UserModel user) sucsess,
     required TResult Function() noInternet,
+    required TResult Function(String message) sucsess2,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,6 +33,7 @@ mixin _$ConfirmStatus {
     TResult? Function(String errorMessage)? failure,
     TResult? Function(UserModel user)? sucsess,
     TResult? Function()? noInternet,
+    TResult? Function(String message)? sucsess2,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,6 +43,7 @@ mixin _$ConfirmStatus {
     TResult Function(String errorMessage)? failure,
     TResult Function(UserModel user)? sucsess,
     TResult Function()? noInternet,
+    TResult Function(String message)? sucsess2,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,6 +54,7 @@ mixin _$ConfirmStatus {
     required TResult Function(ConfirmEmailFailure value) failure,
     required TResult Function(ConfirmEmailSucsess value) sucsess,
     required TResult Function(ConfirmEmailNoInternet value) noInternet,
+    required TResult Function(ConfirmEmailSucsess2 value) sucsess2,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +64,7 @@ mixin _$ConfirmStatus {
     TResult? Function(ConfirmEmailFailure value)? failure,
     TResult? Function(ConfirmEmailSucsess value)? sucsess,
     TResult? Function(ConfirmEmailNoInternet value)? noInternet,
+    TResult? Function(ConfirmEmailSucsess2 value)? sucsess2,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,6 +74,7 @@ mixin _$ConfirmStatus {
     TResult Function(ConfirmEmailFailure value)? failure,
     TResult Function(ConfirmEmailSucsess value)? sucsess,
     TResult Function(ConfirmEmailNoInternet value)? noInternet,
+    TResult Function(ConfirmEmailSucsess2 value)? sucsess2,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -90,6 +96,9 @@ class _$ConfirmStatusCopyWithImpl<$Res, $Val extends ConfirmStatus>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ConfirmStatus
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -106,6 +115,9 @@ class __$$ConfirmEmailInitialImplCopyWithImpl<$Res>
   __$$ConfirmEmailInitialImplCopyWithImpl(_$ConfirmEmailInitialImpl _value,
       $Res Function(_$ConfirmEmailInitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConfirmStatus
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -136,6 +148,7 @@ class _$ConfirmEmailInitialImpl implements ConfirmEmailInitial {
     required TResult Function(String errorMessage) failure,
     required TResult Function(UserModel user) sucsess,
     required TResult Function() noInternet,
+    required TResult Function(String message) sucsess2,
   }) {
     return initial();
   }
@@ -148,6 +161,7 @@ class _$ConfirmEmailInitialImpl implements ConfirmEmailInitial {
     TResult? Function(String errorMessage)? failure,
     TResult? Function(UserModel user)? sucsess,
     TResult? Function()? noInternet,
+    TResult? Function(String message)? sucsess2,
   }) {
     return initial?.call();
   }
@@ -160,6 +174,7 @@ class _$ConfirmEmailInitialImpl implements ConfirmEmailInitial {
     TResult Function(String errorMessage)? failure,
     TResult Function(UserModel user)? sucsess,
     TResult Function()? noInternet,
+    TResult Function(String message)? sucsess2,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -176,6 +191,7 @@ class _$ConfirmEmailInitialImpl implements ConfirmEmailInitial {
     required TResult Function(ConfirmEmailFailure value) failure,
     required TResult Function(ConfirmEmailSucsess value) sucsess,
     required TResult Function(ConfirmEmailNoInternet value) noInternet,
+    required TResult Function(ConfirmEmailSucsess2 value) sucsess2,
   }) {
     return initial(this);
   }
@@ -188,6 +204,7 @@ class _$ConfirmEmailInitialImpl implements ConfirmEmailInitial {
     TResult? Function(ConfirmEmailFailure value)? failure,
     TResult? Function(ConfirmEmailSucsess value)? sucsess,
     TResult? Function(ConfirmEmailNoInternet value)? noInternet,
+    TResult? Function(ConfirmEmailSucsess2 value)? sucsess2,
   }) {
     return initial?.call(this);
   }
@@ -200,6 +217,7 @@ class _$ConfirmEmailInitialImpl implements ConfirmEmailInitial {
     TResult Function(ConfirmEmailFailure value)? failure,
     TResult Function(ConfirmEmailSucsess value)? sucsess,
     TResult Function(ConfirmEmailNoInternet value)? noInternet,
+    TResult Function(ConfirmEmailSucsess2 value)? sucsess2,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -227,6 +245,9 @@ class __$$ConfirmEmailLoadingImplCopyWithImpl<$Res>
   __$$ConfirmEmailLoadingImplCopyWithImpl(_$ConfirmEmailLoadingImpl _value,
       $Res Function(_$ConfirmEmailLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConfirmStatus
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -257,6 +278,7 @@ class _$ConfirmEmailLoadingImpl implements ConfirmEmailLoading {
     required TResult Function(String errorMessage) failure,
     required TResult Function(UserModel user) sucsess,
     required TResult Function() noInternet,
+    required TResult Function(String message) sucsess2,
   }) {
     return loading();
   }
@@ -269,6 +291,7 @@ class _$ConfirmEmailLoadingImpl implements ConfirmEmailLoading {
     TResult? Function(String errorMessage)? failure,
     TResult? Function(UserModel user)? sucsess,
     TResult? Function()? noInternet,
+    TResult? Function(String message)? sucsess2,
   }) {
     return loading?.call();
   }
@@ -281,6 +304,7 @@ class _$ConfirmEmailLoadingImpl implements ConfirmEmailLoading {
     TResult Function(String errorMessage)? failure,
     TResult Function(UserModel user)? sucsess,
     TResult Function()? noInternet,
+    TResult Function(String message)? sucsess2,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -297,6 +321,7 @@ class _$ConfirmEmailLoadingImpl implements ConfirmEmailLoading {
     required TResult Function(ConfirmEmailFailure value) failure,
     required TResult Function(ConfirmEmailSucsess value) sucsess,
     required TResult Function(ConfirmEmailNoInternet value) noInternet,
+    required TResult Function(ConfirmEmailSucsess2 value) sucsess2,
   }) {
     return loading(this);
   }
@@ -309,6 +334,7 @@ class _$ConfirmEmailLoadingImpl implements ConfirmEmailLoading {
     TResult? Function(ConfirmEmailFailure value)? failure,
     TResult? Function(ConfirmEmailSucsess value)? sucsess,
     TResult? Function(ConfirmEmailNoInternet value)? noInternet,
+    TResult? Function(ConfirmEmailSucsess2 value)? sucsess2,
   }) {
     return loading?.call(this);
   }
@@ -321,6 +347,7 @@ class _$ConfirmEmailLoadingImpl implements ConfirmEmailLoading {
     TResult Function(ConfirmEmailFailure value)? failure,
     TResult Function(ConfirmEmailSucsess value)? sucsess,
     TResult Function(ConfirmEmailNoInternet value)? noInternet,
+    TResult Function(ConfirmEmailSucsess2 value)? sucsess2,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -351,6 +378,8 @@ class __$$ConfirmEmailFailureImplCopyWithImpl<$Res>
       $Res Function(_$ConfirmEmailFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConfirmStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -390,7 +419,9 @@ class _$ConfirmEmailFailureImpl implements ConfirmEmailFailure {
   @override
   int get hashCode => Object.hash(runtimeType, errorMessage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConfirmStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConfirmEmailFailureImplCopyWith<_$ConfirmEmailFailureImpl> get copyWith =>
@@ -405,6 +436,7 @@ class _$ConfirmEmailFailureImpl implements ConfirmEmailFailure {
     required TResult Function(String errorMessage) failure,
     required TResult Function(UserModel user) sucsess,
     required TResult Function() noInternet,
+    required TResult Function(String message) sucsess2,
   }) {
     return failure(errorMessage);
   }
@@ -417,6 +449,7 @@ class _$ConfirmEmailFailureImpl implements ConfirmEmailFailure {
     TResult? Function(String errorMessage)? failure,
     TResult? Function(UserModel user)? sucsess,
     TResult? Function()? noInternet,
+    TResult? Function(String message)? sucsess2,
   }) {
     return failure?.call(errorMessage);
   }
@@ -429,6 +462,7 @@ class _$ConfirmEmailFailureImpl implements ConfirmEmailFailure {
     TResult Function(String errorMessage)? failure,
     TResult Function(UserModel user)? sucsess,
     TResult Function()? noInternet,
+    TResult Function(String message)? sucsess2,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -445,6 +479,7 @@ class _$ConfirmEmailFailureImpl implements ConfirmEmailFailure {
     required TResult Function(ConfirmEmailFailure value) failure,
     required TResult Function(ConfirmEmailSucsess value) sucsess,
     required TResult Function(ConfirmEmailNoInternet value) noInternet,
+    required TResult Function(ConfirmEmailSucsess2 value) sucsess2,
   }) {
     return failure(this);
   }
@@ -457,6 +492,7 @@ class _$ConfirmEmailFailureImpl implements ConfirmEmailFailure {
     TResult? Function(ConfirmEmailFailure value)? failure,
     TResult? Function(ConfirmEmailSucsess value)? sucsess,
     TResult? Function(ConfirmEmailNoInternet value)? noInternet,
+    TResult? Function(ConfirmEmailSucsess2 value)? sucsess2,
   }) {
     return failure?.call(this);
   }
@@ -469,6 +505,7 @@ class _$ConfirmEmailFailureImpl implements ConfirmEmailFailure {
     TResult Function(ConfirmEmailFailure value)? failure,
     TResult Function(ConfirmEmailSucsess value)? sucsess,
     TResult Function(ConfirmEmailNoInternet value)? noInternet,
+    TResult Function(ConfirmEmailSucsess2 value)? sucsess2,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -483,7 +520,10 @@ abstract class ConfirmEmailFailure implements ConfirmStatus {
       _$ConfirmEmailFailureImpl;
 
   String get errorMessage;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConfirmStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConfirmEmailFailureImplCopyWith<_$ConfirmEmailFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -505,6 +545,8 @@ class __$$ConfirmEmailSucsessImplCopyWithImpl<$Res>
       $Res Function(_$ConfirmEmailSucsessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConfirmStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -543,7 +585,9 @@ class _$ConfirmEmailSucsessImpl implements ConfirmEmailSucsess {
   @override
   int get hashCode => Object.hash(runtimeType, user);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConfirmStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConfirmEmailSucsessImplCopyWith<_$ConfirmEmailSucsessImpl> get copyWith =>
@@ -558,6 +602,7 @@ class _$ConfirmEmailSucsessImpl implements ConfirmEmailSucsess {
     required TResult Function(String errorMessage) failure,
     required TResult Function(UserModel user) sucsess,
     required TResult Function() noInternet,
+    required TResult Function(String message) sucsess2,
   }) {
     return sucsess(user);
   }
@@ -570,6 +615,7 @@ class _$ConfirmEmailSucsessImpl implements ConfirmEmailSucsess {
     TResult? Function(String errorMessage)? failure,
     TResult? Function(UserModel user)? sucsess,
     TResult? Function()? noInternet,
+    TResult? Function(String message)? sucsess2,
   }) {
     return sucsess?.call(user);
   }
@@ -582,6 +628,7 @@ class _$ConfirmEmailSucsessImpl implements ConfirmEmailSucsess {
     TResult Function(String errorMessage)? failure,
     TResult Function(UserModel user)? sucsess,
     TResult Function()? noInternet,
+    TResult Function(String message)? sucsess2,
     required TResult orElse(),
   }) {
     if (sucsess != null) {
@@ -598,6 +645,7 @@ class _$ConfirmEmailSucsessImpl implements ConfirmEmailSucsess {
     required TResult Function(ConfirmEmailFailure value) failure,
     required TResult Function(ConfirmEmailSucsess value) sucsess,
     required TResult Function(ConfirmEmailNoInternet value) noInternet,
+    required TResult Function(ConfirmEmailSucsess2 value) sucsess2,
   }) {
     return sucsess(this);
   }
@@ -610,6 +658,7 @@ class _$ConfirmEmailSucsessImpl implements ConfirmEmailSucsess {
     TResult? Function(ConfirmEmailFailure value)? failure,
     TResult? Function(ConfirmEmailSucsess value)? sucsess,
     TResult? Function(ConfirmEmailNoInternet value)? noInternet,
+    TResult? Function(ConfirmEmailSucsess2 value)? sucsess2,
   }) {
     return sucsess?.call(this);
   }
@@ -622,6 +671,7 @@ class _$ConfirmEmailSucsessImpl implements ConfirmEmailSucsess {
     TResult Function(ConfirmEmailFailure value)? failure,
     TResult Function(ConfirmEmailSucsess value)? sucsess,
     TResult Function(ConfirmEmailNoInternet value)? noInternet,
+    TResult Function(ConfirmEmailSucsess2 value)? sucsess2,
     required TResult orElse(),
   }) {
     if (sucsess != null) {
@@ -636,7 +686,10 @@ abstract class ConfirmEmailSucsess implements ConfirmStatus {
       _$ConfirmEmailSucsessImpl;
 
   UserModel get user;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConfirmStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConfirmEmailSucsessImplCopyWith<_$ConfirmEmailSucsessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -657,6 +710,9 @@ class __$$ConfirmEmailNoInternetImplCopyWithImpl<$Res>
       _$ConfirmEmailNoInternetImpl _value,
       $Res Function(_$ConfirmEmailNoInternetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConfirmStatus
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -687,6 +743,7 @@ class _$ConfirmEmailNoInternetImpl implements ConfirmEmailNoInternet {
     required TResult Function(String errorMessage) failure,
     required TResult Function(UserModel user) sucsess,
     required TResult Function() noInternet,
+    required TResult Function(String message) sucsess2,
   }) {
     return noInternet();
   }
@@ -699,6 +756,7 @@ class _$ConfirmEmailNoInternetImpl implements ConfirmEmailNoInternet {
     TResult? Function(String errorMessage)? failure,
     TResult? Function(UserModel user)? sucsess,
     TResult? Function()? noInternet,
+    TResult? Function(String message)? sucsess2,
   }) {
     return noInternet?.call();
   }
@@ -711,6 +769,7 @@ class _$ConfirmEmailNoInternetImpl implements ConfirmEmailNoInternet {
     TResult Function(String errorMessage)? failure,
     TResult Function(UserModel user)? sucsess,
     TResult Function()? noInternet,
+    TResult Function(String message)? sucsess2,
     required TResult orElse(),
   }) {
     if (noInternet != null) {
@@ -727,6 +786,7 @@ class _$ConfirmEmailNoInternetImpl implements ConfirmEmailNoInternet {
     required TResult Function(ConfirmEmailFailure value) failure,
     required TResult Function(ConfirmEmailSucsess value) sucsess,
     required TResult Function(ConfirmEmailNoInternet value) noInternet,
+    required TResult Function(ConfirmEmailSucsess2 value) sucsess2,
   }) {
     return noInternet(this);
   }
@@ -739,6 +799,7 @@ class _$ConfirmEmailNoInternetImpl implements ConfirmEmailNoInternet {
     TResult? Function(ConfirmEmailFailure value)? failure,
     TResult? Function(ConfirmEmailSucsess value)? sucsess,
     TResult? Function(ConfirmEmailNoInternet value)? noInternet,
+    TResult? Function(ConfirmEmailSucsess2 value)? sucsess2,
   }) {
     return noInternet?.call(this);
   }
@@ -751,6 +812,7 @@ class _$ConfirmEmailNoInternetImpl implements ConfirmEmailNoInternet {
     TResult Function(ConfirmEmailFailure value)? failure,
     TResult Function(ConfirmEmailSucsess value)? sucsess,
     TResult Function(ConfirmEmailNoInternet value)? noInternet,
+    TResult Function(ConfirmEmailSucsess2 value)? sucsess2,
     required TResult orElse(),
   }) {
     if (noInternet != null) {
@@ -762,4 +824,171 @@ class _$ConfirmEmailNoInternetImpl implements ConfirmEmailNoInternet {
 
 abstract class ConfirmEmailNoInternet implements ConfirmStatus {
   const factory ConfirmEmailNoInternet() = _$ConfirmEmailNoInternetImpl;
+}
+
+/// @nodoc
+abstract class _$$ConfirmEmailSucsess2ImplCopyWith<$Res> {
+  factory _$$ConfirmEmailSucsess2ImplCopyWith(_$ConfirmEmailSucsess2Impl value,
+          $Res Function(_$ConfirmEmailSucsess2Impl) then) =
+      __$$ConfirmEmailSucsess2ImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$ConfirmEmailSucsess2ImplCopyWithImpl<$Res>
+    extends _$ConfirmStatusCopyWithImpl<$Res, _$ConfirmEmailSucsess2Impl>
+    implements _$$ConfirmEmailSucsess2ImplCopyWith<$Res> {
+  __$$ConfirmEmailSucsess2ImplCopyWithImpl(_$ConfirmEmailSucsess2Impl _value,
+      $Res Function(_$ConfirmEmailSucsess2Impl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ConfirmStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$ConfirmEmailSucsess2Impl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ConfirmEmailSucsess2Impl implements ConfirmEmailSucsess2 {
+  const _$ConfirmEmailSucsess2Impl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'ConfirmStatus.sucsess2(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ConfirmEmailSucsess2Impl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of ConfirmStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ConfirmEmailSucsess2ImplCopyWith<_$ConfirmEmailSucsess2Impl>
+      get copyWith =>
+          __$$ConfirmEmailSucsess2ImplCopyWithImpl<_$ConfirmEmailSucsess2Impl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String errorMessage) failure,
+    required TResult Function(UserModel user) sucsess,
+    required TResult Function() noInternet,
+    required TResult Function(String message) sucsess2,
+  }) {
+    return sucsess2(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String errorMessage)? failure,
+    TResult? Function(UserModel user)? sucsess,
+    TResult? Function()? noInternet,
+    TResult? Function(String message)? sucsess2,
+  }) {
+    return sucsess2?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String errorMessage)? failure,
+    TResult Function(UserModel user)? sucsess,
+    TResult Function()? noInternet,
+    TResult Function(String message)? sucsess2,
+    required TResult orElse(),
+  }) {
+    if (sucsess2 != null) {
+      return sucsess2(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ConfirmEmailInitial value) initial,
+    required TResult Function(ConfirmEmailLoading value) loading,
+    required TResult Function(ConfirmEmailFailure value) failure,
+    required TResult Function(ConfirmEmailSucsess value) sucsess,
+    required TResult Function(ConfirmEmailNoInternet value) noInternet,
+    required TResult Function(ConfirmEmailSucsess2 value) sucsess2,
+  }) {
+    return sucsess2(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ConfirmEmailInitial value)? initial,
+    TResult? Function(ConfirmEmailLoading value)? loading,
+    TResult? Function(ConfirmEmailFailure value)? failure,
+    TResult? Function(ConfirmEmailSucsess value)? sucsess,
+    TResult? Function(ConfirmEmailNoInternet value)? noInternet,
+    TResult? Function(ConfirmEmailSucsess2 value)? sucsess2,
+  }) {
+    return sucsess2?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ConfirmEmailInitial value)? initial,
+    TResult Function(ConfirmEmailLoading value)? loading,
+    TResult Function(ConfirmEmailFailure value)? failure,
+    TResult Function(ConfirmEmailSucsess value)? sucsess,
+    TResult Function(ConfirmEmailNoInternet value)? noInternet,
+    TResult Function(ConfirmEmailSucsess2 value)? sucsess2,
+    required TResult orElse(),
+  }) {
+    if (sucsess2 != null) {
+      return sucsess2(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ConfirmEmailSucsess2 implements ConfirmStatus {
+  const factory ConfirmEmailSucsess2(final String message) =
+      _$ConfirmEmailSucsess2Impl;
+
+  String get message;
+
+  /// Create a copy of ConfirmStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ConfirmEmailSucsess2ImplCopyWith<_$ConfirmEmailSucsess2Impl>
+      get copyWith => throw _privateConstructorUsedError;
 }

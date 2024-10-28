@@ -14,7 +14,6 @@ LocationsModel _$LocationsModelFromJson(Map<String, dynamic> json) =>
     );
 
 
-
 LocationModel _$LocationModelFromJson(Map<String, dynamic> json) =>
     LocationModel(
       id: (json['id'] as num).toInt(),

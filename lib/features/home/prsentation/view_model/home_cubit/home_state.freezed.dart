@@ -101,6 +101,9 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -117,6 +120,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -249,6 +255,9 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -384,6 +393,8 @@ class __$$SucsessImplCopyWithImpl<$Res>
       _$SucsessImpl _value, $Res Function(_$SucsessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -423,7 +434,9 @@ class _$SucsessImpl implements Sucsess {
   @override
   int get hashCode => Object.hash(runtimeType, homeModel);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SucsessImplCopyWith<_$SucsessImpl> get copyWith =>
@@ -526,7 +539,10 @@ abstract class Sucsess implements HomeState {
   factory Sucsess(final HomeModel homeModel) = _$SucsessImpl;
 
   HomeModel get homeModel;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SucsessImplCopyWith<_$SucsessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -548,6 +564,8 @@ class __$$FailureImplCopyWithImpl<$Res>
       _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -586,7 +604,9 @@ class _$FailureImpl implements Failure {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
@@ -689,7 +709,10 @@ abstract class Failure implements HomeState {
   factory Failure(final String message) = _$FailureImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -708,6 +731,9 @@ class __$$NoInternetImplCopyWithImpl<$Res>
   __$$NoInternetImplCopyWithImpl(
       _$NoInternetImpl _value, $Res Function(_$NoInternetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -843,6 +869,8 @@ class __$$Failure2ImplCopyWithImpl<$Res>
       _$Failure2Impl _value, $Res Function(_$Failure2Impl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -881,7 +909,9 @@ class _$Failure2Impl implements Failure2 {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$Failure2ImplCopyWith<_$Failure2Impl> get copyWith =>
@@ -984,7 +1014,10 @@ abstract class Failure2 implements HomeState {
   factory Failure2(final String message) = _$Failure2Impl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$Failure2ImplCopyWith<_$Failure2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1006,6 +1039,8 @@ class __$$Sucsess2ImplCopyWithImpl<$Res>
       _$Sucsess2Impl _value, $Res Function(_$Sucsess2Impl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1044,7 +1079,9 @@ class _$Sucsess2Impl implements Sucsess2 {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$Sucsess2ImplCopyWith<_$Sucsess2Impl> get copyWith =>
@@ -1147,7 +1184,10 @@ abstract class Sucsess2 implements HomeState {
   factory Sucsess2(final String message) = _$Sucsess2Impl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$Sucsess2ImplCopyWith<_$Sucsess2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }

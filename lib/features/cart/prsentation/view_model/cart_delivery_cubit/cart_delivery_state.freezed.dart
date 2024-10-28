@@ -96,6 +96,9 @@ class _$CartDeliveryStateCopyWithImpl<$Res, $Val extends CartDeliveryState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of CartDeliveryState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -112,6 +115,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CartDeliveryState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -238,6 +244,9 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CartDeliveryState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -367,6 +376,8 @@ class __$$SucsessImplCopyWithImpl<$Res>
       _$SucsessImpl _value, $Res Function(_$SucsessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CartDeliveryState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -406,7 +417,9 @@ class _$SucsessImpl implements Sucsess {
   @override
   int get hashCode => Object.hash(runtimeType, cartDeliveryModel);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CartDeliveryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SucsessImplCopyWith<_$SucsessImpl> get copyWith =>
@@ -504,7 +517,10 @@ abstract class Sucsess implements CartDeliveryState {
       _$SucsessImpl;
 
   CartDeliveryModel get cartDeliveryModel;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CartDeliveryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SucsessImplCopyWith<_$SucsessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -526,6 +542,8 @@ class __$$FailureImplCopyWithImpl<$Res>
       _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CartDeliveryState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -564,7 +582,9 @@ class _$FailureImpl implements Failure {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CartDeliveryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
@@ -661,7 +681,10 @@ abstract class Failure implements CartDeliveryState {
   const factory Failure(final String message) = _$FailureImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CartDeliveryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -680,6 +703,9 @@ class __$$NointernetImplCopyWithImpl<$Res>
   __$$NointernetImplCopyWithImpl(
       _$NointernetImpl _value, $Res Function(_$NointernetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CartDeliveryState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -809,6 +835,8 @@ class __$$NoLocationImplCopyWithImpl<$Res>
       _$NoLocationImpl _value, $Res Function(_$NoLocationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CartDeliveryState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -847,7 +875,9 @@ class _$NoLocationImpl implements NoLocation {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CartDeliveryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NoLocationImplCopyWith<_$NoLocationImpl> get copyWith =>
@@ -944,7 +974,10 @@ abstract class NoLocation implements CartDeliveryState {
   const factory NoLocation(final String message) = _$NoLocationImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CartDeliveryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NoLocationImplCopyWith<_$NoLocationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

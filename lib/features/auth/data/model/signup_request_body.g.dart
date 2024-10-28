@@ -7,7 +7,6 @@ part of 'signup_request_body.dart';
 // **************************************************************************
 
 
-
 Map<String, dynamic> _$SignUpRequestBodyToJson(SignUpRequestBody instance) =>
     <String, dynamic>{
       'firstName': instance.firstName,

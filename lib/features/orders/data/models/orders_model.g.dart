@@ -13,7 +13,6 @@ OrdersModel _$OrdersModelFromJson(Map<String, dynamic> json) => OrdersModel(
     );
 
 
-
 Order _$OrderFromJson(Map<String, dynamic> json) => Order(
       (json['id'] as num?)?.toInt(),
       (json['status'] as num?)?.toInt(),
@@ -24,4 +23,5 @@ Order _$OrderFromJson(Map<String, dynamic> json) => Order(
       json['deliveryDate'] as String?,
       json['createdAt'] as String?,
     );
+
 

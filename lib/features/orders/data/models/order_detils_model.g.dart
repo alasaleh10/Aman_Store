@@ -28,7 +28,23 @@ OrderDetilsModel _$OrderDetilsModelFromJson(Map<String, dynamic> json) =>
       json['recivedDate'] as String?,
     );
 
-
+Map<String, dynamic> _$OrderDetilsModelToJson(OrderDetilsModel instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'status': instance.status,
+      'coupon': instance.coupon,
+      'isDelivery': instance.isDelivery,
+      'deliveryPrice': instance.deliveryPrice,
+      'totalCart': instance.totalCart,
+      'totalOrder': instance.totalOrder,
+      'preparingDate': instance.preparingDate,
+      'paymentType': instance.paymentType,
+      'deliveryDate': instance.deliveryDate,
+      'createdAt': instance.createdAt,
+      'recivedDate': instance.recivedDate,
+      'orderItems': instance.orderItems,
+      'location': instance.location,
+    };
 
 OrderItems _$OrderItemsFromJson(Map<String, dynamic> json) => OrderItems(
       (json['product'] as num).toInt(),
@@ -38,5 +54,4 @@ OrderItems _$OrderItemsFromJson(Map<String, dynamic> json) => OrderItems(
       json['subName'] as String?,
       json['image'] as String?,
     );
-
 

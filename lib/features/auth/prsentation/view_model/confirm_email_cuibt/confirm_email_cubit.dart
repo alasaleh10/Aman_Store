@@ -10,8 +10,9 @@ class ConfirmEmailCubit extends Cubit<ConfirmStatus> {
   ConfirmEmailCubit(this._authRepo) : super(const ConfirmStatus.initial());
 
   String? otpCode;
-
+int? type;
   void confirmEmail(String email) async {
+    type=0;
     if (otpCode == null) {
       emit(const ConfirmStatus.failure('أكمل جميع الحقول'));
     } else {
@@ -29,6 +30,28 @@ class ConfirmEmailCubit extends Cubit<ConfirmStatus> {
       } else {
         emit(const ConfirmStatus.noInternet());
       }
+    }
+  }
+  void resendCode(String email)async
+  {
+    type=1;
+    emit(const ConfirmStatus.loading());
+    if(await isConncection())
+    {
+      var response=await _authRepo.sendCode(email);
+      response.when(success: (doneModel)
+      {
+        emit(ConfirmStatus.sucsess2(doneModel.message));
+      }, failure: (failure)
+      {
+        emit(ConfirmStatus.failure(failure.message!));
+      });
+
+
+    }
+    else
+    {
+      emit(const ConfirmStatus.noInternet());
     }
   }
 }

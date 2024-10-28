@@ -91,6 +91,9 @@ class _$ConfirmLocationStateCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ConfirmLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -110,6 +113,9 @@ class __$$ConfirmLocationStateInitialImplCopyWithImpl<$Res>
       _$ConfirmLocationStateInitialImpl _value,
       $Res Function(_$ConfirmLocationStateInitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConfirmLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -235,6 +241,9 @@ class __$$ConfirmLocationStateLoadingImplCopyWithImpl<$Res>
       _$ConfirmLocationStateLoadingImpl _value,
       $Res Function(_$ConfirmLocationStateLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConfirmLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -363,6 +372,8 @@ class __$$ConfirmLocationStateSuccessImplCopyWithImpl<$Res>
       $Res Function(_$ConfirmLocationStateSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConfirmLocationState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -401,7 +412,9 @@ class _$ConfirmLocationStateSuccessImpl implements ConfirmLocationStateSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConfirmLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConfirmLocationStateSuccessImplCopyWith<_$ConfirmLocationStateSuccessImpl>
@@ -494,7 +507,10 @@ abstract class ConfirmLocationStateSuccess implements ConfirmLocationState {
       _$ConfirmLocationStateSuccessImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConfirmLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConfirmLocationStateSuccessImplCopyWith<_$ConfirmLocationStateSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -519,6 +535,8 @@ class __$$ConfirmLocationStateFailureImplCopyWithImpl<$Res>
       $Res Function(_$ConfirmLocationStateFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConfirmLocationState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -558,7 +576,9 @@ class _$ConfirmLocationStateFailureImpl implements ConfirmLocationStateFailure {
   @override
   int get hashCode => Object.hash(runtimeType, errorMessage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConfirmLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConfirmLocationStateFailureImplCopyWith<_$ConfirmLocationStateFailureImpl>
@@ -651,7 +671,10 @@ abstract class ConfirmLocationStateFailure implements ConfirmLocationState {
       _$ConfirmLocationStateFailureImpl;
 
   String get errorMessage;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConfirmLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConfirmLocationStateFailureImplCopyWith<_$ConfirmLocationStateFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -673,6 +696,9 @@ class __$$ConfirmLocationStateNoInternetImplCopyWithImpl<$Res>
       _$ConfirmLocationStateNoInternetImpl _value,
       $Res Function(_$ConfirmLocationStateNoInternetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConfirmLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

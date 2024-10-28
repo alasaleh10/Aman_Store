@@ -90,6 +90,9 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -106,6 +109,9 @@ class __$$LoginInitialImplCopyWithImpl<$Res>
   __$$LoginInitialImplCopyWithImpl(
       _$LoginInitialImpl _value, $Res Function(_$LoginInitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -226,6 +232,9 @@ class __$$LoginLoadingImplCopyWithImpl<$Res>
   __$$LoginLoadingImplCopyWithImpl(
       _$LoginLoadingImpl _value, $Res Function(_$LoginLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -349,6 +358,8 @@ class __$$LoginFailureImplCopyWithImpl<$Res>
       _$LoginFailureImpl _value, $Res Function(_$LoginFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -388,7 +399,9 @@ class _$LoginFailureImpl implements LoginFailure {
   @override
   int get hashCode => Object.hash(runtimeType, errorMessage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoginFailureImplCopyWith<_$LoginFailureImpl> get copyWith =>
@@ -479,7 +492,10 @@ abstract class LoginFailure implements LoginState {
   const factory LoginFailure(final String errorMessage) = _$LoginFailureImpl;
 
   String get errorMessage;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoginFailureImplCopyWith<_$LoginFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -501,6 +517,8 @@ class __$$LoginSucsessImplCopyWithImpl<$Res>
       _$LoginSucsessImpl _value, $Res Function(_$LoginSucsessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -539,7 +557,9 @@ class _$LoginSucsessImpl implements LoginSucsess {
   @override
   int get hashCode => Object.hash(runtimeType, user);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoginSucsessImplCopyWith<_$LoginSucsessImpl> get copyWith =>
@@ -630,7 +650,10 @@ abstract class LoginSucsess implements LoginState {
   const factory LoginSucsess(final UserModel user) = _$LoginSucsessImpl;
 
   UserModel get user;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoginSucsessImplCopyWith<_$LoginSucsessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -649,6 +672,9 @@ class __$$LoginNoInternetImplCopyWithImpl<$Res>
   __$$LoginNoInternetImplCopyWithImpl(
       _$LoginNoInternetImpl _value, $Res Function(_$LoginNoInternetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

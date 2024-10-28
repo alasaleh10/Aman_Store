@@ -1,3 +1,4 @@
+import 'package:aman_store2/core/models/done_model.dart';
 import 'package:aman_store2/core/networking/api_error_handler.dart';
 
 import 'package:aman_store2/features/auth/data/auth_servises.dart';
@@ -59,6 +60,15 @@ class AuthRepo {
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<DoneModel>> sendCode(String email) async {
+    try {
+      DoneModel response = await _authServices.resendCode({'email': email});
+      return ApiResult.success(response);
+    } catch (err) {
+      return ApiResult.failure(ApiErrorHandler.handle(err));
     }
   }
 }

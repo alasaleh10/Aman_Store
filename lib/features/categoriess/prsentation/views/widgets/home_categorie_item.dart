@@ -35,6 +35,7 @@
 //   }
 // }
 import 'package:aman_store2/core/routers/app_routers.dart';
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -53,42 +54,39 @@ class CategorieItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        return Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            GestureDetector(
-              onTap: () {
-                context.pushNamed(AppRouters.categorieeItemsView,
-                    extra: [categorieeModel.id, categorieeModel.name]);
-              },
-              child: Container(
-                  clipBehavior: Clip.antiAlias,
-                  height: 70.h,
-                  width: 70.w,
-                  // padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 8.w),
-                  decoration: const BoxDecoration(
-                    color: AppColors.kPrimColor,
-                    shape: BoxShape.circle,
-                  ),
-                  child: ClipRRect(
-                      borderRadius: BorderRadius.circular(15.r),
-                      clipBehavior: Clip.antiAlias,
-                      child: CachedImageWidget(
-                        url: categorieeModel.image,
-                      )
-
-                  
-                      )
-
-                  ),
-            ),
-            SizedBox(height: 10.h),
-            Text(
-              categorieeModel.name,
-              style: AppStyle.textStyleRegular14.copyWith(fontSize: 13.sp),
-              textAlign: TextAlign.center,
-            ),
-          ],
+        return ZoomIn(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              GestureDetector(
+                onTap: () {
+                  context.pushNamed(AppRouters.categorieeItemsView,
+                      extra: [categorieeModel.id, categorieeModel.name]);
+                },
+                child: Container(
+                    clipBehavior: Clip.antiAlias,
+                    height: 70.h,
+                    width: 70.w,
+                    // padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 8.w),
+                    decoration: const BoxDecoration(
+                      color: AppColors.kPrimColor,
+                      shape: BoxShape.circle,
+                    ),
+                    child: ClipRRect(
+                        borderRadius: BorderRadius.circular(15.r),
+                        clipBehavior: Clip.antiAlias,
+                        child: CachedImageWidget(
+                          url: categorieeModel.image,
+                        ))),
+              ),
+              SizedBox(height: 10.h),
+              Text(
+                categorieeModel.name,
+                style: AppStyle.textStyleRegular14.copyWith(fontSize: 13.sp),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
         );
       },
     );

@@ -7,7 +7,6 @@ part of 'add_rating_model.dart';
 // **************************************************************************
 
 
-
 Map<String, dynamic> _$AddRatingModelToJson(AddRatingModel instance) =>
     <String, dynamic>{
       'order': instance.order,

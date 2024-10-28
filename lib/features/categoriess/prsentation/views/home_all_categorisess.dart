@@ -17,23 +17,7 @@ class HomeAllCategorisess extends StatelessWidget {
           appBar: customAppbar('categorises'.tr()),
           body: const HomeAllCategorieesViewBody()
 
-          // CustomScrollView(
-          //           slivers: [
-
-          // const SliverToBoxAdapter(child: SizedBox(height: 15)),
-          // SliverPadding(
-          //   padding: const EdgeInsets.symmetric(horizontal: 10),
-          //   sliver:
-          // SliverGrid.builder(
-          //     gridDelegate: ,
-          //     itemBuilder: (context, index) {
-          //       return;
-          //     },
-          //     itemCount: testCategorieList.length,
-          //   ),
-          // )
-          //           ],
-          //         ),
+        
           ),
     );
   }

@@ -1,9 +1,7 @@
 import 'package:aman_store2/core/functions/app_sizedbox.dart';
 import 'package:aman_store2/core/widgets/product_item/product_loading/product_item_loading.dart';
 import 'package:aman_store2/core/widgets/shimar_loading.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';
 

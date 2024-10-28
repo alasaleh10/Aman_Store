@@ -32,4 +32,5 @@ class Order {
   );
 
   factory Order.fromJson(Map<String, dynamic> json) =>_$OrderFromJson(json);
+
 }

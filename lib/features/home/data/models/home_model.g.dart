@@ -19,9 +19,3 @@ HomeModel _$HomeModelFromJson(Map<String, dynamic> json) => HomeModel(
       json['locationName'] as String?,
     );
 
-Map<String, dynamic> _$HomeModelToJson(HomeModel instance) => <String, dynamic>{
-      'locationName': instance.locationName,
-      'banars': instance.banars,
-      'categorie': instance.categories,
-      'bestSellingProducts': instance.bestSellingProducts,
-    };

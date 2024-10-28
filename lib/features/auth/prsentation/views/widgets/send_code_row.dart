@@ -8,7 +8,8 @@ import '../../../../../core/utils/app_styles.dart';
 import '../../view_model/confirm_email_cuibt/confirm_email_cubit.dart';
 
 class SendCodeRow extends StatefulWidget {
-  const SendCodeRow({super.key});
+  final String email;
+  const SendCodeRow({super.key, required this.email});
 
   @override
   State<SendCodeRow> createState() => _SendCodeRowState();
@@ -27,9 +28,10 @@ class _SendCodeRowState extends State<SendCodeRow> {
   }
 
   void startTimer() {
+    start = 60;
     countdownStream = startCountdown(start);
     countdownSubscription = countdownStream.listen((remainingSeconds) {
-      if (!mounted) return; // تحقق من أن الـ State ما زال ملحقًا
+      if (!mounted) return;
       setState(() {
         start = remainingSeconds;
       });
@@ -44,7 +46,7 @@ class _SendCodeRowState extends State<SendCodeRow> {
 
   @override
   void dispose() {
-    countdownSubscription.cancel(); // تأكد من إلغاء الاشتراك
+    countdownSubscription.cancel();
     super.dispose();
   }
 
@@ -56,6 +58,7 @@ class _SendCodeRowState extends State<SendCodeRow> {
           ? GestureDetector(
               onTap: () {
                 startTimer();
+                context.read<ConfirmEmailCubit>().resendCode(widget.email);
               },
               child: Text('sendAgain'.tr(), style: AppStyle.textStyleRegular14))
           : Text(

@@ -4,6 +4,8 @@ class ApiConstanses {
   static const String signUp = 'users/signUp';
   static const String login = 'users/login';
   static const String virifyCode = 'users/virifyCode';
+  static const String sendCode = 'users/sendCode';
+
   static const String forgetPassword = 'users/forgetPassword';
   static const String restPassword = 'users/restPassword';
   static const String me = 'users/user';
@@ -57,6 +59,7 @@ class ApiConstanses {
   static const String cheekCoupon = 'coupons/cheekCoupon';
 
   // Orders
+  static const String order = 'orders';
   static const String addOrder = 'orders/createOrder';
   static const String myPreviousOrders = 'orders/myPreviousOrders';
   static const String myCurrentOrders = 'orders/myCurrentOrders';

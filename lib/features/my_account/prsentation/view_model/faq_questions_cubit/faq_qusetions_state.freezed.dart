@@ -108,6 +108,9 @@ class _$FaqQusetionsStateCopyWithImpl<$Res, $Val extends FaqQusetionsState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -124,6 +127,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -262,6 +268,9 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -400,6 +409,9 @@ class __$$Loading2ImplCopyWithImpl<$Res>
   __$$Loading2ImplCopyWithImpl(
       _$Loading2Impl _value, $Res Function(_$Loading2Impl) _then)
       : super(_value, _then);
+
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -541,6 +553,8 @@ class __$$SucsessImplCopyWithImpl<$Res>
       _$SucsessImpl _value, $Res Function(_$SucsessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -587,7 +601,9 @@ class _$SucsessImpl implements Sucsess {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_questions));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SucsessImplCopyWith<_$SucsessImpl> get copyWith =>
@@ -696,7 +712,10 @@ abstract class Sucsess implements FaqQusetionsState {
   const factory Sucsess(final List<FaqQuestionModel> questions) = _$SucsessImpl;
 
   List<FaqQuestionModel> get questions;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SucsessImplCopyWith<_$SucsessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -718,6 +737,8 @@ class __$$FailureImplCopyWithImpl<$Res>
       _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -756,7 +777,9 @@ class _$FailureImpl implements Failure {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
@@ -865,7 +888,10 @@ abstract class Failure implements FaqQusetionsState {
   const factory Failure(final String message) = _$FailureImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -887,6 +913,8 @@ class __$$Failure2ImplCopyWithImpl<$Res>
       _$Failure2Impl _value, $Res Function(_$Failure2Impl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -925,7 +953,9 @@ class _$Failure2Impl implements Failure2 {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$Failure2ImplCopyWith<_$Failure2Impl> get copyWith =>
@@ -1034,7 +1064,10 @@ abstract class Failure2 implements FaqQusetionsState {
   const factory Failure2(final String message) = _$Failure2Impl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$Failure2ImplCopyWith<_$Failure2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1053,6 +1086,9 @@ class __$$NoInternetImplCopyWithImpl<$Res>
   __$$NoInternetImplCopyWithImpl(
       _$NoInternetImpl _value, $Res Function(_$NoInternetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1191,6 +1227,9 @@ class __$$NoInternet2ImplCopyWithImpl<$Res>
   __$$NoInternet2ImplCopyWithImpl(
       _$NoInternet2Impl _value, $Res Function(_$NoInternet2Impl) _then)
       : super(_value, _then);
+
+  /// Create a copy of FaqQusetionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

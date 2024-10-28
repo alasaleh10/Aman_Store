@@ -90,6 +90,9 @@ class _$RestPasswordStateCopyWithImpl<$Res, $Val extends RestPasswordState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of RestPasswordState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -106,6 +109,9 @@ class __$$RestPasswordInitialImplCopyWithImpl<$Res>
   __$$RestPasswordInitialImplCopyWithImpl(_$RestPasswordInitialImpl _value,
       $Res Function(_$RestPasswordInitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of RestPasswordState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -227,6 +233,9 @@ class __$$RestPasswordLoadingImplCopyWithImpl<$Res>
   __$$RestPasswordLoadingImplCopyWithImpl(_$RestPasswordLoadingImpl _value,
       $Res Function(_$RestPasswordLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of RestPasswordState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -348,6 +357,9 @@ class __$$RestPasswordSucsessImplCopyWithImpl<$Res>
   __$$RestPasswordSucsessImplCopyWithImpl(_$RestPasswordSucsessImpl _value,
       $Res Function(_$RestPasswordSucsessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of RestPasswordState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -471,6 +483,9 @@ class __$$RestPasswordNoInternetImplCopyWithImpl<$Res>
       _$RestPasswordNoInternetImpl _value,
       $Res Function(_$RestPasswordNoInternetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of RestPasswordState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -595,6 +610,8 @@ class __$$RestPasswordFailurerImplCopyWithImpl<$Res>
       $Res Function(_$RestPasswordFailurerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RestPasswordState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -633,7 +650,9 @@ class _$RestPasswordFailurerImpl implements RestPasswordFailurer {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RestPasswordState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RestPasswordFailurerImplCopyWith<_$RestPasswordFailurerImpl>
@@ -727,7 +746,10 @@ abstract class RestPasswordFailurer implements RestPasswordState {
       _$RestPasswordFailurerImpl;
 
   String get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RestPasswordState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RestPasswordFailurerImplCopyWith<_$RestPasswordFailurerImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

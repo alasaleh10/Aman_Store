@@ -50,7 +50,7 @@ class DCartAddressContiner extends StatelessWidget {
                     leading: Radio(
                         activeColor: AppColors.kPrimColor,
                         fillColor:
-                            MaterialStateProperty.all(AppColors.kPrimColor),
+                            WidgetStateProperty.all(AppColors.kPrimColor),
                         value: 4,
                         groupValue: 4,
                         onChanged: (t) {}),

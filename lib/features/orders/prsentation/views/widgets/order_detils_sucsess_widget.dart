@@ -61,9 +61,10 @@ class OrderDetilsSucsessWidget extends StatelessWidget {
           FollowOrdersItems(orderItems: data.orderItems),
           SliverToBoxAdapter(child: SizedBox(height: 15.h)),
           FollowOrderScoundTable(
-            deliveryPrice: data.isDelivery!
-                ? '${decimalNumer(price: data.deliveryPrice)}  ${'ry'.tr()}'
-                : '_',
+            deliveryPrice: data.isDelivery==null
+                ? '_':
+                '${decimalNumer(price: data.deliveryPrice)}  ${'ry'.tr()}'
+                 ,
             discount: data.coupon ?? '_',
             paymentMethod: paymentType(data.paymentType),
             total: '${decimalNumer(price: data.totalOrder)}  ${'ry'.tr()}',

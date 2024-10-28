@@ -12,3 +12,4 @@ CouponModel _$CouponModelFromJson(Map<String, dynamic> json) => CouponModel(
       discount: (json['discount'] as num).toInt(),
     );
 
+

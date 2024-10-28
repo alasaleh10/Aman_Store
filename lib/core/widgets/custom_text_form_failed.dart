@@ -16,7 +16,9 @@ class CustomTextFormField extends StatelessWidget {
   final String title;
   final int maxLines;
   final bool obesText;
+  final bool autoFoucs;
   final TextInputType? textInputType;
+  final EdgeInsetsGeometry? contentPadding;
   final TextEditingController? textFormController;
 
   const CustomTextFormField(
@@ -31,13 +33,15 @@ class CustomTextFormField extends StatelessWidget {
       this.maxLines = 1,
       this.seffexIcon,
       this.onChanged,
-      this.borderColor});
+      this.borderColor,
+      this.autoFoucs = false, this.contentPadding});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4.5),
       child: TextFormField(
+        autofocus: autoFoucs,
         onChanged: onChanged,
         maxLines: maxLines,
         keyboardType: textInputType,
@@ -46,47 +50,49 @@ class CustomTextFormField extends StatelessWidget {
         controller: textFormController,
         cursorColor: AppColors.kPrimColor,
         decoration: InputDecoration(
-            floatingLabelBehavior: maxLines > 1
-                ? FloatingLabelBehavior.always
-                : FloatingLabelBehavior.auto,
-            hintStyle: AppStyle.textStyleRegular16,
-            hintText: title,
-            errorStyle: AppStyle.textStyleRegular14
-                .copyWith(color: AppColors.kPrimColor3),
-            label: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 9),
-                child: Text(title, style: AppStyle.textStyleRegular16)),
-            prefixIconColor: Colors.black,
-            suffixIcon: seffexIcon,
-            prefixIcon: isCommed
-                ? null
-                : Padding(
-                    padding: const EdgeInsetsDirectional.only(start: 19),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        SvgPicture.asset(
-                          image!,
-                          // height: 25.h,
-                          // width: 10.w,
-                        ),
-                        SizedBox(width: 10.w),
-                      ],
-                    ),
+          floatingLabelBehavior: maxLines > 1
+              ? FloatingLabelBehavior.always
+              : FloatingLabelBehavior.auto,
+          hintStyle: AppStyle.textStyleRegular16,
+          hintText: title,
+          errorStyle: AppStyle.textStyleRegular14
+              .copyWith(color: AppColors.kPrimColor3),
+          label: Container(
+              margin: const EdgeInsets.symmetric(horizontal: 9),
+              child: Text(title, style: AppStyle.textStyleRegular16)),
+          prefixIconColor: Colors.black,
+          suffixIcon: seffexIcon,
+          prefixIcon: isCommed
+              ? null
+              : Padding(
+                  padding: const EdgeInsetsDirectional.only(start: 19),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      SvgPicture.asset(
+                        image!,
+                        // height: 25.h,
+                        // width: 10.w,
+                      ),
+                      SizedBox(width: 10.w),
+                    ],
                   ),
-            // Text(title, style: AppStyle.textStyleRegular16)
-            focusedErrorBorder:
-                textFormBorder(isCommed: isCommed, borderColor: borderColor),
-            disabledBorder:
-                textFormBorder(isCommed: isCommed, borderColor: borderColor),
-            contentPadding: EdgeInsets.symmetric(
-                vertical: 10, horizontal: isCommed ? 15 : 0),
-            focusedBorder:
-                textFormBorder(isCommed: isCommed, borderColor: borderColor),
-            errorBorder:
-                textFormBorder(isCommed: isCommed, borderColor: borderColor),
-            enabledBorder:
-                textFormBorder(isCommed: isCommed, borderColor: borderColor)),
+                ),
+
+          //  border: OutlineInputBorder(),
+          focusedErrorBorder:
+              textFormBorder(isCommed: isCommed, borderColor: borderColor),
+          disabledBorder:
+              textFormBorder(isCommed: isCommed, borderColor: borderColor),
+          contentPadding:contentPadding??
+              EdgeInsets.symmetric(vertical: 10, horizontal: isCommed ? 15 : 0),
+          focusedBorder:
+              textFormBorder(isCommed: isCommed, borderColor: borderColor),
+          errorBorder:
+              textFormBorder(isCommed: isCommed, borderColor: borderColor),
+          enabledBorder:
+              textFormBorder(isCommed: isCommed, borderColor: borderColor),
+        ),
       ),
     );
   }

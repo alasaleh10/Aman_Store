@@ -10,4 +10,5 @@ class ConfirmStatus with _$ConfirmStatus {
       ConfirmEmailFailure;
   const factory ConfirmStatus.sucsess(UserModel user) = ConfirmEmailSucsess;
   const factory ConfirmStatus.noInternet() = ConfirmEmailNoInternet;
+   const factory ConfirmStatus.sucsess2(String message) = ConfirmEmailSucsess2;
 }

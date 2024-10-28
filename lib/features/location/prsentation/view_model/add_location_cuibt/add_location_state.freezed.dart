@@ -102,6 +102,9 @@ class _$AddLocationStateCopyWithImpl<$Res, $Val extends AddLocationState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AddLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -118,6 +121,9 @@ class __$$AddLocationInitialImplCopyWithImpl<$Res>
   __$$AddLocationInitialImplCopyWithImpl(_$AddLocationInitialImpl _value,
       $Res Function(_$AddLocationInitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AddLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -250,6 +256,9 @@ class __$$AddLocationLoadingImplCopyWithImpl<$Res>
   __$$AddLocationLoadingImplCopyWithImpl(_$AddLocationLoadingImpl _value,
       $Res Function(_$AddLocationLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AddLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -385,6 +394,8 @@ class __$$AddLocationSucsessImplCopyWithImpl<$Res>
       $Res Function(_$AddLocationSucsessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddLocationState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -440,7 +451,9 @@ class _$AddLocationSucsessImpl implements AddLocationSucsess {
   @override
   int get hashCode => Object.hash(runtimeType, lat, long, location);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddLocationSucsessImplCopyWith<_$AddLocationSucsessImpl> get copyWith =>
@@ -548,7 +561,10 @@ abstract class AddLocationSucsess implements AddLocationState {
   String get lat;
   String get long;
   String get location;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddLocationSucsessImplCopyWith<_$AddLocationSucsessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -569,6 +585,9 @@ class __$$AddLocationNoPermisionImplCopyWithImpl<$Res>
       _$AddLocationNoPermisionImpl _value,
       $Res Function(_$AddLocationNoPermisionImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AddLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -703,6 +722,9 @@ class __$$AddLocationNoLocationImplCopyWithImpl<$Res>
   __$$AddLocationNoLocationImplCopyWithImpl(_$AddLocationNoLocationImpl _value,
       $Res Function(_$AddLocationNoLocationImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AddLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -837,6 +859,9 @@ class __$$AddLocationNoInternetImplCopyWithImpl<$Res>
   __$$AddLocationNoInternetImplCopyWithImpl(_$AddLocationNoInternetImpl _value,
       $Res Function(_$AddLocationNoInternetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AddLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -973,6 +998,8 @@ class __$$AddLocationFailureImplCopyWithImpl<$Res>
       $Res Function(_$AddLocationFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddLocationState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1011,7 +1038,9 @@ class _$AddLocationFailureImpl implements AddLocationFailure {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddLocationFailureImplCopyWith<_$AddLocationFailureImpl> get copyWith =>
@@ -1116,7 +1145,10 @@ abstract class AddLocationFailure implements AddLocationState {
       _$AddLocationFailureImpl;
 
   String get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddLocationFailureImplCopyWith<_$AddLocationFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

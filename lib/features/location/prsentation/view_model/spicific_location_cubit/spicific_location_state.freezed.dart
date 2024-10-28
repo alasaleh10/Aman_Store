@@ -115,6 +115,9 @@ class _$SpicificLocationStateCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -131,6 +134,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -275,6 +281,9 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -422,6 +431,8 @@ class __$$LoadedImplCopyWithImpl<$Res>
       _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -461,7 +472,9 @@ class _$LoadedImpl implements Loaded {
   @override
   int get hashCode => Object.hash(runtimeType, locationModel);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
@@ -577,7 +590,10 @@ abstract class Loaded implements SpicificLocationState {
       _$LoadedImpl;
 
   LocationsModel get locationModel;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -599,6 +615,8 @@ class __$$ErrorImplCopyWithImpl<$Res>
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -638,7 +656,9 @@ class _$ErrorImpl implements Error {
   @override
   int get hashCode => Object.hash(runtimeType, errorMessage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -753,7 +773,10 @@ abstract class Error implements SpicificLocationState {
   const factory Error({required final String errorMessage}) = _$ErrorImpl;
 
   String get errorMessage;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -772,6 +795,9 @@ class __$$NoInternetImplCopyWithImpl<$Res>
   __$$NoInternetImplCopyWithImpl(
       _$NoInternetImpl _value, $Res Function(_$NoInternetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -916,6 +942,9 @@ class __$$Loading2ImplCopyWithImpl<$Res>
   __$$Loading2ImplCopyWithImpl(
       _$Loading2Impl _value, $Res Function(_$Loading2Impl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1063,6 +1092,8 @@ class __$$Loaded2ImplCopyWithImpl<$Res>
       _$Loaded2Impl _value, $Res Function(_$Loaded2Impl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1102,7 +1133,9 @@ class _$Loaded2Impl implements Loaded2 {
   @override
   int get hashCode => Object.hash(runtimeType, locationMessageModel);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$Loaded2ImplCopyWith<_$Loaded2Impl> get copyWith =>
@@ -1218,7 +1251,10 @@ abstract class Loaded2 implements SpicificLocationState {
       _$Loaded2Impl;
 
   DoneModel get locationMessageModel;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$Loaded2ImplCopyWith<_$Loaded2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1240,6 +1276,8 @@ class __$$Error2ImplCopyWithImpl<$Res>
       _$Error2Impl _value, $Res Function(_$Error2Impl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1279,7 +1317,9 @@ class _$Error2Impl implements Error2 {
   @override
   int get hashCode => Object.hash(runtimeType, errorMessage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$Error2ImplCopyWith<_$Error2Impl> get copyWith =>
@@ -1394,7 +1434,10 @@ abstract class Error2 implements SpicificLocationState {
   const factory Error2({required final String errorMessage}) = _$Error2Impl;
 
   String get errorMessage;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$Error2ImplCopyWith<_$Error2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1413,6 +1456,9 @@ class __$$NoInternet2ImplCopyWithImpl<$Res>
   __$$NoInternet2ImplCopyWithImpl(
       _$NoInternet2Impl _value, $Res Function(_$NoInternet2Impl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SpicificLocationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

@@ -21,7 +21,7 @@ class OrdersRepo {
     }
   }
 
-Future<ApiResult<OrdersModel>> getMyCurrentOrderss() async {
+  Future<ApiResult<OrdersModel>> getMyCurrentOrderss() async {
     try {
       var response = await _ordersServices.getMyCurrentOrderss();
       return ApiResult.success(response);
@@ -31,24 +31,30 @@ Future<ApiResult<OrdersModel>> getMyCurrentOrderss() async {
   }
 
   Future<ApiResult<OrderDetilsModel>> getOrderDetils(int orderID) async {
-
     try {
-      var response=await _ordersServices.getOrderDetails(orderID);
+      var response = await _ordersServices.getOrderDetails(orderID);
       return ApiResult.success(response);
     } catch (err) {
       return ApiResult.failure(ApiErrorHandler.handle(err));
-      
     }
   }
-Future<ApiResult<DoneModel>> addRating(AddRatingModel addRatingModel)async
-{
 
-  try {
-    var response=await _ordersServices.addRating(addRatingModel);
-    return ApiResult.success(response);
-  } catch (err) {
-    return ApiResult.failure(ApiErrorHandler.handle(err));
-    
+  Future<ApiResult<DoneModel>> addRating(AddRatingModel addRatingModel) async {
+    try {
+      var response = await _ordersServices.addRating(addRatingModel);
+      return ApiResult.success(response);
+    } catch (err) {
+      return ApiResult.failure(ApiErrorHandler.handle(err));
+    }
   }
-}
+
+  Future<ApiResult<Order>> searchOrder(int id) async {
+    try {
+      var response = await _ordersServices.searchOrder(id);
+      Order order = Order.fromJson(response['order']);
+      return ApiResult.success(order);
+    } catch (err) {
+      return ApiResult.failure(ApiErrorHandler.handle(err));
+    }
+  }
 }

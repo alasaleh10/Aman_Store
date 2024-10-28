@@ -96,6 +96,9 @@ class _$FavoriteStateCopyWithImpl<$Res, $Val extends FavoriteState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of FavoriteState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -112,6 +115,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of FavoriteState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -238,6 +244,9 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of FavoriteState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -367,6 +376,8 @@ class __$$SussessImplCopyWithImpl<$Res>
       _$SussessImpl _value, $Res Function(_$SussessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FavoriteState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -405,7 +416,9 @@ class _$SussessImpl implements Sussess {
   @override
   int get hashCode => Object.hash(runtimeType, product);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FavoriteState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SussessImplCopyWith<_$SussessImpl> get copyWith =>
@@ -502,7 +515,10 @@ abstract class Sussess implements FavoriteState {
   const factory Sussess(final ListProductModel product) = _$SussessImpl;
 
   ListProductModel get product;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FavoriteState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SussessImplCopyWith<_$SussessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -524,6 +540,8 @@ class __$$ErrorImplCopyWithImpl<$Res>
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FavoriteState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -562,7 +580,9 @@ class _$ErrorImpl implements Error {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FavoriteState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -659,7 +679,10 @@ abstract class Error implements FavoriteState {
   const factory Error(final String error) = _$ErrorImpl;
 
   String get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FavoriteState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -678,6 +701,9 @@ class __$$NoInternetImplCopyWithImpl<$Res>
   __$$NoInternetImplCopyWithImpl(
       _$NoInternetImpl _value, $Res Function(_$NoInternetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of FavoriteState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -804,6 +830,9 @@ class __$$FromOpreationsImplCopyWithImpl<$Res>
   __$$FromOpreationsImplCopyWithImpl(
       _$FromOpreationsImpl _value, $Res Function(_$FromOpreationsImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of FavoriteState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

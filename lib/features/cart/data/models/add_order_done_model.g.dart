@@ -12,4 +12,3 @@ AddOrderDoneModel _$AddOrderDoneModelFromJson(Map<String, dynamic> json) =>
       createdAt: json['createdAt'] as String,
     );
 
-
