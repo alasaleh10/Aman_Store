@@ -65,4 +65,7 @@ class ApiConstanses {
   static const String myCurrentOrders = 'orders/myCurrentOrders';
   static const String orderDetails = 'orders/orderDetails';
   static const String addRating = 'ratings/addRating';
+
+  // Notifications
+  static const String notifications = 'notifications';
 }

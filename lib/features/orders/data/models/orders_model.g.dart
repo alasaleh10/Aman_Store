@@ -12,6 +12,10 @@ OrdersModel _$OrdersModelFromJson(Map<String, dynamic> json) => OrdersModel(
           .toList(),
     );
 
+Map<String, dynamic> _$OrdersModelToJson(OrdersModel instance) =>
+    <String, dynamic>{
+      'orders': instance.order,
+    };
 
 Order _$OrderFromJson(Map<String, dynamic> json) => Order(
       (json['id'] as num?)?.toInt(),
@@ -24,4 +28,13 @@ Order _$OrderFromJson(Map<String, dynamic> json) => Order(
       json['createdAt'] as String?,
     );
 
-
+Map<String, dynamic> _$OrderToJson(Order instance) => <String, dynamic>{
+      'id': instance.id,
+      'status': instance.status,
+      'isDelivery': instance.isDelivery,
+      'totalOrder': instance.totalOrder,
+      'preparingDate': instance.preparingDate,
+      'paymentType': instance.paymentType,
+      'deliveryDate': instance.deliveryDate,
+      'createdAt': instance.createdAt,
+    };

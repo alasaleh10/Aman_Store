@@ -37,6 +37,7 @@ import '../../features/cart/prsentation/view_model/cart_payment_cubit/cart_payme
 import '../../features/cart/prsentation/views/cart_payment_view.dart';
 import '../../features/home/prsentation/views/home_new_aman_view.dart';
 import '../../features/my_account/prsentation/view_model/technical_support_cubit/technical_support_cubit.dart';
+import '../../features/notifications/views/notification_view.dart';
 import '../helper/cached_helper.dart';
 import '../helper/secure_storage.dart';
 import 'app_routers.dart';
@@ -194,6 +195,10 @@ abstract class Routers {
             goPaymentModel: state.extra as GoPaymentModel,
           ),
         ),
+      ),
+        buildRoute(
+        AppRouters.notificationView,
+        (context, state) => const NotificationView(),
       ),
     ],
   );
