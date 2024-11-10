@@ -20,16 +20,20 @@ class HomeBannerImages extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return AspectRatio(
               aspectRatio: 2 / 1,
-              child: CachedNetworkImage(imageUrl: bannerList[index].image),
+              child: CachedNetworkImage(
+                imageUrl: bannerList[index].image,
+              ),
             );
           },
           scale: 2,
           itemCount: bannerList.length,
           pagination: SwiperPagination(
-              builder: DotSwiperPaginationBuilder(
-                  color: AppColors.kPrimColor.withOpacity(.5),
-                  activeSize: 13,
-                  activeColor: AppColors.kPrimColor)),
+            builder: DotSwiperPaginationBuilder(
+              color: AppColors.kPrimColor.withOpacity(.5),
+              activeSize: 13,
+              activeColor: AppColors.kPrimColor,
+            ),
+          ),
           autoplay: true,
         ),
       ),

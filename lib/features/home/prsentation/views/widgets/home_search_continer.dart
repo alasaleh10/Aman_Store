@@ -10,7 +10,7 @@ class HomeSearchContiner extends StatelessWidget {
   const HomeSearchContiner({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     return SliverToBoxAdapter(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),

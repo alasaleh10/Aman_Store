@@ -5,7 +5,7 @@ pageAnimation({required Widget page}) {
   return CustomTransitionPage(
     child: page,
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      return FadeTransition(opacity: animation, child: child);
+      return ScaleTransition(scale: animation, child: child);
     },
   );
 }
